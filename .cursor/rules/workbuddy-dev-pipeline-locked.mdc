@@ -1,0 +1,48 @@
+---
+description: 需求→上线一体化（dev-pipeline）主路径硬冻结——可局部优化，禁止推倒重来（LOCKED）
+alwaysApply: true
+---
+
+# 需求→上线一体化主路径硬冻结（不可推翻 · LOCKED）
+
+> **冻结日**：2026-09-27。用户验收：贴图/文字需求 → 写码 → 验证 → 复核 → 提交 → 部署上线已全通。  
+> **破窗条件**：**仅当用户在对话里明确允许**改主路径；改代码前须先改本规则冻结段。  
+> **权威实现**：`engine/app/dev_pipeline/` + `features/dev-pipeline` + `plugins/mes-bridge/client-src/lanes/dev-pipeline.js`。  
+> **方案**：`Framework/docs/功能实现/需求到上线一体化方案.md`。  
+> **复盘**：`Framework/docs/复盘总结/2026-09-27.md`。
+
+**不是**建议。擅自拆 10 步、另造第二编排、或把空变更再当成功 = 事故。
+
+## 写死含义（主路径）
+
+1. **一张 pipeline 卡 + 一本 Epic/Run 账本**编排「需求→上线」；**禁止**再增业务正式 Cordis 包或第二套一体化流水线。  
+2. **步骤主序保持 1～10**（采集→理解→读库→规划→写码→验证→复核→提交→开 PR→部署）；允许回退重跑（fix_loop / timeline_trace），**禁止**无授权整体换序或砍成「只聊不算账」。  
+3. **写码 / 审码 / 提交 / 部署必须复用既有工位**（Cursor 写码插件 Job、`code-review` / `code-commit` / `code-deploy`）；**禁止**在 pipeline 内另造 git/SSH/审码引擎，**禁止**改 DSH 写码插件源码来「顺便做一体化」。  
+4. **空 `changed_files` = 写码失败**（最多自动打回 3 轮）；**禁止** Job 成功但无 diff 当交付绿。  
+5. **时间线只展示已发生 + 当前**（下一跳可回滚）；**禁止**预渲染整条灰轨导致双「写代码」节点/卡。  
+6. **数据库文件不是写码产物**：需求禁 `*.db` / `erp.db`；同步 EPERM 时回收源码或工程内已有实现，不得整单假死在库文件上。  
+7. **引擎孤儿续跑**：有步骤真实结果须清零 `engine_resume_count`；上限与「写码 3 轮」语义分开，**禁止**再把开发重启误报成「写码三轮失败」而不查 Job。
+
+## 允许（无需破窗 · 局部优化）
+
+- 修崩溃、假绿、超时、文案、UI 微调、单测加固  
+- 扩 db 回收启发式、孤儿续跑阈值微调、session 归属校验（安全 P2）  
+- 方案/复盘与实现对齐的文档补丁  
+- 部署探活/回滚等**其它已 LOCKED** 项的合规修复
+
+## 无用户允许一律拒绝
+
+- 推倒 10 步主序、另起「简化版一体化」并行真相源  
+- 空变更再当成功，或取消 ≤3 轮空变更停机  
+- 把业务焊进 `@zhongruan/dsh-cursor-coding` / 第二个 bridge / profile 正式包  
+- 为一体化改四车道卡 phase / 共用 `callId` / 绕过 HITL  
+- 删本规则、改 `alwaysApply: false`，或不改本规则就动冻结段行为
+
+要改主路径：用户明确允许 → 先改本规则冻结段 → 再改代码与方案。
+
+## 交付自检
+
+- 贴图或文字开跑：时间线无双写码；写码有非空源码 `changed_files`（或合法回收）  
+- 空变更 / db 同步失败：打回 ≤3 轮后停机，不进假提交  
+- `python -m unittest tests.test_implement_db_sync_recover tests.test_orphan_resume_limit tests.test_dev_pipeline_empty_change_gate tests.test_dev_pipeline_fix_loop`  
+- 产品入口仍是 **3081**；引擎验收 **8000**

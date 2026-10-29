@@ -1,0 +1,317 @@
+{
+  "epic_id": "ep-20260928-d5a161628d",
+  "message": "报表中心菜单新增此需求\n\n【识图摘录】\n### 需求条目\n- 编码：R01\n- 模块/项目：报表中心\n- 本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致\n- 功能要求：\n  1. 增审批状态筛选及列表批量通过/驳回；\n  2. 视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过\n- 验收标准：\n  1. 报表页含审批操作截图；② 项目汇总与接口一致；③ 待审批不计入合计\n- 优先级 / 业务目标：生产·人员效率\n\n### 页面定位\n- 页面标题：未见\n- 菜单/导航路径：未见\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n### 表格（若有）\n- 表头列名（从左到右完整列出）：未见\n- 可见示例行（最多 3 行）：未见\n- 分页/合计文案：未见\n### 标注与改动暗示\n- 附图附加文字：报表中心菜单新增此需求\n- 红框/箭头/高亮：未见",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_admin",
+  "created_at": 1790564533,
+  "runs": [
+    "dpj-98ac33ae1e504428"
+  ],
+  "intake_image_ids": [
+    "vimg-6840e0c67927fd8c"
+  ],
+  "updated_at": 1790564774,
+  "requirement_core": "报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】。在报表中心菜单下新增「员工工时报表」功能：员工在T时可查询、可录入工时；提供审批状态筛选及列表批量通过/驳回操作；视图支持仅明细、按员工汇总，并补充按项目、按部门汇总（复用已有dimension）；核算口径与后端维度保持一致；合计与导出默认只统计已通过的数据",
+  "artifacts": {
+    "raw_intake": {
+      "text": "报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】",
+      "has_workspace_hint": true,
+      "captured_at": 1790564533,
+      "image_ids": [
+        "vimg-6840e0c67927fd8c"
+      ],
+      "vision_text": "### 需求条目\n- 编码：R01\n- 模块/项目：报表中心\n- 本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致\n- 功能要求：\n  1. 增审批状态筛选及列表批量通过/驳回；\n  2. 视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过\n- 验收标准：\n  1. 报表页含审批操作截图；② 项目汇总与接口一致；③ 待审批不计入合计\n- 优先级 / 业务目标：生产·人员效率\n\n### 页面定位\n- 页面标题：未见\n- 菜单/导航路径：未见\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n### 表格（若有）\n- 表头列名（从左到右完整列出）：未见\n- 可见示例行（最多 3 行）：未见\n- 分页/合计文案：未见\n### 标注与改动暗示\n- 附图附加文字：报表中心菜单新增此需求\n- 红框/箭头/高亮：未见",
+      "vision": {
+        "ok": true,
+        "model": "glm-4v-flash",
+        "image_count": 1
+      },
+      "requirement_core": "报表中心菜单新增此需求",
+      "vision_surface": {
+        "page_title": "",
+        "menu_path": "报表中心",
+        "table_columns": [
+          "未见"
+        ],
+        "filters": [
+          "本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致",
+          "增审批状态筛选及列表批量通过/驳回；",
+          "### 筛选与操作",
+          "筛选项：未见"
+        ],
+        "buttons": [
+          "视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过",
+          "按钮：未见"
+        ],
+        "marks": [
+          "红框/箭头/高亮：未见",
+          "标注与改动暗示",
+          "高亮：未见",
+          "箭头/高亮：未见"
+        ],
+        "sample_codes": [],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "path_hints": [],
+        "raw_excerpt": "### 需求条目\n- 编码：R01\n- 模块/项目：报表中心\n- 本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致\n- 功能要求：\n  1. 增审批状态筛选及列表批量通过/驳回；\n  2. 视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过\n- 验收标准：\n  1. 报表页含审批操作截图；② 项目汇总与接口一致；③ 待审批不计入合计\n- 优先级 / 业务目标：生产·人员效率\n\n### 页面定位\n- 页面标题：未见\n- 菜单/导航路径：未见\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n### 表格（若有）\n- 表头列名（从左到右完整列出）：未见\n- 可见示例行（最多 3 行）：未见\n- 分页/合计文案：未见\n### 标注与改动暗示\n- 附图附加文字：报表中心菜单新增此需求\n- 红框/箭头/高亮：未见"
+      },
+      "normalize": {
+        "source": "user_text",
+        "one_liner": "报表中心菜单新增此需求",
+        "was_sanitized": true,
+        "notes": [],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】。在报表中心菜单下新增「员工工时报表」功能：员工在T时可查询、可录入工时；提供审批状态筛选及列表批量通过/驳回操作；视图支持仅明细、按员工汇总，并补充按项目、按部门汇总（复用已有dimension）；核算口径与后端维度保持一致；合计与导出默认只统计已通过的数据",
+      "goal_one_liner": "报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】",
+      "user_card": {
+        "one_liner": "报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】",
+        "what": "报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】。在报表中心菜单下新增「员工工时报表」功能：员工在T时可查询、可录入工时；提供审批状态筛选及列表批量通过/驳回操作；视图支持仅明细、按员工汇总，并补充按项目、按部门汇总（复用已有dimension）；核算口径与后端维度保持一致；合计与导出默认只统计已通过的数据",
+        "how": "1）在报表中心菜单下新增员工工时报表入口与页面；2）实现员工T时查询与录入能力；3）新增审批状态筛选，并在列表提供批量通过/驳回操作；4）视图维度支持仅明细、按员工汇总，并基于已有dimension补充按项目汇总、按部门汇总；5）核算口径对齐后端维度；6）合计与导出逻辑默认仅统计已通过记录，待审批不计入合计。",
+        "done_when": [
+          "报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】",
+          "报表页包含审批操作（可通过截图验证）",
+          "按项目汇总结果与接口返回一致",
+          "待审批记录不计入合计",
+          "合计与导出默认只统计已通过数据",
+          "员工T时可查询、可录入工时",
+          "支持审批状态筛选及列表批量通过/驳回",
+          "视图支持仅明细、按员工汇总，并含按项目、按部门汇总"
+        ],
+        "scenario_label": "既有能力增强",
+        "scenario_id": "enhance_existing",
+        "user_quote": "报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】"
+      },
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "用户原话：报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】",
+          "报表中心菜单新增此需求",
+          "报表页包含审批操作（可通过截图验证）",
+          "按项目汇总结果与接口返回一致",
+          "待审批记录不计入合计",
+          "合计与导出默认只统计已通过数据",
+          "员工T时可查询、可录入工时",
+          "支持审批状态筛选及列表批量通过/驳回"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*",
+          "**/*filter*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】。在报表中心菜单下新增「员工工时报表」功能：员工在T时可查询、可录入工时；提供审批状态筛选及列表批量通过/驳回操作；视图支持仅明细、按员工汇总，并补充按项目、按部门汇总（复用已有dimension）；核算口径与后端维度保持一致；合计与导出默认只统计已通过的数据",
+        "scenario_id": "enhance_existing"
+      },
+      "acceptance": [
+        "用户原话：报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】",
+        "报表中心菜单新增此需求",
+        "报表页包含审批操作（可通过截图验证）",
+        "按项目汇总结果与接口返回一致",
+        "待审批记录不计入合计",
+        "合计与导出默认只统计已通过数据",
+        "员工T时可查询、可录入工时",
+        "支持审批状态筛选及列表批量通过/驳回"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790564542"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790564309_2"
+    },
+    "plan": {
+      "problem": "报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】",
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "用户原话：报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】",
+          "报表中心菜单新增此需求",
+          "报表页包含审批操作（可通过截图验证）",
+          "按项目汇总结果与接口返回一致",
+          "待审批记录不计入合计",
+          "合计与导出默认只统计已通过数据",
+          "员工T时可查询、可录入工时",
+          "支持审批状态筛选及列表批量通过/驳回"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*",
+          "**/*filter*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "报表中心菜单新增此需求\n【附图:vimg-6840e0c67927fd8c】。在报表中心菜单下新增「员工工时报表」功能：员工在T时可查询、可录入工时；提供审批状态筛选及列表批量通过/驳回操作；视图支持仅明细、按员工汇总，并补充按项目、按部门汇总（复用已有dimension）；核算口径与后端维度保持一致；合计与导出默认只统计已通过的数据",
+        "scenario_id": "enhance_existing"
+      },
+      "must_touch": [
+        "既有页面或接口的增量改动",
+        "必要时菜单文案/权限点"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "增强点可验收；原主路径不回归"
+      ],
+      "files_hint": "**/reports/**, **/employee*work*, **/routers/reports*, **/schemas.py, frontend/src/views/reports/, **/layouts/**, **/router*, **/*filter*, **/*.vue, README.md, readme.md, backend/",
+      "rev": "plan_1790564546"
+    },
+    "implement": {
+      "cursor_job_id": "ccj-20260928-110226-681c",
+      "changed_files": [
+        "backend/tests/test_employee_work_hours_report.py",
+        "backend/app/routers/reports.py"
+      ],
+      "auto": true,
+      "gate": {
+        "class": "pass",
+        "reason": "pass",
+        "summary": "写码完成（已忽略数据库同步失败，回收源码 2 项）"
+      },
+      "scope_audit": {
+        "ok": true,
+        "file_count": 2,
+        "violations": [],
+        "detail": "变更 2 个文件，在范围内",
+        "max_files": 8
+      },
+      "content_audit": {
+        "ok": true,
+        "violations": [],
+        "detail": "无明确列名，跳过内容文案门禁"
+      }
+    },
+    "validate_last": {
+      "ok": true,
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "results": [
+        {
+          "name": "py-compile-root",
+          "cmd": "python -m compileall -q .",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 5.02
+        },
+        {
+          "name": "git-diff-check",
+          "cmd": "git diff --check",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 0.22
+        }
+      ],
+      "auto_defaults": true
+    },
+    "review": {
+      "report_id": "cr-ea702d5f7b9748ed",
+      "auto": true,
+      "changed_only": true,
+      "files": [
+        "backend/tests/test_employee_work_hours_report.py",
+        "backend/app/routers/reports.py"
+      ],
+      "skipped": false
+    },
+    "commit": {
+      "job_id": "cc-adad668090f847ad",
+      "skipped": false,
+      "can_manual_retry": false,
+      "auto": true,
+      "attempts": 1
+    },
+    "pr": {
+      "pr_url": "",
+      "skipped": true,
+      "auto": true
+    },
+    "deploy": {
+      "job_id": "cd-83a0e8cbecc448ec",
+      "auto": true
+    }
+  },
+  "prd_rev": "prd_1790564542",
+  "context_rev": "ctx_1790564309_2",
+  "plan_rev": "plan_1790564546"
+}

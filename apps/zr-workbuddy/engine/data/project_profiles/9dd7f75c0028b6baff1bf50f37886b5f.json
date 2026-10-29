@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "workspace": "C:\\Users\\Yu\\AppData\\Local\\Temp\\tmpaodh36qm",
+  "scanned_at": 1791945786,
+  "fingerprint": "e41827edb13896062b8c",
+  "vcs": {
+    "kind": "git",
+    "remote": ""
+  },
+  "languages": [
+    "Python"
+  ],
+  "stack": {
+    "frontend": [],
+    "backend": [],
+    "test": []
+  },
+  "layout": {
+    "kind": "python_app",
+    "frontend_root": "",
+    "backend_root": "",
+    "router_files": [],
+    "view_dirs": [],
+    "api_dirs": [],
+    "menu_files": [],
+    "entry_files": []
+  },
+  "validate_commands": [],
+  "deploy": {
+    "preset": "python_app",
+    "build_cwd": "",
+    "build_cmd": "",
+    "sync_hint": [],
+    "exclude_patterns": [
+      "node_modules",
+      ".venv",
+      "venv",
+      ".env",
+      ".env.*",
+      "*.db",
+      "*.sqlite",
+      "*.sqlite3",
+      ".git",
+      "__pycache__"
+    ]
+  },
+  "ui": {
+    "sample_pages": [],
+    "style_libs": []
+  },
+  "conventions": {
+    "readme_excerpt": "",
+    "agents_excerpt": ""
+  },
+  "review": {
+    "skip_dirs": []
+  },
+  "code_suffixes": [
+    ".py"
+  ],
+  "gaps": [
+    "未发现测试或 lint 脚本，验证步不会自动跑真实用例",
+    "没有 README，规范只能从代码抽样"
+  ],
+  "summary_zh": "布局：python_app\n语言：Python\n前端：未识别\n后端：未识别\n托管：Git\n改页面、挂菜单、写接口时以以上路径为准，不要套用其它仓库的目录。"
+}

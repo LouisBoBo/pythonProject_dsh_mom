@@ -1,0 +1,366 @@
+{
+  "epic_id": "ep-20260928-a48cafe509",
+  "message": "报表中心菜单新增员工工时报表",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_admin",
+  "created_at": 1790574438,
+  "runs": [
+    "dpj-eb0834aef62c4464"
+  ],
+  "intake_image_ids": [],
+  "updated_at": 1790574806,
+  "requirement_core": "报表中心菜单新增员工工时报表。在报表中心菜单中新增一个「员工工时报表」入口/报表",
+  "artifacts": {
+    "raw_intake": {
+      "text": "报表中心菜单新增员工工时报表",
+      "has_workspace_hint": true,
+      "captured_at": 1790574438,
+      "image_ids": [],
+      "vision_text": "",
+      "vision": {},
+      "requirement_core": "报表中心菜单新增员工工时报表",
+      "vision_surface": {},
+      "normalize": {
+        "source": "user_text",
+        "one_liner": "报表中心菜单新增员工工时报表",
+        "was_sanitized": false,
+        "notes": [],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "报表中心菜单新增员工工时报表。在报表中心菜单中新增一个「员工工时报表」入口/报表",
+      "goal_one_liner": "报表中心菜单新增员工工时报表",
+      "user_card": {
+        "one_liner": "报表中心菜单新增员工工时报表",
+        "what": "报表中心菜单新增员工工时报表。在报表中心菜单中新增一个「员工工时报表」入口/报表",
+        "how": "在报表中心菜单下增加「员工工时报表」菜单项，并接入对应的员工工时报表页面",
+        "done_when": [
+          "报表中心菜单下可见「员工工时报表」菜单项",
+          "点击该菜单项可打开员工工时报表页面",
+          "改动不超过 22 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "新功能全栈页",
+        "scenario_id": "full_feature",
+        "user_quote": "报表中心菜单新增员工工时报表"
+      },
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "med",
+        "reason": "像新报表/管理页，按全栈页规划"
+      },
+      "scope": {
+        "in_scope": [
+          "报表中心菜单新增员工工时报表",
+          "报表中心菜单下可见「员工工时报表」菜单项",
+          "点击该菜单项可打开员工工时报表页面"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "报表中心菜单新增员工工时报表。在报表中心菜单中新增一个「员工工时报表」入口/报表",
+        "scenario_id": "full_feature"
+      },
+      "acceptance": [
+        "报表中心菜单新增员工工时报表",
+        "报表中心菜单下可见「员工工时报表」菜单项",
+        "点击该菜单项可打开员工工时报表页面",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790574439"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790564309_2"
+    },
+    "plan": {
+      "problem": "报表中心菜单新增员工工时报表",
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "med",
+        "reason": "像新报表/管理页，按全栈页规划"
+      },
+      "scope": {
+        "in_scope": [
+          "报表中心菜单新增员工工时报表",
+          "报表中心菜单下可见「员工工时报表」菜单项",
+          "点击该菜单项可打开员工工时报表页面"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "报表中心菜单新增员工工时报表。在报表中心菜单中新增一个「员工工时报表」入口/报表",
+        "scenario_id": "full_feature"
+      },
+      "must_touch": [
+        "菜单/导航（入口可见）",
+        "路由注册（页面可达）",
+        "页面/组件（完整主路径）",
+        "后端接口（与页面配套）"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "菜单与路由可达",
+        "页面主路径可操作；接口可调通"
+      ],
+      "files_hint": "**/reports/**, **/employee*work*, **/routers/reports*, **/schemas.py, frontend/src/views/reports/, **/layouts/**, **/router*, README.md, readme.md, backend/, docs/, frontend/",
+      "rev": "plan_1790574441"
+    },
+    "implement": {
+      "cursor_job_id": "ccj-20260928-135031-8820",
+      "changed_files": [
+        "backend/app/routers/reports.py"
+      ],
+      "auto": true,
+      "gate": {
+        "class": "pass",
+        "reason": "pass",
+        "summary": "写码完成（已忽略数据库同步失败，回收源码 1 项）"
+      },
+      "scope_audit": {
+        "ok": true,
+        "file_count": 1,
+        "violations": [],
+        "detail": "变更 1 个文件，在范围内",
+        "max_files": 22
+      },
+      "content_audit": {
+        "ok": true,
+        "violations": [],
+        "detail": "无明确列名，跳过内容文案门禁"
+      }
+    },
+    "validate_last": {
+      "ok": true,
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "results": [
+        {
+          "name": "py-compile-root",
+          "cmd": "python -m compileall -q .",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 5.13
+        },
+        {
+          "name": "git-diff-check",
+          "cmd": "git diff --check",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 0.18
+        }
+      ],
+      "auto_defaults": true
+    },
+    "review_fail_evidence": {
+      "round": 1,
+      "summary": "存在 1 处高危问题，审核不通过",
+      "reason": "review_fail",
+      "report_id": "cr-b4e4a265b74e400a",
+      "detail": "存在 1 处高危问题，审核不通过",
+      "report_body": "代码审核汇总报告\n审核文件：frontend/src/views/reports/EmployeeWorkHourReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/employeeWorkHours.js、backend/app/routers/reports.py\n审核日期：2026-09-28\n审核人：Viprasol + workbuddy-gate-90（Skill `zr-workbuddy-code-review`）\n工程路径：D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n---\n一、总体评价\n🔴 高危问题：共 1 处，必须全部修复后方可合并。\n🟡 中危问题：共 3 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n本次审核共发现 7 个问题。\n所有问题均基于已读源码/配置，方法论为 Viprasol + workbuddy-gate-90（及源码规则补种），位置与代码片段对应原始文件。\n---\n二、详细问题清单（汇总后）\n🔴 高危 问题1 — employee_month 维度使用 SQLite 专有 strftime，跨库直接 500\n文件：backend/app/routers/reports.py　位置：约第 470 行\n问题描述：employee_month 维度用 func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date) 生成月份表达式。strftime 是 SQLite 专有函数，MySQL 用 DATE_FORMAT、PostgreSQL 用 to_char。若生产库非 SQLite，请求 dimension=employee_month 会抛 OperationalError 导致 500。触发条件：任意客户端调用 GET /api/reports/employee-work-hours?dimension=employee_month。\n// ❌ 当前代码\n```\nif dimension == \"employee_month\":\n        month_expr = func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date)\n        rows = (\n            query.with_entities(\n                EmployeeWorkHour.employee_no,\n                ...\n                month_expr.label(\"work_month\"),\n```\n修改建议：改为按数据库方言选择月份表达式，或统一用 SQLAlchemy 的 extract 组合。推荐用 func.extract('year', col) 与 func.extract('month', col) 拼接，或按 db.bind.dialect.name 分支。验证：在目标数据库执行 dimension=employee_month，确认返回按月分组且无 500。\n// ✅ 正确做法\n```\nif dimension == \"employee_month\":\n        dialect = db.bind.dialect.name if db.bind is not None else \"sqlite\"\n        if dialect == \"sqlite\":\n            month_expr = func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date)\n        elif dialect == \"mysql\":\n            month_expr = func.date_format(EmployeeWorkHour.work_date, \"%Y-%m\")\n        else:\n            month_expr = func.to_char(EmployeeWorkHour.work_date, \"YYYY-MM\")\n        rows = (\n            query.with_entities(\n                EmployeeWorkHour.employee_no,\n                EmployeeWorkHour.employee_name,\n                EmployeeWorkHour.department,\n                month_expr.label(\"work_month\"),\n                func.sum(EmployeeWorkHour.work_hours).label(\"work_hours\"),\n                func.sum(EmployeeWorkHour.overtime_hours).label(\"overtime_hours\"),\n                func.count(EmployeeWorkHour.id).label(\"record_count\"),\n            )\n            .group_by(\n                EmployeeWorkHour.employee_no,\n                EmployeeWorkHour.employee_name,\n                EmployeeWorkHour.department,\n                month_expr,\n            )\n            .order_by(month_expr.desc(), EmployeeWorkHour.employee_no)\n            .all()\n        )\n```\n---\n🟡 中危 问题2 — 员工工时报表全量加载后内存分页，数据量大时内存与耗时线性膨胀\n文件：backend/app/routers/reports.py　位置：约第 560 行\n问题描述：_build_work_hour_report_items 对 detail 维度执行 .all() 取回全部匹配行，路由层再用 all_items[start:start+page_size] 做内存切片，total 与 work_hours_sum 也基于全量列表计算。触发条件：日期范围较大（默认近 30 日）且 employee_work_hours 行数达数万时，单次请求会把全部记录加载进内存，响应时间与内存随总量线性增长，且无法利用数据库索引分页。\n// ❌ 当前代码\n```\nall_items = _build_work_hour_report_items(\n        db,\n        date_from=date_from,\n        date_to=date_to,\n        ...\n        dimension=dimension,\n    )\n    total = len(all_items)\n    work_hours_sum = round(sum(item.work_hours for item in all_items), 2)\n    overtime_hours_sum = round(sum(item.overtime_hours for item in all_items), 2)\n    start = (page - 1) * page_size\n    page_items = all_items[start : start + page_size]\n```\n修改建议：detail 维度改为 SQL 层分页：用 query.count() 取 total，用 func.sum 单独聚合 work_hours/overtime_hours，再用 .offset().limit() 取当前页。汇总维度（employee/project/department 等）因分组后行数有限可保留内存分页。验证：插入 10 万条记录后请求 page=1&page_size=10，确认 SQL 只返回 10 行且响应时间不随总量增长。\n// ✅ 正确做法\n```\nif dimension == \"detail\":\n        base = _apply_work_hour_filters(\n            db.query(EmployeeWorkHour),\n            date_from=date_from, date_to=date_to,\n            department=department, employee_no=employee_no,\n            project_name=project_name, shift_type=shift_type,\n            approval_status=approval_status,\n        )\n        total = base.count()\n        sums = base.with_entities(\n            func.coalesce(func.sum(EmployeeWorkHour.work_hours), 0),\n            func.coalesce(func.sum(EmployeeWorkHour.overtime_hours), 0),\n        ).one()\n        rows = (\n            base.order_by(\n                EmployeeWorkHour.work_date.desc(),\n                EmployeeWorkHour.employee_no,\n                EmployeeWorkHour.id.desc(),\n            )\n            .offset((page - 1) * page_size)\n            .limit(page_size)\n            .all()\n        )\n        items = [_to_work_hour_item(r) for r in rows]\n        return EmployeeWorkHourReportListResponse(\n            items=items, total=total, page=page, page_size=page_size,\n            dimension=dimension,\n            work_hours_sum=round(float(sums[0] or 0), 2),\n            overtime_hours_sum=round(float(sums[1] or 0), 2),\n        )\n```\n---\n🟡 中危 问题3 — _lookup_work_hour_staff 回退到当日全部门汇总，导致产线工时虚高\n文件：backend/app/routers/reports.py　位置：约第 300 行\n问题描述：当按车间匹配不到工时记录时，函数回退到 date_hours/date_staff（当日所有部门的工时与人员）。这会把其他部门的工时算到当前产线行上，若同一天多个产线都匹配不到车间，则每条产线都会重复计入当日全部工时，造成日产报表工时合计虚高。触发条件：ProductionLine.workshop 为空或与 EmployeeWorkHour.department 不一致时。\n// ❌ 当前代码\n```\nif workshop:\n        hours = workshop_hours.get((report_date, workshop), 0.0)\n        names = workshop_staff.get((report_date, workshop), set())\n    if not hours and not names:\n        hours = date_hours.get(report_date, 0.0)\n        names = date_staff.get(report_date, set())\n```\n修改建议：回退策略应限定为「仅当该日无任何部门维度数据时」才使用当日汇总，或直接返回 0 并标注未匹配，避免跨部门重复计入。验证：构造两条产线 workshop 为空、当日有 8 小时工时，确认修复前两条产线各显示 8 小时（合计 16），修复后合计不超过 8。\n// ✅ 正确做法\n```\nhours = 0.0\n    names: set[str] = set()\n    if workshop:\n        hours = workshop_hours.get((report_date, workshop), 0.0)\n        names = workshop_staff.get((report_date, workshop), set())\n    # 仅当该日完全没有部门维度数据时才回退到当日汇总，避免跨部门重复计入\n    if not hours and not names and not workshop_hours and not workshop_staff:\n        hours = date_hours.get(report_date, 0.0)\n        names = date_staff.get(report_date, set())\n    staff = \"、\".join(sorted(names)) if names else None\n    return round(hours, 2), staff\n```\n---\n🟡 中危 问题4 — _build_work_hour_report_items 缺少非法 dimension 兜底，会误走 department 分支\n文件：backend/app/routers/reports.py　位置：约第 430 行\n问题描述：函数对 detail/employee/employee_date/employee_month/project 分支后，直接以注释 # department 收尾，未对未知 dimension 抛错或返回空。若未来新增调用方绕过路由层校验，或路由白名单与函数分支不同步，非法维度会被当作部门汇总静默返回，掩盖调用错误。触发条件：dimension 传入不在 WORK_HOUR_DIMENSIONS 内的值且未经过路由校验。\n// ❌ 当前代码\n```\n# department\n    rows = (\n        query.with_entities(\n            EmployeeWorkHour.department,\n            func.sum(EmployeeWorkHour.work_hours).label(\"work_hours\"),\n```\n修改建议：在函数入口对 dimension 做白名单断言，非法值抛 ValueError；路由层捕获后返回 400。验证：直接调用 _build_work_hour_report_items(dimension='bogus')，确认抛错而非返回部门汇总。\n// ✅ 正确做法\n```\ndef _build_work_hour_report_items(\n    db: Session,\n    *,\n    date_from: date,\n    date_to: date,\n    department: str | None,\n    employee_no: str | None,\n    project_name: str | None,\n    shift_type: str | None = None,\n    approval_status: str | None = None,\n    dimension: str,\n) -> list[EmployeeWorkHourReportItem]:\n    if dimension not in WORK_HOUR_DIMENSIONS:\n        raise ValueError(f\"unsupported dimension: {dimension}\")\n    query = db.query(EmployeeWorkHour)\n    ...\n```\n---\n🟢 低危 问题5 — 配置表顶部残留流水线验证注释\n文件：frontend/src/config/reportFeatures.js　位置：约第 1 行\n问题描述：文件首行保留 workbuddy-e2e-pipeline-verify-20260925 与 mes-dev-pipeline-tooling-verify-20260926 两行调试标记，属 CI/流水线验证残留，会污染配置入口的可读性。触发条件：无，纯代码卫生问题。\n// ❌ 当前代码\n```\n// workbuddy-e2e-pipeline-verify-20260925\n// mes-dev-pipeline-tooling-verify-20260926\n/**\n * 报表功能注册表（唯一配置入口）。\n```\n修改建议：删除这两行验证注释，保留正式的文件头注释。验证：文件首行应为 /** 开头的注册表说明。\n// ✅ 正确做法\n```\n/**\n * 报表功能注册表（唯一配置入口）。\n * - menu: false → 侧栏隐藏（删菜单只改这里，勿删 api/视图文件）\n * - hub: false → 报表中心首页不展示入口\n * - enabled: false → 强制下线（即使文件还在）\n * 路由/菜单仅注册「enabled + 视图文件存在 + api 文件存在（若声明）」的项，缺文件不会拖垮整站。\n */\nexport const REPORT_CATALOG = [\n```\n---\n🟢 低危 问题6 — formatHours 对 null/undefined 返回 0.00 而非占位符\n文件：frontend/src/views/reports/EmployeeWorkHourReportView.vu",
+      "must_fix": [
+        "🔴 高危 — employee_month 维度使用 SQLite 专有 strftime，跨库直接 500｜文件：backend/app/routers/reports.py:470｜修复：改为按数据库方言选择月份表达式，或统一用 SQLAlchemy 的 extract 组合。推荐用 func.extract('year', col) 与 func.extract('month', col) 拼接，或按 db.bind.dialect.name 分支。验证：在目标数据库执行 dimension=employee_month，确认返回按月分组且无 500。"
+      ],
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+        "frontend/src/config/reportFeatures.js",
+        "frontend/src/api/reports/employeeWorkHours.js",
+        "backend/app/routers/reports.py"
+      ],
+      "blocker_count": 1,
+      "gate_findings": [
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 470,
+          "severity": "high",
+          "title": "employee_month 维度使用 SQLite 专有 strftime，跨库直接 500",
+          "description": "employee_month 维度用 func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date) 生成月份表达式。strftime 是 SQLite 专有函数，MySQL 用 DATE_FORMAT、PostgreSQL 用 to_char。若生产库非 SQLite，请求 dimension=employee_month 会抛 OperationalError 导致 500。触发条件：任意客户端调用 GET /api/reports/employee-work-hours?dimension=employee_month。",
+          "code_snippet": "if dimension == \"employee_month\":\n        month_expr = func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date)\n        rows = (\n            query.with_entities(\n                EmployeeWorkHour.employee_no,\n                ...\n                month_expr.label(\"work_month\"),",
+          "fix_suggestion": "改为按数据库方言选择月份表达式，或统一用 SQLAlchemy 的 extract 组合。推荐用 func.extract('year', col) 与 func.extract('month', col) 拼接，或按 db.bind.dialect.name 分支。验证：在目标数据库执行 dimension=employee_month，确认返回按月分组且无 500。",
+          "fix_code": "if dimension == \"employee_month\":\n        dialect = db.bind.dialect.name if db.bind is not None else \"sqlite\"\n        if dialect == \"sqlite\":\n            month_expr = func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date)\n        elif dialect == \"mysql\":\n            month_expr = func.date_format(EmployeeWorkHour.work_date, \"%Y-%m\")\n        else:\n            month_expr = func.to_char(EmployeeWorkHour.work_date, \"YYYY-MM\")\n        rows = (\n            query.with_entities(\n                EmployeeWorkHour.employee_no,\n                EmployeeWorkHour.employee_name,\n                EmployeeWorkHour.department,\n                month_expr.label(\"work_month\"),\n                func.sum(EmployeeWorkHour.work_hours).label(\"work_hours\"),\n                func.sum(EmployeeWorkHour.overtime_hours).label(\"overtime_hours\"),\n                func.count(EmployeeWorkHour.id).label(\"record_count\"),\n            )\n            .group_by(\n                EmployeeWorkHour.employee_no,\n                EmployeeWorkHour.employee_name,\n                EmployeeWorkHour.department,\n                month_expr,\n            )\n            .order_by(month_expr.desc(), EmployeeWorkHour.employee_no)\n            .all()\n        )"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 560,
+          "severity": "medium",
+          "title": "员工工时报表全量加载后内存分页，数据量大时内存与耗时线性膨胀",
+          "description": "_build_work_hour_report_items 对 detail 维度执行 .all() 取回全部匹配行，路由层再用 all_items[start:start+page_size] 做内存切片，total 与 work_hours_sum 也基于全量列表计算。触发条件：日期范围较大（默认近 30 日）且 employee_work_hours 行数达数万时，单次请求会把全部记录加载进内存，响应时间与内存随总量线性增长，且无法利用数据库索引分页。",
+          "code_snippet": "all_items = _build_work_hour_report_items(\n        db,\n        date_from=date_from,\n        date_to=date_to,\n        ...\n        dimension=dimension,\n    )\n    total = len(all_items)\n    work_hours_sum = round(sum(item.work_hours for item in all_items), 2)\n    overtime_hours_sum = round(sum(item.overtime_hours for item in all_items), 2)\n    start = (page - 1) * page_size\n    page_items = all_items[start : start + page_size]",
+          "fix_suggestion": "detail 维度改为 SQL 层分页：用 query.count() 取 total，用 func.sum 单独聚合 work_hours/overtime_hours，再用 .offset().limit() 取当前页。汇总维度（employee/project/department 等）因分组后行数有限可保留内存分页。验证：插入 10 万条记录后请求 page=1&page_size=10，确认 SQL 只返回 10 行且响应时间不随总量增长。",
+          "fix_code": "if dimension == \"detail\":\n        base = _apply_work_hour_filters(\n            db.query(EmployeeWorkHour),\n            date_from=date_from, date_to=date_to,\n            department=department, employee_no=employee_no,\n            project_name=project_name, shift_type=shift_type,\n            approval_status=approval_status,\n        )\n        total = base.count()\n        sums = base.with_entities(\n            func.coalesce(func.sum(EmployeeWorkHour.work_hours), 0),\n            func.coalesce(func.sum(EmployeeWorkHour.overtime_hours), 0),\n        ).one()\n        rows = (\n            base.order_by(\n                EmployeeWorkHour.work_date.desc(),\n                EmployeeWorkHour.employee_no,\n                EmployeeWorkHour.id.desc(),\n            )\n            .offset((page - 1) * page_size)\n            .limit(page_size)\n            .all()\n        )\n        items = [_to_work_hour_item(r) for r in rows]\n        return EmployeeWorkHourReportListResponse(\n            items=items, total=total, page=page, page_size=page_size,\n            dimension=dimension,\n            work_hours_sum=round(float(sums[0] or 0), 2),\n            overtime_hours_sum=round(float(sums[1] or 0), 2),\n        )"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 300,
+          "severity": "medium",
+          "title": "_lookup_work_hour_staff 回退到当日全部门汇总，导致产线工时虚高",
+          "description": "当按车间匹配不到工时记录时，函数回退到 date_hours/date_staff（当日所有部门的工时与人员）。这会把其他部门的工时算到当前产线行上，若同一天多个产线都匹配不到车间，则每条产线都会重复计入当日全部工时，造成日产报表工时合计虚高。触发条件：ProductionLine.workshop 为空或与 EmployeeWorkHour.department 不一致时。",
+          "code_snippet": "if workshop:\n        hours = workshop_hours.get((report_date, workshop), 0.0)\n        names = workshop_staff.get((report_date, workshop), set())\n    if not hours and not names:\n        hours = date_hours.get(report_date, 0.0)\n        names = date_staff.get(report_date, set())",
+          "fix_suggestion": "回退策略应限定为「仅当该日无任何部门维度数据时」才使用当日汇总，或直接返回 0 并标注未匹配，避免跨部门重复计入。验证：构造两条产线 workshop 为空、当日有 8 小时工时，确认修复前两条产线各显示 8 小时（合计 16），修复后合计不超过 8。",
+          "fix_code": "hours = 0.0\n    names: set[str] = set()\n    if workshop:\n        hours = workshop_hours.get((report_date, workshop), 0.0)\n        names = workshop_staff.get((report_date, workshop), set())\n    # 仅当该日完全没有部门维度数据时才回退到当日汇总，避免跨部门重复计入\n    if not hours and not names and not workshop_hours and not workshop_staff:\n        hours = date_hours.get(report_date, 0.0)\n        names = date_staff.get(report_date, set())\n    staff = \"、\".join(sorted(names)) if names else None\n    return round(hours, 2), staff"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 430,
+          "severity": "medium",
+          "title": "_build_work_hour_report_items 缺少非法 dimension 兜底，会误走 department 分支",
+          "description": "函数对 detail/employee/employee_date/employee_month/project 分支后，直接以注释 # department 收尾，未对未知 dimension 抛错或返回空。若未来新增调用方绕过路由层校验，或路由白名单与函数分支不同步，非法维度会被当作部门汇总静默返回，掩盖调用错误。触发条件：dimension 传入不在 WORK_HOUR_DIMENSIONS 内的值且未经过路由校验。",
+          "code_snippet": "# department\n    rows = (\n        query.with_entities(\n            EmployeeWorkHour.department,\n            func.sum(EmployeeWorkHour.work_hours).label(\"work_hours\"),",
+          "fix_suggestion": "在函数入口对 dimension 做白名单断言，非法值抛 ValueError；路由层捕获后返回 400。验证：直接调用 _build_work_hour_report_items(dimension='bogus')，确认抛错而非返回部门汇总。",
+          "fix_code": "def _build_work_hour_report_items(\n    db: Session,\n    *,\n    date_from: date,\n    date_to: date,\n    department: str | None,\n    employee_no: str | None,\n    project_name: str | None,\n    shift_type: str | None = None,\n    approval_status: str | None = None,\n    dimension: str,\n) -> list[EmployeeWorkHourReportItem]:\n    if dimension not in WORK_HOUR_DIMENSIONS:\n        raise ValueError(f\"unsupported dimension: {dimension}\")\n    query = db.query(EmployeeWorkHour)\n    ..."
+        },
+        {
+          "file": "frontend/src/config/reportFeatures.js",
+          "line": 1,
+          "severity": "low",
+          "title": "配置表顶部残留流水线验证注释",
+          "description": "文件首行保留 workbuddy-e2e-pipeline-verify-20260925 与 mes-dev-pipeline-tooling-verify-20260926 两行调试标记，属 CI/流水线验证残留，会污染配置入口的可读性。触发条件：无，纯代码卫生问题。",
+          "code_snippet": "// workbuddy-e2e-pipeline-verify-20260925\n// mes-dev-pipeline-tooling-verify-20260926\n/**\n * 报表功能注册表（唯一配置入口）。",
+          "fix_suggestion": "删除这两行验证注释，保留正式的文件头注释。验证：文件首行应为 /** 开头的注册表说明。",
+          "fix_code": "/**\n * 报表功能注册表（唯一配置入口）。\n * - menu: false → 侧栏隐藏（删菜单只改这里，勿删 api/视图文件）\n * - hub: false → 报表中心首页不展示入口\n * - enabled: false → 强制下线（即使文件还在）\n * 路由/菜单仅注册「enabled + 视图文件存在 + api 文件存在（若声明）」的项，缺文件不会拖垮整站。\n */\nexport const REPORT_CATALOG = ["
+        },
+        {
+          "file": "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "line": 175,
+          "severity": "low",
+          "title": "formatHours 对 null/undefined 返回 0.00 而非占位符",
+          "description": "formatHours 用 Number(value) 判断，Number(null) === 0、Number(undefined) === NaN。因此 work_hours 为 null 时显示 0.00，为 undefined 时显示 —，行为不一致；且与同文件其他列 row.work_date || '—' 的空值处理风格不统一，可能让用户误以为该行工时确为 0。触发条件：后端返回 work_hours=null 的行。",
+          "code_snippet": "function formatHours(value) {\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(2)\n}",
+          "fix_suggestion": "先判空再转数字，null/undefined/'' 统一返回 '—'。验证：传入 null 应显示 —，传入 0 应显示 0.00。",
+          "fix_code": "function formatHours(value) {\n  if (value === null || value === undefined || value === '') return '—'\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(2)\n}"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 400,
+          "severity": "low",
+          "title": "工时报表常量定义在文件中部，与顶部常量区分离",
+          "description": "WORK_HOUR_DIMENSIONS、WORK_HOUR_SHIFT_VALUES、APPROVAL_STATUS_LABELS 等常量定义在文件中部（日产报表与维修报表之间），而 WIP_METRIC 等定义在顶部。同一文件常量分散，后续维护易遗漏。触发条件：无，纯可读性问题。",
+          "code_snippet": "WORK_HOUR_DIMENSIONS = (\"detail\", \"employee\", \"employee_date\", \"employee_month\", \"project\", \"department\")\nWORK_HOUR_SHIFT_VALUES = frozenset({\"day\", \"night\"})\nWORK_HOUR_APPROVAL_VALUES = frozenset({\"pending\", \"approved\", \"rejected\"})",
+          "fix_suggestion": "将工时报表相关常量上移到文件顶部常量区（WIP_METRIC 附近），或统一抽到 app/constants.py。验证：文件顶部集中所有模块级常量，中部仅保留函数与路由。",
+          "fix_code": "# 文件顶部常量区\nWIP_METRIC = \"wip\"\n\nWORK_HOUR_DIMENSIONS = (\"detail\", \"employee\", \"employee_date\", \"employee_month\", \"project\", \"department\")\nWORK_HOUR_SHIFT_VALUES = frozenset({\"day\", \"night\"})\nWORK_HOUR_APPROVAL_VALUES = frozenset({\"pending\", \"approved\", \"rejected\"})\nWORK_HOUR_APPROVAL_QUERY_VALUES = WORK_HOUR_APPROVAL_VALUES | {\"all\"}\n\nAPPROVAL_STATUS_LABELS = {\"pending\": \"待审批\", \"approved\": \"已通过\", \"rejected\": \"已驳回\"}\nSHIFT_TYPE_LABELS = {\"day\": \"白班\", \"night\": \"晚班\"}"
+        }
+      ]
+    },
+    "implement_fix_mandate": {
+      "round": 1,
+      "max_rounds": 3,
+      "must_fix": [
+        "🔴 高危 — employee_month 维度使用 SQLite 专有 strftime，跨库直接 500｜文件：backend/app/routers/reports.py:470｜修复：改为按数据库方言选择月份表达式，或统一用 SQLAlchemy 的 extract 组合。推荐用 func.extract('year', col) 与 func.extract('month', col) 拼接，或按 db.bind.dialect.name 分支。验证：在目标数据库执行 dimension=employee_month，确认返回按月分组且无 500。"
+      ],
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+        "frontend/src/config/reportFeatures.js",
+        "frontend/src/api/reports/employeeWorkHours.js",
+        "backend/app/routers/reports.py"
+      ],
+      "source": "review"
+    },
+    "review": {
+      "report_id": "cr-d5705ed1df774d27",
+      "auto": true,
+      "changed_only": true,
+      "files": [
+        "backend/app/routers/reports.py"
+      ],
+      "skipped": false
+    },
+    "commit": {
+      "job_id": "cc-7cb4193fcd5a4322",
+      "skipped": false,
+      "can_manual_retry": false,
+      "auto": true,
+      "attempts": 1
+    },
+    "pr": {
+      "pr_url": "",
+      "skipped": true,
+      "auto": true
+    },
+    "deploy": {
+      "job_id": "cd-642fcfea827548c3",
+      "auto": true,
+      "attempts": 1
+    }
+  },
+  "prd_rev": "prd_1790574439",
+  "context_rev": "ctx_1790564309_2",
+  "plan_rev": "plan_1790574441"
+}

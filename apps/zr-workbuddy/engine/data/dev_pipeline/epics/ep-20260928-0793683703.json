@@ -1,0 +1,398 @@
+{
+  "epic_id": "ep-20260928-0793683703",
+  "message": "在报表中心菜单中新增一个员工工时报表",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_hebo",
+  "created_at": 1790582609,
+  "runs": [
+    "dpj-ae2c048d584248d8"
+  ],
+  "intake_image_ids": [],
+  "updated_at": 1790582955,
+  "requirement_core": "在报表中心菜单中新增一个员工工时报表。在报表中心菜单下新增一个「员工工时报表」",
+  "artifacts": {
+    "raw_intake": {
+      "text": "在报表中心菜单中新增一个员工工时报表",
+      "has_workspace_hint": true,
+      "captured_at": 1790582609,
+      "image_ids": [],
+      "vision_text": "",
+      "vision": {},
+      "requirement_core": "在报表中心菜单中新增一个员工工时报表",
+      "vision_surface": {},
+      "normalize": {
+        "source": "user_text",
+        "one_liner": "在报表中心菜单中新增一个员工工时报表",
+        "was_sanitized": false,
+        "notes": [],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "在报表中心菜单中新增一个员工工时报表。在报表中心菜单下新增一个「员工工时报表」",
+      "goal_one_liner": "在报表中心菜单中新增一个员工工时报表",
+      "user_card": {
+        "one_liner": "在报表中心菜单中新增一个员工工时报表",
+        "what": "在报表中心菜单中新增一个员工工时报表。在报表中心菜单下新增一个「员工工时报表」",
+        "how": "在报表中心菜单中增加「员工工时报表」入口，并实现该报表页面",
+        "done_when": [
+          "报表中心菜单中出现「员工工时报表」入口",
+          "点击该入口可打开员工工时报表页面",
+          "改动不超过 22 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "新功能全栈页",
+        "scenario_id": "full_feature",
+        "user_quote": "在报表中心菜单中新增一个员工工时报表"
+      },
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "med",
+        "reason": "像新报表/管理页，按全栈页规划"
+      },
+      "scope": {
+        "in_scope": [
+          "在报表中心菜单中新增一个员工工时报表",
+          "报表中心菜单中出现「员工工时报表」入口",
+          "点击该入口可打开员工工时报表页面"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "backend/app/routers/reports.py",
+          "**/reports/**",
+          "**/employee*work*",
+          "frontend/src/api/reports/**",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*"
+        ],
+        "must_include_paths": [
+          "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "backend/app/routers/reports.py"
+        ],
+        "forbid_paths": [
+          "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "frontend/src/views/warehouse/LowStockAlertsView.vue"
+        ],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "在报表中心菜单中新增一个员工工时报表。在报表中心菜单下新增一个「员工工时报表」",
+        "scenario_id": "full_feature"
+      },
+      "acceptance": [
+        "在报表中心菜单中新增一个员工工时报表",
+        "报表中心菜单中出现「员工工时报表」入口",
+        "点击该入口可打开员工工时报表页面",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790582610"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790564309_2"
+    },
+    "plan": {
+      "problem": "在报表中心菜单中新增一个员工工时报表",
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "med",
+        "reason": "像新报表/管理页，按全栈页规划"
+      },
+      "scope": {
+        "in_scope": [
+          "在报表中心菜单中新增一个员工工时报表",
+          "报表中心菜单中出现「员工工时报表」入口",
+          "点击该入口可打开员工工时报表页面"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "backend/app/routers/reports.py",
+          "**/reports/**",
+          "**/employee*work*",
+          "frontend/src/api/reports/**",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*"
+        ],
+        "must_include_paths": [
+          "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "backend/app/routers/reports.py"
+        ],
+        "forbid_paths": [
+          "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "frontend/src/views/warehouse/LowStockAlertsView.vue"
+        ],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "在报表中心菜单中新增一个员工工时报表。在报表中心菜单下新增一个「员工工时报表」",
+        "scenario_id": "full_feature"
+      },
+      "must_touch": [
+        "菜单/导航（入口可见）",
+        "路由注册（页面可达）",
+        "页面/组件（完整主路径）",
+        "后端接口（与页面配套）"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "菜单与路由可达",
+        "页面主路径可操作；接口可调通"
+      ],
+      "files_hint": "frontend/src/views/reports/EmployeeWorkHourReportView.vue, backend/app/routers/reports.py, **/reports/**, **/employee*work*, frontend/src/api/reports/**, **/routers/reports*, **/schemas.py, frontend/src/views/reports/, **/layouts/**, **/router*, README.md, readme.md",
+      "rev": "plan_1790582612"
+    },
+    "implement": {
+      "cursor_job_id": "ccj-20260928-160603-09e0",
+      "changed_files": [
+        "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+        "frontend/src/config/reportFeatures.js",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "auto": true,
+      "gate": {
+        "class": "pass",
+        "reason": "pass",
+        "summary": "写码完成（ccj-20260928-160603-09e0，变更 4 项）"
+      },
+      "scope_audit": {
+        "ok": true,
+        "file_count": 4,
+        "violations": [],
+        "detail": "变更 4 个文件，在范围内",
+        "max_files": 22
+      },
+      "content_audit": {
+        "ok": true,
+        "violations": [],
+        "detail": "无明确列名，跳过内容文案门禁"
+      }
+    },
+    "validate_last": {
+      "ok": true,
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "results": [
+        {
+          "name": "py-compile-root",
+          "cmd": "python -m compileall -q .",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 5.22
+        },
+        {
+          "name": "git-diff-check",
+          "cmd": "git diff --check",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "warning: in the working copy of 'backend/app/routers/reports.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'backend/app/schemas.py', LF will be replaced by CRLF the next time Git touches it",
+          "duration_sec": 0.18
+        }
+      ],
+      "auto_defaults": true
+    },
+    "review_fail_evidence": {
+      "round": 1,
+      "summary": "存在 1 处高危问题，审核不通过",
+      "reason": "review_fail",
+      "report_id": "cr-6947b1af7d414222",
+      "detail": "存在 1 处高危问题，审核不通过",
+      "report_body": "代码审核汇总报告\n审核文件：frontend/src/views/reports/EmployeeWorkHourReportView.vue、frontend/src/config/reportFeatures.js、backend/app/routers/reports.py\n审核日期：2026-09-28\n审核人：Viprasol + workbuddy-gate-90（Skill `zr-workbuddy-code-review`）\n工程路径：D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n---\n一、总体评价\n🔴 高危问题：共 1 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n本次审核共发现 8 个问题。\n所有问题均基于已读源码/配置，方法论为 Viprasol + workbuddy-gate-90（及源码规则补种），位置与代码片段对应原始文件。\n---\n二、详细问题清单（汇总后）\n🔴 高危 问题1 — 员工工时报表合计与列表口径不一致，页面数据自相矛盾\n文件：backend/app/routers/reports.py　位置：见相关片段\n问题描述：list_employee_work_hours_report 在 dimension=='detail' 且未传 approval_status 时，列表展示全部审批状态（含 pending/rejected），但合计因 include_unapproved=False 且 status_filter is None 而只统计 approved。前端固定传 dimension:'detail' 且不传 approval_status，默认进入页面即出现「表格工时之和 ≠ 合计」，误导审批与工时结算。触发条件：默认打开页面（不选审批筛选）。\n// ❌ 当前代码\n```\nif status_filter is None and dimension != \"detail\":\n        item_status = \"approved\"\n    else:\n        item_status = status_filter\n    all_items = _build_work_hour_report_items(db, approval_status=item_status, **build_kwargs)\n    total = len(all_items)\n    if include_unapproved or status_filter is not None:\n        sum_items = all_items\n    else:\n        sum_items = _build_work_hour_report_items(db, approval_status=\"approved\", **build_kwargs)\n    work_hours_sum = round(sum(i.work_hours for i in sum_items), 2)\n```\n修改建议：让合计与列表口径显式对齐：方案一，明细维度下合计默认与列表同口径；方案二（推荐），保留 R01 语义但在响应中回传 sum_scope 字段（如 'approved_only'），前端在合计旁显示「仅已通过」角标。验证：默认打开页面，确认表格行工时之和与合计一致，或合计旁出现「仅已通过」标识且数值等于 approved 行之和。\n// ✅ 正确做法\n```\n# backend/app/routers/reports.py\n    if include_unapproved or status_filter is not None:\n        sum_items = all_items\n        sum_scope = \"list\"\n    else:\n        sum_items = _build_work_hour_report_items(db, approval_status=\"approved\", **build_kwargs)\n        sum_scope = \"approved_only\"\n    work_hours_sum = round(sum(i.work_hours for i in sum_items), 2)\n    overtime_hours_sum = round(sum(i.overtime_hours for i in sum_items), 2)\n    return EmployeeWorkHourReportListResponse(\n        items=page_items, total=total, page=page, page_size=page_size,\n        dimension=dimension, work_hours_sum=work_hours_sum,\n        overtime_hours_sum=overtime_hours_sum, sum_scope=sum_scope,\n    )\n\n<!-- frontend/src/views/reports/EmployeeWorkHourReportView.vue -->\n<span class=\"sum-text\">\n  工时合计 {{ formatHours(workHoursSum) }}\n  <el-tag v-if=\"sumScope === 'approved_only'\" size=\"small\" type=\"warning\">仅已通过</el-tag>\n</span>\n\n// script\nconst sumScope = ref('list')\n// loadReport 内：sumScope.value = resp.sum_scope || 'list'\n```\n---\n🟡 中危 问题2 — 明细维度全量加载后内存分页，数据量增长后存在性能与内存风险\n文件：backend/app/routers/reports.py　位置：见相关片段\n问题描述：_build_work_hour_report_items 在 dimension=='detail' 时执行 .all() 拉取全部匹配行，再由调用方做内存分页；日期范围默认 30 天且无上限，导出接口同样全量加载。数据量增大或用户放宽日期范围时，单次请求内存与响应时间线性膨胀，可能拖慢甚至打满 worker。触发条件：数据量增大或手动放宽日期范围（如一年）。\n// ❌ 当前代码\n```\nif dimension == \"detail\":\n        rows = query.order_by(\n            EmployeeWorkHour.work_date.desc(),\n            EmployeeWorkHour.employee_no,\n            EmployeeWorkHour.id.desc(),\n        ).all()\n        return [ ... for row in rows ]\n```\n修改建议：明细维度改为数据库层分页：为 _build_work_hour_report_items 增加 limit/offset 参数，仅对 detail 维度下推；调用处先 count 再分页。同时给 date_from/date_to 增加最大跨度校验（如 366 天）。验证：构造 5 万行数据，请求 page=1&page_size=10，观察响应时间与内存；修复后应只取 10 行。\n// ✅ 正确做法\n```\ndef _build_work_hour_report_items(\n    db: Session, *, date_from: date, date_to: date,\n    department: str | None, employee_no: str | None, project_name: str | None,\n    shift_type: str | None = None, approval_status: str | None = None,\n    dimension: str, limit: int | None = None, offset: int | None = None,\n) -> list[EmployeeWorkHourReportItem]:\n    query = db.query(EmployeeWorkHour)\n    query = _apply_work_hour_filters(query, date_from=date_from, date_to=date_to,\n        department=department, employee_no=employee_no, project_name=project_name,\n        shift_type=shift_type, approval_status=approval_status)\n    if dimension == \"detail\":\n        query = query.order_by(EmployeeWorkHour.work_date.desc(),\n            EmployeeWorkHour.employee_no, EmployeeWorkHour.id.desc())\n        if offset is not None:\n            query = query.offset(offset)\n        if limit is not None:\n            query = query.limit(limit)\n        rows = query.all()\n        return [ ... ]\n\n# 调用处\n    if dimension == \"detail\":\n        base_q = _apply_work_hour_filters(db.query(EmployeeWorkHour),\n            date_from=date_from, date_to=date_to, department=department,\n            employee_no=employee_no, project_name=project_name,\n            shift_type=shift_type, approval_status=item_status)\n        total = base_q.count()\n        page_items = _build_work_hour_report_items(db, approval_status=item_status,\n            dimension=dimension, limit=page_size, offset=(page - 1) * page_size, **build_kwargs)\n```\n---\n🟡 中危 问题3 — 前端错误提示直接透出 err.message，未区分错误类型\n文件：frontend/src/views/reports/EmployeeWorkHourReportView.vue　位置：见相关片段\n问题描述：loadReport 的 catch 直接 ElMessage.error(err.message || '加载报表失败')。后端返回 401/403/500 或网络中断时，err.message 可能是英文技术信息（如 Request failed with status code 500），用户无法理解；且未对 401 做跳登录处理。触发条件：token 过期或后端异常时复现。\n// ❌ 当前代码\n```\n} catch (err) {\n    ElMessage.error(err.message || '加载报表失败')\n    items.value = []\n    total.value = 0\n    workHoursSum.value = 0\n  } finally {\n```\n修改建议：按状态码分支提示，401 引导重新登录，403 提示无权限，其余统一友好文案；保留原始错误到 console 便于排查。验证：手动改坏 token 请求，确认提示为中文且不泄露技术栈。\n// ✅ 正确做法\n```\n} catch (err) {\n    const status = err?.response?.status\n    if (status === 401) {\n      ElMessage.error('登录已过期，请重新登录')\n    } else if (status === 403) {\n      ElMessage.error('无权限查看该报表')\n    } else {\n      ElMessage.error('加载报表失败，请稍后重试')\n    }\n    console.error('[EmployeeWorkHourReport] load failed:', err)\n    items.value = []\n    total.value = 0\n    workHoursSum.value = 0\n  } finally {\n```\n---\n🟡 中危 问题4 — 报表注册表残留流水线验证注释\n文件：frontend/src/config/reportFeatures.js　位置：约第 1 行\n问题描述：reportFeatures.js 顶部保留两条调试/流水线验证注释，属于开发过程残留，污染配置入口可读性，并暗示该文件曾被自动化脚本改写。触发条件：静态阅读即见。\n// ❌ 当前代码\n```\n// workbuddy-e2e-pipeline-verify-20260925\n// mes-dev-pipeline-tooling-verify-20260926\n/**\n * 报表功能注册表（唯一配置入口）。\n```\n修改建议：删除这两行注释，保留正式的文件说明注释。验证：文件首行应为 /** 文档注释。\n// ✅ 正确做法\n```\n// frontend/src/config/reportFeatures.js\n/**\n * 报表功能注册表（唯一配置入口）。\n * - menu: false → 侧栏隐藏（删菜单只改这里，勿删 api/视图文件）\n * ...\n */\n```\n---\n🟡 中危 问题5 — 合计区初始值 0 与明细列 — 语义不一致\n文件：frontend/src/views/reports/EmployeeWorkHourReportView.vue　位置：见相关片段\n问题描述：workHoursSum 初始为 0，formatHours(0) 返回 '0.00'；而明细列在值为 null/undefined 时显示 '—'。查询无数据时合计区显示 0.00 而非 —，与「无数据」语义不符，用户可能误以为存在 0 工时记录。触发条件：查询条件无匹配数据时复现。\n// ❌ 当前代码\n```\nconst workHoursSum = ref(0)\n...\nfunction formatHours(value) {\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(2)\n}\n```\n修改建议：将 workHoursSum 初始值改为 null，formatHours 对 null/undefined 返回 '—'；或在无数据时（total === 0）显示 —。验证：查询一个不存在的工号，合计区应显示 —。\n// ✅ 正确做法\n```\nconst workHoursSum = ref(null)\n\nfunction formatHours(value) {\n  if (value === null || value === undefined || value === '') return '—'\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(2)\n}\n\n// loadReport 成功分支\nworkHoursSum.value = resp.total ? (resp.work_hours_sum ?? 0) : null\n```\n---\n🟢 低危 问题6 — 工号输入未 trim，与后端精确匹配组合易致查不到\n文件：frontend/src/views/reports/EmployeeWorkHourReportView.vue　位置：见相关片段\n问题描述：filters.employeeNo 为自由文本输入，用户可能带入首尾空格；后端 EmployeeWorkHour.employee_no == employee_no 为精确匹配，带空格即查不到且无提示。触发条件：输入 'E001 ' 后查询。\n// ❌ 当前代码\n```\n<el-input v-model=\"filters.employeeNo\" placeholder=\"工号\" clearable style=\"width: 120px\" />\n```\n修改建议：提交前对 employeeNo 做 trim()；或在后端 _apply_work_hour_filters 中对 employee_no 做 strip()。验证：输入带空格工号，仍能查到。\n// ✅ 正确做法\n```\n// loadReport 内\nemployeeNo: filters.employeeNo.trim() || undefined,\n```\n---\n🟢 低危 问题7 — equipment-downtime 下线项缺少原因说明\n文件：frontend/src/config/reportFeatures.js　位置：见相关片段\n问题描述：reportFeatures.js 中 equipment-downtime 项 enabled:false、menu:false、hub:false，但未说明下线原因，后续维护者可能误开或误删关联文件。触发条件：静态阅读即见。\n// ❌ 当前代码\n```\n{\n    id: 'equipment-downtime',\n    ...\n    menu: false,\n    hub: false,\n    enabled: false,\n  },\n```\n修改建议",
+      "must_fix": [
+        "🔴 高危 — 员工工时报表合计与列表口径不一致，页面数据自相矛盾｜文件：backend/app/routers/reports.py｜修复：让合计与列表口径显式对齐：方案一，明细维度下合计默认与列表同口径；方案二（推荐），保留 R01 语义但在响应中回传 sum_scope 字段（如 'approved_only'），前端在合计旁显示「仅已通过」角标。验证：默认打开页面，确认表格行工时之和与合计一致，或合计旁出现「仅已通过」标识且数值等于 approved 行之和。"
+      ],
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+        "frontend/src/config/reportFeatures.js",
+        "backend/app/routers/reports.py"
+      ],
+      "blocker_count": 1,
+      "gate_findings": [
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": null,
+          "severity": "high",
+          "title": "员工工时报表合计与列表口径不一致，页面数据自相矛盾",
+          "description": "list_employee_work_hours_report 在 dimension=='detail' 且未传 approval_status 时，列表展示全部审批状态（含 pending/rejected），但合计因 include_unapproved=False 且 status_filter is None 而只统计 approved。前端固定传 dimension:'detail' 且不传 approval_status，默认进入页面即出现「表格工时之和 ≠ 合计」，误导审批与工时结算。触发条件：默认打开页面（不选审批筛选）。",
+          "code_snippet": "if status_filter is None and dimension != \"detail\":\n        item_status = \"approved\"\n    else:\n        item_status = status_filter\n    all_items = _build_work_hour_report_items(db, approval_status=item_status, **build_kwargs)\n    total = len(all_items)\n    if include_unapproved or status_filter is not None:\n        sum_items = all_items\n    else:\n        sum_items = _build_work_hour_report_items(db, approval_status=\"approved\", **build_kwargs)\n    work_hours_sum = round(sum(i.work_hours for i in sum_items), 2)",
+          "fix_suggestion": "让合计与列表口径显式对齐：方案一，明细维度下合计默认与列表同口径；方案二（推荐），保留 R01 语义但在响应中回传 sum_scope 字段（如 'approved_only'），前端在合计旁显示「仅已通过」角标。验证：默认打开页面，确认表格行工时之和与合计一致，或合计旁出现「仅已通过」标识且数值等于 approved 行之和。",
+          "fix_code": "# backend/app/routers/reports.py\n    if include_unapproved or status_filter is not None:\n        sum_items = all_items\n        sum_scope = \"list\"\n    else:\n        sum_items = _build_work_hour_report_items(db, approval_status=\"approved\", **build_kwargs)\n        sum_scope = \"approved_only\"\n    work_hours_sum = round(sum(i.work_hours for i in sum_items), 2)\n    overtime_hours_sum = round(sum(i.overtime_hours for i in sum_items), 2)\n    return EmployeeWorkHourReportListResponse(\n        items=page_items, total=total, page=page, page_size=page_size,\n        dimension=dimension, work_hours_sum=work_hours_sum,\n        overtime_hours_sum=overtime_hours_sum, sum_scope=sum_scope,\n    )\n\n<!-- frontend/src/views/reports/EmployeeWorkHourReportView.vue -->\n<span class=\"sum-text\">\n  工时合计 {{ formatHours(workHoursSum) }}\n  <el-tag v-if=\"sumScope === 'approved_only'\" size=\"small\" type=\"warning\">仅已通过</el-tag>\n</span>\n\n// script\nconst sumScope = ref('list')\n// loadReport 内：sumScope.value = resp.sum_scope || 'list'"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": null,
+          "severity": "medium",
+          "title": "明细维度全量加载后内存分页，数据量增长后存在性能与内存风险",
+          "description": "_build_work_hour_report_items 在 dimension=='detail' 时执行 .all() 拉取全部匹配行，再由调用方做内存分页；日期范围默认 30 天且无上限，导出接口同样全量加载。数据量增大或用户放宽日期范围时，单次请求内存与响应时间线性膨胀，可能拖慢甚至打满 worker。触发条件：数据量增大或手动放宽日期范围（如一年）。",
+          "code_snippet": "if dimension == \"detail\":\n        rows = query.order_by(\n            EmployeeWorkHour.work_date.desc(),\n            EmployeeWorkHour.employee_no,\n            EmployeeWorkHour.id.desc(),\n        ).all()\n        return [ ... for row in rows ]",
+          "fix_suggestion": "明细维度改为数据库层分页：为 _build_work_hour_report_items 增加 limit/offset 参数，仅对 detail 维度下推；调用处先 count 再分页。同时给 date_from/date_to 增加最大跨度校验（如 366 天）。验证：构造 5 万行数据，请求 page=1&page_size=10，观察响应时间与内存；修复后应只取 10 行。",
+          "fix_code": "def _build_work_hour_report_items(\n    db: Session, *, date_from: date, date_to: date,\n    department: str | None, employee_no: str | None, project_name: str | None,\n    shift_type: str | None = None, approval_status: str | None = None,\n    dimension: str, limit: int | None = None, offset: int | None = None,\n) -> list[EmployeeWorkHourReportItem]:\n    query = db.query(EmployeeWorkHour)\n    query = _apply_work_hour_filters(query, date_from=date_from, date_to=date_to,\n        department=department, employee_no=employee_no, project_name=project_name,\n        shift_type=shift_type, approval_status=approval_status)\n    if dimension == \"detail\":\n        query = query.order_by(EmployeeWorkHour.work_date.desc(),\n            EmployeeWorkHour.employee_no, EmployeeWorkHour.id.desc())\n        if offset is not None:\n            query = query.offset(offset)\n        if limit is not None:\n            query = query.limit(limit)\n        rows = query.all()\n        return [ ... ]\n\n# 调用处\n    if dimension == \"detail\":\n        base_q = _apply_work_hour_filters(db.query(EmployeeWorkHour),\n            date_from=date_from, date_to=date_to, department=department,\n            employee_no=employee_no, project_name=project_name,\n            shift_type=shift_type, approval_status=item_status)\n        total = base_q.count()\n        page_items = _build_work_hour_report_items(db, approval_status=item_status,\n            dimension=dimension, limit=page_size, offset=(page - 1) * page_size, **build_kwargs)"
+        },
+        {
+          "file": "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "line": null,
+          "severity": "medium",
+          "title": "前端错误提示直接透出 err.message，未区分错误类型",
+          "description": "loadReport 的 catch 直接 ElMessage.error(err.message || '加载报表失败')。后端返回 401/403/500 或网络中断时，err.message 可能是英文技术信息（如 Request failed with status code 500），用户无法理解；且未对 401 做跳登录处理。触发条件：token 过期或后端异常时复现。",
+          "code_snippet": "} catch (err) {\n    ElMessage.error(err.message || '加载报表失败')\n    items.value = []\n    total.value = 0\n    workHoursSum.value = 0\n  } finally {",
+          "fix_suggestion": "按状态码分支提示，401 引导重新登录，403 提示无权限，其余统一友好文案；保留原始错误到 console 便于排查。验证：手动改坏 token 请求，确认提示为中文且不泄露技术栈。",
+          "fix_code": "} catch (err) {\n    const status = err?.response?.status\n    if (status === 401) {\n      ElMessage.error('登录已过期，请重新登录')\n    } else if (status === 403) {\n      ElMessage.error('无权限查看该报表')\n    } else {\n      ElMessage.error('加载报表失败，请稍后重试')\n    }\n    console.error('[EmployeeWorkHourReport] load failed:', err)\n    items.value = []\n    total.value = 0\n    workHoursSum.value = 0\n  } finally {"
+        },
+        {
+          "file": "frontend/src/config/reportFeatures.js",
+          "line": 1,
+          "severity": "medium",
+          "title": "报表注册表残留流水线验证注释",
+          "description": "reportFeatures.js 顶部保留两条调试/流水线验证注释，属于开发过程残留，污染配置入口可读性，并暗示该文件曾被自动化脚本改写。触发条件：静态阅读即见。",
+          "code_snippet": "// workbuddy-e2e-pipeline-verify-20260925\n// mes-dev-pipeline-tooling-verify-20260926\n/**\n * 报表功能注册表（唯一配置入口）。",
+          "fix_suggestion": "删除这两行注释，保留正式的文件说明注释。验证：文件首行应为 /** 文档注释。",
+          "fix_code": "// frontend/src/config/reportFeatures.js\n/**\n * 报表功能注册表（唯一配置入口）。\n * - menu: false → 侧栏隐藏（删菜单只改这里，勿删 api/视图文件）\n * ...\n */"
+        },
+        {
+          "file": "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "line": null,
+          "severity": "medium",
+          "title": "合计区初始值 0 与明细列 — 语义不一致",
+          "description": "workHoursSum 初始为 0，formatHours(0) 返回 '0.00'；而明细列在值为 null/undefined 时显示 '—'。查询无数据时合计区显示 0.00 而非 —，与「无数据」语义不符，用户可能误以为存在 0 工时记录。触发条件：查询条件无匹配数据时复现。",
+          "code_snippet": "const workHoursSum = ref(0)\n...\nfunction formatHours(value) {\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(2)\n}",
+          "fix_suggestion": "将 workHoursSum 初始值改为 null，formatHours 对 null/undefined 返回 '—'；或在无数据时（total === 0）显示 —。验证：查询一个不存在的工号，合计区应显示 —。",
+          "fix_code": "const workHoursSum = ref(null)\n\nfunction formatHours(value) {\n  if (value === null || value === undefined || value === '') return '—'\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(2)\n}\n\n// loadReport 成功分支\nworkHoursSum.value = resp.total ? (resp.work_hours_sum ?? 0) : null"
+        },
+        {
+          "file": "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "line": null,
+          "severity": "low",
+          "title": "工号输入未 trim，与后端精确匹配组合易致查不到",
+          "description": "filters.employeeNo 为自由文本输入，用户可能带入首尾空格；后端 EmployeeWorkHour.employee_no == employee_no 为精确匹配，带空格即查不到且无提示。触发条件：输入 'E001 ' 后查询。",
+          "code_snippet": "<el-input v-model=\"filters.employeeNo\" placeholder=\"工号\" clearable style=\"width: 120px\" />",
+          "fix_suggestion": "提交前对 employeeNo 做 trim()；或在后端 _apply_work_hour_filters 中对 employee_no 做 strip()。验证：输入带空格工号，仍能查到。",
+          "fix_code": "// loadReport 内\nemployeeNo: filters.employeeNo.trim() || undefined,"
+        },
+        {
+          "file": "frontend/src/config/reportFeatures.js",
+          "line": null,
+          "severity": "low",
+          "title": "equipment-downtime 下线项缺少原因说明",
+          "description": "reportFeatures.js 中 equipment-downtime 项 enabled:false、menu:false、hub:false，但未说明下线原因，后续维护者可能误开或误删关联文件。触发条件：静态阅读即见。",
+          "code_snippet": "{\n    id: 'equipment-downtime',\n    ...\n    menu: false,\n    hub: false,\n    enabled: false,\n  },",
+          "fix_suggestion": "补充一行注释说明下线原因与恢复条件。验证：阅读该项即可知为何关闭。",
+          "fix_code": "{\n    id: 'equipment-downtime',\n    // 2026-09 起暂时下线：数据源 equipment_runtime_logs 待补全，恢复前勿开 enabled\n    ...\n    menu: false,\n    hub: false,\n    enabled: false,\n  },"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": null,
+          "severity": "low",
+          "title": "dimension 分支使用连续 if 而非 elif，可读性差且易引入穿透",
+          "description": "_build_work_hour_report_items 中多个 if dimension == ... 分支依赖 return 提前退出，当前逻辑正确，但后续若插入不 return 的分支或调整顺序，极易产生穿透 bug。触发条件：后续维护修改该函数时。",
+          "code_snippet": "if dimension == \"detail\":\n        ...\n        return [...]\n    if dimension == \"employee\":\n        ...\n        return [...]\n    if dimension == \"employee_date\":\n        ...",
+          "fix_suggestion": "改为 if/elif/else 链，或使用 dimension -> builder 的映射表，提升可读性与扩展安全性。验证：单元测试覆盖各 dimension 返回值正确。",
+          "fix_code": "if dimension == \"detail\":\n        ...\n        return [...]\n    elif dimension == \"employee\":\n        ...\n        return [...]\n    elif dimension == \"employee_date\":\n        ...\n        return [...]\n    elif dimension == \"employee_month\":\n        ...\n        return [...]\n    elif dimension == \"project\":\n        ...\n        return [...]\n    else:  # department\n        ...\n        return [...]"
+        }
+      ]
+    },
+    "implement_fix_mandate": {
+      "round": 1,
+      "max_rounds": 3,
+      "must_fix": [
+        "🔴 高危 — 员工工时报表合计与列表口径不一致，页面数据自相矛盾｜文件：backend/app/routers/reports.py｜修复：让合计与列表口径显式对齐：方案一，明细维度下合计默认与列表同口径；方案二（推荐），保留 R01 语义但在响应中回传 sum_scope 字段（如 'approved_only'），前端在合计旁显示「仅已通过」角标。验证：默认打开页面，确认表格行工时之和与合计一致，或合计旁出现「仅已通过」标识且数值等于 approved 行之和。"
+      ],
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+        "frontend/src/config/reportFeatures.js",
+        "backend/app/routers/reports.py"
+      ],
+      "source": "review"
+    },
+    "review": {
+      "report_id": "cr-4f70591e1fea4331",
+      "auto": true,
+      "changed_only": true,
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+        "frontend/src/config/reportFeatures.js",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "skipped": false
+    },
+    "commit": {
+      "job_id": "cc-9ec9d9de2c564c67",
+      "skipped": false,
+      "can_manual_retry": false,
+      "auto": true,
+      "attempts": 1
+    },
+    "pr": {
+      "pr_url": "",
+      "skipped": true,
+      "auto": true
+    },
+    "deploy": {
+      "job_id": "cd-2e7a3e81fd884dc3",
+      "auto": true,
+      "attempts": 1
+    }
+  },
+  "prd_rev": "prd_1790582610",
+  "context_rev": "ctx_1790564309_2",
+  "plan_rev": "plan_1790582612"
+}

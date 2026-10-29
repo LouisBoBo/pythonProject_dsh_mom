@@ -1,0 +1,270 @@
+{
+  "epic_id": "ep-20261027-aa239a8de2",
+  "message": "新增员工工时报表",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_admin",
+  "created_at": 1793092838,
+  "runs": [
+    "dpj-3d9e1eaa2fdc4b2a"
+  ],
+  "intake_image_ids": [],
+  "updated_at": 1793093148,
+  "requirement_core": "新增员工工时报表。新增一个员工工时报表",
+  "artifacts": {
+    "raw_intake": {
+      "text": "新增员工工时报表",
+      "has_workspace_hint": true,
+      "captured_at": 1793092839,
+      "image_ids": [],
+      "vision_text": "",
+      "vision": {},
+      "requirement_core": "新增员工工时报表",
+      "vision_surface": {},
+      "normalize": {
+        "source": "user_text",
+        "one_liner": "新增员工工时报表",
+        "was_sanitized": false,
+        "notes": [],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "新增员工工时报表。新增一个员工工时报表",
+      "goal_one_liner": "新增员工工时报表",
+      "user_card": {
+        "one_liner": "新增员工工时报表",
+        "what": "新增员工工时报表。新增一个员工工时报表",
+        "how": "按用户原话新增员工工时报表；具体统计字段、筛选条件、数据来源与展示形式用户未说明，需向用户确认后再实施",
+        "done_when": [
+          "系统中存在名为“员工工时报表”的报表入口",
+          "可打开该报表并查看员工工时数据",
+          "改动不超过 22 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "新功能全栈页",
+        "scenario_id": "full_feature",
+        "user_quote": "新增员工工时报表"
+      },
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "med",
+        "reason": "像新报表/管理页，按全栈页规划"
+      },
+      "scope": {
+        "in_scope": [
+          "新增员工工时报表",
+          "系统中存在名为“员工工时报表”的报表入口",
+          "可打开该报表并查看员工工时数据"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的其它侧栏菜单"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "frontend/src/views/**",
+          "frontend/src/api/**",
+          "backend/app/routers/**",
+          "**/views/**",
+          "**/*.vue",
+          "**/*.tsx",
+          "**/*.jsx"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "",
+        "need_user_path_confirm": false,
+        "user_message_excerpt": "新增员工工时报表。新增一个员工工时报表",
+        "scenario_id": "full_feature"
+      },
+      "acceptance": [
+        "新增员工工时报表",
+        "系统中存在名为“员工工时报表”的报表入口",
+        "可打开该报表并查看员工工时数据",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1793092839"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/",
+        "ZR/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1792901025_2"
+    },
+    "plan": {
+      "problem": "新增员工工时报表",
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "med",
+        "reason": "像新报表/管理页，按全栈页规划"
+      },
+      "scope": {
+        "in_scope": [
+          "新增员工工时报表",
+          "系统中存在名为“员工工时报表”的报表入口",
+          "可打开该报表并查看员工工时数据"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的其它侧栏菜单"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "frontend/src/views/**",
+          "frontend/src/api/**",
+          "backend/app/routers/**",
+          "**/views/**",
+          "**/*.vue",
+          "**/*.tsx",
+          "**/*.jsx"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "",
+        "need_user_path_confirm": false,
+        "user_message_excerpt": "新增员工工时报表。新增一个员工工时报表",
+        "scenario_id": "full_feature"
+      },
+      "must_touch": [
+        "菜单/导航（入口可见）",
+        "路由注册（页面可达）",
+        "页面/组件（完整主路径）",
+        "后端接口（与页面配套）"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "菜单与路由可达",
+        "页面主路径可操作；接口可调通"
+      ],
+      "files_hint": "frontend/src/views/**, frontend/src/api/**, backend/app/routers/**, **/views/**, **/*.vue, **/*.tsx, **/*.jsx, README.md, readme.md, backend/, docs/, frontend/",
+      "rev": "plan_1793092843"
+    },
+    "implement": {
+      "cursor_job_id": "cch-20261027-172044-44eb",
+      "changed_files": [
+        "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+        "frontend/src/config/reportFeatures.js"
+      ],
+      "auto": true,
+      "gate": {
+        "class": "pass",
+        "reason": "pass",
+        "summary": "写码完成（cch-20261027-172044-44eb，变更 2 项）"
+      },
+      "scope_audit": {
+        "ok": true,
+        "file_count": 2,
+        "violations": [],
+        "detail": "变更 2 个文件，在范围内",
+        "max_files": 22
+      },
+      "content_audit": {
+        "ok": true,
+        "violations": [],
+        "detail": "无明确列名，跳过内容文案门禁"
+      }
+    },
+    "validate_last": {
+      "ok": true,
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "results": [
+        {
+          "name": "py-compile-root",
+          "cmd": "python -m compileall -q .",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 7.14
+        },
+        {
+          "name": "git-diff-check",
+          "cmd": "git diff --check",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 0.23
+        }
+      ],
+      "auto_defaults": true,
+      "used_profile": false
+    },
+    "review": {
+      "report_id": "cr-d2c42392c64d464d",
+      "auto": true,
+      "changed_only": true,
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+        "frontend/src/config/reportFeatures.js"
+      ],
+      "skipped": false
+    },
+    "commit": {
+      "job_id": "cc-fe7e1e84eba646a6",
+      "skipped": false,
+      "can_manual_retry": false,
+      "auto": true,
+      "attempts": 1
+    },
+    "pr": {
+      "pr_url": "",
+      "skipped": true,
+      "not_applicable": false,
+      "provider": "github",
+      "auto": true
+    },
+    "deploy": {
+      "job_id": "cd-713aa4aafd134599",
+      "auto": true,
+      "attempts": 1
+    }
+  },
+  "prd_rev": "prd_1793092839",
+  "context_rev": "ctx_1792901025_2",
+  "plan_rev": "plan_1793092843"
+}

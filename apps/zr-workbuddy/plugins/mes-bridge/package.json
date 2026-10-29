@@ -1,0 +1,41 @@
+{
+  "name": "@dsh-external/dsh-mes-bridge",
+  "version": "0.4.2",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib"
+  ],
+  "description": "ZR-WorkBuddy Bridge：唯一常驻 Cordis 包；features 热插拔 + 聊天面板壳",
+  "scripts": {
+    "build:client": "node ../../../../scripts/build-mes-bridge-client.mjs",
+    "check:client": "node ../../../../scripts/build-mes-bridge-client.mjs --check",
+    "check:client-css": "node ../../../../scripts/build-mes-bridge-client.mjs --check",
+    "test:coding": "node --test tests/test_coding_acceptance.js tests/test_coding_continue_handoff.js tests/test_coding_dup_guard.js tests/test_coding_fail_kind.js tests/test_coding_image_localize.js tests/test_coding_zod_gate.js",
+    "test:coding-hard-pits": "node ../../../../scripts/lib/run_coding_hard_pit_tests.mjs"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "dshApp": {
+    "cordisPlugin": true,
+    "role": "bridge"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-tools": "link:../../../../vendor/@deepseek-ai/dsh-tools",
+    "@dsh-external/mes-runtime": "link:../mes-runtime"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "0.25.0"
+  }
+}

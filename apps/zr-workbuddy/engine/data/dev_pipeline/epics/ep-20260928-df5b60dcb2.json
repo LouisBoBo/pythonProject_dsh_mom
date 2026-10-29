@@ -1,0 +1,295 @@
+{
+  "epic_id": "ep-20260928-df5b60dcb2",
+  "message": "【界面锚定】员工工时报表 【现有表头】日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、审批 【改动】员工工时报表删除加班工时。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把入库列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框/箭头/高亮：位于第9列“加班工时”所在列；标注与改动暗示；高亮：位于第9列“加班工时”所在列；箭头/高亮：位于第9列“加班工时”所在列\n\n【识图摘录】\nB. 软件业务界面截图（列表）\n\n### 页面定位\n- 页面标题：员工工时报表\n- 菜单/导航路径：未见\n- 页面类型：列表页\n\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n\n### 表格（若有）\n- 表头列名（从左到右完整列出）：日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、审批\n- 可见示例行（最多 3 行）：\n  - 2026-09-28、E1001、张三、生产一部、PCB-A量产项目、贴片工序、白班、8.00、1.00、已通过\n  - 2026-09-27、E1001、张三、生产一部、PCB-A量产项目、贴片工序、白班、8.00、1.00、已通过\n  - 2026-09-26、E1001、张三、生产一部、PCB-A量产项目、贴片工序、白班、8.00、1.50、已通过\n\n### 标注与改动暗示\n- 附图附加文字：员工工时报表删除加班工时\n- 红框/箭头/高亮：位于第9列“加班工时”所在列",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_admin",
+  "created_at": 1790574933,
+  "runs": [
+    "dpj-fde33a49f8334bdc"
+  ],
+  "intake_image_ids": [
+    "vimg-2b5f404aa80cab0b",
+    "vimg-ad816ed7f88b6b24"
+  ],
+  "updated_at": 1790575001,
+  "requirement_core": "员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】。在员工工时报表列表页中删除“加班工时”这一列，列表中不再展示加班工时数据",
+  "artifacts": {
+    "raw_intake": {
+      "text": "员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】",
+      "has_workspace_hint": true,
+      "captured_at": 1790574933,
+      "image_ids": [
+        "vimg-2b5f404aa80cab0b",
+        "vimg-ad816ed7f88b6b24"
+      ],
+      "vision_text": "B. 软件业务界面截图（列表）\n\n### 页面定位\n- 页面标题：员工工时报表\n- 菜单/导航路径：未见\n- 页面类型：列表页\n\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n\n### 表格（若有）\n- 表头列名（从左到右完整列出）：日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、审批\n- 可见示例行（最多 3 行）：\n  - 2026-09-28、E1001、张三、生产一部、PCB-A量产项目、贴片工序、白班、8.00、1.00、已通过\n  - 2026-09-27、E1001、张三、生产一部、PCB-A量产项目、贴片工序、白班、8.00、1.00、已通过\n  - 2026-09-26、E1001、张三、生产一部、PCB-A量产项目、贴片工序、白班、8.00、1.50、已通过\n\n### 标注与改动暗示\n- 附图附加文字：员工工时报表删除加班工时\n- 红框/箭头/高亮：位于第9列“加班工时”所在列",
+      "vision": {
+        "ok": true,
+        "model": "glm-4v-flash",
+        "image_count": 2
+      },
+      "requirement_core": "【界面锚定】员工工时报表 【现有表头】日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、审批 【改动】员工工时报表删除加班工时。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把入库列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框/箭头/高亮：位于第9列“加班工时”所在列；标注与改动暗示；高亮：位于第9列“加班工时”所在列；箭头/高亮：位于第9列“加班工时”所在列",
+      "vision_surface": {
+        "page_title": "员工工时报表",
+        "menu_path": "",
+        "table_columns": [
+          "日期",
+          "工号",
+          "员工姓名",
+          "所属部门",
+          "项目名称",
+          "任务名称",
+          "班别",
+          "工时数",
+          "加班工时",
+          "审批"
+        ],
+        "filters": [
+          "### 筛选与操作",
+          "筛选项：未见"
+        ],
+        "buttons": [
+          "按钮：未见"
+        ],
+        "marks": [
+          "红框/箭头/高亮：位于第9列“加班工时”所在列",
+          "标注与改动暗示",
+          "高亮：位于第9列“加班工时”所在列",
+          "箭头/高亮：位于第9列“加班工时”所在列"
+        ],
+        "sample_codes": [],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "path_hints": [],
+        "raw_excerpt": "B. 软件业务界面截图（列表）\n\n### 页面定位\n- 页面标题：员工工时报表\n- 菜单/导航路径：未见\n- 页面类型：列表页\n\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n\n### 表格（若有）\n- 表头列名（从左到右完整列出）：日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、审批\n- 可见示例行（最多 3 行）：\n  - 2026-09-28、E1001、张三、生产一部、PCB-A量产项目、贴片工序、白班、8.00、1.00、已通过\n  - 2026-09-27、E1001、张三、生产一部、PCB-A量产项目、贴片工序、白班、8.00、1.00、已通过\n  - 2026-09-26、E1001、张三、生产一部、PCB-A量产项目、贴片工序、白班、8.00、1.50、已通过\n\n### 标注与改动暗示\n- 附图附加文字：员工工时报表删除加班工时\n- 红框/箭头/高亮：位于第9列“加班工时”所在列"
+      },
+      "normalize": {
+        "source": "user_plus_vision",
+        "one_liner": "员工工时报表删除加班工时",
+        "was_sanitized": true,
+        "notes": [
+          "用户短句依赖截图：已锚定识图页面，禁止只按关键词改错页"
+        ],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】。在员工工时报表列表页中删除“加班工时”这一列，列表中不再展示加班工时数据",
+      "goal_one_liner": "员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】",
+      "user_card": {
+        "one_liner": "员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】",
+        "what": "员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】。在员工工时报表列表页中删除“加班工时”这一列，列表中不再展示加班工时数据",
+        "how": "定位员工工时报表列表页，移除表头中的“加班工时”列及对应单元格数据；同步调整该列表接口，不再返回/展示加班工时字段。仅改动员工工时报表页，不影响其它业务列表页。",
+        "done_when": [
+          "员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】",
+          "员工工时报表表头不再出现“加班工时”列",
+          "列表各行不再展示加班工时数据",
+          "其余列（日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、审批）保持正常展示",
+          "改动不超过 8 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "既有能力增强",
+        "scenario_id": "enhance_existing",
+        "user_quote": "员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】"
+      },
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "用户原话：员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】",
+          "员工工时报表删除加班工时",
+          "员工工时报表表头不再出现“加班工时”列",
+          "列表各行不再展示加班工时数据",
+          "其余列（日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、审批）保持正常展示"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "**/*.vue"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "员工工时报表",
+        "target_menu": "",
+        "user_message_excerpt": "员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】。在员工工时报表列表页中删除“加班工时”这一列，列表中不再展示加班工时数据",
+        "scenario_id": "enhance_existing"
+      },
+      "acceptance": [
+        "用户原话：员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】",
+        "员工工时报表删除加班工时",
+        "员工工时报表表头不再出现“加班工时”列",
+        "列表各行不再展示加班工时数据",
+        "其余列（日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、审批）保持正常展示",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790574943"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790564309_2"
+    },
+    "plan": {
+      "problem": "员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】",
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "用户原话：员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】",
+          "员工工时报表删除加班工时",
+          "员工工时报表表头不再出现“加班工时”列",
+          "列表各行不再展示加班工时数据",
+          "其余列（日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、审批）保持正常展示"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "**/*.vue"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "员工工时报表",
+        "target_menu": "",
+        "user_message_excerpt": "员工工时报表删除加班工时\n【附图:vimg-2b5f404aa80cab0b】。在员工工时报表列表页中删除“加班工时”这一列，列表中不再展示加班工时数据",
+        "scenario_id": "enhance_existing"
+      },
+      "must_touch": [
+        "既有页面或接口的增量改动",
+        "必要时菜单文案/权限点"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "增强点可验收；原主路径不回归"
+      ],
+      "files_hint": "**/reports/**, **/employee*work*, **/routers/reports*, **/schemas.py, **/*.vue, README.md, readme.md, backend/, docs/, frontend/",
+      "rev": "plan_1790574946"
+    },
+    "implement": {
+      "cursor_job_id": "ccj-20260928-135547-bfff",
+      "changed_files": [
+        "frontend/src/views/reports/EmployeeWorkHourReportView.vue"
+      ],
+      "auto": true,
+      "gate": {
+        "class": "retry_delivery",
+        "reason": "content_gap",
+        "summary": "写码交付内容未达标：缺「班工时”这一」"
+      },
+      "scope_audit": {
+        "ok": true,
+        "file_count": 1,
+        "violations": [],
+        "detail": "变更 1 个文件，在范围内",
+        "max_files": 8
+      },
+      "content_audit": {
+        "ok": false,
+        "violations": [
+          "需求要求落地「班工时”这一」，前端源码未见该表头/文案（以用户意图为准，勿擅自换成其它列）"
+        ],
+        "detail": "缺「班工时”这一」",
+        "checked": [
+          "frontend/src/views/reports/EmployeeWorkHourReportView.vue"
+        ],
+        "labels": [
+          "班工时”这一"
+        ]
+      }
+    },
+    "implement_fix_mandate": {
+      "round": 1,
+      "max_rounds": 3,
+      "must_fix": [
+        "需求要求落地「班工时”这一」，前端源码未见该表头/文案（以用户意图为准，勿擅自换成其它列）",
+        "按用户意图补齐列/字段文案（勿擅自换成需求未写的列）",
+        "不要扩大改动面，不要改其它业务列表页"
+      ],
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHourReportView.vue"
+      ],
+      "source": "content_gap"
+    },
+    "implement_gate_verdict": {
+      "class": "retry_delivery",
+      "reason": "content_gap",
+      "summary": "写码交付内容未达标：缺「班工时”这一」",
+      "violations": [
+        "需求要求落地「班工时”这一」，前端源码未见该表头/文案（以用户意图为准，勿擅自换成其它列）"
+      ]
+    },
+    "scope_fail_evidence": {
+      "detail": "写码交付内容未达标：缺「班工时”这一」",
+      "violations": [
+        "需求要求落地「班工时”这一」，前端源码未见该表头/文案（以用户意图为准，勿擅自换成其它列）"
+      ],
+      "file_count": 1,
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHourReportView.vue"
+      ],
+      "gate_reason": "content_gap"
+    }
+  },
+  "prd_rev": "prd_1790574943",
+  "context_rev": "ctx_1790564309_2",
+  "plan_rev": "plan_1790574946"
+}

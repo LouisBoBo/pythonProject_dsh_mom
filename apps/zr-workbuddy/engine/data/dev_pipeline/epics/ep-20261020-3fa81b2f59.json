@@ -1,0 +1,303 @@
+{
+  "epic_id": "ep-20261020-3fa81b2f59",
+  "message": "员工工时报表在红框处新增班别字段（用户提到的红框截图未随消息传上来，请在员工工时报表中定位对应区域新增「班别」字段）",
+  "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_admin",
+  "created_at": 1792485557,
+  "runs": [
+    "dpj-e29e0fab75b74a67"
+  ],
+  "intake_image_ids": [],
+  "session_context": {
+    "prior_run_id": "dpj-b907cc78b8a7470a",
+    "prior_epic_id": "ep-20261020-ef4a3f7abd",
+    "prior_message": "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、日期、项目、工时、加班、审批状态 【改动】员工工时报表在红框处新增班别字段。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把其它列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框处新增班别字段；红框/箭头/高亮：位于第4列和第5列之间；标注与改动暗示；高亮：位于第4列和第5列之间 【路径待确认】工程内未自动定位到与该页面标题匹配的文件；请用户指出要改的页面/路由文件，禁止猜测其它仓库的目录习惯。\n\n【识图摘录】\nB. 若是软件业务界面截图（列表/表单/看板）\n\n### 页面定位\n- 页面标题：员工工时报表\n- 菜单/导航路径：未见\n- 页面类型：列表页\n\n### 筛选与操作\n- 筛选项：日期范围（2026-10-14 至 2026-10-20）、部门（全部）、视图（明细）、按员工汇总\n- 按钮：查询、重置\n\n### 表格（若有）\n- 表头列名（从左到右完整列出）：员工、工号、部门、日期、项目、工时、加班、审批状态\n- 可见示例行（最多 3 行）：\n  - 张三、E1001、生产一部、2026-10-20、PCB-A量产项目、8.0、1.0、已通过\n  - 张三、E1001、生产一部、2026-10-19、PCB-A量产项目、8.0、1.0、已通过\n  - 李四、E1002、生产一部、2026-10-17、PCB-B试产项目、7.5、0.5、已通过\n- 分页/合计文案：Total 7, 10/page\n\n### 标注与改动暗示\n- 附图附加文字：员工工时报表在红框处新增班别字段\n- 红框/箭头/高亮：位于第4列和第5列之间\n- 改动意图采用附加文字原文\n\n用户附加文字：员工工时报表在红框处新增班别字段",
+    "prior_workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+    "prior_status": "running",
+    "prior_outcome": null,
+    "prior_current_step": "2"
+  },
+  "artifacts": {
+    "session_context": {
+      "prior_run_id": "dpj-b907cc78b8a7470a",
+      "prior_epic_id": "ep-20261020-ef4a3f7abd",
+      "prior_message": "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、日期、项目、工时、加班、审批状态 【改动】员工工时报表在红框处新增班别字段。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把其它列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框处新增班别字段；红框/箭头/高亮：位于第4列和第5列之间；标注与改动暗示；高亮：位于第4列和第5列之间 【路径待确认】工程内未自动定位到与该页面标题匹配的文件；请用户指出要改的页面/路由文件，禁止猜测其它仓库的目录习惯。\n\n【识图摘录】\nB. 若是软件业务界面截图（列表/表单/看板）\n\n### 页面定位\n- 页面标题：员工工时报表\n- 菜单/导航路径：未见\n- 页面类型：列表页\n\n### 筛选与操作\n- 筛选项：日期范围（2026-10-14 至 2026-10-20）、部门（全部）、视图（明细）、按员工汇总\n- 按钮：查询、重置\n\n### 表格（若有）\n- 表头列名（从左到右完整列出）：员工、工号、部门、日期、项目、工时、加班、审批状态\n- 可见示例行（最多 3 行）：\n  - 张三、E1001、生产一部、2026-10-20、PCB-A量产项目、8.0、1.0、已通过\n  - 张三、E1001、生产一部、2026-10-19、PCB-A量产项目、8.0、1.0、已通过\n  - 李四、E1002、生产一部、2026-10-17、PCB-B试产项目、7.5、0.5、已通过\n- 分页/合计文案：Total 7, 10/page\n\n### 标注与改动暗示\n- 附图附加文字：员工工时报表在红框处新增班别字段\n- 红框/箭头/高亮：位于第4列和第5列之间\n- 改动意图采用附加文字原文\n\n用户附加文字：员工工时报表在红框处新增班别字段",
+      "prior_workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "prior_status": "running",
+      "prior_outcome": null,
+      "prior_current_step": "2"
+    },
+    "raw_intake": {
+      "text": "员工工时报表在红框处新增班别字段（用户提到的红框截图未随消息传上来，请在员工工时报表中定位对应区域新增「班别」字段）",
+      "has_workspace_hint": true,
+      "captured_at": 1792485558,
+      "image_ids": [],
+      "vision_text": "",
+      "vision": {},
+      "requirement_core": "员工工时报表在红框处新增班别字段（用户提到的红框截图未随消息传上来，请在员工工时报表中定位对应区域新增「班别」字段）",
+      "vision_surface": {},
+      "normalize": {
+        "source": "user_text",
+        "one_liner": "员工工时报表在红框处新增班别字段（用户提到的红框截图未随消息传上来，请在员工工时报表中定位对应区域新增「班别」字段）",
+        "was_sanitized": false,
+        "notes": [],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "员工工时报表在红框处新增班别字段。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页。红框处新增班别字段；位于第4列和第5列之间。在员工工时报表列表页的表格中，于第4列（日期）和第5列（项目）之间新增一列「班别」，并同步在对应列表接口中返回班别字段",
+      "goal_one_liner": "员工工时报表在日期列与项目列之间新增「班别」字段",
+      "user_card": {
+        "one_liner": "员工工时报表在日期列与项目列之间新增「班别」字段",
+        "what": "员工工时报表在红框处新增班别字段。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页。红框处新增班别字段；位于第4列和第5列之间。在员工工时报表列表页的表格中，于第4列（日期）和第5列（项目）之间新增一列「班别」，并同步在对应列表接口中返回班别字段",
+        "how": "1) 定位员工工时报表页面及其列表接口（工程内未自动匹配到文件，需用户指出页面/路由文件后再改，禁止猜测其它仓库目录）；2) 前端表格在日期列后、项目列前插入「班别」列并绑定对应字段；3) 列表接口查询与返回结果中增加班别字段；4) 仅改本页，不动其它业务列表页。",
+        "done_when": [
+          "员工工时报表表格中「班别」列显示在日期列与项目列之间",
+          "列表接口返回数据包含班别字段且前端能正确渲染",
+          "其它业务列表页未被改动",
+          "改动不超过 8 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "既有能力增强",
+        "scenario_id": "enhance_existing"
+      },
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "员工工时报表在红框处新增班别字段。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页。红框处新增班别字段；位于第4列和第5列之间",
+          "员工工时报表表格中「班别」列显示在日期列与项目列之间",
+          "列表接口返回数据包含班别字段且前端能正确渲染",
+          "其它业务列表页未被改动"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的其它侧栏菜单"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "frontend/src/views/**",
+          "frontend/src/api/**",
+          "backend/app/routers/**",
+          "**/views/**",
+          "**/*.vue",
+          "**/*.tsx",
+          "**/*.jsx",
+          "**/api/**",
+          "**/routers/**",
+          "**/controllers/**"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "",
+        "need_user_path_confirm": false,
+        "user_message_excerpt": "员工工时报表在红框处新增班别字段。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页。红框处新增班别字段；位于第4列和第5列之间。在员工工时报表列表页的表格中，于第4列（日期）和第5列（项目）之间新增一列「班别」，并同步在对应列表接口中返回班别字段",
+        "scenario_id": "enhance_existing"
+      },
+      "acceptance": [
+        "员工工时报表在红框处新增班别字段。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页。红框处新增班别字段；位于第4列和第5列之间",
+        "员工工时报表表格中「班别」列显示在日期列与项目列之间",
+        "列表接口返回数据包含班别字段且前端能正确渲染",
+        "其它业务列表页未被改动",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1792485559"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1792456513_2"
+    },
+    "plan": {
+      "problem": "员工工时报表在日期列与项目列之间新增「班别」字段",
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "员工工时报表在红框处新增班别字段。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页。红框处新增班别字段；位于第4列和第5列之间",
+          "员工工时报表表格中「班别」列显示在日期列与项目列之间",
+          "列表接口返回数据包含班别字段且前端能正确渲染",
+          "其它业务列表页未被改动"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的其它侧栏菜单"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "frontend/src/views/**",
+          "frontend/src/api/**",
+          "backend/app/routers/**",
+          "**/views/**",
+          "**/*.vue",
+          "**/*.tsx",
+          "**/*.jsx",
+          "**/api/**",
+          "**/routers/**",
+          "**/controllers/**"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "",
+        "need_user_path_confirm": false,
+        "user_message_excerpt": "员工工时报表在红框处新增班别字段。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页。红框处新增班别字段；位于第4列和第5列之间。在员工工时报表列表页的表格中，于第4列（日期）和第5列（项目）之间新增一列「班别」，并同步在对应列表接口中返回班别字段",
+        "scenario_id": "enhance_existing"
+      },
+      "must_touch": [
+        "既有页面或接口的增量改动",
+        "必要时菜单文案/权限点"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "增强点可验收；原主路径不回归"
+      ],
+      "files_hint": "frontend/src/views/**, frontend/src/api/**, backend/app/routers/**, **/views/**, **/*.vue, **/*.tsx, **/*.jsx, **/api/**, **/routers/**, **/controllers/**, README.md, readme.md",
+      "rev": "plan_1792485563"
+    },
+    "implement": {
+      "cursor_job_id": "cch-20261020-163927-4166",
+      "changed_files": [
+        "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+        "frontend/src/api/reports/employeeWorkHours.js",
+        "backend/app/schemas.py",
+        "backend/app/routers/employee_work_hours_report.py"
+      ],
+      "auto": true,
+      "gate": {
+        "class": "pass",
+        "reason": "pass",
+        "summary": "写码完成（已忽略数据库同步失败，从沙箱回收源码 4 项）"
+      },
+      "scope_audit": {
+        "ok": true,
+        "file_count": 4,
+        "violations": [],
+        "detail": "变更 4 个文件，在范围内",
+        "max_files": 8
+      },
+      "content_audit": {
+        "ok": true,
+        "violations": [],
+        "detail": "内容门禁通过：用户要求的列名已出现在前端",
+        "checked": [
+          "frontend/src/views/reports/EmployeeWorkHoursReportView.vue"
+        ],
+        "labels": [
+          "班别"
+        ]
+      }
+    },
+    "validate_last": {
+      "ok": true,
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "results": [
+        {
+          "name": "py-compile-root",
+          "cmd": "python -m compileall -q .",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 13.23
+        },
+        {
+          "name": "git-diff-check",
+          "cmd": "git diff --check",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "warning: in the working copy of 'backend/app/openapi_zh.py', LF will be replaced by CRLF the next time Git touches it",
+          "duration_sec": 0.41
+        }
+      ],
+      "auto_defaults": true,
+      "used_profile": false
+    },
+    "review": {
+      "report_id": "cr-dfbb99b628c2409c",
+      "auto": true,
+      "changed_only": true,
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+        "frontend/src/api/reports/employeeWorkHours.js",
+        "backend/app/schemas.py",
+        "backend/app/routers/employee_work_hours_report.py"
+      ],
+      "skipped": false
+    },
+    "commit": {
+      "job_id": "cc-6a7a9db1ca9042a5",
+      "skipped": false,
+      "can_manual_retry": false,
+      "auto": true,
+      "attempts": 1
+    },
+    "pr": {
+      "pr_url": "",
+      "skipped": true,
+      "not_applicable": false,
+      "provider": "github",
+      "auto": true
+    },
+    "deploy": {
+      "job_id": "cd-4471a59b5fe54d73",
+      "auto": true,
+      "attempts": 1
+    }
+  },
+  "updated_at": 1792485864,
+  "requirement_core": "员工工时报表在红框处新增班别字段。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页。红框处新增班别字段；位于第4列和第5列之间。在员工工时报表列表页的表格中，于第4列（日期）和第5列（项目）之间新增一列「班别」，并同步在对应列表接口中返回班别字段",
+  "prd_rev": "prd_1792485559",
+  "context_rev": "ctx_1792456513_2",
+  "plan_rev": "plan_1792485563"
+}

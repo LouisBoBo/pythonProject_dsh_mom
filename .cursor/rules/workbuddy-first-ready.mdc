@@ -1,0 +1,63 @@
+---
+description: 【LOCKED】第一次安装配完 WorkBuddy Key 就必须能聊、能调工具（alwaysApply）
+alwaysApply: true
+---
+
+# 第一次安装即可用（不可推翻 · LOCKED）
+
+> **冻结日**：2026-09-21。  
+> **破窗条件**：**仅当用户在对话里明确允许**；改代码前须先改本规则。
+
+安装完成、在 **WorkBuddy 配置中心** 填好 DeepSeek Key 并保存后，聊天壳必须能回复、能调工具。  
+**禁止**再要求用户去 DSH「设置 → 模型」另填一份，或手工跑 `check-vendor.sh` 才能消除 `reading prepare`。
+
+## 写死含义
+
+1. **Key 真相源 = WorkBuddy `config.yaml` 的 `deepseek.api_key`**  
+   保存 / 引擎启动必须同步到 `$DSH_HOME/.credentials.yaml` 与本机 `~/.dsh`（若不同）。  
+   实现：`engine/app/dsh_chat_credential.py`、`config_store.save_config`、`host.sh` 启动前 `ensure_dsh_deepseek_credential`。  
+   **禁止**改回「DSH 已有 Key 就不覆盖」。
+
+2. **dsh-tools 必须与宿主同一 realpath**  
+   否则任意工具红条 `Cannot read properties of undefined (reading 'prepare')`。  
+   第一次 `host.sh wire` / `up` / `start-web` / `restart-web` / `plugin.sh install bridge` / 桌面启动 **必须** `--fix --require`。  
+   Windows 全球 npm 布局必须能找到宿主；链接用 junction，**禁止** `rm -rf` 掉宿主包。  
+   实现：`scripts/lib/align_dsh_tools.py`。对齐失败 **拒绝启动**。
+
+3. **dshmarket 第一次必须装上**（见 `workbuddy-company-market.mdc`）。
+
+4. **引擎工具链路必须跨平台**  
+   启动自检 `boot_check`（os_lock / plugins_store / 审码模块）；解释器发现含 Windows `python.exe`；启停走 `engine_ctl.py`，禁止只认 `python3` + `bash` + `lsof`。  
+   `/api/runtime` 的 `tools_ready` 为 false 则工具不可用，不得当安装成功。  
+   实现：`engine/app/os_lock.py`、`engine/app/boot_check.py`、`scripts/lib/find_python.py`、`scripts/lib/engine_ctl.py`。
+
+5. **新机启动必须过统一依赖门禁**  
+   `host.sh` wire/up/start-web/restart-web、`plugin.sh install bridge`、桌面启动 **必须**跑 `scripts/lib/ensure_runtime.py --fix --require`。  
+   `engine_ctl ensure|start|restart` 跑同一脚本加 `--engine`（Python+uvicorn+boot+Key）。  
+   覆盖：Python 引擎依赖、boot 模块、Node≥22、dsh 可启动、公司市场 `.env` 锁定、dshmarket、dsh-tools、Key 同步、profile 关键 npm 入口（含 `zod/dist`、`@cursor/sdk`、mes-bridge）。  
+   能修的自动修（`pip -r requirements.txt`、junction、缺 dist 的 zod、凭据同步）；修不了的 **拒绝启动**，禁止「先起来再补」。  
+   **禁止**把门禁拆回各入口各自 `|| true`。
+
+## Agent / 开发者禁令
+
+- 启动聊天壳跳过 `align_dsh_tools.py --fix --require`，或改回 `|| true`
+- 跳过 `ensure_runtime.py --fix --require`，或把统一门禁改成 soft-fail
+- 桌面包 `cpSync` 一份独立 `dsh-tools` 而不接到宿主
+- 引导用户「必须去设置 → 模型再填 Key」作为主路径
+- 只在 `restart-web` 对齐、第一次 `start-web` 不对齐
+- 探活只认 `/api/runtime` 200、跳过 `boot_check` / `tools_ready`
+- mes-runtime 只 `spawn bash engine.sh`，或 Python 候选不含 `python.exe`
+
+## 交付检查
+
+```bash
+python scripts/lib/ensure_runtime.py --fix --require
+python scripts/lib/align_dsh_tools.py --require
+python scripts/lib/ensure_dsh_deepseek_credential.py
+python scripts/lib/engine_ctl.py zr-workbuddy status
+scripts/host.sh verify
+```
+
+引擎日志允许：`已将 WorkBuddy DeepSeek Key 对齐 DSH 聊天凭据`、`工具运行时自检通过`。  
+`/api/runtime` 必须 `tools_ready: true`。  
+宿主日志必须：`[mes-bridge] TOOL_RUNTIME_SCHEDULER.prepare 可用`。

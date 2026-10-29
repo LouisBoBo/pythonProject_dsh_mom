@@ -1,0 +1,5 @@
+{
+  "id": "dev-pipeline",
+  "name": "需求到上线一体化",
+  "purpose": "mes_dev_pipeline_*：单输入开跑 · 时间线编排（P0）；不替代写码/审码/提交/部署车道"
+}

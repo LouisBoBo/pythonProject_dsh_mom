@@ -1,0 +1,43 @@
+---
+description: 宿主底栏输入框是系统组件，任何时候禁止改布局/显隐（LOCKED）
+alwaysApply: true
+---
+
+# 宿主底栏输入框硬冻结（不可推翻 · LOCKED）
+
+> **冻结日**：2026-09-30。  
+> **破窗条件**：**仅当用户在对话里明确允许**；改代码前须先改本规则冻结段。  
+> **对象**：DSH 系统组件 `[data-composer-seat]` / `[data-composer-card]`（聊天底栏输入）。
+
+**不是**建议。擅自藏输入、钉 sticky、改 flex/投影 = 事故。
+
+## 写死含义
+
+1. **输入框是系统组件**  
+   布局、位置、显隐一律由 DSH 宿主自己管。  
+   **本仓（mes-bridge / features / 引擎 SPA）禁止**对上述节点做任何改写。
+
+2. **任何时候都不能藏、不能挪**  
+   含但不限于：过程流执行中、写码/HITL、toolview、追问、资料库、用量页。  
+   **禁止** `display:none` / `height:0` / `visibility:hidden` / `pointer-events:none` / `position:sticky|fixed` / 擅自改 `flex` / 投影滤镜等。
+
+3. **资料库 / 用量叠层**  
+   只允许用 `.wb-main-view-overlay { bottom: var(--dsh-composer-height, 0px) }` **让出底栏高度**，让系统输入仍可见。  
+   **禁止**再为叠层写「隐藏 `[data-composer-seat]`」类规则，或把 `--dsh-composer-height` 置 `0` 来挤掉输入。
+
+4. **允许**（无需破窗）  
+   - 读 composer DOM（贴图桥、取草稿图）**不改样式**  
+   - 在输入框**旁**挂 WorkBuddy 自己的开关/按钮（不改 seat/card 布局）  
+   - 排障只读、文档说明「若仍消失则可能是 DSH 宿主自身收起（须用户去宿主侧改）」
+
+## 无用户允许一律拒绝
+
+- 恢复「资料库/用量打开时 `display:none` 藏输入」  
+- 再给 seat 加 sticky / 强行改高度 / 盖住底栏  
+- 删本规则、改 `alwaysApply: false`，或不改本规则就动冻结行为
+
+## 交付自检
+
+- `styles.css` / 打包后的 `client.js` **无**针对 `[data-composer-seat]` 的显隐/sticky 规则  
+- 聊天主路径、需求→上线执行中、资料库/用量打开时，底栏系统输入仍在（叠层不盖住）  
+- 打开 http://127.0.0.1:3081 人工冒烟确认

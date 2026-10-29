@@ -1,0 +1,89 @@
+---
+description: WorkBuddy 五条铁律——DSH 架构、验收看引擎、features/宿主分轨（alwaysApply）
+alwaysApply: true
+---
+
+# WorkBuddy 五条铁律（不可推翻）
+
+权威细则：`AGENTS.md` §0、`docs/架构与选型/三大核心目标落地方案.md`。  
+安全加固：`docs/安全/企业级安全加固方案.md` + `.cursor/rules/workbuddy-security-enterprise.mdc`。
+
+## 铁律
+
+1. **架构保留 DSH 写法**  
+   唯一 `plugins/mes-bridge` + `features/` 热插拔。  
+   **禁止**删 Bridge、再增业务正式 Cordis 包、把业务堆进 profile。
+
+2. **业务收尾不绑宿主**  
+   不以打开 Harness/聊天为业务步骤；不以「重启 DSH」为业务收尾。  
+   `auto_restart_bridge`：非一体默认 false；一体（`unified_product=true`）默认 true（可显式 false）；无远端 profile 跳过宿主重启 ≠ 部署失败。
+
+3. **业务验收与发布只认引擎**  
+   成败看：引擎网页 / 探活 / `engine.sh … ensure|restart`。  
+   增量：改哪发哪；bridge 文件同步 ≠ 业务成败。
+
+4. **WorkBuddy 业务第三方只进 `features/`**  
+   校验 → enable（`plugins.json` / 功能插件页）→ 可按 `feature:<id>` 部署。  
+   **禁止**任意生态 zip 硬塞进引擎功能页。
+
+5. **生态 Cordis/Skill 走宿主**  
+   聊天壳用本机/桌面包的 `dsh` 发行版，**本仓不放 DSH 源码**。宿主跑起来后用插件中心/官方命令装。  
+   `scripts/host.sh` 接线和启停（走 PATH `dsh`）；**禁止**把 Studio 源码树倒进本仓，除非用户明确要求另开独立仓。
+
+6. **公司/私有插件市场硬锁定**（详规 LOCKED：`.cursor/rules/workbuddy-company-market.mdc`）  
+   启停与打包必须保留合并市场 + seed + `@zhongruan` npmrc；无 `DSHM` **拒绝启动**；`verify_company_dsh_market.py` 不过不得交付。  
+   置空 `DSHM_REGISTRY_URL=` **无效**。唯一破窗：`WORKBUDDY_ALLOW_OFFICIAL_MARKET=1`（禁止写进发版默认）。  
+   **第一次接线必须预装 `dshmarket`**（设置→插件市场 UI）；裸 `dsh web` 没有。未落地 `client.js` 不得当市场就绪。
+
+7. **用量计量口径硬冻结**（详规 LOCKED：`.cursor/rules/workbuddy-usage-metering-locked.mdc`）  
+   Token 合计 = input+output+cache（reasoning 只明细）；引擎账本 + meter 插件分工合并、禁止叠记。  
+   **无用户明确允许禁止改公式/双计策略。**
+
+8. **第一次安装即可用**（详规 LOCKED：`.cursor/rules/workbuddy-first-ready.mdc`）  
+   装好并在 WorkBuddy 配置中心保存 DeepSeek Key 后，聊天必须能回、工具必须能调。  
+   Key 同步到 DSH `.credentials.yaml`；启动前 `ensure_runtime.py --fix --require`（含 dsh-tools）。  
+   **禁止**主路径再去「设置 → 模型」另填 Key，禁止跳过统一依赖门禁。
+
+9. **桌面发版必须上传**（详规 LOCKED：`.cursor/rules/workbuddy-desktop-feed-upload.mdc`）  
+   `package_desktop.py` 成功后强制 scp 安装包 + `latest-*.json`；远端最多 2 个版本；产物名 **MOM-*.exe**。  
+   Windows 本机入口：`scripts\pack-desktop.ps1`（勿在 Agent 壳阻塞跑；防假死见 `workbuddy-windows-shell-nofreeze.mdc`）。  
+   **禁止**把「只打本地包、靠人工上传」当发版成功。
+
+10. **桌面冷/热启动契约硬冻结**（详规 LOCKED：`.cursor/rules/workbuddy-desktop-startup-locked.mdc`）  
+    单例 `!gotLock → exit(0)`；`BrowserWindow` 一律 `show:true`；splash **await** 后再 `loadURL`。  
+    **无用户明确允许禁止改**；门禁：`desktop/tests/test_startup_contract.js`。
+
+11. **部署不得搞挂服务**（详规 LOCKED：`.cursor/rules/workbuddy-deploy-service-alive.mdc`）  
+    探活不过 = 部署失败；覆盖前快照，失败自动回滚并尽量恢复探活。  
+    **禁止**「文件已同步」当成功；破窗仅 `WORKBUDDY_ALLOW_DEAD_SERVICE_DEPLOY=1`（禁止发版默认）。
+
+12. **需求→上线一体化主路径硬冻结**（详规 LOCKED：`.cursor/rules/workbuddy-dev-pipeline-locked.mdc`）  
+    贴图/文字 → 1～10 步 → 部署已用户验收；空变更硬失败；写码复用插件 Job，审/提/部署复用四车道。  
+    **允许局部优化**；**无用户明确允许禁止推倒重来 / 另造第二编排**。
+
+13. **宿主底栏输入框硬冻结**（详规 LOCKED：`.cursor/rules/workbuddy-composer-system-locked.mdc`）  
+    `[data-composer-seat]` / `[data-composer-card]` 是 DSH 系统组件；**任何时候**禁止本仓改布局/位移/显隐。  
+    资料库·用量叠层只许让出 `--dsh-composer-height`，禁止 `display:none` 藏输入。
+
+14. **公网 8093 一体入口部署契约**（详规 LOCKED：`.cursor/rules/workbuddy-public-8093-deploy-locked.mdc`）  
+    本机 3081 通 ≠ 公网交付；nginx 分流+市场 Origin+isLoopback+知识 exposeApi/版本必须齐；验收表全过才算成功。  
+    模板：`scripts/deploy/nginx-8093-workbuddy-entry.conf`。
+
+## 分层（实施禁止推翻）
+
+| 层 | 路径 | 禁令 |
+|---|---|---|
+| 唯一常驻包 | `plugins/mes-bridge` | 禁止第二个业务 bridge |
+| 业务能力 | `features/*` | 禁止 npm import；经 `mesEngine` |
+| 算数 | `engine/` | 密钥只在 `config.yaml`；只绑 `127.0.0.1` |
+| 宿主 | 本机 `dsh` / 桌面包 `desktop/runtime/host` | 禁止焊业务进 Studio；禁止倒进根 `vendor/` 或再建源码树 |
+
+## 禁止说成 / 可以说
+
+- ❌「必须重启 DSH 业务才生效」→ ✅ 日常改 feature 热插拔  
+- ❌「删掉 Bridge 也一样」→ ✅ 删 Bridge = 退出 DSH 架构  
+- ❌「引擎页能装任意上游包」→ ✅ 生态走宿主；features 要 manifest+index  
+- ❌「官方市场能刷列表=中软还在」→ ✅ 必须合并目录 + 进程带 `DSHM_REGISTRY_URL`；`verify_company_dsh_market` 过才算  
+- ❌「配完 Key 还要去设置→模型再填一次」→ ✅ WorkBuddy 配置中心保存即同步；dsh-tools 启动前对齐  
+- ❌「本机 3081 好了=公网 8093 好了」→ ✅ 必须按公网验收表（登录/市场/知识/设置镜像）  
+- ✅「架构在 Bridge+features；验收看引擎；生态在 Studio 插件中心装」

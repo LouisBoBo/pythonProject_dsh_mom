@@ -1,0 +1,112 @@
+{
+  "name": "company-dsh-plugins",
+  "url": "http://175.178.238.31/dsh-plugins",
+  "updated": "2026-09-29",
+  "count": 7,
+  "categories": {
+    "tools": {
+      "en": "Tools & Capabilities",
+      "zh": "工具与能力"
+    }
+  },
+  "plugins": [
+    {
+      "name": "@zhongruan/dsh-pcb-8d",
+      "owner": "中软",
+      "url": "https://github.com/zhongruan/dsh-pcb-8d",
+      "category": "tools",
+      "description": {
+        "zh": "PCB 8D 报告：对话建稿、按步补全、导出 Markdown",
+        "en": "PCB 8D report: draft, fill steps, export Markdown"
+      },
+      "npm": "@zhongruan/dsh-pcb-8d",
+      "version": "0.1.1",
+      "install": "dsh plugin --profile web add @zhongruan/dsh-pcb-8d",
+      "added": "2026-09-11"
+    },
+    {
+      "name": "@zhongruan/dsh-remote-review",
+      "owner": "中软",
+      "url": "https://github.com/zhongruan/dsh-remote-review",
+      "category": "tools",
+      "description": {
+        "zh": "远端/本地 Webhook 审码：提交触发、共用现有审码 API、报告写入飞书文档",
+        "en": "Webhook code review: commit trigger, existing review API, Feishu Docs"
+      },
+      "npm": "@zhongruan/dsh-remote-review",
+      "version": "0.1.5",
+      "install": "dsh plugin --profile web add @zhongruan/dsh-remote-review",
+      "added": "2026-09-11"
+    },
+    {
+      "name": "@zhongruan/dsh-knowledge",
+      "owner": "中软",
+      "url": "https://github.com/zhongruan/dsh-knowledge",
+      "category": "tools",
+      "description": {
+        "zh": "本机知识库（中软）：文档导入/管理、挂载召回；WorkBuddy 接线预装，默认关回写",
+        "en": "Zhongruan local knowledge base with import/mount/recall; preinstalled by WorkBuddy"
+      },
+      "npm": "@zhongruan/dsh-knowledge",
+      "version": "latest",
+      "install": "dsh plugin --profile web add @zhongruan/dsh-knowledge@latest",
+      "added": "2026-09-16"
+    },
+    {
+      "name": "@zhongruan/dsh-llm-meter",
+      "owner": "中软",
+      "url": "https://github.com/zhongruan/dsh-llm-meter",
+      "category": "tools",
+      "description": {
+        "zh": "LLM 用量计量（中软）：拦截 llm/stream，写本机 jsonl；WorkBuddy 接线预装",
+        "en": "Zhongruan LLM usage meter via llm/stream → local jsonl; preinstalled by WorkBuddy"
+      },
+      "npm": "@zhongruan/dsh-llm-meter",
+      "version": "0.1.1",
+      "install": "dsh plugin --profile web add @zhongruan/dsh-llm-meter@0.1.1",
+      "added": "2026-09-17"
+    },
+    {
+      "name": "@zhongruan/dsh-automations",
+      "owner": "中软",
+      "url": "https://github.com/zhongruan/dsh-automations",
+      "category": "tools",
+      "description": {
+        "zh": "自动化任务：模板一键建或自定义指令，定时执行只读汇总并可选推企微",
+        "en": "Scheduled automations: templates or custom prompts, read-only summaries, optional WeCom push"
+      },
+      "npm": "@zhongruan/dsh-automations",
+      "version": "0.1.1",
+      "install": "dsh plugin --profile web add @zhongruan/dsh-automations@0.1.1",
+      "added": "2026-09-17"
+    },
+    {
+      "name": "@zhongruan/dsh-esc",
+      "owner": "中软",
+      "url": "https://github.com/zhongruan/dsh-esc",
+      "category": "tools",
+      "description": {
+        "zh": "专家·技能·连接器：PCB 岗位角色、售后/测试 SOP、MES 与 Dify 取数（可与现有查数/8D 并存）",
+        "en": "Experts, skills and connectors for PCB roles, after-sales/test SOPs, MES and Dify"
+      },
+      "npm": "@zhongruan/dsh-esc",
+      "version": "0.1.0",
+      "install": "dsh plugin --profile web add @zhongruan/dsh-esc@0.1.0",
+      "added": "2026-09-18"
+    },
+    {
+      "name": "@zhongruan/dsh-cursor-chat",
+      "owner": "中软",
+      "url": "https://github.com/zhongruan/dsh-cursor-chat",
+      "category": "tools",
+      "description": {
+        "zh": "对话写码：像跟 Cursor 聊，确认后改代码，同会话可多轮续改",
+        "en": "Chat coding: talk like Cursor, confirm then edit, multi-turn resume"
+      },
+      "npm": "@zhongruan/dsh-cursor-chat",
+      "version": "0.1.1",
+      "install": "dsh plugin --profile web add @zhongruan/dsh-cursor-chat@0.1.1",
+      "added": "2026-09-29"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+/* 摘自 mes-bridge client-src/styles.css（.wb-app-login-gate / .wb-login-*），与登录门背景严格一致 */
+.wb-app-login-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(1200px 600px at 10% -10%, #d8f3e4 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, #eef7f1 0%, transparent 50%), #f6faf7;
+}
+.wb-login-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 28px 24px 20px;
+  background: #fff;
+  border: 1px solid #dce8e0;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(27, 94, 59, 0.08);
+}
+.wb-login-brand {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.wb-login-brand .brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  padding: 6px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  background: #1b5e3b;
+  border: 1px solid #2e8b57;
+  box-sizing: border-box;
+}
+.wb-login-brand .brand-icon svg {
+  display: block;
+  width: 52px;
+  height: 52px;
+}
+.wb-login-brand h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.wb-login-brand p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+.wb-splash-progress {
+  text-align: center;
+}
+.wb-splash-spinner {
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 16px;
+  border: 3px solid rgba(15, 118, 110, 0.15);
+  border-top-color: #0f766e;
+  border-radius: 50%;
+  animation: wb-splash-spin 0.9s linear infinite;
+}
+@keyframes wb-splash-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+#status {
+  font-size: 13px;
+  color: #64748b;
+  min-height: 20px;
+}
+.wb-splash-bar {
+  width: 220px;
+  height: 3px;
+  background: rgba(15, 118, 110, 0.12);
+  border-radius: 2px;
+  margin: 18px auto 0;
+  overflow: hidden;
+}
+.wb-splash-bar > i {
+  display: block;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, #0f766e, #0ea5e9);
+  border-radius: 2px;
+  animation: wb-splash-slide 1.2s ease-in-out infinite;
+}
+@keyframes wb-splash-slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}

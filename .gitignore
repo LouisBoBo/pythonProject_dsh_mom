@@ -1,0 +1,76 @@
+# secrets & runtime config
+**/engine/config/config.yaml
+**/engine/config/config.yaml.bak
+**/engine/data/chat_log.jsonl
+**/engine/data/.mplcache/
+**/engine/data/charts/
+**/engine/data/engine.pid
+**/engine/data/engine.log
+# plugins.json 是启停状态，可提交；勿忽略
+.env
+.env.*
+!**/.env.example
+**/credentials.json
+**/secrets.yaml
+# 应用侧本地市场/私有源配置（勿提交）
+apps/*/config/*.env
+apps/*/config/company-*.env
+
+# python
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/venv/
+**/*.egg-info/
+.pytest_cache/
+
+# node / OS
+node_modules/
+.DS_Store
+*.log
+.npm/
+.pnpm-store/
+
+# editor
+.idea/
+.vscode/
+*.swp
+apps/*/plugins/*/node_modules/
+**/vendor/@deepseek-ai/dsh-tools.bak-copy/
+
+**/engine/data/plugins.json.lock
+**/engine/data/local_dev/sandboxes/
+**/engine/data/local_dev/jobs/
+**/engine/data/_cursor_probe/
+**/engine/data/_cursor_probe2/
+**/engine/data/code_review/reports/
+**/engine/data/code_commit/jobs/
+**/engine/data/code_deploy/jobs/
+**/engine/data/code_deploy/last_deploy.json
+**/engine/data/code_deploy/jobs.lock
+**/engine/data/feature_quarantine/
+**/engine/data/feature_install_tmp/
+**/engine/data/usage/
+**/engine/data/usage_hub/
+**/engine/data/auth/
+**/engine/data/space/
+**/engine/data/_test_space/
+**/engine/data/feedback.jsonl
+**/engine/data/feedback/
+**/engine/data/security/
+
+# 宿主 host/（禁止再导入 DeepSeek Harness Studio 源码树）
+/host/
+
+# 桌面体验包产物（scripts/package-desktop.sh）
+desktop/node_modules/
+desktop/runtime/
+desktop/release/
+desktop/dist/
+
+# 仓库根临时日志（host.sh start-web 等）
+/tmp/
+/lefthook.yml
+.svn/
+.svn-merge-backup/
+apps/*/engine/tmp/

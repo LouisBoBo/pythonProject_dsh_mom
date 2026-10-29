@@ -1,0 +1,1716 @@
+{
+  "run_id": "dpj-d63a713e32114849",
+  "epic_id": "ep-20261019-be40a23e6a",
+  "message": "新增停机报表",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_hebo",
+  "dsh_session_id": "session-837ab368-714e-4da8-8f64-cab75be02c15",
+  "status": "failed",
+  "outcome": "failed",
+  "current_step": "10",
+  "steps": [
+    {
+      "step_id": "1",
+      "key": "intake",
+      "title": "需求采集",
+      "skill_id": "req-intake-multimodal",
+      "skill_title": "多模态需求采集",
+      "flow_brief": "这一步把你刚发的文字与贴图收成「原始需求账本」。贴图走引擎独立视觉识图（智谱）；不做实现、不改代码。",
+      "status": "pass",
+      "summary": "已采集需求（6 字）；工程提示 d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding；来源 user_text",
+      "receipt": {
+        "step_id": "1",
+        "status": "pass",
+        "summary": "已采集需求（6 字）；工程提示 d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding；来源 user_text",
+        "result_detail": "状态：pass\n摘要：已采集需求（6 字）；工程提示 d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding；来源 user_text\n判定说明：至少有一条非空需求文字，或识图成功写出有效描述。\n需求核心：新增停机报表\n原文预览：新增停机报表\n识图预览：（无）\n工程目录提示：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n账本字段：artifacts.raw_intake",
+        "skill_id": "req-intake-multimodal",
+        "skill_title": "多模态需求采集",
+        "started_at": 1792394344,
+        "finished_at": 1792394344,
+        "duration_sec": 0,
+        "artifacts": {
+          "raw_intake": true,
+          "chars": 6,
+          "workspace_hint": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "image_count": 0,
+          "vision_ok": false,
+          "normalize_source": "user_text"
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】req-intake-multimodal · 多模态需求采集",
+            "【来源】WorkBuddy 自写",
+            "【这一步在干什么】这一步把你刚发的文字与贴图收成「原始需求账本」。贴图走引擎独立视觉识图（智谱）；不做实现、不改代码。",
+            "【会做】记录需求原文与字数；附图落盘并调用视觉识图；记下当前工程目录提示；写出 raw_intake 供后续步骤引用",
+            "【不会做】不写代码；不跑测试；不提交 Git；不发明图上未出现的侧栏菜单名（禁止默认生产管理/仓储管理）",
+            "开始：采集用户需求原文",
+            "需求字数：6",
+            "工作区提示：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "需求摘要：新增停机报表",
+            "需求预览：新增停机报表",
+            "结果：需求已写入 Epic 账本 raw_intake"
+          ],
+          "result_detail": "状态：pass\n摘要：已采集需求（6 字）；工程提示 d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding；来源 user_text\n判定说明：至少有一条非空需求文字，或识图成功写出有效描述。\n需求核心：新增停机报表\n原文预览：新增停机报表\n识图预览：（无）\n工程目录提示：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n账本字段：artifacts.raw_intake",
+          "skill": {
+            "id": "req-intake-multimodal",
+            "title_zh": "多模态需求采集",
+            "source": "workbuddy",
+            "cole_ref": null,
+            "flow_brief": "这一步把你刚发的文字与贴图收成「原始需求账本」。贴图走引擎独立视觉识图（智谱）；不做实现、不改代码。"
+          }
+        }
+      },
+      "started_at": 1792394344,
+      "result_detail": "状态：pass\n摘要：已采集需求（6 字）；工程提示 d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding；来源 user_text\n判定说明：至少有一条非空需求文字，或识图成功写出有效描述。\n需求核心：新增停机报表\n原文预览：新增停机报表\n识图预览：（无）\n工程目录提示：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n账本字段：artifacts.raw_intake"
+    },
+    {
+      "step_id": "2",
+      "key": "prd",
+      "title": "需求理解",
+      "skill_id": "plan-create-prd",
+      "skill_title": "需求理解 · PRD-lite",
+      "flow_brief": "剥离宿主 runtime/记忆库噪音，把真实需求整理成三句话：要做什么、怎么干、干成啥；并推断开发场景与变更上限。只依据用户原话与本次识图，禁止套某一家 ERP 菜单/目录模板。",
+      "status": "pass",
+      "summary": "需求已锁定：新增停机报表",
+      "receipt": {
+        "step_id": "2",
+        "status": "pass",
+        "summary": "需求已锁定：新增停机报表",
+        "result_detail": "状态：pass\n摘要：需求已锁定：新增停机报表\n判定说明：产出带版本号的 PRD-lite，且至少有一条验收标准。\n【要做什么】新增停机报表。新增一个停机报表\n【怎么干】按用户原话新增停机报表；具体字段、数据来源、筛选条件与展示形式用户未说明，需向用户确认后再实施\n【干成啥】系统中存在名为“停机报表”的报表入口；可打开并查看该停机报表\n【场景】新功能全栈页（full_feature）· prd_1792394345",
+        "skill_id": "plan-create-prd",
+        "skill_title": "需求理解 · PRD-lite",
+        "started_at": 1792394345,
+        "finished_at": 1792394346,
+        "duration_sec": 1,
+        "artifacts": {
+          "prd_rev": "prd_1792394345",
+          "acceptance_count": 4,
+          "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+          "scenario_id": "full_feature"
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】plan-create-prd · 需求理解 · PRD-lite",
+            "【来源】Cole skills 改编（对照 plan-create-prd）",
+            "【这一步在干什么】剥离宿主 runtime/记忆库噪音，把真实需求整理成三句话：要做什么、怎么干、干成啥；并推断开发场景与变更上限。只依据用户原话与本次识图，禁止套某一家 ERP 菜单/目录模板。",
+            "【会做】清洗需求原文（去掉 runtime / 记忆库偏好 / Knowledge protocol；流水线元需求不得当 PRD）；输出【要做什么】【怎么干】【干成啥】给人看的 PRD 摘要；推断开发场景、交付范围与变更文件上限；冻结 prd_rev 版本号",
+            "【不会做】不把单一全栈/制造业模板套死所有需求；不直接改仓库；不发明用户未点名的菜单路径",
+            "开始：整理可实施 PRD（要做什么 / 怎么干 / 干成啥）",
+            "按用户原话+识图让 LLM 重组织「要做什么」…",
+            "LLM 已按用户原话重组织：新增停机报表。新增一个停机报表",
+            "引用原话/批注：新增停机报表",
+            "要做什么：新增停机报表。新增一个停机报表",
+            "怎么干：按用户原话新增停机报表；具体字段、数据来源、筛选条件与展示形式用户未说明，需向用户确认后再实施",
+            "场景：新功能全栈页（full_feature，置信=med）",
+            "推断：像新报表/管理页，按全栈页规划",
+            "交付范围：菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+            "干成啥[1]：系统中存在名为“停机报表”的报表入口",
+            "干成啥[2]：可打开并查看该停机报表",
+            "干成啥[3]：改动不超过 22 个文件，不做无关重构",
+            "干成啥[4]：步骤 6 验证命令通过",
+            "非目标[1]：不借机做无关大重构",
+            "非目标[2]：不把单一场景模板套死到所有需求上",
+            "非目标[3]：不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）",
+            "范围内[1]：新增停机报表",
+            "范围内[2]：系统中存在名为“停机报表”的报表入口",
+            "范围内[3]：可打开并查看该停机报表",
+            "变更上限：22 个文件",
+            "结果：PRD 版本 prd_1792394345 已冻结"
+          ],
+          "result_detail": "状态：pass\n摘要：需求已锁定：新增停机报表\n判定说明：产出带版本号的 PRD-lite，且至少有一条验收标准。\n【要做什么】新增停机报表。新增一个停机报表\n【怎么干】按用户原话新增停机报表；具体字段、数据来源、筛选条件与展示形式用户未说明，需向用户确认后再实施\n【干成啥】系统中存在名为“停机报表”的报表入口；可打开并查看该停机报表\n【场景】新功能全栈页（full_feature）· prd_1792394345",
+          "skill": {
+            "id": "plan-create-prd",
+            "title_zh": "需求理解 · PRD-lite",
+            "source": "cole",
+            "cole_ref": "plan-create-prd",
+            "flow_brief": "剥离宿主 runtime/记忆库噪音，把真实需求整理成三句话：要做什么、怎么干、干成啥；并推断开发场景与变更上限。只依据用户原话与本次识图，禁止套某一家 ERP 菜单/目录模板。"
+          }
+        }
+      },
+      "started_at": 1792394344,
+      "result_detail": "状态：pass\n摘要：需求已锁定：新增停机报表\n判定说明：产出带版本号的 PRD-lite，且至少有一条验收标准。\n【要做什么】新增停机报表。新增一个停机报表\n【怎么干】按用户原话新增停机报表；具体字段、数据来源、筛选条件与展示形式用户未说明，需向用户确认后再实施\n【干成啥】系统中存在名为“停机报表”的报表入口；可打开并查看该停机报表\n【场景】新功能全栈页（full_feature）· prd_1792394345"
+    },
+    {
+      "step_id": "3",
+      "key": "prime",
+      "title": "读库上下文",
+      "skill_id": "prime-codebase",
+      "skill_title": "读库上下文 · Prime",
+      "flow_brief": "优先读取当前工程的「项目画像」（布局、栈、页面目录、验证命令）；必要时只读扫描仓库顶层与关键配置。目的是站在**本仓库**现有结构上规划，禁止照搬 WorkBuddy 或某一家 ERP 的路径。",
+      "status": "pass",
+      "summary": "已索引 workspace（2 个必读片段）",
+      "receipt": {
+        "step_id": "3",
+        "status": "pass",
+        "summary": "已索引 workspace（2 个必读片段）",
+        "result_detail": "状态：pass\n摘要：已索引 workspace（2 个必读片段）\n判定说明：目录通过校验并生成 context_pack（可含风险说明）。\n目录：D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n校验：通过\n必读片段：2 个\n风险：无\n版本：ctx_1791964531_2",
+        "skill_id": "prime-codebase",
+        "skill_title": "读库上下文 · Prime",
+        "started_at": 1792394347,
+        "finished_at": 1792394347,
+        "duration_sec": 0,
+        "artifacts": {
+          "context_rev": "ctx_1791964531_2",
+          "files": 2
+        },
+        "evidence": {
+          "risks": [],
+          "process_log": [
+            "【Skill】prime-codebase · 读库上下文 · Prime",
+            "【来源】Cole skills 改编（对照 prime-codebase）",
+            "【这一步在干什么】优先读取当前工程的「项目画像」（布局、栈、页面目录、验证命令）；必要时只读扫描仓库顶层与关键配置。目的是站在**本仓库**现有结构上规划，禁止照搬 WorkBuddy 或某一家 ERP 的路径。",
+            "【会做】校验工程目录合法；读取/刷新项目画像；索引顶层目录与工程标记；摘录必读文件片段；记录风险提示",
+            "【不会做】不修改任何文件；不越权扫盘外路径；不把别的项目目录结构写进本仓计划",
+            "开始：Prime 只读扫描工程上下文",
+            "扫描目录：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "顶层目录：backend/, docs/, frontend/",
+            "必读：README.md",
+            "必读：readme.md",
+            "结果：已索引 workspace（2 个必读片段）"
+          ],
+          "result_detail": "状态：pass\n摘要：已索引 workspace（2 个必读片段）\n判定说明：目录通过校验并生成 context_pack（可含风险说明）。\n目录：D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n校验：通过\n必读片段：2 个\n风险：无\n版本：ctx_1791964531_2",
+          "skill": {
+            "id": "prime-codebase",
+            "title_zh": "读库上下文 · Prime",
+            "source": "cole",
+            "cole_ref": "prime-codebase",
+            "flow_brief": "优先读取当前工程的「项目画像」（布局、栈、页面目录、验证命令）；必要时只读扫描仓库顶层与关键配置。目的是站在**本仓库**现有结构上规划，禁止照搬 WorkBuddy 或某一家 ERP 的路径。"
+          }
+        }
+      },
+      "started_at": 1792394347,
+      "result_detail": "状态：pass\n摘要：已索引 workspace（2 个必读片段）\n判定说明：目录通过校验并生成 context_pack（可含风险说明）。\n目录：D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n校验：通过\n必读片段：2 个\n风险：无\n版本：ctx_1791964531_2"
+    },
+    {
+      "step_id": "4",
+      "key": "plan",
+      "title": "规划实现",
+      "skill_id": "piv-plan-implementation",
+      "skill_title": "规划实现 · validation-first",
+      "flow_brief": "按已推断场景写验证清单与建议改动面（该动菜单/路由/页/接口才动），路径提示只来自项目画像与读库结果，不强行凑齐全栈，不套 MES 硬目录。",
+      "status": "pass",
+      "summary": "实现计划已锁定（plan_1792394347，场景 新功能全栈页，验证 3 项）",
+      "receipt": {
+        "step_id": "4",
+        "status": "pass",
+        "summary": "实现计划已锁定（plan_1792394347，场景 新功能全栈页，验证 3 项）",
+        "result_detail": "状态：pass\n摘要：实现计划已锁定（plan_1792394347，场景 新功能全栈页，验证 3 项）\n判定说明：计划含版本号，且验证清单至少一条。\n问题：新增停机报表\n场景：新功能全栈页（full_feature）\n交付范围：菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）\n建议改动面：菜单/导航（入口可见）；路由注册（页面可达）；页面/组件（完整主路径）；后端接口（与页面配套）\n验证清单：config.yaml · dev_pipeline.validate_commands；菜单与路由可达；页面主路径可操作；接口可调通\n路径提示：frontend/src/views/**, frontend/src/api/**, backend/app/routers/**, **/views/**, **/*.vue, **/*.tsx, **/*.jsx, README.md, readme.md, backend/, docs/, frontend/\n版本：plan_1792394347",
+        "skill_id": "piv-plan-implementation",
+        "skill_title": "规划实现 · validation-first",
+        "started_at": 1792394347,
+        "finished_at": 1792394347,
+        "duration_sec": 0,
+        "artifacts": {
+          "plan_rev": "plan_1792394347",
+          "validation_count": 3,
+          "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+          "scenario_id": "full_feature"
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】piv-plan-implementation · 规划实现 · validation-first",
+            "【来源】Cole skills 改编（对照 piv-plan-implementation）",
+            "【这一步在干什么】按已推断场景写验证清单与建议改动面（该动菜单/路由/页/接口才动），路径提示只来自项目画像与读库结果，不强行凑齐全栈，不套 MES 硬目录。",
+            "【会做】锁定问题描述与场景化交付范围；按场景列出建议改动面（对照画像）；列出机器可跑的验证项；给出待改路径提示（通用 glob / 画像路径）；冻结 plan_rev",
+            "【不会做】本步仍不写业务代码；不套死单一交付模板；不执行 git；不写死 frontend/src/views/warehouse 一类外仓路径",
+            "开始：编写实现计划与验证清单",
+            "问题：新增停机报表",
+            "场景：新功能全栈页（full_feature）",
+            "交付范围：菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+            "建议改动面[1]：菜单/导航（入口可见）",
+            "建议改动面[2]：路由注册（页面可达）",
+            "建议改动面[3]：页面/组件（完整主路径）",
+            "建议改动面[4]：后端接口（与页面配套）",
+            "验证项[1]：config.yaml · dev_pipeline.validate_commands",
+            "验证项[2]：菜单与路由可达",
+            "验证项[3]：页面主路径可操作；接口可调通",
+            "路径提示：frontend/src/views/**, frontend/src/api/**, backend/app/routers/**, **/views/**, **/*.vue, **/*.tsx, **/*.jsx, README.md, readme.md, backend/, docs/, frontend/",
+            "结果：计划版本 plan_1792394347 已锁定"
+          ],
+          "result_detail": "状态：pass\n摘要：实现计划已锁定（plan_1792394347，场景 新功能全栈页，验证 3 项）\n判定说明：计划含版本号，且验证清单至少一条。\n问题：新增停机报表\n场景：新功能全栈页（full_feature）\n交付范围：菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）\n建议改动面：菜单/导航（入口可见）；路由注册（页面可达）；页面/组件（完整主路径）；后端接口（与页面配套）\n验证清单：config.yaml · dev_pipeline.validate_commands；菜单与路由可达；页面主路径可操作；接口可调通\n路径提示：frontend/src/views/**, frontend/src/api/**, backend/app/routers/**, **/views/**, **/*.vue, **/*.tsx, **/*.jsx, README.md, readme.md, backend/, docs/, frontend/\n版本：plan_1792394347",
+          "skill": {
+            "id": "piv-plan-implementation",
+            "title_zh": "规划实现 · validation-first",
+            "source": "cole",
+            "cole_ref": "piv-plan-implementation",
+            "flow_brief": "按已推断场景写验证清单与建议改动面（该动菜单/路由/页/接口才动），路径提示只来自项目画像与读库结果，不强行凑齐全栈，不套 MES 硬目录。"
+          }
+        }
+      },
+      "started_at": 1792394347,
+      "result_detail": "状态：pass\n摘要：实现计划已锁定（plan_1792394347，场景 新功能全栈页，验证 3 项）\n判定说明：计划含版本号，且验证清单至少一条。\n问题：新增停机报表\n场景：新功能全栈页（full_feature）\n交付范围：菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）\n建议改动面：菜单/导航（入口可见）；路由注册（页面可达）；页面/组件（完整主路径）；后端接口（与页面配套）\n验证清单：config.yaml · dev_pipeline.validate_commands；菜单与路由可达；页面主路径可操作；接口可调通\n路径提示：frontend/src/views/**, frontend/src/api/**, backend/app/routers/**, **/views/**, **/*.vue, **/*.tsx, **/*.jsx, README.md, readme.md, backend/, docs/, frontend/\n版本：plan_1792394347"
+    },
+    {
+      "step_id": "5",
+      "key": "implement",
+      "title": "写代码（Cursor 插件）",
+      "skill_id": "piv-implement",
+      "skill_title": "写代码 · Cursor 插件",
+      "flow_brief": "把 PRD + 计划 + 项目画像交给本机 Cursor **对话写码**真实改盘：创建确认单 → 开工 → 等待 Job 结束 → 回收变更文件列表。写码范围以当前工作区为准，禁止按另一套 ERP 目录改盘。",
+      "status": "pass",
+      "summary": "写码完成（cch-20261019-151911-3640，变更 5 项）",
+      "receipt": {
+        "step_id": "5",
+        "status": "pass",
+        "summary": "写码完成（cch-20261019-151911-3640，变更 5 项）",
+        "result_detail": "状态：pass\n摘要：写码完成（cch-20261019-151911-3640，变更 5 项）\n判定说明：写码 Job 成功且 changed_files 非空；空变更一律失败并打回（最多 3 轮）。\nJob：cch-20261019-151911-3640\n变更文件数：5\n门禁：pass · 变更 5 个文件，在范围内\n变更：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py\n工程：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+        "skill_id": "piv-implement",
+        "skill_title": "写代码 · Cursor 插件",
+        "started_at": 1792394348,
+        "finished_at": 1792394480,
+        "duration_sec": 132,
+        "artifacts": {
+          "cursor_job_id": "cch-20261019-151911-3640",
+          "implement": "pass"
+        },
+        "evidence": {
+          "job_id": "cch-20261019-151911-3640",
+          "changed_files": [
+            "frontend/src/views/reports/EquipmentDowntimeReportView.vue",
+            "frontend/src/config/reportFeatures.js",
+            "frontend/src/api/reports/equipmentDowntime.js",
+            "backend/app/schemas.py",
+            "backend/app/routers/reports.py"
+          ],
+          "gate": "pass",
+          "scope_audit": {
+            "ok": true,
+            "file_count": 5,
+            "violations": [],
+            "detail": "变更 5 个文件，在范围内",
+            "max_files": 22
+          },
+          "process_log": [
+            "【Skill】piv-implement · 写代码 · Cursor 插件",
+            "【来源】Cole skills 改编（对照 piv-implement）",
+            "【这一步在干什么】把 PRD + 计划 + 项目画像交给本机 Cursor **对话写码**真实改盘：创建确认单 → 开工 → 等待 Job 结束 → 回收变更文件列表。写码范围以当前工作区为准，禁止按另一套 ERP 目录改盘。",
+            "【会做】调用 :18791 对话写码插件；附带项目画像与本次需求/识图结构；跟踪 Job 状态；记录 job_id 与变更文件",
+            "【不会做】不在本仓另造第二套写码内核；不回退旧 coding :18788；不跳过插件 Key 校验",
+            "写码预检：sidecar / Key / 工程目录…",
+            "已自愈 sidecar：已拉起 sidecar http://127.0.0.1:18791（pid≈26140）",
+            "开始：真实调用 Cursor 写码插件改盘",
+            "工程目录：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "任务卡：【写码任务卡 · 本步唯一交付目标】",
+            "写码目标：http://127.0.0.1:18791",
+            "写码插件就绪：http://127.0.0.1:18791",
+            "创建 pending 确认单…",
+            "confirm_token=pcf-6e58b8153b89e2697a85",
+            "签发写码 HITL nonce（流水线代签，不再弹中间确认）…",
+            "确认开工（真实 Cursor 写码 Job）…",
+            "Job 已启动：cch-20261019-151911-3640，等待终态（最长 2700s）…",
+            "Job 状态 → running",
+            "轮询 Job 暂失败（1/3）：[WinError 10054] 远程主机强迫关闭了一个现有的连接。",
+            "写码服务连接中断，自愈拉起 sidecar（1/2）…",
+            "已拉起 sidecar http://127.0.0.1:18791（pid≈3076）",
+            "自愈后 Job 轮询恢复",
+            "Job 状态 → succeeded",
+            "写码门禁判定：pass / pass"
+          ],
+          "result_detail": "状态：pass\n摘要：写码完成（cch-20261019-151911-3640，变更 5 项）\n判定说明：写码 Job 成功且 changed_files 非空；空变更一律失败并打回（最多 3 轮）。\nJob：cch-20261019-151911-3640\n变更文件数：5\n门禁：pass · 变更 5 个文件，在范围内\n变更：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py\n工程：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "skill": {
+            "id": "piv-implement",
+            "title_zh": "写代码 · Cursor 插件",
+            "source": "cole",
+            "cole_ref": "piv-implement",
+            "flow_brief": "把 PRD + 计划 + 项目画像交给本机 Cursor **对话写码**真实改盘：创建确认单 → 开工 → 等待 Job 结束 → 回收变更文件列表。写码范围以当前工作区为准，禁止按另一套 ERP 目录改盘。"
+          }
+        }
+      },
+      "started_at": 1792394348,
+      "result_detail": "状态：pass\n摘要：写码完成（cch-20261019-151911-3640，变更 5 项）\n判定说明：写码 Job 成功且 changed_files 非空；空变更一律失败并打回（最多 3 轮）。\nJob：cch-20261019-151911-3640\n变更文件数：5\n门禁：pass · 变更 5 个文件，在范围内\n变更：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py\n工程：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding"
+    },
+    {
+      "step_id": "6",
+      "key": "validate",
+      "title": "验证",
+      "skill_id": "piv-validate",
+      "skill_title": "机器验证 · 只认 PASS/FAIL",
+      "flow_brief": "在工程目录内按配置或项目画像跑验证命令，只看 exit code。失败不会假装通过；探测不到检查项标「未验证」并跳过，不假绿。可按策略自动回到第 5 步修。",
+      "status": "pass",
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "receipt": {
+        "step_id": "6",
+        "status": "pass",
+        "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+        "result_detail": "状态：pass\n摘要：自动验证通过（未手写 validate_commands，已探测默认检查）\n判定说明：全部命令 exit 0；探测到的默认检查全部通过。\n判定：全部通过\n工程：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n· py-compile-root: exit 0\n· git-diff-check: exit 0",
+        "skill_id": "piv-validate",
+        "skill_title": "机器验证 · 只认 PASS/FAIL",
+        "started_at": 1792394481,
+        "finished_at": 1792394489,
+        "duration_sec": 8,
+        "artifacts": {
+          "validate": "pass"
+        },
+        "evidence": {
+          "results": [
+            {
+              "name": "py-compile-root",
+              "cmd": "python -m compileall -q .",
+              "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+              "exit_code": 0,
+              "ok": true,
+              "stdout": "",
+              "stderr": "",
+              "duration_sec": 7.46
+            },
+            {
+              "name": "git-diff-check",
+              "cmd": "git diff --check",
+              "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+              "exit_code": 0,
+              "ok": true,
+              "stdout": "",
+              "stderr": "warning: in the working copy of 'backend/app/openapi_zh.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'backend/app/routers/workbuddy.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'frontend/src/views/ai-assistant/WorkBuddyView.vue', LF will be replaced by CRLF the next time Git touches it",
+              "duration_sec": 0.16
+            }
+          ],
+          "process_log": [
+            "【Skill】piv-validate · 机器验证 · 只认 PASS/FAIL",
+            "【来源】Cole skills 改编（对照 piv-validate）",
+            "【这一步在干什么】在工程目录内按配置或项目画像跑验证命令，只看 exit code。失败不会假装通过；探测不到检查项标「未验证」并跳过，不假绿。可按策略自动回到第 5 步修。",
+            "【会做】优先执行 config / 画像 validate_commands；自动探测 frontend/backend、pom、go、pyproject 等；记录每条命令的退出码与摘要",
+            "【不会做】不靠模型嘴炮说「应该过了」；不在本步改业务代码；不把「无探测项」当成通过",
+            "开始：执行 validate_commands",
+            "py-compile-root: exit 0",
+            "git-diff-check: exit 0",
+            "结果：验证通过"
+          ],
+          "result_detail": "状态：pass\n摘要：自动验证通过（未手写 validate_commands，已探测默认检查）\n判定说明：全部命令 exit 0；探测到的默认检查全部通过。\n判定：全部通过\n工程：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n· py-compile-root: exit 0\n· git-diff-check: exit 0",
+          "skill": {
+            "id": "piv-validate",
+            "title_zh": "机器验证 · 只认 PASS/FAIL",
+            "source": "cole",
+            "cole_ref": "piv-validate",
+            "flow_brief": "在工程目录内按配置或项目画像跑验证命令，只看 exit code。失败不会假装通过；探测不到检查项标「未验证」并跳过，不假绿。可按策略自动回到第 5 步修。"
+          }
+        }
+      },
+      "started_at": 1792394481,
+      "result_detail": "状态：pass\n摘要：自动验证通过（未手写 validate_commands，已探测默认检查）\n判定说明：全部命令 exit 0；探测到的默认检查全部通过。\n判定：全部通过\n工程：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n· py-compile-root: exit 0\n· git-diff-check: exit 0"
+    },
+    {
+      "step_id": "7",
+      "key": "review",
+      "title": "复核",
+      "skill_id": "piv-review-changes",
+      "skill_title": "复核 · 审码（仅本次改动）",
+      "flow_brief": "只审核第 5 步写码产出的变更文件；并通过与步骤 8 **同一套提交门禁**。有 Blocker / 门禁阻断则本步失败，打回写码（5）自动补救后重跑 6→7→8。",
+      "status": "pass",
+      "summary": "🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。",
+      "receipt": {
+        "step_id": "7",
+        "status": "pass",
+        "summary": "🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。",
+        "result_detail": "状态：pass\n摘要：🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n判定说明：审码无 Blocker，且提交门禁可提交。\n报告 ID：cr-88e0767aa0e847a1\n范围：仅本次改动（5 个文件）\n文件：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py",
+        "skill_id": "piv-review-changes",
+        "skill_title": "复核 · 审码（仅本次改动）",
+        "started_at": 1792394489,
+        "finished_at": 1792394523,
+        "duration_sec": 34,
+        "artifacts": {
+          "report_id": "cr-88e0767aa0e847a1",
+          "changed_only": true,
+          "file_count": 5,
+          "skipped": false,
+          "high_count": 0,
+          "medium_count": 4,
+          "low_count": 3
+        },
+        "evidence": {
+          "report_body": "代码审核汇总报告\n审核文件：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py\n审核日期：2026-10-19\n审核人：Viprasol + workbuddy-gate-90（Skill `zr-workbuddy-code-review`）\n工程路径：D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n---\n一、总体评价\n🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n本次审核共发现 7 个问题。\n所有问题均基于已读源码/配置，方法论为 Viprasol + workbuddy-gate-90（及源码规则补种），位置与代码片段对应原始文件。\n---\n二、详细问题清单（汇总后）\n🟡 中危 问题1 — 停机报表全量加载后内存分页\n文件：backend/app/routers/reports.py　位置：约第 1 行\n问题描述：list_equipment_downtime_report 先 _build_equipment_downtime_report_items 全量 .all() 拉取满足筛选的全部停机记录，再 len/sum/切片分页。停机日志为持续增长流水表，日期范围放宽或设备多时行数可达数十万，单请求内存与耗时线性膨胀，total 与 downtime_hours_sum 无法用数据库聚合下推。触发条件：停机日志量大 + 宽日期范围查询。\n// ❌ 当前代码\n```\nall_items = _build_equipment_downtime_report_items(db, date_from=date_from, date_to=date_to, workshop=workshop, equipment_id=equipment_id)\ntotal = len(all_items)\ndowntime_hours_sum = round(sum(item.downtime_hours for item in all_items), 2)\nstart = (page - 1) * page_size\npage_items = all_items[start : start + page_size]\n```\n修改建议：把计数与求和下推为 SQL 聚合，明细用 offset/limit 分页；拆出 _equipment_downtime_base_query 返回 query，调用方 .count() / with_entities(func.sum(...)) / .offset().limit().all()。验证：造 10 万条停机日志对比改造前后 P95 与内存，total 与合计需一致。\n// ✅ 正确做法\n```\ndef _equipment_downtime_base_query(db, *, date_from, date_to, workshop, equipment_id):\n    query = (db.query(EquipmentRuntimeLog, Equipment)\n        .join(Equipment, EquipmentRuntimeLog.equipment_id == Equipment.id)\n        .filter(EquipmentRuntimeLog.status == \"停机\",\n                func.date(EquipmentRuntimeLog.start_at) >= date_from,\n                func.date(EquipmentRuntimeLog.start_at) <= date_to))\n    if workshop:\n        query = query.filter(Equipment.department == workshop)\n    if equipment_id:\n        query = query.filter(EquipmentRuntimeLog.equipment_id == equipment_id)\n    return query\n\n@router.get(\"/equipment-downtime\", response_model=EquipmentDowntimeReportListResponse)\ndef list_equipment_downtime_report(...):\n    date_from, date_to = _normalize_equipment_downtime_date_range(date_from, date_to)\n    base = _equipment_downtime_base_query(db, date_from=date_from, date_to=date_to, workshop=workshop, equipment_id=equipment_id)\n    total = base.count()\n    hours_sum = base.with_entities(func.coalesce(func.sum(EquipmentRuntimeLog.runtime_hours), 0)).scalar() or 0\n    rows = base.order_by(EquipmentRuntimeLog.start_at.desc(), EquipmentRuntimeLog.id.desc()).offset((page - 1) * page_size).limit(page_size).all()\n    return EquipmentDowntimeReportListResponse(items=[_runtime_log_to_downtime_item(log, eq) for log, eq in rows], total=total, page=page, page_size=page_size, downtime_hours_sum=round(float(hours_sum), 2))\n```\n---\n🟡 中危 问题2 — 停机时长直接取 runtime_hours，未结束/跨天停机失真\n文件：backend/app/routers/reports.py　位置：约第 1 行\n问题描述：_runtime_log_to_downtime_item 用 log.runtime_hours 作为 downtime_hours。若 end_at 为空（仍在停机中），runtime_hours 可能为 0 或未回填，报表显示 0 小时；跨天停机按 start_at 归属会把整段时长算到开始日，与按日期范围统计的直觉不符。触发条件：存在未结束停机或跨零点停机记录。\n// ❌ 当前代码\n```\ndowntime_hours=round(float(log.runtime_hours or 0), 2),\n```\n修改建议：对未结束记录用 now - start_at 兜底计算，并在 schema 描述注明口径；跨天归属若业务要求按日切分需在聚合层按天拆分。验证：插入 end_at=NULL 停机记录接口应返回非 0 时长。\n// ✅ 正确做法\n```\ndef _runtime_log_to_downtime_item(log, equipment):\n    if log.runtime_hours:\n        hours = float(log.runtime_hours)\n    elif log.start_at:\n        end = log.end_at or datetime.now()\n        hours = max((end - log.start_at).total_seconds() / 3600, 0.0)\n    else:\n        hours = 0.0\n    return EquipmentDowntimeReportItem(id=log.id, equipment_code=equipment.equipment_code, equipment_name=equipment.name, workshop=equipment.department, start_at=log.start_at, end_at=log.end_at, downtime_hours=round(hours, 2), status=log.status)\n```\n---\n🟡 中危 问题3 — new Date('YYYY-MM-DD HH:mm') 解析跨浏览器/时区不稳\n文件：frontend/src/views/reports/EquipmentDowntimeReportView.vue　位置：约第 1 行\n问题描述：formatDateTime 用 new Date(value) 解析后端 start_at。若后端返回空格分隔无时区的 'YYYY-MM-DD HH:mm:ss'，Safari 等会解析失败返回 Invalid Date 并回退原字符串；若返回带 Z 的 UTC 时间，getHours() 会按本地时区偏移，与用户预期不一致。触发条件：后端时间格式非 ISO8601 或带时区。\n// ❌ 当前代码\n```\nconst d = new Date(value)\nif (Number.isNaN(d.getTime())) return String(value)\n```\n修改建议：统一约定后端返回 ISO8601；前端对本地时间字符串直接正则截取展示，避免时区解析歧义。验证：Safari/Firefox 打开页面时间列格式统一无偏移。\n// ✅ 正确做法\n```\nfunction formatDateTime(value) {\n  if (!value) return '—'\n  const m = String(value).match(/^(\\d{4}-\\d{2}-\\d{2})[ T](\\d{2}:\\d{2})/)\n  if (m) return `${m[1]} ${m[2]}`\n  const d = new Date(value)\n  if (Number.isNaN(d.getTime())) return String(value)\n  const pad = (n) => String(n).padStart(2, '0')\n  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`\n}\n```\n---\n🟡 中危 问题4 — 停机时长合计标签语义易误读为当前页合计\n文件：frontend/src/views/reports/EquipmentDowntimeReportView.vue　位置：约第 1 行\n问题描述：顶部 el-tag 显示「停机时长合计」，而 downtimeHoursSum 来自后端筛选全量合计（非当前页）。用户翻页时该值不变，容易误以为本页合计，属口径/可用性问题。\n// ❌ 当前代码\n```\n<el-tag size=\"small\" type=\"warning\">停机时长合计 {{ formatHours(downtimeHoursSum) }} h</el-tag>\n```\n修改建议：标签文案明确为「筛选范围合计」，或改为当前页合计（前端 items.reduce）。验证：翻到第 2 页确认标签语义与数值一致。\n// ✅ 正确做法\n```\n<el-tag size=\"small\" type=\"warning\">\n  筛选范围停机合计 {{ formatHours(downtimeHoursSum) }} h\n</el-tag>\n```\n---\n🟢 低危 问题5 — 文件头堆积数十行变更流水注释\n文件：frontend/src/config/reportFeatures.js　位置：约第 1 行\n问题描述：reportFeatures.js 顶部有 40+ 行 cch-2026... 变更流水与 parent_job_id 注释，属提交历史信息，应放 git log/CHANGELOG，留在源码污染可读性且易冲突。\n// ❌ 当前代码\n```\n// cch-20261019-report-center-add-equipment-downtime-menu-v14\n// parent_job_id=cch-20261019-143600-5d27\n// parent_job_id=cch-20261019-102121-9f51\n```\n修改建议：清理为一行模块说明，历史交给 git。验证：文件头仅保留模块文档注释。\n// ✅ 正确做法\n```\n/**\n * 报表功能注册表（唯一配置入口）。\n * 侧栏「报表中心」菜单由此表驱动；menu/hub/enabled 控制展示与下线。\n */\nexport const REPORT_CATALOG = [ /* ... */ ]\n```\n---\n🟢 低危 问题6 — loadFilters 静默吞异常无提示\n文件：frontend/src/views/reports/EquipmentDowntimeReportView.vue　位置：约第 1 行\n问题描述：loadFilters 的 catch {} 空捕获，筛选选项加载失败时用户只看到空下拉无任何提示，排查困难。\n// ❌ 当前代码\n```\n} catch {\n  filterOptions.workshops = []\n  filterOptions.equipment = []\n}\n```\n修改建议：至少 ElMessage.warning 或 console.warn，保留降级。验证：断网/接口 500 时页面有提示。\n// ✅ 正确做法\n```\n} catch (err) {\n  filterOptions.workshops = []\n  filterOptions.equipment = []\n  ElMessage.warning(err?.message || '筛选选项加载失败，请稍后重试')\n}\n```\n---\n🟢 低危 问题7 — 可变默认值 permissions: list[str] = []\n文件：backend/app/schemas.py　位置：约第 1 行\n问题描述：UserResponse.permissions 使用可变默认值。Pydantic 会为每实例复制默认值当前不踩坑，但属常见反模式，建议与同文件其他处统一用 default_factory。\n// ❌ 当前代码\n```\npermissions: list[str] = []\n```\n修改建议：改为 Field(default_factory=list)。验证：两实例 permissions 不共享。\n// ✅ 正确做法\n```\npermissions: list[str] = Field(default_factory=list)\n```\n---\n四、审核结论\n⚠️ 有条件通过（无高危；存在中危项，建议本次一并修复）\n🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n✅ 数量核对：高危0 + 中危4 + 低危3 = 总问题数7。\n> 审码元信息：已按 Viprasol + workbuddy-gate-90 **本批次改动重审** （指定改动 5 个，实际审读 5 个功能源码文件）（1 批并行，审码 ID `cr-run-0eb9c2d20290-072130`，无结果缓存）。LLM 产出 7 条；规则补种 0 条；合并去重后 7 条。\n\n\n报告 ID：`cr-88e0767aa0e847a1`",
+          "findings": [
+            {
+              "file": "backend/app/routers/reports.py",
+              "line": 1,
+              "severity": "medium",
+              "title": "停机报表全量加载后内存分页",
+              "description": "list_equipment_downtime_report 先 _build_equipment_downtime_report_items 全量 .all() 拉取满足筛选的全部停机记录，再 len/sum/切片分页。停机日志为持续增长流水表，日期范围放宽或设备多时行数可达数十万，单请求内存与耗时线性膨胀，total 与 downtime_hours_sum 无法用数据库聚合下推。触发条件：停机日志量大 + 宽日期范围查询。",
+              "code_snippet": "all_items = _build_equipment_downtime_report_items(db, date_from=date_from, date_to=date_to, workshop=workshop, equipment_id=equipment_id)\ntotal = len(all_items)\ndowntime_hours_sum = round(sum(item.downtime_hours for item in all_items), 2)\nstart = (page - 1) * page_size\npage_items = all_items[start : start + page_size]",
+              "fix_suggestion": "把计数与求和下推为 SQL 聚合，明细用 offset/limit 分页；拆出 _equipment_downtime_base_query 返回 query，调用方 .count() / with_entities(func.sum(...)) / .offset().limit().all()。验证：造 10 万条停机日志对比改造前后 P95 与内存，total 与合计需一致。",
+              "fix_code": "def _equipment_downtime_base_query(db, *, date_from, date_to, workshop, equipment_id):\n    query = (db.query(EquipmentRuntimeLog, Equipment)\n        .join(Equipment, EquipmentRuntimeLog.equipment_id == Equipment.id)\n        .filter(EquipmentRuntimeLog.status == \"停机\",\n                func.date(EquipmentRuntimeLog.start_at) >= date_from,\n                func.date(EquipmentRuntimeLog.start_at) <= date_to))\n    if workshop:\n        query = query.filter(Equipment.department == workshop)\n    if equipment_id:\n        query = query.filter(EquipmentRuntimeLog.equipment_id == equipment_id)\n    return query\n\n@router.get(\"/equipment-downtime\", response_model=EquipmentDowntimeReportListResponse)\ndef list_equipment_downtime_report(...):\n    date_from, date_to = _normalize_equipment_downtime_date_range(date_from, date_to)\n    base = _equipment_downtime_base_query(db, date_from=date_from, date_to=date_to, workshop=workshop, equipment_id=equipment_id)\n    total = base.count()\n    hours_sum = base.with_entities(func.coalesce(func.sum(EquipmentRuntimeLog.runtime_hours), 0)).scalar() or 0\n    rows = base.order_by(EquipmentRuntimeLog.start_at.desc(), EquipmentRuntimeLog.id.desc()).offset((page - 1) * page_size).limit(page_size).all()\n    return EquipmentDowntimeReportListResponse(items=[_runtime_log_to_downtime_item(log, eq) for log, eq in rows], total=total, page=page, page_size=page_size, downtime_hours_sum=round(float(hours_sum), 2))"
+            },
+            {
+              "file": "backend/app/routers/reports.py",
+              "line": 1,
+              "severity": "medium",
+              "title": "停机时长直接取 runtime_hours，未结束/跨天停机失真",
+              "description": "_runtime_log_to_downtime_item 用 log.runtime_hours 作为 downtime_hours。若 end_at 为空（仍在停机中），runtime_hours 可能为 0 或未回填，报表显示 0 小时；跨天停机按 start_at 归属会把整段时长算到开始日，与按日期范围统计的直觉不符。触发条件：存在未结束停机或跨零点停机记录。",
+              "code_snippet": "downtime_hours=round(float(log.runtime_hours or 0), 2),",
+              "fix_suggestion": "对未结束记录用 now - start_at 兜底计算，并在 schema 描述注明口径；跨天归属若业务要求按日切分需在聚合层按天拆分。验证：插入 end_at=NULL 停机记录接口应返回非 0 时长。",
+              "fix_code": "def _runtime_log_to_downtime_item(log, equipment):\n    if log.runtime_hours:\n        hours = float(log.runtime_hours)\n    elif log.start_at:\n        end = log.end_at or datetime.now()\n        hours = max((end - log.start_at).total_seconds() / 3600, 0.0)\n    else:\n        hours = 0.0\n    return EquipmentDowntimeReportItem(id=log.id, equipment_code=equipment.equipment_code, equipment_name=equipment.name, workshop=equipment.department, start_at=log.start_at, end_at=log.end_at, downtime_hours=round(hours, 2), status=log.status)"
+            },
+            {
+              "file": "frontend/src/views/reports/EquipmentDowntimeReportView.vue",
+              "line": 1,
+              "severity": "medium",
+              "title": "new Date('YYYY-MM-DD HH:mm') 解析跨浏览器/时区不稳",
+              "description": "formatDateTime 用 new Date(value) 解析后端 start_at。若后端返回空格分隔无时区的 'YYYY-MM-DD HH:mm:ss'，Safari 等会解析失败返回 Invalid Date 并回退原字符串；若返回带 Z 的 UTC 时间，getHours() 会按本地时区偏移，与用户预期不一致。触发条件：后端时间格式非 ISO8601 或带时区。",
+              "code_snippet": "const d = new Date(value)\nif (Number.isNaN(d.getTime())) return String(value)",
+              "fix_suggestion": "统一约定后端返回 ISO8601；前端对本地时间字符串直接正则截取展示，避免时区解析歧义。验证：Safari/Firefox 打开页面时间列格式统一无偏移。",
+              "fix_code": "function formatDateTime(value) {\n  if (!value) return '—'\n  const m = String(value).match(/^(\\d{4}-\\d{2}-\\d{2})[ T](\\d{2}:\\d{2})/)\n  if (m) return `${m[1]} ${m[2]}`\n  const d = new Date(value)\n  if (Number.isNaN(d.getTime())) return String(value)\n  const pad = (n) => String(n).padStart(2, '0')\n  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`\n}"
+            },
+            {
+              "file": "frontend/src/views/reports/EquipmentDowntimeReportView.vue",
+              "line": 1,
+              "severity": "medium",
+              "title": "停机时长合计标签语义易误读为当前页合计",
+              "description": "顶部 el-tag 显示「停机时长合计」，而 downtimeHoursSum 来自后端筛选全量合计（非当前页）。用户翻页时该值不变，容易误以为本页合计，属口径/可用性问题。",
+              "code_snippet": "<el-tag size=\"small\" type=\"warning\">停机时长合计 {{ formatHours(downtimeHoursSum) }} h</el-tag>",
+              "fix_suggestion": "标签文案明确为「筛选范围合计」，或改为当前页合计（前端 items.reduce）。验证：翻到第 2 页确认标签语义与数值一致。",
+              "fix_code": "<el-tag size=\"small\" type=\"warning\">\n  筛选范围停机合计 {{ formatHours(downtimeHoursSum) }} h\n</el-tag>"
+            },
+            {
+              "file": "frontend/src/config/reportFeatures.js",
+              "line": 1,
+              "severity": "low",
+              "title": "文件头堆积数十行变更流水注释",
+              "description": "reportFeatures.js 顶部有 40+ 行 cch-2026... 变更流水与 parent_job_id 注释，属提交历史信息，应放 git log/CHANGELOG，留在源码污染可读性且易冲突。",
+              "code_snippet": "// cch-20261019-report-center-add-equipment-downtime-menu-v14\n// parent_job_id=cch-20261019-143600-5d27\n// parent_job_id=cch-20261019-102121-9f51",
+              "fix_suggestion": "清理为一行模块说明，历史交给 git。验证：文件头仅保留模块文档注释。",
+              "fix_code": "/**\n * 报表功能注册表（唯一配置入口）。\n * 侧栏「报表中心」菜单由此表驱动；menu/hub/enabled 控制展示与下线。\n */\nexport const REPORT_CATALOG = [ /* ... */ ]"
+            },
+            {
+              "file": "frontend/src/views/reports/EquipmentDowntimeReportView.vue",
+              "line": 1,
+              "severity": "low",
+              "title": "loadFilters 静默吞异常无提示",
+              "description": "loadFilters 的 catch {} 空捕获，筛选选项加载失败时用户只看到空下拉无任何提示，排查困难。",
+              "code_snippet": "} catch {\n  filterOptions.workshops = []\n  filterOptions.equipment = []\n}",
+              "fix_suggestion": "至少 ElMessage.warning 或 console.warn，保留降级。验证：断网/接口 500 时页面有提示。",
+              "fix_code": "} catch (err) {\n  filterOptions.workshops = []\n  filterOptions.equipment = []\n  ElMessage.warning(err?.message || '筛选选项加载失败，请稍后重试')\n}"
+            },
+            {
+              "file": "backend/app/schemas.py",
+              "line": 1,
+              "severity": "low",
+              "title": "可变默认值 permissions: list[str] = []",
+              "description": "UserResponse.permissions 使用可变默认值。Pydantic 会为每实例复制默认值当前不踩坑，但属常见反模式，建议与同文件其他处统一用 default_factory。",
+              "code_snippet": "permissions: list[str] = []",
+              "fix_suggestion": "改为 Field(default_factory=list)。验证：两实例 permissions 不共享。",
+              "fix_code": "permissions: list[str] = Field(default_factory=list)"
+            }
+          ],
+          "process_log": [
+            "【Skill】piv-review-changes · 复核 · 审码（仅本次改动）",
+            "【来源】Cole skills 改编（对照 piv-review-changes）",
+            "【这一步在干什么】只审核第 5 步写码产出的变更文件；并通过与步骤 8 **同一套提交门禁**。有 Blocker / 门禁阻断则本步失败，打回写码（5）自动补救后重跑 6→7→8。",
+            "【会做】读取写码变更文件列表；只对这些文件跑 code-review；对齐跑提交门禁（run_commit_review_gate）；落盘 report_id",
+            "【不会做】不跑整仓全量抽样；不自动 git commit；不改聊天审码卡默认行为",
+            "开始：真实审码（code-review · 仅本次改动）",
+            "改动文件来自写码产物（5）：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py",
+            "开始真实审码（仅本次改动 5 个）：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "文件：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py",
+            "复核对齐提交门禁（5 个文件）…",
+            "提交批审：无阻断，2 条警告 —— 确认后可提交"
+          ],
+          "result_detail": "状态：pass\n摘要：🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n判定说明：审码无 Blocker，且提交门禁可提交。\n报告 ID：cr-88e0767aa0e847a1\n范围：仅本次改动（5 个文件）\n文件：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py",
+          "skill": {
+            "id": "piv-review-changes",
+            "title_zh": "复核 · 审码（仅本次改动）",
+            "source": "cole",
+            "cole_ref": "piv-review-changes",
+            "flow_brief": "只审核第 5 步写码产出的变更文件；并通过与步骤 8 **同一套提交门禁**。有 Blocker / 门禁阻断则本步失败，打回写码（5）自动补救后重跑 6→7→8。"
+          }
+        }
+      },
+      "started_at": 1792394489,
+      "result_detail": "状态：pass\n摘要：🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n判定说明：审码无 Blocker，且提交门禁可提交。\n报告 ID：cr-88e0767aa0e847a1\n范围：仅本次改动（5 个文件）\n文件：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py"
+    },
+    {
+      "step_id": "8",
+      "key": "commit",
+      "title": "提交",
+      "skill_id": "piv-commit",
+      "skill_title": "提交 · Git commit/push",
+      "flow_brief": "走本仓提交车道：列待提交文件 → 门禁（与复核同标准）→ 中文说明 → commit/push。墙钟最多约 60 秒；超时则软跳过本步继续开 PR/部署，用户可稍后用提交车道手动再提。门禁 P0/P1 阻断仍打回写码补救（5→6→7→8），不硬闯。",
+      "status": "pass",
+      "summary": "已提交到分支 `hebo`（80e4515b1399），并已推送到远程。",
+      "receipt": {
+        "step_id": "8",
+        "status": "pass",
+        "summary": "已提交到分支 `hebo`（80e4515b1399），并已推送到远程。",
+        "result_detail": "状态：pass\n摘要：已提交到分支 `hebo`（80e4515b1399），并已推送到远程。\n判定说明：提交成功，或无变更/超时软跳过（可稍后手动提交）。\n提交 Job：cc-f182f5f57b404ea2\n自动尝试：1 次\n是否跳过：否\n摘要：已提交到分支 `hebo`（80e4515b1399），并已推送到远程。",
+        "skill_id": "piv-commit",
+        "skill_title": "提交 · Git commit/push",
+        "started_at": 1792394524,
+        "finished_at": 1792394542,
+        "duration_sec": 18,
+        "artifacts": {
+          "commit_job_id": "cc-f182f5f57b404ea2",
+          "skipped": false,
+          "can_manual_retry": false,
+          "attempts": 1
+        },
+        "evidence": {
+          "reason": "",
+          "can_manual_retry": false,
+          "process_log": [
+            "【Skill】piv-commit · 提交 · Git commit/push",
+            "【来源】Cole skills 改编（对照 piv-commit）",
+            "【这一步在干什么】走本仓提交车道：列待提交文件 → 门禁（与复核同标准）→ 中文说明 → commit/push。墙钟最多约 60 秒；超时则软跳过本步继续开 PR/部署，用户可稍后用提交车道手动再提。门禁 P0/P1 阻断仍打回写码补救（5→6→7→8），不硬闯。",
+            "【会做】跑提交门禁；压缩中文提交说明；墙钟≤60s，超时软跳过可稍后手动提交；门禁阻断打回写码补救",
+            "【不会做】不让模型直接敲 git；门禁阻断时不允许硬提交；超时不得拖死整条流水线",
+            "开始：真实提交（code-commit，墙钟≤60s；超时软跳过可稍后手动提交）",
+            "提交墙钟上限 60s（超时将软跳过并继续下一步）",
+            "开始真实提交门禁（第 1/3 次）：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "门禁通过，执行 commit/push（job=cc-f182f5f57b404ea2，说明 15 字）…"
+          ],
+          "result_detail": "状态：pass\n摘要：已提交到分支 `hebo`（80e4515b1399），并已推送到远程。\n判定说明：提交成功，或无变更/超时软跳过（可稍后手动提交）。\n提交 Job：cc-f182f5f57b404ea2\n自动尝试：1 次\n是否跳过：否\n摘要：已提交到分支 `hebo`（80e4515b1399），并已推送到远程。",
+          "skill": {
+            "id": "piv-commit",
+            "title_zh": "提交 · Git commit/push",
+            "source": "cole",
+            "cole_ref": "piv-commit",
+            "flow_brief": "走本仓提交车道：列待提交文件 → 门禁（与复核同标准）→ 中文说明 → commit/push。墙钟最多约 60 秒；超时则软跳过本步继续开 PR/部署，用户可稍后用提交车道手动再提。门禁 P0/P1 阻断仍打回写码补救（5→6→7→8），不硬闯。"
+          }
+        }
+      },
+      "started_at": 1792394524,
+      "result_detail": "状态：pass\n摘要：已提交到分支 `hebo`（80e4515b1399），并已推送到远程。\n判定说明：提交成功，或无变更/超时软跳过（可稍后手动提交）。\n提交 Job：cc-f182f5f57b404ea2\n自动尝试：1 次\n是否跳过：否\n摘要：已提交到分支 `hebo`（80e4515b1399），并已推送到远程。"
+    },
+    {
+      "step_id": "9",
+      "key": "pr",
+      "title": "开 PR",
+      "skill_id": "piv-create-pr",
+      "skill_title": "开 PR",
+      "flow_brief": "按工程远端托管开合并请求：GitHub→gh，GitLab→glab；Gitee 给手工说明；SVN 标「不适用」后仍可进部署。也可在 config.yaml · dev_pipeline.pr_provider=skip 整步跳过。",
+      "status": "skipped",
+      "summary": "本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip",
+      "receipt": {
+        "step_id": "9",
+        "status": "skipped",
+        "summary": "本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip",
+        "result_detail": "状态：skipped\n摘要：本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip\n判定说明：拿到 PR/MR URL；或诚实跳过/不适用（无 CLI、Gitee 手工、SVN、配置 skip）。\n托管：github\nPR：（已跳过/不适用）\n摘要：本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip",
+        "skill_id": "piv-create-pr",
+        "skill_title": "开 PR",
+        "started_at": 1792394543,
+        "finished_at": 1792394543,
+        "duration_sec": 0,
+        "artifacts": {
+          "pr_url": "",
+          "skipped": true,
+          "provider": "github"
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】piv-create-pr · 开 PR",
+            "【来源】Cole skills 改编（对照 piv-create-pr）",
+            "【这一步在干什么】按工程远端托管开合并请求：GitHub→gh，GitLab→glab；Gitee 给手工说明；SVN 标「不适用」后仍可进部署。也可在 config.yaml · dev_pipeline.pr_provider=skip 整步跳过。",
+            "【会做】识别 origin（github/gitlab/gitee）或 SVN；调用 gh / glab（若已安装且已登录）；回写 PR/MR URL 或诚实跳过说明",
+            "【不会做】不自动合并；不伪造 PR 链接；不对 SVN 硬跑 gh",
+            "开始：按托管类型开 PR/MR（或标不适用）",
+            "尝试 gh pr create（GitHub）…"
+          ],
+          "result_detail": "状态：skipped\n摘要：本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip\n判定说明：拿到 PR/MR URL；或诚实跳过/不适用（无 CLI、Gitee 手工、SVN、配置 skip）。\n托管：github\nPR：（已跳过/不适用）\n摘要：本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip",
+          "skill": {
+            "id": "piv-create-pr",
+            "title_zh": "开 PR",
+            "source": "cole",
+            "cole_ref": "piv-create-pr",
+            "flow_brief": "按工程远端托管开合并请求：GitHub→gh，GitLab→glab；Gitee 给手工说明；SVN 标「不适用」后仍可进部署。也可在 config.yaml · dev_pipeline.pr_provider=skip 整步跳过。"
+          }
+        }
+      },
+      "started_at": 1792394543,
+      "result_detail": "状态：skipped\n摘要：本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip\n判定说明：拿到 PR/MR URL；或诚实跳过/不适用（无 CLI、Gitee 手工、SVN、配置 skip）。\n托管：github\nPR：（已跳过/不适用）\n摘要：本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip"
+    },
+    {
+      "step_id": "10",
+      "key": "deploy",
+      "title": "部署上线",
+      "skill_id": "piv-deploy",
+      "skill_title": "部署上线",
+      "flow_brief": "走本仓一体部署车道：准备变更集 → 同步远端 → 探活。仅对配置了部署的工程有效；目录不对会诚实失败。",
+      "status": "fail",
+      "summary": "单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed",
+      "receipt": {
+        "step_id": "10",
+        "status": "fail",
+        "summary": "单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed",
+        "result_detail": "状态：fail\n摘要：单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed\n失败对照：准备失败、同步失败或探活未过。\n说明：单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed\n尝试次数：1",
+        "skill_id": "piv-deploy",
+        "skill_title": "部署上线",
+        "started_at": 1792394544,
+        "finished_at": 1792394577,
+        "duration_sec": 33,
+        "artifacts": {
+          "deploy": "fail"
+        },
+        "evidence": {
+          "reason": "deploy_fail",
+          "attempts": 1,
+          "job_id": "cd-0f94a962ef4a438c",
+          "detail": "单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed",
+          "process_log": [
+            "【Skill】piv-deploy · 部署上线",
+            "【来源】WorkBuddy 自写",
+            "【这一步在干什么】走本仓一体部署车道：准备变更集 → 同步远端 → 探活。仅对配置了部署的工程有效；目录不对会诚实失败。",
+            "【会做】prepare 部署计划；执行同步/重启；记录 deploy job_id",
+            "【不会做】不在未配置环境上装成功；不跳过探活标准（若配置要求）",
+            "开始：真实部署（code-deploy）",
+            "准备真实部署：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "确认部署执行（job=cd-0f94a962ef4a438c，尝试 1/3）…"
+          ],
+          "result_detail": "状态：fail\n摘要：单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed\n失败对照：准备失败、同步失败或探活未过。\n说明：单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed\n尝试次数：1",
+          "skill": {
+            "id": "piv-deploy",
+            "title_zh": "部署上线",
+            "source": "workbuddy",
+            "cole_ref": null,
+            "flow_brief": "走本仓一体部署车道：准备变更集 → 同步远端 → 探活。仅对配置了部署的工程有效；目录不对会诚实失败。"
+          }
+        }
+      },
+      "started_at": 1792394544,
+      "result_detail": "状态：fail\n摘要：单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed\n失败对照：准备失败、同步失败或探活未过。\n说明：单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed\n尝试次数：1"
+    }
+  ],
+  "fix_round": 0,
+  "implement_attempt": 1,
+  "timeline_trace": [
+    {
+      "kind": "step",
+      "seq": 1,
+      "step_id": "1",
+      "implement_attempt": 1,
+      "title": "需求采集",
+      "status": "pass",
+      "summary": "已采集需求（6 字）；工程提示 d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding；来源 user_text",
+      "receipt": {
+        "step_id": "1",
+        "status": "pass",
+        "summary": "已采集需求（6 字）；工程提示 d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding；来源 user_text",
+        "result_detail": "状态：pass\n摘要：已采集需求（6 字）；工程提示 d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding；来源 user_text\n判定说明：至少有一条非空需求文字，或识图成功写出有效描述。\n需求核心：新增停机报表\n原文预览：新增停机报表\n识图预览：（无）\n工程目录提示：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n账本字段：artifacts.raw_intake",
+        "skill_id": "req-intake-multimodal",
+        "skill_title": "多模态需求采集",
+        "duration_sec": 0,
+        "artifacts": {
+          "raw_intake": true,
+          "chars": 6,
+          "workspace_hint": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "image_count": 0,
+          "vision_ok": false,
+          "normalize_source": "user_text"
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】req-intake-multimodal · 多模态需求采集",
+            "【来源】WorkBuddy 自写",
+            "【这一步在干什么】这一步把你刚发的文字与贴图收成「原始需求账本」。贴图走引擎独立视觉识图（智谱）；不做实现、不改代码。",
+            "【会做】记录需求原文与字数；附图落盘并调用视觉识图；记下当前工程目录提示；写出 raw_intake 供后续步骤引用",
+            "【不会做】不写代码；不跑测试；不提交 Git；不发明图上未出现的侧栏菜单名（禁止默认生产管理/仓储管理）",
+            "开始：采集用户需求原文",
+            "需求字数：6",
+            "工作区提示：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "需求摘要：新增停机报表",
+            "需求预览：新增停机报表",
+            "结果：需求已写入 Epic 账本 raw_intake"
+          ],
+          "results": null,
+          "skill": {
+            "id": "req-intake-multimodal",
+            "title_zh": "多模态需求采集",
+            "source": "workbuddy",
+            "cole_ref": null,
+            "flow_brief": "这一步把你刚发的文字与贴图收成「原始需求账本」。贴图走引擎独立视觉识图（智谱）；不做实现、不改代码。"
+          },
+          "reason": null,
+          "detail": null,
+          "files": null
+        }
+      }
+    },
+    {
+      "kind": "step",
+      "seq": 2,
+      "step_id": "2",
+      "implement_attempt": 1,
+      "title": "需求理解",
+      "status": "pass",
+      "summary": "需求已锁定：新增停机报表",
+      "receipt": {
+        "step_id": "2",
+        "status": "pass",
+        "summary": "需求已锁定：新增停机报表",
+        "result_detail": "状态：pass\n摘要：需求已锁定：新增停机报表\n判定说明：产出带版本号的 PRD-lite，且至少有一条验收标准。\n【要做什么】新增停机报表。新增一个停机报表\n【怎么干】按用户原话新增停机报表；具体字段、数据来源、筛选条件与展示形式用户未说明，需向用户确认后再实施\n【干成啥】系统中存在名为“停机报表”的报表入口；可打开并查看该停机报表\n【场景】新功能全栈页（full_feature）· prd_1792394345",
+        "skill_id": "plan-create-prd",
+        "skill_title": "需求理解 · PRD-lite",
+        "duration_sec": 1,
+        "artifacts": {
+          "prd_rev": "prd_1792394345",
+          "acceptance_count": 4,
+          "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+          "scenario_id": "full_feature"
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】plan-create-prd · 需求理解 · PRD-lite",
+            "【来源】Cole skills 改编（对照 plan-create-prd）",
+            "【这一步在干什么】剥离宿主 runtime/记忆库噪音，把真实需求整理成三句话：要做什么、怎么干、干成啥；并推断开发场景与变更上限。只依据用户原话与本次识图，禁止套某一家 ERP 菜单/目录模板。",
+            "【会做】清洗需求原文（去掉 runtime / 记忆库偏好 / Knowledge protocol；流水线元需求不得当 PRD）；输出【要做什么】【怎么干】【干成啥】给人看的 PRD 摘要；推断开发场景、交付范围与变更文件上限；冻结 prd_rev 版本号",
+            "【不会做】不把单一全栈/制造业模板套死所有需求；不直接改仓库；不发明用户未点名的菜单路径",
+            "开始：整理可实施 PRD（要做什么 / 怎么干 / 干成啥）",
+            "按用户原话+识图让 LLM 重组织「要做什么」…",
+            "LLM 已按用户原话重组织：新增停机报表。新增一个停机报表",
+            "引用原话/批注：新增停机报表",
+            "要做什么：新增停机报表。新增一个停机报表",
+            "怎么干：按用户原话新增停机报表；具体字段、数据来源、筛选条件与展示形式用户未说明，需向用户确认后再实施",
+            "场景：新功能全栈页（full_feature，置信=med）",
+            "推断：像新报表/管理页，按全栈页规划",
+            "交付范围：菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+            "干成啥[1]：系统中存在名为“停机报表”的报表入口",
+            "干成啥[2]：可打开并查看该停机报表",
+            "干成啥[3]：改动不超过 22 个文件，不做无关重构",
+            "干成啥[4]：步骤 6 验证命令通过",
+            "非目标[1]：不借机做无关大重构",
+            "非目标[2]：不把单一场景模板套死到所有需求上",
+            "非目标[3]：不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）",
+            "范围内[1]：新增停机报表",
+            "范围内[2]：系统中存在名为“停机报表”的报表入口",
+            "范围内[3]：可打开并查看该停机报表",
+            "变更上限：22 个文件",
+            "结果：PRD 版本 prd_1792394345 已冻结"
+          ],
+          "results": null,
+          "skill": {
+            "id": "plan-create-prd",
+            "title_zh": "需求理解 · PRD-lite",
+            "source": "cole",
+            "cole_ref": "plan-create-prd",
+            "flow_brief": "剥离宿主 runtime/记忆库噪音，把真实需求整理成三句话：要做什么、怎么干、干成啥；并推断开发场景与变更上限。只依据用户原话与本次识图，禁止套某一家 ERP 菜单/目录模板。"
+          },
+          "reason": null,
+          "detail": null,
+          "files": null
+        }
+      }
+    },
+    {
+      "kind": "step",
+      "seq": 3,
+      "step_id": "3",
+      "implement_attempt": 1,
+      "title": "读库上下文",
+      "status": "pass",
+      "summary": "已索引 workspace（2 个必读片段）",
+      "receipt": {
+        "step_id": "3",
+        "status": "pass",
+        "summary": "已索引 workspace（2 个必读片段）",
+        "result_detail": "状态：pass\n摘要：已索引 workspace（2 个必读片段）\n判定说明：目录通过校验并生成 context_pack（可含风险说明）。\n目录：D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n校验：通过\n必读片段：2 个\n风险：无\n版本：ctx_1791964531_2",
+        "skill_id": "prime-codebase",
+        "skill_title": "读库上下文 · Prime",
+        "duration_sec": 0,
+        "artifacts": {
+          "context_rev": "ctx_1791964531_2",
+          "files": 2
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】prime-codebase · 读库上下文 · Prime",
+            "【来源】Cole skills 改编（对照 prime-codebase）",
+            "【这一步在干什么】优先读取当前工程的「项目画像」（布局、栈、页面目录、验证命令）；必要时只读扫描仓库顶层与关键配置。目的是站在**本仓库**现有结构上规划，禁止照搬 WorkBuddy 或某一家 ERP 的路径。",
+            "【会做】校验工程目录合法；读取/刷新项目画像；索引顶层目录与工程标记；摘录必读文件片段；记录风险提示",
+            "【不会做】不修改任何文件；不越权扫盘外路径；不把别的项目目录结构写进本仓计划",
+            "开始：Prime 只读扫描工程上下文",
+            "扫描目录：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "顶层目录：backend/, docs/, frontend/",
+            "必读：README.md",
+            "必读：readme.md",
+            "结果：已索引 workspace（2 个必读片段）"
+          ],
+          "results": null,
+          "skill": {
+            "id": "prime-codebase",
+            "title_zh": "读库上下文 · Prime",
+            "source": "cole",
+            "cole_ref": "prime-codebase",
+            "flow_brief": "优先读取当前工程的「项目画像」（布局、栈、页面目录、验证命令）；必要时只读扫描仓库顶层与关键配置。目的是站在**本仓库**现有结构上规划，禁止照搬 WorkBuddy 或某一家 ERP 的路径。"
+          },
+          "reason": null,
+          "detail": null,
+          "files": null
+        }
+      }
+    },
+    {
+      "kind": "step",
+      "seq": 4,
+      "step_id": "4",
+      "implement_attempt": 1,
+      "title": "规划实现",
+      "status": "pass",
+      "summary": "实现计划已锁定（plan_1792394347，场景 新功能全栈页，验证 3 项）",
+      "receipt": {
+        "step_id": "4",
+        "status": "pass",
+        "summary": "实现计划已锁定（plan_1792394347，场景 新功能全栈页，验证 3 项）",
+        "result_detail": "状态：pass\n摘要：实现计划已锁定（plan_1792394347，场景 新功能全栈页，验证 3 项）\n判定说明：计划含版本号，且验证清单至少一条。\n问题：新增停机报表\n场景：新功能全栈页（full_feature）\n交付范围：菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）\n建议改动面：菜单/导航（入口可见）；路由注册（页面可达）；页面/组件（完整主路径）；后端接口（与页面配套）\n验证清单：config.yaml · dev_pipeline.validate_commands；菜单与路由可达；页面主路径可操作；接口可调通\n路径提示：frontend/src/views/**, frontend/src/api/**, backend/app/routers/**, **/views/**, **/*.vue, **/*.tsx, **/*.jsx, README.md, readme.md, backend/, docs/, frontend/\n版本：plan_1792394347",
+        "skill_id": "piv-plan-implementation",
+        "skill_title": "规划实现 · validation-first",
+        "duration_sec": 0,
+        "artifacts": {
+          "plan_rev": "plan_1792394347",
+          "validation_count": 3,
+          "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+          "scenario_id": "full_feature"
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】piv-plan-implementation · 规划实现 · validation-first",
+            "【来源】Cole skills 改编（对照 piv-plan-implementation）",
+            "【这一步在干什么】按已推断场景写验证清单与建议改动面（该动菜单/路由/页/接口才动），路径提示只来自项目画像与读库结果，不强行凑齐全栈，不套 MES 硬目录。",
+            "【会做】锁定问题描述与场景化交付范围；按场景列出建议改动面（对照画像）；列出机器可跑的验证项；给出待改路径提示（通用 glob / 画像路径）；冻结 plan_rev",
+            "【不会做】本步仍不写业务代码；不套死单一交付模板；不执行 git；不写死 frontend/src/views/warehouse 一类外仓路径",
+            "开始：编写实现计划与验证清单",
+            "问题：新增停机报表",
+            "场景：新功能全栈页（full_feature）",
+            "交付范围：菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+            "建议改动面[1]：菜单/导航（入口可见）",
+            "建议改动面[2]：路由注册（页面可达）",
+            "建议改动面[3]：页面/组件（完整主路径）",
+            "建议改动面[4]：后端接口（与页面配套）",
+            "验证项[1]：config.yaml · dev_pipeline.validate_commands",
+            "验证项[2]：菜单与路由可达",
+            "验证项[3]：页面主路径可操作；接口可调通",
+            "路径提示：frontend/src/views/**, frontend/src/api/**, backend/app/routers/**, **/views/**, **/*.vue, **/*.tsx, **/*.jsx, README.md, readme.md, backend/, docs/, frontend/",
+            "结果：计划版本 plan_1792394347 已锁定"
+          ],
+          "results": null,
+          "skill": {
+            "id": "piv-plan-implementation",
+            "title_zh": "规划实现 · validation-first",
+            "source": "cole",
+            "cole_ref": "piv-plan-implementation",
+            "flow_brief": "按已推断场景写验证清单与建议改动面（该动菜单/路由/页/接口才动），路径提示只来自项目画像与读库结果，不强行凑齐全栈，不套 MES 硬目录。"
+          },
+          "reason": null,
+          "detail": null,
+          "files": null
+        }
+      }
+    },
+    {
+      "kind": "step",
+      "seq": 5,
+      "step_id": "5",
+      "implement_attempt": 1,
+      "title": "写代码（Cursor 插件）",
+      "status": "pass",
+      "summary": "写码完成（cch-20261019-151911-3640，变更 5 项）",
+      "receipt": {
+        "step_id": "5",
+        "status": "pass",
+        "summary": "写码完成（cch-20261019-151911-3640，变更 5 项）",
+        "result_detail": "状态：pass\n摘要：写码完成（cch-20261019-151911-3640，变更 5 项）\n判定说明：写码 Job 成功且 changed_files 非空；空变更一律失败并打回（最多 3 轮）。\nJob：cch-20261019-151911-3640\n变更文件数：5\n门禁：pass · 变更 5 个文件，在范围内\n变更：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py\n工程：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+        "skill_id": "piv-implement",
+        "skill_title": "写代码 · Cursor 插件",
+        "duration_sec": 132,
+        "artifacts": {
+          "cursor_job_id": "cch-20261019-151911-3640",
+          "implement": "pass"
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】piv-implement · 写代码 · Cursor 插件",
+            "【来源】Cole skills 改编（对照 piv-implement）",
+            "【这一步在干什么】把 PRD + 计划 + 项目画像交给本机 Cursor **对话写码**真实改盘：创建确认单 → 开工 → 等待 Job 结束 → 回收变更文件列表。写码范围以当前工作区为准，禁止按另一套 ERP 目录改盘。",
+            "【会做】调用 :18791 对话写码插件；附带项目画像与本次需求/识图结构；跟踪 Job 状态；记录 job_id 与变更文件",
+            "【不会做】不在本仓另造第二套写码内核；不回退旧 coding :18788；不跳过插件 Key 校验",
+            "写码预检：sidecar / Key / 工程目录…",
+            "已自愈 sidecar：已拉起 sidecar http://127.0.0.1:18791（pid≈26140）",
+            "开始：真实调用 Cursor 写码插件改盘",
+            "工程目录：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "任务卡：【写码任务卡 · 本步唯一交付目标】",
+            "写码目标：http://127.0.0.1:18791",
+            "写码插件就绪：http://127.0.0.1:18791",
+            "创建 pending 确认单…",
+            "confirm_token=pcf-6e58b8153b89e2697a85",
+            "签发写码 HITL nonce（流水线代签，不再弹中间确认）…",
+            "确认开工（真实 Cursor 写码 Job）…",
+            "Job 已启动：cch-20261019-151911-3640，等待终态（最长 2700s）…",
+            "Job 状态 → running",
+            "轮询 Job 暂失败（1/3）：[WinError 10054] 远程主机强迫关闭了一个现有的连接。",
+            "写码服务连接中断，自愈拉起 sidecar（1/2）…",
+            "已拉起 sidecar http://127.0.0.1:18791（pid≈3076）",
+            "自愈后 Job 轮询恢复",
+            "Job 状态 → succeeded",
+            "写码门禁判定：pass / pass"
+          ],
+          "results": null,
+          "skill": {
+            "id": "piv-implement",
+            "title_zh": "写代码 · Cursor 插件",
+            "source": "cole",
+            "cole_ref": "piv-implement",
+            "flow_brief": "把 PRD + 计划 + 项目画像交给本机 Cursor **对话写码**真实改盘：创建确认单 → 开工 → 等待 Job 结束 → 回收变更文件列表。写码范围以当前工作区为准，禁止按另一套 ERP 目录改盘。"
+          },
+          "reason": null,
+          "detail": null,
+          "files": null
+        }
+      }
+    },
+    {
+      "kind": "step",
+      "seq": 6,
+      "step_id": "6",
+      "implement_attempt": 1,
+      "title": "验证",
+      "status": "pass",
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "receipt": {
+        "step_id": "6",
+        "status": "pass",
+        "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+        "result_detail": "状态：pass\n摘要：自动验证通过（未手写 validate_commands，已探测默认检查）\n判定说明：全部命令 exit 0；探测到的默认检查全部通过。\n判定：全部通过\n工程：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n· py-compile-root: exit 0\n· git-diff-check: exit 0",
+        "skill_id": "piv-validate",
+        "skill_title": "机器验证 · 只认 PASS/FAIL",
+        "duration_sec": 8,
+        "artifacts": {
+          "validate": "pass"
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】piv-validate · 机器验证 · 只认 PASS/FAIL",
+            "【来源】Cole skills 改编（对照 piv-validate）",
+            "【这一步在干什么】在工程目录内按配置或项目画像跑验证命令，只看 exit code。失败不会假装通过；探测不到检查项标「未验证」并跳过，不假绿。可按策略自动回到第 5 步修。",
+            "【会做】优先执行 config / 画像 validate_commands；自动探测 frontend/backend、pom、go、pyproject 等；记录每条命令的退出码与摘要",
+            "【不会做】不靠模型嘴炮说「应该过了」；不在本步改业务代码；不把「无探测项」当成通过",
+            "开始：执行 validate_commands",
+            "py-compile-root: exit 0",
+            "git-diff-check: exit 0",
+            "结果：验证通过"
+          ],
+          "results": [
+            {
+              "name": "py-compile-root",
+              "cmd": "python -m compileall -q .",
+              "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+              "exit_code": 0,
+              "ok": true,
+              "stdout": "",
+              "stderr": "",
+              "duration_sec": 7.46
+            },
+            {
+              "name": "git-diff-check",
+              "cmd": "git diff --check",
+              "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+              "exit_code": 0,
+              "ok": true,
+              "stdout": "",
+              "stderr": "warning: in the working copy of 'backend/app/openapi_zh.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'backend/app/routers/workbuddy.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'frontend/src/views/ai-assistant/WorkBuddyView.vue', LF will be replaced by CRLF the next time Git touches it",
+              "duration_sec": 0.16
+            }
+          ],
+          "skill": {
+            "id": "piv-validate",
+            "title_zh": "机器验证 · 只认 PASS/FAIL",
+            "source": "cole",
+            "cole_ref": "piv-validate",
+            "flow_brief": "在工程目录内按配置或项目画像跑验证命令，只看 exit code。失败不会假装通过；探测不到检查项标「未验证」并跳过，不假绿。可按策略自动回到第 5 步修。"
+          },
+          "reason": null,
+          "detail": null,
+          "files": null
+        }
+      }
+    },
+    {
+      "kind": "step",
+      "seq": 7,
+      "step_id": "7",
+      "implement_attempt": 1,
+      "title": "复核",
+      "status": "pass",
+      "summary": "🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。",
+      "receipt": {
+        "step_id": "7",
+        "status": "pass",
+        "summary": "🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。",
+        "result_detail": "状态：pass\n摘要：🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n判定说明：审码无 Blocker，且提交门禁可提交。\n报告 ID：cr-88e0767aa0e847a1\n范围：仅本次改动（5 个文件）\n文件：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py",
+        "skill_id": "piv-review-changes",
+        "skill_title": "复核 · 审码（仅本次改动）",
+        "duration_sec": 34,
+        "artifacts": {
+          "report_id": "cr-88e0767aa0e847a1",
+          "changed_only": true,
+          "file_count": 5,
+          "skipped": false,
+          "high_count": 0,
+          "medium_count": 4,
+          "low_count": 3
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】piv-review-changes · 复核 · 审码（仅本次改动）",
+            "【来源】Cole skills 改编（对照 piv-review-changes）",
+            "【这一步在干什么】只审核第 5 步写码产出的变更文件；并通过与步骤 8 **同一套提交门禁**。有 Blocker / 门禁阻断则本步失败，打回写码（5）自动补救后重跑 6→7→8。",
+            "【会做】读取写码变更文件列表；只对这些文件跑 code-review；对齐跑提交门禁（run_commit_review_gate）；落盘 report_id",
+            "【不会做】不跑整仓全量抽样；不自动 git commit；不改聊天审码卡默认行为",
+            "开始：真实审码（code-review · 仅本次改动）",
+            "改动文件来自写码产物（5）：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py",
+            "开始真实审码（仅本次改动 5 个）：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "文件：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py",
+            "复核对齐提交门禁（5 个文件）…",
+            "提交批审：无阻断，2 条警告 —— 确认后可提交"
+          ],
+          "results": null,
+          "skill": {
+            "id": "piv-review-changes",
+            "title_zh": "复核 · 审码（仅本次改动）",
+            "source": "cole",
+            "cole_ref": "piv-review-changes",
+            "flow_brief": "只审核第 5 步写码产出的变更文件；并通过与步骤 8 **同一套提交门禁**。有 Blocker / 门禁阻断则本步失败，打回写码（5）自动补救后重跑 6→7→8。"
+          },
+          "reason": null,
+          "detail": null,
+          "files": null
+        }
+      }
+    },
+    {
+      "kind": "step",
+      "seq": 8,
+      "step_id": "8",
+      "implement_attempt": 1,
+      "title": "提交",
+      "status": "pass",
+      "summary": "已提交到分支 `hebo`（80e4515b1399），并已推送到远程。",
+      "receipt": {
+        "step_id": "8",
+        "status": "pass",
+        "summary": "已提交到分支 `hebo`（80e4515b1399），并已推送到远程。",
+        "result_detail": "状态：pass\n摘要：已提交到分支 `hebo`（80e4515b1399），并已推送到远程。\n判定说明：提交成功，或无变更/超时软跳过（可稍后手动提交）。\n提交 Job：cc-f182f5f57b404ea2\n自动尝试：1 次\n是否跳过：否\n摘要：已提交到分支 `hebo`（80e4515b1399），并已推送到远程。",
+        "skill_id": "piv-commit",
+        "skill_title": "提交 · Git commit/push",
+        "duration_sec": 18,
+        "artifacts": {
+          "commit_job_id": "cc-f182f5f57b404ea2",
+          "skipped": false,
+          "can_manual_retry": false,
+          "attempts": 1
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】piv-commit · 提交 · Git commit/push",
+            "【来源】Cole skills 改编（对照 piv-commit）",
+            "【这一步在干什么】走本仓提交车道：列待提交文件 → 门禁（与复核同标准）→ 中文说明 → commit/push。墙钟最多约 60 秒；超时则软跳过本步继续开 PR/部署，用户可稍后用提交车道手动再提。门禁 P0/P1 阻断仍打回写码补救（5→6→7→8），不硬闯。",
+            "【会做】跑提交门禁；压缩中文提交说明；墙钟≤60s，超时软跳过可稍后手动提交；门禁阻断打回写码补救",
+            "【不会做】不让模型直接敲 git；门禁阻断时不允许硬提交；超时不得拖死整条流水线",
+            "开始：真实提交（code-commit，墙钟≤60s；超时软跳过可稍后手动提交）",
+            "提交墙钟上限 60s（超时将软跳过并继续下一步）",
+            "开始真实提交门禁（第 1/3 次）：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "门禁通过，执行 commit/push（job=cc-f182f5f57b404ea2，说明 15 字）…"
+          ],
+          "results": null,
+          "skill": {
+            "id": "piv-commit",
+            "title_zh": "提交 · Git commit/push",
+            "source": "cole",
+            "cole_ref": "piv-commit",
+            "flow_brief": "走本仓提交车道：列待提交文件 → 门禁（与复核同标准）→ 中文说明 → commit/push。墙钟最多约 60 秒；超时则软跳过本步继续开 PR/部署，用户可稍后用提交车道手动再提。门禁 P0/P1 阻断仍打回写码补救（5→6→7→8），不硬闯。"
+          },
+          "reason": "",
+          "detail": null,
+          "files": null
+        }
+      }
+    },
+    {
+      "kind": "step",
+      "seq": 9,
+      "step_id": "9",
+      "implement_attempt": 1,
+      "title": "开 PR",
+      "status": "skipped",
+      "summary": "本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip",
+      "receipt": {
+        "step_id": "9",
+        "status": "skipped",
+        "summary": "本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip",
+        "result_detail": "状态：skipped\n摘要：本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip\n判定说明：拿到 PR/MR URL；或诚实跳过/不适用（无 CLI、Gitee 手工、SVN、配置 skip）。\n托管：github\nPR：（已跳过/不适用）\n摘要：本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip",
+        "skill_id": "piv-create-pr",
+        "skill_title": "开 PR",
+        "duration_sec": 0,
+        "artifacts": {
+          "pr_url": "",
+          "skipped": true,
+          "provider": "github"
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】piv-create-pr · 开 PR",
+            "【来源】Cole skills 改编（对照 piv-create-pr）",
+            "【这一步在干什么】按工程远端托管开合并请求：GitHub→gh，GitLab→glab；Gitee 给手工说明；SVN 标「不适用」后仍可进部署。也可在 config.yaml · dev_pipeline.pr_provider=skip 整步跳过。",
+            "【会做】识别 origin（github/gitlab/gitee）或 SVN；调用 gh / glab（若已安装且已登录）；回写 PR/MR URL 或诚实跳过说明",
+            "【不会做】不自动合并；不伪造 PR 链接；不对 SVN 硬跑 gh",
+            "开始：按托管类型开 PR/MR（或标不适用）",
+            "尝试 gh pr create（GitHub）…"
+          ],
+          "results": null,
+          "skill": {
+            "id": "piv-create-pr",
+            "title_zh": "开 PR",
+            "source": "cole",
+            "cole_ref": "piv-create-pr",
+            "flow_brief": "按工程远端托管开合并请求：GitHub→gh，GitLab→glab；Gitee 给手工说明；SVN 标「不适用」后仍可进部署。也可在 config.yaml · dev_pipeline.pr_provider=skip 整步跳过。"
+          },
+          "reason": null,
+          "detail": null,
+          "files": null
+        }
+      }
+    },
+    {
+      "kind": "step",
+      "seq": 10,
+      "step_id": "10",
+      "implement_attempt": 1,
+      "title": "部署上线",
+      "status": "fail",
+      "summary": "单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed",
+      "receipt": {
+        "step_id": "10",
+        "status": "fail",
+        "summary": "单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed",
+        "result_detail": "状态：fail\n摘要：单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed\n失败对照：准备失败、同步失败或探活未过。\n说明：单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed\n尝试次数：1",
+        "skill_id": "piv-deploy",
+        "skill_title": "部署上线",
+        "duration_sec": 33,
+        "artifacts": {
+          "deploy": "fail"
+        },
+        "evidence": {
+          "process_log": [
+            "【Skill】piv-deploy · 部署上线",
+            "【来源】WorkBuddy 自写",
+            "【这一步在干什么】走本仓一体部署车道：准备变更集 → 同步远端 → 探活。仅对配置了部署的工程有效；目录不对会诚实失败。",
+            "【会做】prepare 部署计划；执行同步/重启；记录 deploy job_id",
+            "【不会做】不在未配置环境上装成功；不跳过探活标准（若配置要求）",
+            "开始：真实部署（code-deploy）",
+            "准备真实部署：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+            "确认部署执行（job=cd-0f94a962ef4a438c，尝试 1/3）…"
+          ],
+          "results": null,
+          "skill": {
+            "id": "piv-deploy",
+            "title_zh": "部署上线",
+            "source": "workbuddy",
+            "cole_ref": null,
+            "flow_brief": "走本仓一体部署车道：准备变更集 → 同步远端 → 探活。仅对配置了部署的工程有效；目录不对会诚实失败。"
+          },
+          "reason": "deploy_fail",
+          "detail": "单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed",
+          "files": null
+        }
+      }
+    }
+  ],
+  "created_at": 1792394344,
+  "intake_image_ids": [],
+  "updated_at": 1792394577,
+  "step_attempts": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 1,
+    "9": 1,
+    "10": 1
+  },
+  "run_summary": {
+    "title": "Run 失败",
+    "tone": "error",
+    "outcome": "failed",
+    "status": "failed",
+    "live": false,
+    "lines": [
+      "已完成步骤：1, 2, 3, 4, 5, 6, 7, 8, 9",
+      "失败步骤：10",
+      "当前停在步骤 10",
+      "总用时：3 分 53 秒"
+    ],
+    "passed_steps": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "waiting_steps": [],
+    "failed_steps": [
+      "10"
+    ],
+    "current_step": "10",
+    "started_at": 1792394344,
+    "finished_at": 1792394577,
+    "duration_sec": 233,
+    "duration_label": "3 分 53 秒",
+    "timeline": [
+      {
+        "kind": "step",
+        "seq": 1,
+        "step_id": "1",
+        "display_step": "1",
+        "implement_attempt": 1,
+        "title": "需求采集",
+        "status": "pass",
+        "summary": "已采集需求（6 字）；工程提示 d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding；来源 user_text",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 2,
+        "step_id": "2",
+        "display_step": "2",
+        "implement_attempt": 1,
+        "title": "需求理解",
+        "status": "pass",
+        "summary": "需求已锁定：新增停机报表",
+        "duration_sec": 1,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 3,
+        "step_id": "3",
+        "display_step": "3",
+        "implement_attempt": 1,
+        "title": "读库上下文",
+        "status": "pass",
+        "summary": "已索引 workspace（2 个必读片段）",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 4,
+        "step_id": "4",
+        "display_step": "4",
+        "implement_attempt": 1,
+        "title": "规划实现",
+        "status": "pass",
+        "summary": "实现计划已锁定（plan_1792394347，场景 新功能全栈页，验证 3 项）",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 5,
+        "step_id": "5",
+        "display_step": "5",
+        "implement_attempt": 1,
+        "title": "写代码（Cursor 插件）",
+        "status": "pass",
+        "summary": "写码完成（cch-20261019-151911-3640，变更 5 项）",
+        "duration_sec": 132,
+        "duration_label": "2 分 12 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 6,
+        "step_id": "6",
+        "display_step": "6",
+        "implement_attempt": 1,
+        "title": "验证",
+        "status": "pass",
+        "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+        "duration_sec": 8,
+        "duration_label": "8 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 7,
+        "step_id": "7",
+        "display_step": "7",
+        "implement_attempt": 1,
+        "title": "复核",
+        "status": "pass",
+        "summary": "🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。",
+        "duration_sec": 34,
+        "duration_label": "34 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 8,
+        "step_id": "8",
+        "display_step": "8",
+        "implement_attempt": 1,
+        "title": "提交",
+        "status": "pass",
+        "summary": "已提交到分支 `hebo`（80e4515b1399），并已推送到远程。",
+        "duration_sec": 18,
+        "duration_label": "18 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 9,
+        "step_id": "9",
+        "display_step": "9",
+        "implement_attempt": 1,
+        "title": "开 PR",
+        "status": "skipped",
+        "summary": "本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip",
+        "duration_sec": 0,
+        "duration_label": "0 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 10,
+        "step_id": "10",
+        "display_step": "10",
+        "implement_attempt": 1,
+        "title": "部署上线",
+        "status": "fail",
+        "summary": "单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed",
+        "duration_sec": 33,
+        "duration_label": "33 秒"
+      }
+    ],
+    "timeline_flat": [
+      {
+        "kind": "step",
+        "seq": 1,
+        "step_id": "1",
+        "display_step": "1",
+        "implement_attempt": 1,
+        "title": "需求采集",
+        "status": "pass",
+        "summary": "已采集需求（6 字）；工程提示 d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding；来源 user_text",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 2,
+        "step_id": "2",
+        "display_step": "2",
+        "implement_attempt": 1,
+        "title": "需求理解",
+        "status": "pass",
+        "summary": "需求已锁定：新增停机报表",
+        "duration_sec": 1,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 3,
+        "step_id": "3",
+        "display_step": "3",
+        "implement_attempt": 1,
+        "title": "读库上下文",
+        "status": "pass",
+        "summary": "已索引 workspace（2 个必读片段）",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 4,
+        "step_id": "4",
+        "display_step": "4",
+        "implement_attempt": 1,
+        "title": "规划实现",
+        "status": "pass",
+        "summary": "实现计划已锁定（plan_1792394347，场景 新功能全栈页，验证 3 项）",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 5,
+        "step_id": "5",
+        "display_step": "5",
+        "implement_attempt": 1,
+        "title": "写代码（Cursor 插件）",
+        "status": "pass",
+        "summary": "写码完成（cch-20261019-151911-3640，变更 5 项）",
+        "duration_sec": 132,
+        "duration_label": "2 分 12 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 6,
+        "step_id": "6",
+        "display_step": "6",
+        "implement_attempt": 1,
+        "title": "验证",
+        "status": "pass",
+        "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+        "duration_sec": 8,
+        "duration_label": "8 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 7,
+        "step_id": "7",
+        "display_step": "7",
+        "implement_attempt": 1,
+        "title": "复核",
+        "status": "pass",
+        "summary": "🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。",
+        "duration_sec": 34,
+        "duration_label": "34 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 8,
+        "step_id": "8",
+        "display_step": "8",
+        "implement_attempt": 1,
+        "title": "提交",
+        "status": "pass",
+        "summary": "已提交到分支 `hebo`（80e4515b1399），并已推送到远程。",
+        "duration_sec": 18,
+        "duration_label": "18 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 9,
+        "step_id": "9",
+        "display_step": "9",
+        "implement_attempt": 1,
+        "title": "开 PR",
+        "status": "skipped",
+        "summary": "本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip",
+        "duration_sec": 0,
+        "duration_label": "0 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 10,
+        "step_id": "10",
+        "display_step": "10",
+        "implement_attempt": 1,
+        "title": "部署上线",
+        "status": "fail",
+        "summary": "单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed",
+        "duration_sec": 33,
+        "duration_label": "33 秒"
+      }
+    ],
+    "timeline_all": [
+      {
+        "step_id": "1",
+        "title": "需求采集",
+        "status": "pass",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "step_id": "2",
+        "title": "需求理解",
+        "status": "pass",
+        "duration_sec": 1,
+        "duration_label": "1 秒"
+      },
+      {
+        "step_id": "3",
+        "title": "读库上下文",
+        "status": "pass",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "step_id": "4",
+        "title": "规划实现",
+        "status": "pass",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "step_id": "5",
+        "title": "写代码（Cursor 插件）",
+        "status": "pass",
+        "duration_sec": 132,
+        "duration_label": "2 分 12 秒"
+      },
+      {
+        "step_id": "6",
+        "title": "验证",
+        "status": "pass",
+        "duration_sec": 8,
+        "duration_label": "8 秒"
+      },
+      {
+        "step_id": "7",
+        "title": "复核",
+        "status": "pass",
+        "duration_sec": 34,
+        "duration_label": "34 秒"
+      },
+      {
+        "step_id": "8",
+        "title": "提交",
+        "status": "pass",
+        "duration_sec": 18,
+        "duration_label": "18 秒"
+      },
+      {
+        "step_id": "9",
+        "title": "开 PR",
+        "status": "skipped",
+        "duration_sec": 0,
+        "duration_label": "0 秒"
+      },
+      {
+        "step_id": "10",
+        "title": "部署上线",
+        "status": "fail",
+        "duration_sec": 33,
+        "duration_label": "33 秒"
+      }
+    ],
+    "timeline_trace_display": [
+      {
+        "kind": "step",
+        "seq": 1,
+        "step_id": "1",
+        "display_step": "1",
+        "implement_attempt": 1,
+        "title": "需求采集",
+        "status": "pass",
+        "summary": "已采集需求（6 字）；工程提示 d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding；来源 user_text",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 2,
+        "step_id": "2",
+        "display_step": "2",
+        "implement_attempt": 1,
+        "title": "需求理解",
+        "status": "pass",
+        "summary": "需求已锁定：新增停机报表",
+        "duration_sec": 1,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 3,
+        "step_id": "3",
+        "display_step": "3",
+        "implement_attempt": 1,
+        "title": "读库上下文",
+        "status": "pass",
+        "summary": "已索引 workspace（2 个必读片段）",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 4,
+        "step_id": "4",
+        "display_step": "4",
+        "implement_attempt": 1,
+        "title": "规划实现",
+        "status": "pass",
+        "summary": "实现计划已锁定（plan_1792394347，场景 新功能全栈页，验证 3 项）",
+        "duration_sec": 0,
+        "duration_label": "1 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 5,
+        "step_id": "5",
+        "display_step": "5",
+        "implement_attempt": 1,
+        "title": "写代码（Cursor 插件）",
+        "status": "pass",
+        "summary": "写码完成（cch-20261019-151911-3640，变更 5 项）",
+        "duration_sec": 132,
+        "duration_label": "2 分 12 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 6,
+        "step_id": "6",
+        "display_step": "6",
+        "implement_attempt": 1,
+        "title": "验证",
+        "status": "pass",
+        "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+        "duration_sec": 8,
+        "duration_label": "8 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 7,
+        "step_id": "7",
+        "display_step": "7",
+        "implement_attempt": 1,
+        "title": "复核",
+        "status": "pass",
+        "summary": "🔴 高危问题：共 0 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。",
+        "duration_sec": 34,
+        "duration_label": "34 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 8,
+        "step_id": "8",
+        "display_step": "8",
+        "implement_attempt": 1,
+        "title": "提交",
+        "status": "pass",
+        "summary": "已提交到分支 `hebo`（80e4515b1399），并已推送到远程。",
+        "duration_sec": 18,
+        "duration_label": "18 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 9,
+        "step_id": "9",
+        "display_step": "9",
+        "implement_attempt": 1,
+        "title": "开 PR",
+        "status": "skipped",
+        "summary": "本机无 GitHub CLI（gh），已跳过开 PR。请安装 gh 后手工开，或改用配置 pr_provider=skip",
+        "duration_sec": 0,
+        "duration_label": "0 秒"
+      },
+      {
+        "kind": "step",
+        "seq": 10,
+        "step_id": "10",
+        "display_step": "10",
+        "implement_attempt": 1,
+        "title": "部署上线",
+        "status": "fail",
+        "summary": "单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed",
+        "duration_sec": 33,
+        "duration_label": "33 秒"
+      }
+    ],
+    "done_count": 9,
+    "total_count": 10,
+    "trace_node_count": 10,
+    "fix_round": 0,
+    "closing": {
+      "conclusion": "流程未完成（Run 失败）。run_id=dpj-d63a713e32114849。",
+      "highlights": [
+        "失败步骤 10：单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed",
+        "已改文件（供排查）：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py"
+      ],
+      "verify": [
+        "根据失败步骤摘要修复后，重新开跑或从停住的步骤继续。",
+        "工程目录：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding"
+      ],
+      "body": "流程未完成（Run 失败）。run_id=dpj-d63a713e32114849。\n\n关键成果：\n· 失败步骤 10：单元 workspace 失败：/usr/bin/tar: Cannot connect to C: resolve failed\n· 已改文件（供排查）：frontend/src/views/reports/EquipmentDowntimeReportView.vue、frontend/src/config/reportFeatures.js、frontend/src/api/reports/equipmentDowntime.js、backend/app/schemas.py、backend/app/routers/reports.py\n\n如何验证：\n· 根据失败步骤摘要修复后，重新开跑或从停住的步骤继续。\n· 工程目录：d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding"
+    }
+  },
+  "requirement_core": "新增停机报表。新增一个停机报表",
+  "engine_resume_count": 0
+}

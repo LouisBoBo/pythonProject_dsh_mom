@@ -1,0 +1,260 @@
+{
+  "run_id": "dpj-verifyresume01",
+  "epic_id": "ep-verifyresume",
+  "message": "自验：引擎重启应续跑而非取消",
+  "workspace": "d:\\AICodes\\DSH_WorkBuddy",
+  "dsh_session_id": "session-verify-resume",
+  "status": "cancelled",
+  "current_step": "5",
+  "steps": [
+    {
+      "step_id": "1",
+      "title": "需求采集",
+      "status": "pass",
+      "summary": "ok",
+      "receipt": null
+    },
+    {
+      "step_id": "2",
+      "title": "需求理解",
+      "status": "pass",
+      "summary": "ok",
+      "receipt": null
+    },
+    {
+      "step_id": "3",
+      "title": "读库上下文",
+      "status": "pass",
+      "summary": "ok",
+      "receipt": null
+    },
+    {
+      "step_id": "4",
+      "title": "规划实现",
+      "status": "pass",
+      "summary": "ok",
+      "receipt": null
+    },
+    {
+      "step_id": "5",
+      "title": "写代码",
+      "status": "cancelled",
+      "summary": "verify cleanup",
+      "receipt": null,
+      "started_at": 1790479682
+    },
+    {
+      "step_id": "6",
+      "title": "验证",
+      "status": "pending",
+      "summary": "",
+      "receipt": null
+    },
+    {
+      "step_id": "7",
+      "title": "审码",
+      "status": "pending",
+      "summary": "",
+      "receipt": null
+    },
+    {
+      "step_id": "8",
+      "title": "提交",
+      "status": "pending",
+      "summary": "",
+      "receipt": null
+    },
+    {
+      "step_id": "9",
+      "title": "开PR",
+      "status": "pending",
+      "summary": "",
+      "receipt": null
+    },
+    {
+      "step_id": "10",
+      "title": "一体部署",
+      "status": "pending",
+      "summary": "",
+      "receipt": null
+    }
+  ],
+  "created_at": 1790479586,
+  "updated_at": 1790479682,
+  "timeline_trace": [
+    {
+      "kind": "step",
+      "seq": 1,
+      "step_id": "5",
+      "status": "cancelled",
+      "summary": "verify cleanup",
+      "receipt": null
+    },
+    {
+      "kind": "step",
+      "seq": 2,
+      "step_id": "5",
+      "implement_attempt": 1,
+      "title": "写代码（Cursor 插件）",
+      "status": "cancelled",
+      "summary": "verify cleanup",
+      "receipt": null
+    },
+    {
+      "kind": "step",
+      "seq": 3,
+      "step_id": "5",
+      "implement_attempt": 1,
+      "title": "写代码（Cursor 插件）",
+      "status": "cancelled",
+      "summary": "verify cleanup",
+      "receipt": null
+    }
+  ],
+  "implement_attempt": 1,
+  "fix_round": 0,
+  "engine_resume_count": 2,
+  "engine_resumed_at": 1790479682,
+  "outcome": "cancelled",
+  "run_summary": {
+    "title": "已停止",
+    "tone": "warn",
+    "outcome": "cancelled",
+    "status": "cancelled",
+    "live": false,
+    "lines": [
+      "已完成步骤：1, 2, 3, 4",
+      "当前停在步骤 5",
+      "总用时：1 分 36 秒"
+    ],
+    "passed_steps": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "waiting_steps": [],
+    "failed_steps": [],
+    "current_step": "5",
+    "started_at": 1790479586,
+    "finished_at": 1790479682,
+    "duration_sec": 96,
+    "duration_label": "1 分 36 秒",
+    "timeline": [
+      {
+        "kind": "step",
+        "seq": 1,
+        "step_id": "5",
+        "display_step": "5",
+        "implement_attempt": 1,
+        "title": "写代码（Cursor 插件）",
+        "status": "cancelled",
+        "summary": "verify cleanup",
+        "duration_sec": null,
+        "duration_label": ""
+      },
+      {
+        "kind": "step",
+        "seq": 2,
+        "step_id": "5",
+        "display_step": "5",
+        "implement_attempt": 1,
+        "title": "写代码（Cursor 插件）",
+        "status": "cancelled",
+        "summary": "verify cleanup",
+        "duration_sec": null,
+        "duration_label": ""
+      },
+      {
+        "kind": "step",
+        "seq": 3,
+        "step_id": "5",
+        "display_step": "5",
+        "implement_attempt": 1,
+        "title": "写代码（Cursor 插件）",
+        "status": "cancelled",
+        "summary": "verify cleanup",
+        "duration_sec": null,
+        "duration_label": ""
+      }
+    ],
+    "timeline_flat": [
+      {
+        "step_id": "1",
+        "title": "需求采集",
+        "status": "pass",
+        "duration_sec": null,
+        "duration_label": ""
+      },
+      {
+        "step_id": "2",
+        "title": "需求理解",
+        "status": "pass",
+        "duration_sec": null,
+        "duration_label": ""
+      },
+      {
+        "step_id": "3",
+        "title": "读库上下文",
+        "status": "pass",
+        "duration_sec": null,
+        "duration_label": ""
+      },
+      {
+        "step_id": "4",
+        "title": "规划实现",
+        "status": "pass",
+        "duration_sec": null,
+        "duration_label": ""
+      },
+      {
+        "step_id": "5",
+        "title": "写代码",
+        "status": "cancelled",
+        "duration_sec": null,
+        "duration_label": ""
+      },
+      {
+        "step_id": "6",
+        "title": "验证",
+        "status": "pending",
+        "duration_sec": null,
+        "duration_label": ""
+      },
+      {
+        "step_id": "7",
+        "title": "审码",
+        "status": "pending",
+        "duration_sec": null,
+        "duration_label": ""
+      },
+      {
+        "step_id": "8",
+        "title": "提交",
+        "status": "pending",
+        "duration_sec": null,
+        "duration_label": ""
+      },
+      {
+        "step_id": "9",
+        "title": "开PR",
+        "status": "pending",
+        "duration_sec": null,
+        "duration_label": ""
+      },
+      {
+        "step_id": "10",
+        "title": "一体部署",
+        "status": "pending",
+        "duration_sec": null,
+        "duration_label": ""
+      }
+    ],
+    "done_count": 4,
+    "total_count": 10,
+    "trace_node_count": 3,
+    "fix_round": 0
+  },
+  "cancel_requested": true,
+  "cancel_reason": "verify cleanup"
+}

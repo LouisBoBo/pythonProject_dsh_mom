@@ -1,0 +1,417 @@
+{
+  "epic_id": "ep-20260928-9c3a71d367",
+  "message": "【R01】 菜单：报表中心（必须挂此侧栏，禁止改挂） 增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致 功能：1.增审批状态筛选及列表批量通过/驳回；2.视图补按项目、按部门汇总（用已有dimension）；3.合计与导出默认只统计已通过 验收：报表页含审批操作截图；项目汇总与接口一致；待审批不计入合计\n\n【识图摘录】\n### 需求条目\n- 编码：R01\n- 模块/项目：报表中心\n- 本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致\n- 功能要求：\n  1. 增审批状态筛选及列表批量通过/驳回；\n  2. 视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过\n- 验收标准：\n  1. 报表页含审批操作截图；② 项目汇总与接口一致；③ 待审批不计入合计\n- 优先级 / 业务目标：生产·人员效率\n\n### 页面定位\n- 页面标题：未见\n- 菜单/导航路径：未见\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n### 表格（若有）\n- 表头列名（从左到右完整列出）：未见\n- 可见示例行（最多 3 行）：未见\n- 分页/合计文案：未见\n### 标注与改动暗示\n- 附图附加文字：未见\n- 红框/箭头/高亮：未见",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_admin",
+  "created_at": 1790563499,
+  "runs": [
+    "dpj-d77ba299279f4b67"
+  ],
+  "intake_image_ids": [
+    "vimg-e544dc4109f7e6bd"
+  ],
+  "updated_at": 1790563945,
+  "artifacts": {
+    "raw_intake": {
+      "text": "（附图需求，详见识图结果）",
+      "has_workspace_hint": true,
+      "captured_at": 1790563499,
+      "image_ids": [
+        "vimg-e544dc4109f7e6bd"
+      ],
+      "vision_text": "### 需求条目\n- 编码：R01\n- 模块/项目：报表中心\n- 本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致\n- 功能要求：\n  1. 增审批状态筛选及列表批量通过/驳回；\n  2. 视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过\n- 验收标准：\n  1. 报表页含审批操作截图；② 项目汇总与接口一致；③ 待审批不计入合计\n- 优先级 / 业务目标：生产·人员效率\n\n### 页面定位\n- 页面标题：未见\n- 菜单/导航路径：未见\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n### 表格（若有）\n- 表头列名（从左到右完整列出）：未见\n- 可见示例行（最多 3 行）：未见\n- 分页/合计文案：未见\n### 标注与改动暗示\n- 附图附加文字：未见\n- 红框/箭头/高亮：未见",
+      "vision": {
+        "ok": true,
+        "model": "glm-4v-flash",
+        "image_count": 1
+      },
+      "requirement_core": "【R01】 菜单：报表中心（必须挂此侧栏，禁止改挂） 增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致 功能：1.增审批状态筛选及列表批量通过/驳回；2.视图补按项目、按部门汇总（用已有dimension）；3.合计与导出默认只统计已通过 验收：报表页含审批操作截图；项目汇总与接口一致；待审批不计入合计",
+      "vision_surface": {
+        "page_title": "",
+        "menu_path": "报表中心",
+        "table_columns": [
+          "未见"
+        ],
+        "filters": [
+          "本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致",
+          "增审批状态筛选及列表批量通过/驳回；",
+          "### 筛选与操作",
+          "筛选项：未见"
+        ],
+        "buttons": [
+          "视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过",
+          "按钮：未见"
+        ],
+        "marks": [
+          "红框/箭头/高亮：未见",
+          "标注与改动暗示",
+          "高亮：未见",
+          "箭头/高亮：未见"
+        ],
+        "sample_codes": [],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "path_hints": [],
+        "raw_excerpt": "### 需求条目\n- 编码：R01\n- 模块/项目：报表中心\n- 本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致\n- 功能要求：\n  1. 增审批状态筛选及列表批量通过/驳回；\n  2. 视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过\n- 验收标准：\n  1. 报表页含审批操作截图；② 项目汇总与接口一致；③ 待审批不计入合计\n- 优先级 / 业务目标：生产·人员效率\n\n### 页面定位\n- 页面标题：未见\n- 菜单/导航路径：未见\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n### 表格（若有）\n- 表头列名（从左到右完整列出）：未见\n- 可见示例行（最多 3 行）：未见\n- 分页/合计文案：未见\n### 标注与改动暗示\n- 附图附加文字：未见\n- 红框/箭头/高亮：未见"
+      },
+      "normalize": {
+        "source": "vision",
+        "one_liner": "【R01】 菜单：报表中心（必须挂此侧栏，禁止改挂） 增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致 功能：1.增审批状态筛选及列表批量通过/驳回",
+        "was_sanitized": true,
+        "notes": [
+          "已丢弃套话/占位原文",
+          "原文无效或套话，已改用识图可实施摘要"
+        ],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致；1.增审批状态筛选及列表批量通过/驳回；2.视图补按项目、按部门汇总（用已有dimension）；3.合计与导出默认只统计已通过；验收：报表页含审批操作截图；项目汇总与接口一致；待审批不计入合计。在报表中心新增「员工工时报表」：员工在T时可查询和录入工时；报表支持审批状态筛选，并可在列表中批量通过/驳回；汇总视图在原有明细/按员工基础上，补充按项目、按部门汇总（复用已有dimension）；核算口径与后端维度保持一致；合计与导出默认只统计已通过的数据",
+      "goal_one_liner": "在报表中心新增员工工时报表，支持员工T时可查可录、审批状态筛选与批量通过/驳回，并补充按项目/按部门汇总视图",
+      "user_card": {
+        "one_liner": "在报表中心新增员工工时报表，支持员工T时可查可录、审批状态筛选与批量通过/驳回，并补充按项目/按部门汇总视图",
+        "what": "增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致；1.增审批状态筛选及列表批量通过/驳回；2.视图补按项目、按部门汇总（用已有dimension）；3.合计与导出默认只统计已通过；验收：报表页含审批操作截图；项目汇总与接口一致；待审批不计入合计。在报表中心新增「员工工时报表」：员工在T时可查询和录入工时；报表支持审批状态筛选，并可在列表中批量通过/驳回；汇总视图在原有明细/按员工基础上，补充按项目、按部门汇总（复用已有dimension）；核算口径与后端维度保持一致；合计与导出默认只统计已通过的数据",
+        "how": "1）报表中心挂载员工工时报表页，提供T时查询与录入入口；2）列表增加审批状态筛选条件，并支持勾选后批量通过/驳回；3）汇总视图复用已有dimension，新增按项目、按部门两种汇总维度；4）合计与导出逻辑默认过滤为已通过状态，待审批数据不计入；5）核算口径对齐后端维度定义。",
+        "done_when": [
+          "报表页包含审批操作（批量通过/驳回）的截图",
+          "按项目汇总的结果与后端接口返回一致",
+          "待审批数据不计入合计与导出统计",
+          "改动不超过 8 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "既有能力增强",
+        "scenario_id": "enhance_existing"
+      },
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致；1.增审批状态筛选及列表批量通过/驳回；2.视图补按项目、按部门汇总（用已有dimension）；3.合计与导出默认只统计已通过；验收：报表页含审批操作截图；项目汇总与接口一致；待审批不计入合计",
+          "报表页包含审批操作（批量通过/驳回）的截图",
+          "按项目汇总的结果与后端接口返回一致",
+          "待审批数据不计入合计与导出统计"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*",
+          "**/*filter*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致；1.增审批状态筛选及列表批量通过/驳回；2.视图补按项目、按部门汇总（用已有dimension）；3.合计与导出默认只统计已通过；验收：报表页含审批操作截图；项目汇总与接口一致；待审批不计入合计。在报表中心新增「员工工时报表」：员工在T时可查询和录入工时；报表支持审批状态筛选，并可在列表中批量通过/驳回；汇总视图在原有明细/按员工基础上，补充按项目、按部门汇总（复用已有dimension）；核算口径与后端维度保持一致；合计与导出默认只统计已通过的数据",
+        "scenario_id": "enhance_existing"
+      },
+      "acceptance": [
+        "增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致；1.增审批状态筛选及列表批量通过/驳回；2.视图补按项目、按部门汇总（用已有dimension）；3.合计与导出默认只统计已通过；验收：报表页含审批操作截图；项目汇总与接口一致；待审批不计入合计",
+        "报表页包含审批操作（批量通过/驳回）的截图",
+        "按项目汇总的结果与后端接口返回一致",
+        "待审批数据不计入合计与导出统计",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790563508"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790485632_2"
+    },
+    "plan": {
+      "problem": "在报表中心新增员工工时报表，支持员工T时可查可录、审批状态筛选与批量通过/驳回，并补充按项目/按部门汇总视图",
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致；1.增审批状态筛选及列表批量通过/驳回；2.视图补按项目、按部门汇总（用已有dimension）；3.合计与导出默认只统计已通过；验收：报表页含审批操作截图；项目汇总与接口一致；待审批不计入合计",
+          "报表页包含审批操作（批量通过/驳回）的截图",
+          "按项目汇总的结果与后端接口返回一致",
+          "待审批数据不计入合计与导出统计"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*",
+          "**/*filter*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致；1.增审批状态筛选及列表批量通过/驳回；2.视图补按项目、按部门汇总（用已有dimension）；3.合计与导出默认只统计已通过；验收：报表页含审批操作截图；项目汇总与接口一致；待审批不计入合计。在报表中心新增「员工工时报表」：员工在T时可查询和录入工时；报表支持审批状态筛选，并可在列表中批量通过/驳回；汇总视图在原有明细/按员工基础上，补充按项目、按部门汇总（复用已有dimension）；核算口径与后端维度保持一致；合计与导出默认只统计已通过的数据",
+        "scenario_id": "enhance_existing"
+      },
+      "must_touch": [
+        "既有页面或接口的增量改动",
+        "必要时菜单文案/权限点"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "增强点可验收；原主路径不回归"
+      ],
+      "files_hint": "**/reports/**, **/employee*work*, **/routers/reports*, **/schemas.py, frontend/src/views/reports/, **/layouts/**, **/router*, **/*filter*, **/*.vue, README.md, readme.md, backend/",
+      "rev": "plan_1790563511"
+    },
+    "implement": {
+      "cursor_job_id": "ccj-20260928-105027-bff5",
+      "changed_files": [
+        "backend/tests/test_employee_work_hours_report.py",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "auto": true,
+      "gate": {
+        "class": "retry_delivery",
+        "reason": "must_fix_unaddressed",
+        "summary": "高危修复未落盘：backend/app/routers/reports.py：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）"
+      },
+      "scope_audit": {
+        "ok": true,
+        "file_count": 2,
+        "violations": [],
+        "detail": "变更 2 个文件，在范围内",
+        "max_files": 8
+      },
+      "content_audit": {
+        "ok": true,
+        "violations": [],
+        "detail": "无明确列名，跳过内容文案门禁"
+      }
+    },
+    "validate_last": {
+      "ok": true,
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "results": [
+        {
+          "name": "py-compile-root",
+          "cmd": "python -m compileall -q .",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 3.27
+        },
+        {
+          "name": "git-diff-check",
+          "cmd": "git diff --check",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 0.13
+        }
+      ],
+      "auto_defaults": true
+    },
+    "review_fail_evidence": {
+      "round": 2,
+      "summary": "存在 2 处高危问题，审核不通过",
+      "reason": "review_fail",
+      "report_id": "cr-a5d1f4dbd1144c4c",
+      "detail": "存在 2 处高危问题，审核不通过",
+      "report_body": "代码审核汇总报告\n审核文件：backend/tests/test_employee_work_hours_report.py、backend/app/schemas.py、backend/app/routers/reports.py\n审核日期：2026-09-28\n审核人：Viprasol + workbuddy-gate-90（Skill `zr-workbuddy-code-review`）\n工程路径：D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n---\n一、总体评价\n🔴 高危问题：共 2 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 2 处，建议在后续迭代中完成整改。\n本次审核共发现 8 个问题。\n所有问题均基于已读源码/配置，方法论为 Viprasol + workbuddy-gate-90（及源码规则补种），位置与代码片段对应原始文件。\n---\n二、详细问题清单（汇总后）\n🔴 高危 问题1 — 合计与导出未按已通过过滤，违反验收口径\n文件：backend/app/routers/reports.py　位置：约第 520 行\n问题描述：需求与验收明确「合计与导出默认只统计已通过的数据」「待审批不计入合计」，但 list_employee_work_hours_report 的 work_hours_sum/overtime_hours_sum 对 all_items 全量求和，_build_work_hour_report_items 与导出接口均未按 approval_status 过滤。触发条件：存在 pending/rejected 记录时，合计与导出即包含未通过数据，与后端维度口径不一致。\n// ❌ 当前代码\n```\nall_items = _build_work_hour_report_items(db, date_from=date_from, date_to=date_to, department=department, employee_no=employee_no, project_name=project_name, shift_type=shift_type, dimension=dimension)\ntotal = len(all_items)\nwork_hours_sum = round(sum(i.work_hours for i in all_items), 2)\novertime_hours_sum = round(sum(i.overtime_hours for i in all_items), 2)\n```\n修改建议：为查询与导出增加 approval_status 过滤参数，默认 approved，在 _apply_work_hour_filters 统一加过滤，保证列表/合计/导出三处口径一致。验证：造 1 条 approved + 1 条 pending，断言合计仅等于 approved 工时。\n// ✅ 正确做法\n```\ndef _apply_work_hour_filters(query, *, date_from, date_to, department, employee_no, project_name, shift_type=None, approval_status: str | None = \"approved\"):\n    query = query.filter(EmployeeWorkHour.work_date >= date_from, EmployeeWorkHour.work_date <= date_to)\n    if department:\n        query = query.filter(EmployeeWorkHour.department == department)\n    if employee_no:\n        query = query.filter(EmployeeWorkHour.employee_no == employee_no)\n    if project_name:\n        query = query.filter(EmployeeWorkHour.project_name == project_name)\n    if shift_type:\n        query = query.filter(EmployeeWorkHour.shift_type == shift_type)\n    if approval_status and approval_status != \"all\":\n        query = query.filter(EmployeeWorkHour.approval_status == approval_status)\n    return query\n```\n---\n🔴 高危 问题2 — 审批状态筛选参数缺失，无法按审批状态筛选\n文件：backend/app/routers/reports.py　位置：约第 505 行\n问题描述：需求「报表支持审批状态筛选」，但 list_employee_work_hours_report 与导出接口均无 approval_status 查询参数，前端无法按待审批/已通过/已驳回筛选，验收「审批筛选与操作」不满足。\n// ❌ 当前代码\n```\ndef list_employee_work_hours_report(\n    page: int = Query(1, ge=1),\n    page_size: int = Query(10, ge=1, le=100),\n    date_from: date | None = Query(None),\n    date_to: date | None = Query(None),\n    department: str | None = Query(None),\n    employee_no: str | None = Query(None),\n    project_name: str | None = Query(None),\n    shift_type: str | None = Query(None),\n    dimension: str = Query(\"detail\"),\n    ...\n):\n```\n修改建议：新增 approval_status 参数并校验取值（pending/approved/rejected/all），非法值返回 400，透传至 _apply_work_hour_filters。验证：?approval_status=pending 只返回待审批记录。\n// ✅ 正确做法\n```\nWORK_HOUR_APPROVAL_FILTER_VALUES = frozenset({\"pending\", \"approved\", \"rejected\", \"all\"})\n\ndef list_employee_work_hours_report(\n    ...,\n    approval_status: str = Query(\"approved\", description=\"审批状态筛选，默认 approved\"),\n    ...,\n):\n    if approval_status not in WORK_HOUR_APPROVAL_FILTER_VALUES:\n        raise HTTPException(status_code=400, detail=\"审批状态无效\")\n```\n---\n🟡 中危 问题3 — employee_month 使用 SQLite 专有 strftime，跨库不兼容\n文件：backend/app/routers/reports.py　位置：约第 430 行\n问题描述：func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date) 是 SQLite 专有函数，在 MySQL/PostgreSQL 上会报错或返回错误结果，导致「按员工+月份」维度在生产库不可用。触发条件：切换到非 SQLite 数据库即失败。\n// ❌ 当前代码\n```\nif dimension == \"employee_month\":\n    month_expr = func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date)\n```\n修改建议：改用跨库表达式或在 Python 侧按 (employee_no, year, month) 聚合。验证：在目标数据库执行该维度查询不报错且月份格式为 YYYY-MM。\n// ✅ 正确做法\n```\nif dimension == \"employee_month\":\n    rows = query.with_entities(\n        EmployeeWorkHour.employee_no, EmployeeWorkHour.employee_name,\n        EmployeeWorkHour.department, EmployeeWorkHour.work_date,\n        EmployeeWorkHour.work_hours, EmployeeWorkHour.overtime_hours, EmployeeWorkHour.id,\n    ).all()\n    agg: dict[tuple, dict] = {}\n    for r in rows:\n        key = (r.employee_no, r.employee_name, r.department, r.work_date.strftime(\"%Y-%m\"))\n        b = agg.setdefault(key, {\"work_hours\": 0.0, \"overtime_hours\": 0.0, \"count\": 0})\n        b[\"work_hours\"] += float(r.work_hours or 0)\n        b[\"overtime_hours\"] += float(r.overtime_hours or 0)\n        b[\"count\"] += 1\n    return [EmployeeWorkHourReportItem(employee_name=k[1], employee_no=k[0], department=k[2], work_month=k[3], work_hours=round(v[\"work_hours\"], 2), overtime_hours=round(v[\"overtime_hours\"], 2), approval_status=\"汇总\", record_count=v[\"count\"]) for k, v in sorted(agg.items(), key=lambda kv: (kv[0][3], kv[0][0]), reverse=True)]\n```\n---\n🟡 中危 问题4 — 新增工时允许客户端自填 approval_status，可绕过审批流\n文件：backend/app/routers/reports.py　位置：约第 560 行\n问题描述：EmployeeWorkHourCreate.approval_status 默认 pending，但接口直接采用客户端传入值，员工可提交 approved 直接进入已通过口径，绕过审批。触发条件：请求体传 approval_status=approved。\n// ❌ 当前代码\n```\napproval = payload.approval_status or \"pending\"\nif approval not in WORK_HOUR_APPROVAL_VALUES:\n    raise HTTPException(status_code=400, detail=\"审批状态无效\")\nrow = EmployeeWorkHour(..., approval_status=approval)\n```\n修改建议：新增记录一律强制 pending，审批状态只能由审批接口变更；若需管理员直录，按角色判断。验证：普通用户提交 approved 后落库仍为 pending。\n// ✅ 正确做法\n```\nrow = EmployeeWorkHour(\n    ...,\n    approval_status=\"pending\",  # 新增一律待审批，审批状态由审批接口变更\n)\n```\n---\n🟡 中危 问题5 — 导出无行数上限，全量加载存在内存/超时风险\n文件：backend/app/routers/reports.py　位置：约第 600 行\n问题描述：export_employee_work_hours_report 一次性拉取全部明细并写入内存 Workbook，无分页/上限。触发条件：日期范围大、记录多时内存暴涨甚至 OOM。\n// ❌ 当前代码\n```\nitems = _build_work_hour_report_items(db, date_from=date_from, date_to=date_to, ...)\nwb = Workbook()\nfor item in items:\n    ws.append(_work_hour_export_row(item, dimension))\n```\n修改建议：对导出设置最大行数上限（如 5 万行）或强制日期范围，超限返回 400；或改用 write_only 模式流式写入。验证：构造超限数据返回明确错误而非 OOM。\n// ✅ 正确做法\n```\nMAX_EXPORT_ROWS = 50000\nitems = _build_work_hour_report_items(...)\nif len(items) > MAX_EXPORT_ROWS:\n    raise HTTPException(status_code=400, detail=f\"导出数据超过 {MAX_EXPORT_ROWS} 行，请缩小日期范围\")\n```\n---\n🟡 中危 问题6 — 测试未覆盖审批筛选与待审批不计入合计验收点\n文件：backend/tests/test_employee_work_hours_report.py　位置：约第 110 行\n问题描述：test_employee_work_hours_detail_and_filters 断言 total == 3（含 pending），未验证合计只统计已通过，也未测试 approval_status 筛选，关键验收点无回归保护。\n// ❌ 当前代码\n```\nresp = client.get(\"/api/reports/employee-work-hours\", headers=auth_headers)\nassert resp.status_code == 200\ndata = resp.json()\nassert data[\"total\"] == 3\n```\n修改建议：新增用例断言默认合计仅含 approved（张三 8.0 + 李四 7.0 = 15.0，不含 pending 的 2.0），并测试 ?approval_status=pending 只返回 1 条。验证：修复问题1后该用例通过。\n// ✅ 正确做法\n```\ndef test_employee_work_hours_summary_only_approved(client, auth_headers, sample_work_hours):\n    resp = client.get(\"/api/reports/employee-work-hours\", headers=auth_headers)\n    data = resp.json()\n    assert data[\"work_hours_sum\"] == 15.0\n    assert data[\"overtime_hours_sum\"] == 1.0\n\ndef test_employee_work_hours_filter_pending(client, auth_headers, sample_work_hours):\n    resp = client.get(\"/api/reports/employee-work-hours?approval_status=pending\", headers=auth_headers)\n    assert resp.json()[\"total\"] == 1\n```\n---\n🟢 低危 问题7 — _build_work_hour_staff_maps 返回类型注解过长可读性差\n文件：backend/app/routers/reports.py　位置：约第 150 行\n问题描述：返回四元组类型注解极长，可读性差，属维护性问题。\n// ❌ 当前代码\n```\ndef _build_work_hour_staff_maps(\n    db: Session, *, date_from: date, date_to: date,\n) -> tuple[dict[tuple[date, str], float], dict[tuple[date, str], set[str]], dict[date, float], dict[date, set[str]]]:\n```\n修改建议：抽取 NamedTuple 或数据类提升可读性。\n// ✅ 正确做法\n```\nfrom typing import NamedTuple\n\nclass WorkHourStaffMaps(NamedTuple):\n    workshop_hours: dict[tuple[date, str], float]\n    workshop_staff: dict[tuple[date, str], set[str]]\n    date_hours: dict[date, float]\n    date_staff: dict[date, set[str]]\n```\n---\n🟢 低危 问题8 — approval_status 硬编码中文魔法值「汇总」\n文件：backend/app/routers/reports.py　位置：约第 470 行\n问题描述：各汇总维度统一写死 approval_status=\"汇总\"，与 _approval_label 语义混用，前端难以区分汇总行与审批状态，属可维护性/命名问题。\n// ❌ 当前代码\n```\nEmployeeWorkHourReportItem(..., approval_status=\"汇总\", record_count=int(row.record_count or ",
+      "must_fix": [
+        "🔴 高危 — 合计与导出未按已通过过滤，违反验收口径｜文件：backend/app/routers/reports.py:520｜修复：为查询与导出增加 approval_status 过滤参数，默认 approved，在 _apply_work_hour_filters 统一加过滤，保证列表/合计/导出三处口径一致。验证：造 1 条 approved + 1 条 pending，断言合计仅等于 approved 工时。",
+        "🔴 高危 — 审批状态筛选参数缺失，无法按审批状态筛选｜文件：backend/app/routers/reports.py:505｜修复：新增 approval_status 参数并校验取值（pending/approved/rejected/all），非法值返回 400，透传至 _apply_work_hour_filters。验证：?approval_status=pending 只返回待审批记录。"
+      ],
+      "files": [
+        "backend/tests/test_employee_work_hours_report.py",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "blocker_count": 2,
+      "gate_findings": [
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 520,
+          "severity": "critical",
+          "title": "合计与导出未按已通过过滤，违反验收口径",
+          "description": "需求与验收明确「合计与导出默认只统计已通过的数据」「待审批不计入合计」，但 list_employee_work_hours_report 的 work_hours_sum/overtime_hours_sum 对 all_items 全量求和，_build_work_hour_report_items 与导出接口均未按 approval_status 过滤。触发条件：存在 pending/rejected 记录时，合计与导出即包含未通过数据，与后端维度口径不一致。",
+          "code_snippet": "all_items = _build_work_hour_report_items(db, date_from=date_from, date_to=date_to, department=department, employee_no=employee_no, project_name=project_name, shift_type=shift_type, dimension=dimension)\ntotal = len(all_items)\nwork_hours_sum = round(sum(i.work_hours for i in all_items), 2)\novertime_hours_sum = round(sum(i.overtime_hours for i in all_items), 2)",
+          "fix_suggestion": "为查询与导出增加 approval_status 过滤参数，默认 approved，在 _apply_work_hour_filters 统一加过滤，保证列表/合计/导出三处口径一致。验证：造 1 条 approved + 1 条 pending，断言合计仅等于 approved 工时。",
+          "fix_code": "def _apply_work_hour_filters(query, *, date_from, date_to, department, employee_no, project_name, shift_type=None, approval_status: str | None = \"approved\"):\n    query = query.filter(EmployeeWorkHour.work_date >= date_from, EmployeeWorkHour.work_date <= date_to)\n    if department:\n        query = query.filter(EmployeeWorkHour.department == department)\n    if employee_no:\n        query = query.filter(EmployeeWorkHour.employee_no == employee_no)\n    if project_name:\n        query = query.filter(EmployeeWorkHour.project_name == project_name)\n    if shift_type:\n        query = query.filter(EmployeeWorkHour.shift_type == shift_type)\n    if approval_status and approval_status != \"all\":\n        query = query.filter(EmployeeWorkHour.approval_status == approval_status)\n    return query"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 505,
+          "severity": "critical",
+          "title": "审批状态筛选参数缺失，无法按审批状态筛选",
+          "description": "需求「报表支持审批状态筛选」，但 list_employee_work_hours_report 与导出接口均无 approval_status 查询参数，前端无法按待审批/已通过/已驳回筛选，验收「审批筛选与操作」不满足。",
+          "code_snippet": "def list_employee_work_hours_report(\n    page: int = Query(1, ge=1),\n    page_size: int = Query(10, ge=1, le=100),\n    date_from: date | None = Query(None),\n    date_to: date | None = Query(None),\n    department: str | None = Query(None),\n    employee_no: str | None = Query(None),\n    project_name: str | None = Query(None),\n    shift_type: str | None = Query(None),\n    dimension: str = Query(\"detail\"),\n    ...\n):",
+          "fix_suggestion": "新增 approval_status 参数并校验取值（pending/approved/rejected/all），非法值返回 400，透传至 _apply_work_hour_filters。验证：?approval_status=pending 只返回待审批记录。",
+          "fix_code": "WORK_HOUR_APPROVAL_FILTER_VALUES = frozenset({\"pending\", \"approved\", \"rejected\", \"all\"})\n\ndef list_employee_work_hours_report(\n    ...,\n    approval_status: str = Query(\"approved\", description=\"审批状态筛选，默认 approved\"),\n    ...,\n):\n    if approval_status not in WORK_HOUR_APPROVAL_FILTER_VALUES:\n        raise HTTPException(status_code=400, detail=\"审批状态无效\")"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 430,
+          "severity": "medium",
+          "title": "employee_month 使用 SQLite 专有 strftime，跨库不兼容",
+          "description": "func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date) 是 SQLite 专有函数，在 MySQL/PostgreSQL 上会报错或返回错误结果，导致「按员工+月份」维度在生产库不可用。触发条件：切换到非 SQLite 数据库即失败。",
+          "code_snippet": "if dimension == \"employee_month\":\n    month_expr = func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date)",
+          "fix_suggestion": "改用跨库表达式或在 Python 侧按 (employee_no, year, month) 聚合。验证：在目标数据库执行该维度查询不报错且月份格式为 YYYY-MM。",
+          "fix_code": "if dimension == \"employee_month\":\n    rows = query.with_entities(\n        EmployeeWorkHour.employee_no, EmployeeWorkHour.employee_name,\n        EmployeeWorkHour.department, EmployeeWorkHour.work_date,\n        EmployeeWorkHour.work_hours, EmployeeWorkHour.overtime_hours, EmployeeWorkHour.id,\n    ).all()\n    agg: dict[tuple, dict] = {}\n    for r in rows:\n        key = (r.employee_no, r.employee_name, r.department, r.work_date.strftime(\"%Y-%m\"))\n        b = agg.setdefault(key, {\"work_hours\": 0.0, \"overtime_hours\": 0.0, \"count\": 0})\n        b[\"work_hours\"] += float(r.work_hours or 0)\n        b[\"overtime_hours\"] += float(r.overtime_hours or 0)\n        b[\"count\"] += 1\n    return [EmployeeWorkHourReportItem(employee_name=k[1], employee_no=k[0], department=k[2], work_month=k[3], work_hours=round(v[\"work_hours\"], 2), overtime_hours=round(v[\"overtime_hours\"], 2), approval_status=\"汇总\", record_count=v[\"count\"]) for k, v in sorted(agg.items(), key=lambda kv: (kv[0][3], kv[0][0]), reverse=True)]"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 560,
+          "severity": "medium",
+          "title": "新增工时允许客户端自填 approval_status，可绕过审批流",
+          "description": "EmployeeWorkHourCreate.approval_status 默认 pending，但接口直接采用客户端传入值，员工可提交 approved 直接进入已通过口径，绕过审批。触发条件：请求体传 approval_status=approved。",
+          "code_snippet": "approval = payload.approval_status or \"pending\"\nif approval not in WORK_HOUR_APPROVAL_VALUES:\n    raise HTTPException(status_code=400, detail=\"审批状态无效\")\nrow = EmployeeWorkHour(..., approval_status=approval)",
+          "fix_suggestion": "新增记录一律强制 pending，审批状态只能由审批接口变更；若需管理员直录，按角色判断。验证：普通用户提交 approved 后落库仍为 pending。",
+          "fix_code": "row = EmployeeWorkHour(\n    ...,\n    approval_status=\"pending\",  # 新增一律待审批，审批状态由审批接口变更\n)"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 600,
+          "severity": "medium",
+          "title": "导出无行数上限，全量加载存在内存/超时风险",
+          "description": "export_employee_work_hours_report 一次性拉取全部明细并写入内存 Workbook，无分页/上限。触发条件：日期范围大、记录多时内存暴涨甚至 OOM。",
+          "code_snippet": "items = _build_work_hour_report_items(db, date_from=date_from, date_to=date_to, ...)\nwb = Workbook()\nfor item in items:\n    ws.append(_work_hour_export_row(item, dimension))",
+          "fix_suggestion": "对导出设置最大行数上限（如 5 万行）或强制日期范围，超限返回 400；或改用 write_only 模式流式写入。验证：构造超限数据返回明确错误而非 OOM。",
+          "fix_code": "MAX_EXPORT_ROWS = 50000\nitems = _build_work_hour_report_items(...)\nif len(items) > MAX_EXPORT_ROWS:\n    raise HTTPException(status_code=400, detail=f\"导出数据超过 {MAX_EXPORT_ROWS} 行，请缩小日期范围\")"
+        },
+        {
+          "file": "backend/tests/test_employee_work_hours_report.py",
+          "line": 110,
+          "severity": "medium",
+          "title": "测试未覆盖审批筛选与待审批不计入合计验收点",
+          "description": "test_employee_work_hours_detail_and_filters 断言 total == 3（含 pending），未验证合计只统计已通过，也未测试 approval_status 筛选，关键验收点无回归保护。",
+          "code_snippet": "resp = client.get(\"/api/reports/employee-work-hours\", headers=auth_headers)\nassert resp.status_code == 200\ndata = resp.json()\nassert data[\"total\"] == 3",
+          "fix_suggestion": "新增用例断言默认合计仅含 approved（张三 8.0 + 李四 7.0 = 15.0，不含 pending 的 2.0），并测试 ?approval_status=pending 只返回 1 条。验证：修复问题1后该用例通过。",
+          "fix_code": "def test_employee_work_hours_summary_only_approved(client, auth_headers, sample_work_hours):\n    resp = client.get(\"/api/reports/employee-work-hours\", headers=auth_headers)\n    data = resp.json()\n    assert data[\"work_hours_sum\"] == 15.0\n    assert data[\"overtime_hours_sum\"] == 1.0\n\ndef test_employee_work_hours_filter_pending(client, auth_headers, sample_work_hours):\n    resp = client.get(\"/api/reports/employee-work-hours?approval_status=pending\", headers=auth_headers)\n    assert resp.json()[\"total\"] == 1"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 150,
+          "severity": "low",
+          "title": "_build_work_hour_staff_maps 返回类型注解过长可读性差",
+          "description": "返回四元组类型注解极长，可读性差，属维护性问题。",
+          "code_snippet": "def _build_work_hour_staff_maps(\n    db: Session, *, date_from: date, date_to: date,\n) -> tuple[dict[tuple[date, str], float], dict[tuple[date, str], set[str]], dict[date, float], dict[date, set[str]]]:",
+          "fix_suggestion": "抽取 NamedTuple 或数据类提升可读性。",
+          "fix_code": "from typing import NamedTuple\n\nclass WorkHourStaffMaps(NamedTuple):\n    workshop_hours: dict[tuple[date, str], float]\n    workshop_staff: dict[tuple[date, str], set[str]]\n    date_hours: dict[date, float]\n    date_staff: dict[date, set[str]]"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 470,
+          "severity": "low",
+          "title": "approval_status 硬编码中文魔法值「汇总」",
+          "description": "各汇总维度统一写死 approval_status=\"汇总\"，与 _approval_label 语义混用，前端难以区分汇总行与审批状态，属可维护性/命名问题。",
+          "code_snippet": "EmployeeWorkHourReportItem(..., approval_status=\"汇总\", record_count=int(row.record_count or 0))",
+          "fix_suggestion": "定义常量 SUMMARY_LABEL 或改用 None 并由前端按 record_count 判断。",
+          "fix_code": "SUMMARY_APPROVAL_LABEL = \"汇总\"\n...\napproval_status=SUMMARY_APPROVAL_LABEL,"
+        }
+      ]
+    },
+    "implement_fix_mandate": {
+      "round": 3,
+      "max_rounds": 3,
+      "must_fix": [
+        "backend/app/routers/reports.py：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）",
+        "须在点名文件的函数签名/Query 增加修复建议中的入参；响应模型字段赋值不算完成",
+        "🔴 高危 — 合计与导出未按已通过过滤，违反验收口径｜文件：backend/app/routers/reports.py:520｜修复：为查询与导出增加 approval_status 过滤参数，默认 approved，在 _apply_work_hour_filters 统一加过滤，保证列表/合计/导出三处口径一致。验证：造 1 条 approved + 1 条 pending，断言合计仅等于 approved 工时。",
+        "🔴 高危 — 审批状态筛选参数缺失，无法按审批状态筛选｜文件：backend/app/routers/reports.py:505｜修复：新增 approval_status 参数并校验取值（pending/approved/rejected/all），非法值返回 400，透传至 _apply_work_hour_filters。验证：?approval_status=pending 只返回待审批记录。"
+      ],
+      "files": [
+        "backend/tests/test_employee_work_hours_report.py",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "source": "must_fix_unaddressed"
+    },
+    "implement_gate_verdict": {
+      "class": "retry_delivery",
+      "reason": "must_fix_unaddressed",
+      "summary": "高危修复未落盘：backend/app/routers/reports.py：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）",
+      "violations": [
+        "backend/app/routers/reports.py：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）"
+      ]
+    },
+    "scope_fail_evidence": {
+      "detail": "高危修复未落盘：backend/app/routers/reports.py：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）",
+      "violations": [
+        "backend/app/routers/reports.py：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）"
+      ],
+      "file_count": 3,
+      "files": [
+        "backend/tests/test_employee_work_hours_report.py",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "gate_reason": "must_fix_unaddressed"
+    }
+  },
+  "requirement_core": "增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致；1.增审批状态筛选及列表批量通过/驳回；2.视图补按项目、按部门汇总（用已有dimension）；3.合计与导出默认只统计已通过；验收：报表页含审批操作截图；项目汇总与接口一致；待审批不计入合计。在报表中心新增「员工工时报表」：员工在T时可查询和录入工时；报表支持审批状态筛选，并可在列表中批量通过/驳回；汇总视图在原有明细/按员工基础上，补充按项目、按部门汇总（复用已有dimension）；核算口径与后端维度保持一致；合计与导出默认只统计已通过的数据",
+  "prd_rev": "prd_1790563508",
+  "context_rev": "ctx_1790485632_2",
+  "plan_rev": "plan_1790563511"
+}

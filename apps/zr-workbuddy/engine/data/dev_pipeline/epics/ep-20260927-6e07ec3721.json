@@ -1,0 +1,430 @@
+{
+  "epic_id": "ep-20260927-6e07ec3721",
+  "message": "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批、状态 【改动】将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）；须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把入库列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框处员工加班工时改为1小时；红框/箭头/高亮：位于“李四”和“E1002”这两列之间；标注与改动暗示；高亮：位于“李四”和“E1002”这两列之间\n\n【识图摘录】\n### 页面定位\n- 页面标题：员工工时报表\n- 菜单/导航路径：未见\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：日期范围（2026-09-21 至 2026-09-27）、部门（全部）、员工（全部）、项目（全部）、班别（全部）、统计维度（明细）、查询按钮、重置按钮、新增工时按钮\n### 表格\n- 表头列名（从左到右完整列出）：员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批/状态\n- 可见示例行（最多 3 行）\n| 员工 | 工号 | 部门 | 项目 | 任务 | 日期 | 班别 | 工时 | 加班工时 | 审批/状态 |\n|------|------|------|------|------|------|------|------|----------|------------|\n| 张三 | E1001 | 生产一部 | PCB-A量产项目 | 贴片工序 | 2026-09-27 | 白班 | 8.0 | 1.0 | 已通过 |\n| 张三 | E1001 | 生产一部 | PCB-A量产项目 | 贴片工序 | 2026-09-26 | 白班 | 8.0 | 1.5 | 已通过 |\n| 李四 | E1002 | 生产一部 | PCB-B试产项目 | 焊接调试 | 2026-09-26 | 晚班 | 8.0 | 2.0 | 待审批 |\n- 分页/合计文案：工时合计92.0，加班合计6.0\n### 标注与改动暗示\n- 附图附加文字：将员工工时报表红框处员工加班工时改为1小时\n- 红框/箭头/高亮：位于“李四”和“E1002”这两列之间",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_hebo",
+  "created_at": 1790519453,
+  "runs": [
+    "dpj-1948feb28aa54b93"
+  ],
+  "intake_image_ids": [
+    "vimg-775e3fe93941339d"
+  ],
+  "updated_at": 1790519879,
+  "requirement_core": "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批、状态 【改动】将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）；须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把入库列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框处员工加班工时改为1小时；红框/箭头/高亮：位于“李四”和“E1002”这两列之间；标注与改动暗示；高亮：位于“李四”和“E1002”这两列之间",
+  "artifacts": {
+    "raw_intake": {
+      "text": "将员工工时报表红框处员工加班工时改为1小时\n【附图:vimg-775e3fe93941339d】",
+      "has_workspace_hint": true,
+      "captured_at": 1790519453,
+      "image_ids": [
+        "vimg-775e3fe93941339d"
+      ],
+      "vision_text": "### 页面定位\n- 页面标题：员工工时报表\n- 菜单/导航路径：未见\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：日期范围（2026-09-21 至 2026-09-27）、部门（全部）、员工（全部）、项目（全部）、班别（全部）、统计维度（明细）、查询按钮、重置按钮、新增工时按钮\n### 表格\n- 表头列名（从左到右完整列出）：员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批/状态\n- 可见示例行（最多 3 行）\n| 员工 | 工号 | 部门 | 项目 | 任务 | 日期 | 班别 | 工时 | 加班工时 | 审批/状态 |\n|------|------|------|------|------|------|------|------|----------|------------|\n| 张三 | E1001 | 生产一部 | PCB-A量产项目 | 贴片工序 | 2026-09-27 | 白班 | 8.0 | 1.0 | 已通过 |\n| 张三 | E1001 | 生产一部 | PCB-A量产项目 | 贴片工序 | 2026-09-26 | 白班 | 8.0 | 1.5 | 已通过 |\n| 李四 | E1002 | 生产一部 | PCB-B试产项目 | 焊接调试 | 2026-09-26 | 晚班 | 8.0 | 2.0 | 待审批 |\n- 分页/合计文案：工时合计92.0，加班合计6.0\n### 标注与改动暗示\n- 附图附加文字：将员工工时报表红框处员工加班工时改为1小时\n- 红框/箭头/高亮：位于“李四”和“E1002”这两列之间",
+      "vision": {
+        "ok": true,
+        "model": "glm-4v-flash",
+        "image_count": 1
+      },
+      "requirement_core": "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批、状态 【改动】将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）；须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把入库列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框处员工加班工时改为1小时；红框/箭头/高亮：位于“李四”和“E1002”这两列之间；标注与改动暗示；高亮：位于“李四”和“E1002”这两列之间",
+      "vision_surface": {
+        "page_title": "员工工时报表",
+        "menu_path": "",
+        "table_columns": [
+          "员工",
+          "工号",
+          "部门",
+          "项目",
+          "任务",
+          "日期",
+          "班别",
+          "工时",
+          "加班工时",
+          "审批",
+          "状态"
+        ],
+        "filters": [
+          "### 筛选与操作"
+        ],
+        "buttons": [],
+        "marks": [
+          "红框处员工加班工时改为1小时",
+          "红框/箭头/高亮：位于“李四”和“E1002”这两列之间",
+          "标注与改动暗示",
+          "高亮：位于“李四”和“E1002”这两列之间",
+          "箭头/高亮：位于“李四”和“E1002”这两列之间"
+        ],
+        "sample_codes": [],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "path_hints": [],
+        "raw_excerpt": "### 页面定位\n- 页面标题：员工工时报表\n- 菜单/导航路径：未见\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：日期范围（2026-09-21 至 2026-09-27）、部门（全部）、员工（全部）、项目（全部）、班别（全部）、统计维度（明细）、查询按钮、重置按钮、新增工时按钮\n### 表格\n- 表头列名（从左到右完整列出）：员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批/状态\n- 可见示例行（最多 3 行）\n| 员工 | 工号 | 部门 | 项目 | 任务 | 日期 | 班别 | 工时 | 加班工时 | 审批/状态 |\n|------|------|------|------|------|------|------|------|----------|------------|\n| 张三 | E1001 | 生产一部 | PCB-A量产项目 | 贴片工序 | 2026-09-27 | 白班 | 8.0 | 1.0 | 已通过 |\n| 张三 | E1001 | 生产一部 | PCB-A量产项目 | 贴片工序 | 2026-09-26 | 白班 | 8.0 | 1.5 | 已通过 |\n| 李四 | E1002 | 生产一部 | PCB-B试产项目 | 焊接调试 | 2026-09-26 | 晚班 | 8.0 | 2.0 | 待审批 |\n- 分页/合计文案：工时合计92.0，加班合计6.0\n### 标注与改动暗示\n- 附图附加文字：将员工工时报表红框处员工加班工时改为1小时\n- 红框/箭头/高亮：位于“李四”和“E1002”这两列之间"
+      },
+      "normalize": {
+        "source": "user_plus_vision",
+        "one_liner": "将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）",
+        "was_sanitized": true,
+        "notes": [
+          "用户短句依赖截图：已锚定识图页面，禁止只按关键词改错页"
+        ],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批、状态 【改动】将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）；须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把入库列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框处员工加班工时改为1小时；红框/箭头/高亮：位于“李四”和“E1002”这两列之间；标注与改动暗示；高亮：位于“李四”和“E1002”这两列之间",
+      "goal_one_liner": "将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）",
+      "user_card": {
+        "one_liner": "将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）",
+        "what": "将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）",
+        "how": "落地可访问页面与主路径交互；对接已有或规划中的接口（含筛选/分页）",
+        "done_when": [
+          "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批、状态 【改动】将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）",
+          "须改本页前端表格 + 对应列表接口字段",
+          "红框/箭头/高亮：位于“李四”和“E1002”这两列之间",
+          "标注与改动暗示",
+          "高亮：位于“李四”和“E1002”这两列之间",
+          "改动不超过 8 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "既有能力增强",
+        "scenario_id": "enhance_existing"
+      },
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批、状态 【改动】将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）",
+          "须改本页前端表格 + 对应列表接口字段",
+          "红框/箭头/高亮：位于“李四”和“E1002”这两列之间",
+          "标注与改动暗示",
+          "高亮：位于“李四”和“E1002”这两列之间"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "backend/app/routers/warehouse.py",
+          "frontend/src/api/warehouse.js",
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "**/*shift*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [
+          "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "backend/app/routers/warehouse.py"
+        ],
+        "forbid_paths": [
+          "frontend/src/views/warehouse/LowStockAlertsView.vue"
+        ],
+        "page_title": "员工工时报表",
+        "target_menu": "",
+        "user_message_excerpt": "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批、状态 【改动】将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）；须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把入库列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框处员工加班工时改为1小时；红框/箭头/高亮：位于“李四”和“E1002”这两列之间；标注与改动暗示；高亮：位于“李四”和“E1002”这两列之间",
+        "scenario_id": "enhance_existing"
+      },
+      "acceptance": [
+        "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批、状态 【改动】将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）",
+        "须改本页前端表格 + 对应列表接口字段",
+        "红框/箭头/高亮：位于“李四”和“E1002”这两列之间",
+        "标注与改动暗示",
+        "高亮：位于“李四”和“E1002”这两列之间",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790519463"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790485632_2"
+    },
+    "plan": {
+      "problem": "将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）",
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批、状态 【改动】将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）",
+          "须改本页前端表格 + 对应列表接口字段",
+          "红框/箭头/高亮：位于“李四”和“E1002”这两列之间",
+          "标注与改动暗示",
+          "高亮：位于“李四”和“E1002”这两列之间"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "backend/app/routers/warehouse.py",
+          "frontend/src/api/warehouse.js",
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "**/*shift*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [
+          "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "backend/app/routers/warehouse.py"
+        ],
+        "forbid_paths": [
+          "frontend/src/views/warehouse/LowStockAlertsView.vue"
+        ],
+        "page_title": "员工工时报表",
+        "target_menu": "",
+        "user_message_excerpt": "【界面锚定】员工工时报表 【现有表头】员工、工号、部门、项目、任务、日期、班别、工时、加班工时、审批、状态 【改动】将员工工时报表红框处员工加班工时改为1小时。插入位置以标注为准（红框/箭头/高亮：位于“李四”和“E1002”这两列之间）；须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把入库列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框处员工加班工时改为1小时；红框/箭头/高亮：位于“李四”和“E1002”这两列之间；标注与改动暗示；高亮：位于“李四”和“E1002”这两列之间",
+        "scenario_id": "enhance_existing"
+      },
+      "must_touch": [
+        "既有页面或接口的增量改动",
+        "必要时菜单文案/权限点"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "增强点可验收；原主路径不回归"
+      ],
+      "files_hint": "frontend/src/views/warehouse/MaterialInboundListView.vue, backend/app/routers/warehouse.py, frontend/src/api/warehouse.js, **/reports/**, **/employee*work*, **/routers/reports*, **/schemas.py, **/*shift*, **/*.vue, README.md, readme.md, backend/",
+      "rev": "plan_1790519464"
+    },
+    "implement": {
+      "cursor_job_id": "ccj-20260927-223352-bbcf",
+      "changed_files": [
+        "frontend/src/views/warehouse/MaterialInboundListView.vue",
+        "backend/app/routers/warehouse.py"
+      ],
+      "auto": true,
+      "gate": {
+        "class": "pass",
+        "reason": "pass",
+        "summary": "写码完成（已忽略数据库同步失败，回收源码 2 项）"
+      },
+      "scope_audit": {
+        "ok": true,
+        "file_count": 2,
+        "violations": [],
+        "detail": "变更 2 个文件，在范围内",
+        "max_files": 8
+      },
+      "content_audit": {
+        "ok": true,
+        "violations": [],
+        "detail": "无明确列名，跳过内容文案门禁"
+      }
+    },
+    "validate_last": {
+      "ok": true,
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "results": [
+        {
+          "name": "py-compile-root",
+          "cmd": "python -m compileall -q .",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 5.9
+        },
+        {
+          "name": "git-diff-check",
+          "cmd": "git diff --check",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 0.19
+        }
+      ],
+      "auto_defaults": true
+    },
+    "review_fail_evidence": {
+      "round": 2,
+      "summary": "存在 1 处高危问题，审核不通过",
+      "reason": "review_fail",
+      "report_id": "cr-8784933e5757434a",
+      "detail": "存在 1 处高危问题，审核不通过",
+      "report_body": "代码审核汇总报告\n审核文件：frontend/src/views/warehouse/MaterialInboundListView.vue、backend/app/routers/warehouse.py\n审核日期：2026-09-27\n审核人：Viprasol + workbuddy-gate-90（Skill `zr-workbuddy-code-review`）\n工程路径：D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n---\n一、总体评价\n🔴 高危问题：共 1 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n本次审核共发现 8 个问题。\n所有问题均基于已读源码/配置，方法论为 Viprasol + workbuddy-gate-90（及源码规则补种），位置与代码片段对应原始文件。\n---\n二、详细问题清单（汇总后）\n🔴 高危 问题1 — 后端硬编码伪造业务数据，污染真实报表\n文件：backend/app/routers/warehouse.py　位置：约第 1 行\n问题描述：新增 LISI_E1002_OVERTIME_HOURS 常量与 _apply_lisi_e1002_overtime_override()，在 /api/warehouse/employee-work-hours 返回前把李四/E1002 的 overtime_hours 强制改写为 1.0。触发条件：任何调用该接口的请求。危害：报表数据与实际工时记录不一致，overtime_hours_sum 汇总同样被污染，且无法通过配置关闭，属于把演示假数据写进生产查询路径，若导出/对账/薪资依赖此接口将造成实质性数据错误。\n// ❌ 当前代码\n```\nLISI_E1002_OVERTIME_HOURS = 1.0\n\ndef _apply_lisi_e1002_overtime_override(items):\n    adjusted = []\n    for item in items:\n        if item.employee_name == \"李四\" and item.employee_no == \"E1002\":\n            adjusted.append(item.model_copy(update={\"overtime_hours\": LISI_E1002_OVERTIME_HOURS}))\n        else:\n            adjusted.append(item)\n    return adjusted\n# ...\n    all_items = _apply_lisi_e1002_overtime_override(all_items)\n```\n修改建议：删除该硬编码覆盖逻辑，让报表如实反映数据源。若需演示数据应通过 seed 脚本写入数据库；若产品要求李四加班=1，应修正其考勤源数据而非在接口层打补丁。验证：调用接口比对数据库原始记录，确认返回值与源数据一致。\n// ✅ 正确做法\n```\n# 删除 LISI_E1002_OVERTIME_HOURS 常量与 _apply_lisi_e1002_overtime_override 函数\n# 删除调用行 all_items = _apply_lisi_e1002_overtime_override(all_items)\n\n    all_items = _build_work_hour_report_items(\n        db, date_from=date_from, date_to=date_to, department=department,\n        employee_no=employee_no, project_name=project_name,\n        shift_type=shift_type, dimension=dimension,\n    )\n    total = len(all_items)\n```\n---\n🟡 中危 问题2 — 前端文件名与页面语义严重不符\n文件：frontend/src/views/warehouse/MaterialInboundListView.vue　位置：约第 1 行\n问题描述：文件名为 MaterialInboundListView.vue（物料入库列表），内容实为员工工时报表（标题、接口 /api/warehouse/employee-work-hours、列头均为工时字段）。触发条件：开发者按文件名检索/路由配置/重构时。危害：极易被误改，本次任务已明确警告勿把入库列表页误当成锚定页，存在维护事故风险。\n// ❌ 当前代码\n```\n<span class=\"table-title\">员工工时报表</span>\n// ...\nreturn authFetch(`/api/warehouse/employee-work-hours?${params.toString()}`)\n```\n修改建议：重命名为语义一致的文件名并同步路由与 import；若不能重命名，至少在文件顶部加注释说明真实用途。验证：全局搜索 MaterialInboundListView 确认引用点全部更新，页面功能不变。\n// ✅ 正确做法\n```\n// 重命名为 frontend/src/views/warehouse/EmployeeWorkHoursReportView.vue\n// 路由配置同步：\n// { path: '/warehouse/employee-work-hours', component: () => import('../views/warehouse/EmployeeWorkHoursReportView.vue') }\n```\n---\n🟡 中危 问题3 — 全量加载后内存分页，数据量大时性能与内存风险\n文件：backend/app/routers/warehouse.py　位置：约第 1 行\n问题描述：warehouse_list_employee_work_hours 先 _build_work_hour_report_items 取出全部明细，再在 Python 内存中切片分页，汇总 sum() 也基于全量列表。触发条件：日期范围大、明细多时。危害：每次请求全量构建对象 O(N) 内存与 CPU，分页无法下推数据库，随数据增长响应变慢。\n// ❌ 当前代码\n```\nall_items = _build_work_hour_report_items(...)\n    total = len(all_items)\n    work_hours_sum = round(sum(i.work_hours for i in all_items), 2)\n    overtime_hours_sum = round(sum(i.overtime_hours for i in all_items), 2)\n    start = (page - 1) * page_size\n    page_items = all_items[start : start + page_size]\n```\n修改建议：将分页与聚合下推到 SQL（LIMIT/OFFSET + SUM 聚合），或对结果加缓存并限制最大日期跨度。验证：构造 1 万条明细，对比修复前后接口响应时间与内存占用。\n// ✅ 正确做法\n```\nbase_query = _build_work_hour_report_query(db, date_from=..., date_to=..., ...)\n    total = base_query.count()\n    sums = base_query.with_entities(\n        func.coalesce(func.sum(WorkHour.work_hours), 0),\n        func.coalesce(func.sum(WorkHour.overtime_hours), 0),\n    ).one()\n    page_items = base_query.offset((page - 1) * page_size).limit(page_size).all()\n```\n---\n🟡 中危 问题4 — 入库单号生成存在并发冲突与全表扫描\n文件：backend/app/routers/warehouse.py　位置：约第 1 行\n问题描述：_generate_inbound_no 通过查最大单号+1 生成序号，无锁、无唯一约束兜底（仅 IntegrityError 返回 409 让用户重试）。触发条件：并发创建入库单时两个请求读到同一 last。危害：并发下频繁冲突、体验差；like 前缀查询在无索引时随数据增长变慢。\n// ❌ 当前代码\n```\ndef _generate_inbound_no(db: Session) -> str:\n    last = (db.query(MaterialInbound)\n        .filter(MaterialInbound.inbound_no.like(f\"{prefix}%\"))\n        .order_by(MaterialInbound.inbound_no.desc()).first())\n    seq = 1\n    if last:\n        try: seq = int(last.inbound_no.split(\"-\")[-1]) + 1\n        except ValueError: seq = db.query(MaterialInbound).count() + 1\n    return f\"{prefix}{seq:03d}\"\n```\n修改建议：改用数据库序列/自增，或对 inbound_no 建唯一索引并在冲突时重试生成而非直接报错。验证：并发脚本同时发起 10 个创建请求，确认无重复单号且无 409。\n// ✅ 正确做法\n```\n# 模型层：inbound_no 加 unique=True\ndef create_material_inbound(...):\n    for attempt in range(5):\n        try:\n            inbound = MaterialInbound(inbound_no=_generate_inbound_no(db), ...)\n            db.add(inbound); db.flush()\n            db.commit(); break\n        except IntegrityError:\n            db.rollback()\n            if attempt == 4:\n                raise HTTPException(status_code=409, detail=\"入库单号冲突，请重试\")\n```\n---\n🟡 中危 问题5 — 看板接口 N+1 查询，物料多时性能急剧下降\n文件：backend/app/routers/warehouse.py　位置：约第 1 行\n问题描述：warehouse_dashboard 中对每个物料循环执行 InventoryBalance 聚合查询，material_rows 循环中又对每个物料再查一次余额。触发条件：物料数量增长。危害：O(N) 次数据库往返，N 大时接口超时。\n// ❌ 当前代码\n```\nfor m in materials:\n        qty = int(db.query(func.coalesce(func.sum(InventoryBalance.quantity), 0))\n            .filter(InventoryBalance.material_id == m.id).scalar() or 0)\n    # ...\n    for m in materials:\n        bal = db.query(InventoryBalance).options(joinedload(...)).filter(...).first()\n        qty = int(db.query(func.coalesce(func.sum(InventoryBalance.quantity), 0))...)\n```\n修改建议：一次性 GROUP BY material_id 聚合出所有物料库存，用字典查表。验证：物料 1000 条时对比 SQL 执行次数（SQLAlchemy echo）。\n// ✅ 正确做法\n```\nqty_rows = (db.query(InventoryBalance.material_id,\n                         func.coalesce(func.sum(InventoryBalance.quantity), 0))\n                .group_by(InventoryBalance.material_id).all())\n    qty_map = {mid: int(q) for mid, q in qty_rows}\n    for m in materials:\n        qty = qty_map.get(m.id, 0)\n```\n---\n🟢 低危 问题6 — filters 定义后未使用\n文件：frontend/src/views/warehouse/MaterialInboundListView.vue　位置：约第 1 行\n问题描述：const filters = reactive({}) 声明后从未使用，el-form :model=\"filters\" 也无实际字段绑定。触发条件：静态检查/阅读代码时。危害：死代码，误导读者以为有筛选逻辑。\n// ❌ 当前代码\n```\nconst filters = reactive({})\n```\n修改建议：删除未使用的 filters 及 reactive 导入（若不再使用）。验证：ESLint no-unused-vars 通过。\n// ✅ 正确做法\n```\n// 删除 const filters = reactive({})\n// 若 el-form 仍需 model，可改为 :model=\"{}\" 或移除该绑定\n```\n---\n🟢 低危 问题7 — formatHours 对 null/undefined 返回 0.0 而非占位符\n文件：frontend/src/views/warehouse/MaterialInboundListView.vue　位置：约第 1 行\n问题描述：formatHours 中 Number(null) 为 0、Number(undefined) 为 NaN。当后端返回 null 时显示 0.0，与无数据语义不符（其它列用 —）。触发条件：字段为空时。危害：报表显示误导。\n// ❌ 当前代码\n```\nfunction formatHours(value) {\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(1)\n}\n```\n修改建议：先判空再转换。验证：传入 null 应显示 —。\n// ✅ 正确做法\n```\nfunction formatHours(value) {\n  if (value === null || value === undefined || value === '') return '—'\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(1)\n}\n```\n---\n🟢 低危 问题8 — loadReport 异常处理未区分错误类型\n文件：frontend/src/views/warehouse/MaterialInboundListView.vue　位置：约第 1 行\n问题描述：loadReport 的 catch 统一 ElMessage.error，未区分 401/403/网络错误；失败后 page 未回退，用户可能停留在空页。触发条件：接口失败时。危害：体验与可诊断性下降。\n// ❌ 当前代码\n```\n} catch (err) {\n    items.value = []\n    total.value = 0\n    overtimeHoursSum.value = 0\n    ElMessage.error(err.message || '加载员工工时报表失败')\n  }\n```\n修改建议：按状态码给出差异化提示，失败时回退页码。验证：模拟 401 与 500，确认提示不同。\n// ✅ 正确做法\n```\n} catch (err) {\n    items.value = []; total.value = 0; overtimeHoursSum.value = 0\n    if (err.status === 401) ElMessage.error('登录已过期，请重新登录')\n    else ElMessage.error(err.message || '加载员工工时报表失败')\n  }\n```\n---\n四、审核结论\n❌ 审核不通过（存在高危问题，须全部修复后方可合并）\n🔴 高危问题：共 1 处，必须全部修复后方可合并。\n🟡 中危问题：共 4 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n✅ 数量核对：高危1 + 中危4 + 低危3 = 总问题数8。\n> 审码元信息：已按 Viprasol + workbuddy-gate-90 **本批次改动重审** （指定改动 2 个，实际审读 2 个功能源码文件）（1 批并行，审码 ID `cr-run-6162572ed906-143727`，无结果缓存）。LLM 产出 8 条；规则补种 0 条；合并去重后 8 条。\n\n\n报告 ID：`cr-8784933e5757434a`",
+      "must_fix": [
+        "🟡 中危 问题2 — 前端文件名与页面语义严重不符",
+        "🔴 高危 问题1 — 后端硬编码伪造业务数据，污染真实报表",
+        "文件：backend/app/routers/warehouse.py 位置：约第 1 行",
+        "问题描述：新增 LISI_E1002_OVERTIME_HOURS 常量与 _apply_lisi_e1002_overtime_override()，在 /api/warehouse/employee-work-hours 返回前把李四/E1002 的 overtime_hours 强制改写为 1.0。触发条件：任何调用该接口的请求。危害：报表数据与实际工时记录不一致，overtime_hours_sum 汇总同样被污染，且无法通过配置关闭，属于把演示假数据写进生产查询路径，若导出/对账/薪资依赖此接口将造成实质性数据错误。",
+        "// ❌ 当前代码",
+        "LISI_E1002_OVERTIME_HOURS = 1.0",
+        "def _apply_lisi_e1002_overtime_override(items):",
+        "adjusted = []",
+        "for item in items:",
+        "if item.employee_name == \"李四\" and item.employee_no == \"E1002\":",
+        "adjusted.append(item.model_copy(update={\"overtime_hours\": LISI_E1002_OVERTIME_HOURS}))",
+        "adjusted.append(item)"
+      ],
+      "files": [
+        "frontend/src/views/warehouse/MaterialInboundListView.vue",
+        "backend/app/routers/warehouse.py"
+      ],
+      "blocker_count": 1,
+      "gate_findings": [
+        {
+          "file": "backend/app/routers/warehouse.py",
+          "line": 1,
+          "severity": "critical",
+          "title": "后端硬编码伪造业务数据，污染真实报表",
+          "description": "新增 LISI_E1002_OVERTIME_HOURS 常量与 _apply_lisi_e1002_overtime_override()，在 /api/warehouse/employee-work-hours 返回前把李四/E1002 的 overtime_hours 强制改写为 1.0。触发条件：任何调用该接口的请求。危害：报表数据与实际工时记录不一致，overtime_hours_sum 汇总同样被污染，且无法通过配置关闭，属于把演示假数据写进生产查询路径，若导出/对账/薪资依赖此接口将造成实质性数据错误。",
+          "code_snippet": "LISI_E1002_OVERTIME_HOURS = 1.0\n\ndef _apply_lisi_e1002_overtime_override(items):\n    adjusted = []\n    for item in items:\n        if item.employee_name == \"李四\" and item.employee_no == \"E1002\":\n            adjusted.append(item.model_copy(update={\"overtime_hours\": LISI_E1002_OVERTIME_HOURS}))\n        else:\n            adjusted.append(item)\n    return adjusted\n# ...\n    all_items = _apply_lisi_e1002_overtime_override(all_items)",
+          "fix_suggestion": "删除该硬编码覆盖逻辑，让报表如实反映数据源。若需演示数据应通过 seed 脚本写入数据库；若产品要求李四加班=1，应修正其考勤源数据而非在接口层打补丁。验证：调用接口比对数据库原始记录，确认返回值与源数据一致。",
+          "fix_code": "# 删除 LISI_E1002_OVERTIME_HOURS 常量与 _apply_lisi_e1002_overtime_override 函数\n# 删除调用行 all_items = _apply_lisi_e1002_overtime_override(all_items)\n\n    all_items = _build_work_hour_report_items(\n        db, date_from=date_from, date_to=date_to, department=department,\n        employee_no=employee_no, project_name=project_name,\n        shift_type=shift_type, dimension=dimension,\n    )\n    total = len(all_items)"
+        },
+        {
+          "file": "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "line": 1,
+          "severity": "medium",
+          "title": "前端文件名与页面语义严重不符",
+          "description": "文件名为 MaterialInboundListView.vue（物料入库列表），内容实为员工工时报表（标题、接口 /api/warehouse/employee-work-hours、列头均为工时字段）。触发条件：开发者按文件名检索/路由配置/重构时。危害：极易被误改，本次任务已明确警告勿把入库列表页误当成锚定页，存在维护事故风险。",
+          "code_snippet": "<span class=\"table-title\">员工工时报表</span>\n// ...\nreturn authFetch(`/api/warehouse/employee-work-hours?${params.toString()}`)",
+          "fix_suggestion": "重命名为语义一致的文件名并同步路由与 import；若不能重命名，至少在文件顶部加注释说明真实用途。验证：全局搜索 MaterialInboundListView 确认引用点全部更新，页面功能不变。",
+          "fix_code": "// 重命名为 frontend/src/views/warehouse/EmployeeWorkHoursReportView.vue\n// 路由配置同步：\n// { path: '/warehouse/employee-work-hours', component: () => import('../views/warehouse/EmployeeWorkHoursReportView.vue') }"
+        },
+        {
+          "file": "backend/app/routers/warehouse.py",
+          "line": 1,
+          "severity": "medium",
+          "title": "全量加载后内存分页，数据量大时性能与内存风险",
+          "description": "warehouse_list_employee_work_hours 先 _build_work_hour_report_items 取出全部明细，再在 Python 内存中切片分页，汇总 sum() 也基于全量列表。触发条件：日期范围大、明细多时。危害：每次请求全量构建对象 O(N) 内存与 CPU，分页无法下推数据库，随数据增长响应变慢。",
+          "code_snippet": "all_items = _build_work_hour_report_items(...)\n    total = len(all_items)\n    work_hours_sum = round(sum(i.work_hours for i in all_items), 2)\n    overtime_hours_sum = round(sum(i.overtime_hours for i in all_items), 2)\n    start = (page - 1) * page_size\n    page_items = all_items[start : start + page_size]",
+          "fix_suggestion": "将分页与聚合下推到 SQL（LIMIT/OFFSET + SUM 聚合），或对结果加缓存并限制最大日期跨度。验证：构造 1 万条明细，对比修复前后接口响应时间与内存占用。",
+          "fix_code": "base_query = _build_work_hour_report_query(db, date_from=..., date_to=..., ...)\n    total = base_query.count()\n    sums = base_query.with_entities(\n        func.coalesce(func.sum(WorkHour.work_hours), 0),\n        func.coalesce(func.sum(WorkHour.overtime_hours), 0),\n    ).one()\n    page_items = base_query.offset((page - 1) * page_size).limit(page_size).all()"
+        },
+        {
+          "file": "backend/app/routers/warehouse.py",
+          "line": 1,
+          "severity": "medium",
+          "title": "入库单号生成存在并发冲突与全表扫描",
+          "description": "_generate_inbound_no 通过查最大单号+1 生成序号，无锁、无唯一约束兜底（仅 IntegrityError 返回 409 让用户重试）。触发条件：并发创建入库单时两个请求读到同一 last。危害：并发下频繁冲突、体验差；like 前缀查询在无索引时随数据增长变慢。",
+          "code_snippet": "def _generate_inbound_no(db: Session) -> str:\n    last = (db.query(MaterialInbound)\n        .filter(MaterialInbound.inbound_no.like(f\"{prefix}%\"))\n        .order_by(MaterialInbound.inbound_no.desc()).first())\n    seq = 1\n    if last:\n        try: seq = int(last.inbound_no.split(\"-\")[-1]) + 1\n        except ValueError: seq = db.query(MaterialInbound).count() + 1\n    return f\"{prefix}{seq:03d}\"",
+          "fix_suggestion": "改用数据库序列/自增，或对 inbound_no 建唯一索引并在冲突时重试生成而非直接报错。验证：并发脚本同时发起 10 个创建请求，确认无重复单号且无 409。",
+          "fix_code": "# 模型层：inbound_no 加 unique=True\ndef create_material_inbound(...):\n    for attempt in range(5):\n        try:\n            inbound = MaterialInbound(inbound_no=_generate_inbound_no(db), ...)\n            db.add(inbound); db.flush()\n            db.commit(); break\n        except IntegrityError:\n            db.rollback()\n            if attempt == 4:\n                raise HTTPException(status_code=409, detail=\"入库单号冲突，请重试\")"
+        },
+        {
+          "file": "backend/app/routers/warehouse.py",
+          "line": 1,
+          "severity": "medium",
+          "title": "看板接口 N+1 查询，物料多时性能急剧下降",
+          "description": "warehouse_dashboard 中对每个物料循环执行 InventoryBalance 聚合查询，material_rows 循环中又对每个物料再查一次余额。触发条件：物料数量增长。危害：O(N) 次数据库往返，N 大时接口超时。",
+          "code_snippet": "for m in materials:\n        qty = int(db.query(func.coalesce(func.sum(InventoryBalance.quantity), 0))\n            .filter(InventoryBalance.material_id == m.id).scalar() or 0)\n    # ...\n    for m in materials:\n        bal = db.query(InventoryBalance).options(joinedload(...)).filter(...).first()\n        qty = int(db.query(func.coalesce(func.sum(InventoryBalance.quantity), 0))...)",
+          "fix_suggestion": "一次性 GROUP BY material_id 聚合出所有物料库存，用字典查表。验证：物料 1000 条时对比 SQL 执行次数（SQLAlchemy echo）。",
+          "fix_code": "qty_rows = (db.query(InventoryBalance.material_id,\n                         func.coalesce(func.sum(InventoryBalance.quantity), 0))\n                .group_by(InventoryBalance.material_id).all())\n    qty_map = {mid: int(q) for mid, q in qty_rows}\n    for m in materials:\n        qty = qty_map.get(m.id, 0)"
+        },
+        {
+          "file": "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "line": 1,
+          "severity": "low",
+          "title": "filters 定义后未使用",
+          "description": "const filters = reactive({}) 声明后从未使用，el-form :model=\"filters\" 也无实际字段绑定。触发条件：静态检查/阅读代码时。危害：死代码，误导读者以为有筛选逻辑。",
+          "code_snippet": "const filters = reactive({})",
+          "fix_suggestion": "删除未使用的 filters 及 reactive 导入（若不再使用）。验证：ESLint no-unused-vars 通过。",
+          "fix_code": "// 删除 const filters = reactive({})\n// 若 el-form 仍需 model，可改为 :model=\"{}\" 或移除该绑定"
+        },
+        {
+          "file": "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "line": 1,
+          "severity": "low",
+          "title": "formatHours 对 null/undefined 返回 0.0 而非占位符",
+          "description": "formatHours 中 Number(null) 为 0、Number(undefined) 为 NaN。当后端返回 null 时显示 0.0，与无数据语义不符（其它列用 —）。触发条件：字段为空时。危害：报表显示误导。",
+          "code_snippet": "function formatHours(value) {\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(1)\n}",
+          "fix_suggestion": "先判空再转换。验证：传入 null 应显示 —。",
+          "fix_code": "function formatHours(value) {\n  if (value === null || value === undefined || value === '') return '—'\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(1)\n}"
+        },
+        {
+          "file": "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "line": 1,
+          "severity": "low",
+          "title": "loadReport 异常处理未区分错误类型",
+          "description": "loadReport 的 catch 统一 ElMessage.error，未区分 401/403/网络错误；失败后 page 未回退，用户可能停留在空页。触发条件：接口失败时。危害：体验与可诊断性下降。",
+          "code_snippet": "} catch (err) {\n    items.value = []\n    total.value = 0\n    overtimeHoursSum.value = 0\n    ElMessage.error(err.message || '加载员工工时报表失败')\n  }",
+          "fix_suggestion": "按状态码给出差异化提示，失败时回退页码。验证：模拟 401 与 500，确认提示不同。",
+          "fix_code": "} catch (err) {\n    items.value = []; total.value = 0; overtimeHoursSum.value = 0\n    if (err.status === 401) ElMessage.error('登录已过期，请重新登录')\n    else ElMessage.error(err.message || '加载员工工时报表失败')\n  }"
+        }
+      ]
+    },
+    "implement_fix_mandate": {
+      "round": 2,
+      "max_rounds": 3,
+      "must_fix": [
+        "🟡 中危 问题2 — 前端文件名与页面语义严重不符",
+        "🔴 高危 问题1 — 后端硬编码伪造业务数据，污染真实报表",
+        "文件：backend/app/routers/warehouse.py 位置：约第 1 行",
+        "问题描述：新增 LISI_E1002_OVERTIME_HOURS 常量与 _apply_lisi_e1002_overtime_override()，在 /api/warehouse/employee-work-hours 返回前把李四/E1002 的 overtime_hours 强制改写为 1.0。触发条件：任何调用该接口的请求。危害：报表数据与实际工时记录不一致，overtime_hours_sum 汇总同样被污染，且无法通过配置关闭，属于把演示假数据写进生产查询路径，若导出/对账/薪资依赖此接口将造成实质性数据错误。",
+        "// ❌ 当前代码",
+        "LISI_E1002_OVERTIME_HOURS = 1.0",
+        "def _apply_lisi_e1002_overtime_override(items):",
+        "adjusted = []",
+        "for item in items:",
+        "if item.employee_name == \"李四\" and item.employee_no == \"E1002\":",
+        "adjusted.append(item.model_copy(update={\"overtime_hours\": LISI_E1002_OVERTIME_HOURS}))",
+        "adjusted.append(item)"
+      ],
+      "files": [
+        "frontend/src/views/warehouse/MaterialInboundListView.vue",
+        "backend/app/routers/warehouse.py"
+      ],
+      "source": "review"
+    }
+  },
+  "prd_rev": "prd_1790519463",
+  "context_rev": "ctx_1790485632_2",
+  "plan_rev": "plan_1790519464"
+}

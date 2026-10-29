@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "scanned_at": 1793092311,
+  "fingerprint": "d1a863fc79aea0cbe380",
+  "vcs": {
+    "kind": "git",
+    "remote": "https://github.com/LouisBoBo/pythonProject_zr_aicoding.git"
+  },
+  "languages": [
+    "JavaScript",
+    "Python",
+    "Vue"
+  ],
+  "stack": {
+    "frontend": [
+      "Vue",
+      "Element Plus",
+      "Vite"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "test": []
+  },
+  "layout": {
+    "kind": "vite_backend",
+    "frontend_root": "frontend",
+    "backend_root": "backend",
+    "router_files": [
+      "frontend/src/router/index.js",
+      "frontend/src/router/reportRoutes.js"
+    ],
+    "view_dirs": [
+      "frontend/src/views"
+    ],
+    "api_dirs": [
+      "frontend/src/api",
+      "backend/app/routers"
+    ],
+    "menu_files": [
+      "frontend/src/config/reportFeatures.js"
+    ],
+    "entry_files": [
+      "backend/app/main.py"
+    ]
+  },
+  "validate_commands": [],
+  "deploy": {
+    "preset": "vite_backend",
+    "build_cwd": "frontend",
+    "build_cmd": "npm run build",
+    "sync_hint": [
+      "frontend/dist",
+      "backend"
+    ],
+    "exclude_patterns": [
+      "node_modules",
+      ".venv",
+      "venv",
+      ".env",
+      ".env.*",
+      "*.db",
+      "*.sqlite",
+      "*.sqlite3",
+      ".git",
+      "__pycache__"
+    ]
+  },
+  "ui": {
+    "sample_pages": [
+      "frontend/src/views/HomeView.vue",
+      "frontend/src/views/InventoryLowStockAlertView.vue",
+      "frontend/src/views/KanbanBoardsView.vue"
+    ],
+    "style_libs": [
+      "Element Plus"
+    ]
+  },
+  "conventions": {
+    "readme_excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。",
+    "agents_excerpt": ""
+  },
+  "review": {
+    "skip_dirs": []
+  },
+  "code_suffixes": [
+    ".vue",
+    ".py",
+    ".js",
+    ".md",
+    ".json",
+    ".mjs",
+    ".txt",
+    ".svg",
+    ".yaml",
+    ".db",
+    ".sh",
+    ".html"
+  ],
+  "gaps": [
+    "未发现测试或 lint 脚本，验证步不会自动跑真实用例"
+  ],
+  "summary_zh": "布局：vite_backend\n语言：JavaScript、Python、Vue\n前端：Vue、Element Plus、Vite\n后端：FastAPI\n托管：Git\n入口：backend/app/main.py\n接口目录：frontend/src/api、backend/app/routers\n页面目录：frontend/src/views\n路由：frontend/src/router/index.js、frontend/src/router/reportRoutes.js\n菜单/导航文件：frontend/src/config/reportFeatures.js\n改页面、挂菜单、写接口时以以上路径为准，不要套用其它仓库的目录。",
+  "directory": {
+    "roots": [
+      {
+        "path": "backend",
+        "name": "backend",
+        "role": "后端",
+        "children": [
+          {
+            "path": "backend/app",
+            "name": "app",
+            "role": "",
+            "modules": [
+              "routers"
+            ]
+          },
+          {
+            "path": "backend/scripts",
+            "name": "scripts",
+            "role": "脚本"
+          },
+          {
+            "path": "backend/tests",
+            "name": "tests",
+            "role": "测试"
+          }
+        ]
+      },
+      {
+        "path": "docs",
+        "name": "docs",
+        "role": "文档",
+        "children": []
+      },
+      {
+        "path": "frontend",
+        "name": "frontend",
+        "role": "前端",
+        "children": [
+          {
+            "path": "frontend/scripts",
+            "name": "scripts",
+            "role": "脚本"
+          },
+          {
+            "path": "frontend/src",
+            "name": "src",
+            "role": "源码",
+            "modules": [
+              "api",
+              "assets",
+              "components",
+              "composables",
+              "config",
+              "layouts",
+              "router",
+              "utils"
+            ],
+            "modules_truncated": true
+          }
+        ]
+      },
+      {
+        "path": "ZR",
+        "name": "ZR",
+        "role": "",
+        "children": []
+      }
+    ],
+    "truncated": false
+  }
+}

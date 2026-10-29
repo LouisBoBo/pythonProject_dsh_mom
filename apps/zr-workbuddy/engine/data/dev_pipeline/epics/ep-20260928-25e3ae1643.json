@@ -1,0 +1,417 @@
+{
+  "epic_id": "ep-20260928-25e3ae1643",
+  "message": "报表中心菜单新增此需求\n\n【识图摘录】\n### 需求条目\n- 编码：R01\n- 模块/项目：报表中心\n- 本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致\n- 功能要求：\n  1. 增审批状态筛选及列表批量通过/驳回；\n  2. 视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过\n- 验收标准：\n  1. 报表页含审批操作截图；\n  2. 项目汇总与接口一致；\n  3. 待审批不计入合计\n- 优先级 / 业务目标：生产·人员效率\n\n用户附加文字：报表中心菜单新增此需求",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_admin",
+  "created_at": 1790562629,
+  "runs": [
+    "dpj-c740c3e2e3ea437e"
+  ],
+  "intake_image_ids": [
+    "vimg-7b471928e4cabf5f"
+  ],
+  "updated_at": 1790562891,
+  "requirement_core": "报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】。在报表中心菜单下新增「员工工时报表」功能：员工在T时可查询、可录入；提供审批状态筛选及列表批量通过/驳回；视图在已有明细/按员工基础上，补充按项目、按部门汇总（复用已有dimension）；合计与导出默认只统计已通过记录，核算口径与后端维度保持一致",
+  "artifacts": {
+    "raw_intake": {
+      "text": "报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】",
+      "has_workspace_hint": true,
+      "captured_at": 1790562629,
+      "image_ids": [
+        "vimg-7b471928e4cabf5f"
+      ],
+      "vision_text": "### 需求条目\n- 编码：R01\n- 模块/项目：报表中心\n- 本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致\n- 功能要求：\n  1. 增审批状态筛选及列表批量通过/驳回；\n  2. 视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过\n- 验收标准：\n  1. 报表页含审批操作截图；\n  2. 项目汇总与接口一致；\n  3. 待审批不计入合计\n- 优先级 / 业务目标：生产·人员效率\n\n用户附加文字：报表中心菜单新增此需求",
+      "vision": {
+        "ok": true,
+        "model": "glm-4v-flash",
+        "image_count": 1
+      },
+      "requirement_core": "报表中心菜单新增此需求",
+      "vision_surface": {
+        "page_title": "",
+        "menu_path": "报表中心",
+        "table_columns": [
+          "状态"
+        ],
+        "filters": [
+          "本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致",
+          "增审批状态筛选及列表批量通过/驳回；"
+        ],
+        "buttons": [
+          "视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过"
+        ],
+        "marks": [],
+        "sample_codes": [],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "path_hints": [],
+        "raw_excerpt": "### 需求条目\n- 编码：R01\n- 模块/项目：报表中心\n- 本项/现状问题：增加员工工时报表，员工T时可查可录，审批筛选与操作，汇总仅明细/按员工，核算口径与后端维度一致\n- 功能要求：\n  1. 增审批状态筛选及列表批量通过/驳回；\n  2. 视图补按项目、按部门汇总（用已有dimension）；③ 合计与导出默认只统计已通过\n- 验收标准：\n  1. 报表页含审批操作截图；\n  2. 项目汇总与接口一致；\n  3. 待审批不计入合计\n- 优先级 / 业务目标：生产·人员效率\n\n用户附加文字：报表中心菜单新增此需求"
+      },
+      "normalize": {
+        "source": "user_text",
+        "one_liner": "报表中心菜单新增此需求",
+        "was_sanitized": true,
+        "notes": [],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】。在报表中心菜单下新增「员工工时报表」功能：员工在T时可查询、可录入；提供审批状态筛选及列表批量通过/驳回；视图在已有明细/按员工基础上，补充按项目、按部门汇总（复用已有dimension）；合计与导出默认只统计已通过记录，核算口径与后端维度保持一致",
+      "goal_one_liner": "报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】",
+      "user_card": {
+        "one_liner": "报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】",
+        "what": "报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】。在报表中心菜单下新增「员工工时报表」功能：员工在T时可查询、可录入；提供审批状态筛选及列表批量通过/驳回；视图在已有明细/按员工基础上，补充按项目、按部门汇总（复用已有dimension）；合计与导出默认只统计已通过记录，核算口径与后端维度保持一致",
+        "how": "1）在报表中心菜单下新增员工工时报表入口与页面；2）实现T时查询与录入能力；3）增加审批状态筛选，并在列表提供批量通过、批量驳回操作；4）视图汇总维度在明细/按员工之外，复用已有dimension补充按项目、按部门汇总；5）合计与导出逻辑默认仅统计已通过记录，待审批不计入；6）核算口径与后端维度对齐。",
+        "done_when": [
+          "报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】",
+          "报表页包含审批操作（可通过/驳回）的界面截图",
+          "按项目汇总的结果与后端接口返回一致",
+          "待审批记录不计入合计与导出统计",
+          "改动不超过 8 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "既有能力增强",
+        "scenario_id": "enhance_existing",
+        "user_quote": "报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】"
+      },
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "用户原话：报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】",
+          "报表中心菜单新增此需求",
+          "报表页包含审批操作（可通过/驳回）的界面截图",
+          "按项目汇总的结果与后端接口返回一致",
+          "待审批记录不计入合计与导出统计"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*",
+          "**/*filter*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】。在报表中心菜单下新增「员工工时报表」功能：员工在T时可查询、可录入；提供审批状态筛选及列表批量通过/驳回；视图在已有明细/按员工基础上，补充按项目、按部门汇总（复用已有dimension）；合计与导出默认只统计已通过记录，核算口径与后端维度保持一致",
+        "scenario_id": "enhance_existing"
+      },
+      "acceptance": [
+        "用户原话：报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】",
+        "报表中心菜单新增此需求",
+        "报表页包含审批操作（可通过/驳回）的界面截图",
+        "按项目汇总的结果与后端接口返回一致",
+        "待审批记录不计入合计与导出统计",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790562636"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790485632_2"
+    },
+    "plan": {
+      "problem": "报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】",
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "用户原话：报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】",
+          "报表中心菜单新增此需求",
+          "报表页包含审批操作（可通过/驳回）的界面截图",
+          "按项目汇总的结果与后端接口返回一致",
+          "待审批记录不计入合计与导出统计"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*",
+          "**/*filter*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "报表中心菜单新增此需求\n【附图:vimg-7b471928e4cabf5f】。在报表中心菜单下新增「员工工时报表」功能：员工在T时可查询、可录入；提供审批状态筛选及列表批量通过/驳回；视图在已有明细/按员工基础上，补充按项目、按部门汇总（复用已有dimension）；合计与导出默认只统计已通过记录，核算口径与后端维度保持一致",
+        "scenario_id": "enhance_existing"
+      },
+      "must_touch": [
+        "既有页面或接口的增量改动",
+        "必要时菜单文案/权限点"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "增强点可验收；原主路径不回归"
+      ],
+      "files_hint": "**/reports/**, **/employee*work*, **/routers/reports*, **/schemas.py, frontend/src/views/reports/, **/layouts/**, **/router*, **/*filter*, **/*.vue, README.md, readme.md, backend/",
+      "rev": "plan_1790562639"
+    },
+    "implement": {
+      "cursor_job_id": "ccj-20260928-103322-b4ac",
+      "changed_files": [
+        "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+        "backend/tests/test_employee_work_hours_report.py",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "auto": true,
+      "gate": {
+        "class": "retry_delivery",
+        "reason": "must_fix_unaddressed",
+        "summary": "高危修复未落盘：frontend/src/views/reports/EmployeeWorkHoursReportView.vue：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）"
+      },
+      "scope_audit": {
+        "ok": true,
+        "file_count": 4,
+        "violations": [],
+        "detail": "变更 4 个文件，在范围内",
+        "max_files": 8
+      },
+      "content_audit": {
+        "ok": true,
+        "violations": [],
+        "detail": "无明确列名，跳过内容文案门禁"
+      }
+    },
+    "validate_last": {
+      "ok": true,
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "results": [
+        {
+          "name": "py-compile-root",
+          "cmd": "python -m compileall -q .",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 4.61
+        },
+        {
+          "name": "git-diff-check",
+          "cmd": "git diff --check",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 0.18
+        }
+      ],
+      "auto_defaults": true
+    },
+    "review_fail_evidence": {
+      "round": 1,
+      "summary": "存在 3 处高危问题，审核不通过",
+      "reason": "review_fail",
+      "report_id": "cr-63f60df276924c1e",
+      "detail": "存在 3 处高危问题，审核不通过",
+      "report_body": "代码审核汇总报告\n审核文件：frontend/src/views/reports/EmployeeWorkHoursReportView.vue、backend/tests/test_employee_work_hours_report.py、backend/app/schemas.py、backend/app/routers/reports.py\n审核日期：2026-09-28\n审核人：Viprasol + workbuddy-gate-90（Skill `zr-workbuddy-code-review`）\n工程路径：D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding\n---\n一、总体评价\n🔴 高危问题：共 3 处，必须全部修复后方可合并。\n🟡 中危问题：共 2 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n本次审核共发现 8 个问题。\n所有问题均基于已读源码/配置，方法论为 Viprasol + workbuddy-gate-90（及源码规则补种），位置与代码片段对应原始文件。\n---\n二、详细问题清单（汇总后）\n🔴 高危 问题1 — 审批状态筛选参数未传递且后端未定义\n文件：frontend/src/views/reports/EmployeeWorkHoursReportView.vue　位置：约第 318 行\n问题描述：前端 filters.approvalStatus 在 UI 可选，但 queryParams() 未将其加入请求参数，后端 list_employee_work_hours_report 也未声明 approval_status 查询参数。需求「提供审批状态筛选」完全失效，用户选择待审批后仍返回全部数据。触发条件：任意选择审批下拉并查询。\n// ❌ 当前代码\n```\nfunction queryParams() {\n  return {\n    dateFrom: dateFrom.value,\n    dateTo: dateTo.value,\n    department: filters.department || undefined,\n    employeeNo: filters.employeeNo || undefined,\n    projectName: filters.projectName || undefined,\n    shiftType: filters.shiftType || undefined,\n    dimension: dimension.value,\n  }\n}\n```\n修改建议：前端 queryParams 补 approvalStatus；后端在 list/export 接口增加 approval_status 参数并在 _apply_work_hour_filters 中过滤。验证：选择待审批后请求 URL 含 approvalStatus=pending，返回记录 approval_status 全为待审批。\n// ✅ 正确做法\n```\n// ✅ 前端\nfunction queryParams() {\n  return {\n    dateFrom: dateFrom.value,\n    dateTo: dateTo.value,\n    department: filters.department || undefined,\n    employeeNo: filters.employeeNo || undefined,\n    projectName: filters.projectName || undefined,\n    shiftType: filters.shiftType || undefined,\n    approvalStatus: filters.approvalStatus || undefined,\n    dimension: dimension.value,\n  }\n}\n// ✅ 后端\nif approval_status:\n    query = query.filter(EmployeeWorkHour.approval_status == approval_status)\n```\n---\n🔴 高危 问题2 — 批量审批接口后端缺失导致 404\n文件：frontend/src/views/reports/EmployeeWorkHoursReportView.vue　位置：约第 420 行\n问题描述：前端 batchApproveEmployeeWorkHours 调用批量审批接口，但 backend/app/routers/reports.py 中不存在该路由，仅有 create_employee_work_hour。点击批量通过/驳回必然 404，需求「列表批量通过/驳回」不可用。触发条件：勾选待审批记录后点击批量通过。\n// ❌ 当前代码\n```\nconst resp = await batchApproveEmployeeWorkHours({ ids, approvalStatus })\nElMessage.success(`已${label} ${resp.updated || 0} 条`)\n```\n修改建议：后端新增 POST /employee-work-hours/batch-approval 路由，校验状态为 approved/rejected，仅更新 pending 记录并返回 updated 数量。验证：POST 后 DB 中对应 id 状态变更，非 pending 记录不被覆盖。\n// ✅ 正确做法\n```\nclass WorkHourBatchApproval(BaseModel):\n    ids: list[int] = Field(min_length=1)\n    approval_status: str\n\n@router.post(\"/employee-work-hours/batch-approval\", summary=\"批量审批员工工时\")\ndef batch_approve_employee_work_hours(\n    payload: WorkHourBatchApproval,\n    _current_user: User = Depends(get_current_user),\n    db: Session = Depends(get_db),\n):\n    if payload.approval_status not in (\"approved\", \"rejected\"):\n        raise HTTPException(status_code=400, detail=\"审批状态无效\")\n    updated = (\n        db.query(EmployeeWorkHour)\n        .filter(EmployeeWorkHour.id.in_(payload.ids),\n                EmployeeWorkHour.approval_status == \"pending\")\n        .update({EmployeeWorkHour.approval_status: payload.approval_status},\n                synchronize_session=False)\n    )\n    db.commit()\n    return {\"updated\": updated}\n```\n---\n🔴 高危 问题3 — 合计与导出默认口径未限定已通过\n文件：backend/app/routers/reports.py　位置：约第 560 行\n问题描述：需求明确「合计与导出默认只统计已通过记录」，但 _build_work_hour_report_items 未按 approval_status 过滤，work_hours_sum/overtime_hours_sum 及导出 Excel 均包含 pending/rejected 记录，核算口径与需求不符，导致工时统计虚高。触发条件：存在非 approved 记录时查询或导出。\n// ❌ 当前代码\n```\nall_items = _build_work_hour_report_items(\n    db, date_from=date_from, date_to=date_to, department=department,\n    employee_no=employee_no, project_name=project_name,\n    shift_type=shift_type, dimension=dimension,\n)\nwork_hours_sum = round(sum(i.work_hours for i in all_items), 2)\n```\n修改建议：未显式传入 approval_status 时，合计与导出默认按 approved 过滤；显式传入时按传入值过滤。验证：插入 approved+pending 各一条，合计应只含 approved。\n// ✅ 正确做法\n```\neffective_status = approval_status or \"approved\"  # 默认只统计已通过\nall_items = _build_work_hour_report_items(\n    db, date_from=date_from, date_to=date_to, department=department,\n    employee_no=employee_no, project_name=project_name,\n    shift_type=shift_type, approval_status=effective_status, dimension=dimension,\n)\n```\n---\n🟡 中危 问题4 — employee_month 维度使用 SQLite 专有函数\n文件：backend/app/routers/reports.py　位置：约第 470 行\n问题描述：func.strftime(\"%Y-%m\", ...) 是 SQLite 专有函数，生产环境若使用 MySQL/PostgreSQL 会抛 OperationalError 导致该维度接口 500。测试用 SQLite 掩盖了该问题。触发条件：在非 SQLite 数据库请求 dimension=employee_month。\n// ❌ 当前代码\n```\nmonth_expr = func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date)\n```\n修改建议：改用跨库表达式或按方言分支。验证：在目标数据库执行 dimension=employee_month 请求返回 200。\n// ✅ 正确做法\n```\nfrom sqlalchemy import cast, String\nmonth_expr = func.substr(cast(EmployeeWorkHour.work_date, String), 1, 7)\n```\n---\n🟡 中危 问题5 — 前端维度枚举与后端不一致\n文件：frontend/src/views/reports/EmployeeWorkHoursReportView.vue　位置：约第 230 行\n问题描述：后端 WORK_HOUR_DIMENSIONS 含 employee_date、employee_month，但前端 DIMENSION_COLS 未定义这两项，showCol 返回空数组导致列全部隐藏，且 radio 无对应按钮，功能不可达。触发条件：后端返回 employee_date/employee_month 维度数据。\n// ❌ 当前代码\n```\nconst DIMENSION_COLS = {\n  detail: [...],\n  employee: [...],\n  project: ['status', 'project_name', 'record_count', 'approval_status'],\n  department: ['status', 'department', 'record_count', 'approval_status'],\n}\n```\n修改建议：补齐前端维度列定义与 radio 按钮，或后端移除未使用维度。验证：切换各维度列显示正确。\n// ✅ 正确做法\n```\nemployee_date: ['status','employee_name','employee_no','department','work_date','record_count','approval_status'],\nemployee_month: ['status','employee_name','employee_no','department','work_month','record_count','approval_status'],\n```\n---\n🟢 低危 问题6 — loadReport 未处理分页越界\n文件：frontend/src/views/reports/EmployeeWorkHoursReportView.vue　位置：约第 360 行\n问题描述：筛选后若当前页超出总页数会返回空列表且不自动回退，用户看到空白表格。触发条件：在第 3 页执行筛选后结果不足 3 页。\n// ❌ 当前代码\n```\nitems.value = resp.items || []\ntotal.value = resp.total || 0\n```\n修改建议：若 items 为空且 page>1，回退到第 1 页重查。\n// ✅ 正确做法\n```\nif ((!resp.items || resp.items.length === 0) && page.value > 1) {\n  page.value = 1\n  return loadReport()\n}\n```\n---\n🟢 低危 问题7 — formatHours 对 null 处理不严谨\n文件：frontend/src/views/reports/EmployeeWorkHoursReportView.vue　位置：约第 300 行\n问题描述：Number(null) 返回 0，Number(undefined) 返回 NaN。后端返回 null 时显示 0.0 而非 —，语义误导。触发条件：后端字段为 null。\n// ❌ 当前代码\n```\nfunction formatHours(value) {\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(1)\n}\n```\n修改建议：先判空再转换。\n// ✅ 正确做法\n```\nfunction formatHours(value) {\n  if (value === null || value === undefined || value === '') return '—'\n  const n = Number(value)\n  return Number.isNaN(n) ? '—' : n.toFixed(1)\n}\n```\n---\n🟢 低危 问题8 — 测试未覆盖审批筛选与批量审批\n文件：backend/tests/test_employee_work_hours_report.py　位置：约第 120 行\n问题描述：测试未覆盖 approval_status 筛选、批量审批接口、默认合计口径，无法防止问题1/2/3 回归。触发条件：后续修改相关逻辑无测试保护。\n// ❌ 当前代码\n```\ndef test_employee_work_hours_dimensions(client, auth_headers, sample_work_hours):\n    by_employee = client.get(\n        \"/api/reports/employee-work-hours?dimension=employee\",\n        headers=auth_headers,\n    )\n```\n修改建议：补充用例：approvalStatus=pending 只返回 pending；批量审批后状态变更；默认合计仅含 approved。\n// ✅ 正确做法\n```\ndef test_approval_filter_and_batch(client, auth_headers, sample_work_hours):\n    r = client.get(\"/api/reports/employee-work-hours?approvalStatus=pending\", headers=auth_headers)\n    assert all(i[\"approval_status\"] == \"待审批\" for i in r.json()[\"items\"])\n    ids = [i[\"id\"] for i in r.json()[\"items\"]]\n    resp = client.post(\"/api/reports/employee-work-hours/batch-approval\",\n                       json={\"ids\": ids, \"approval_status\": \"approved\"}, headers=auth_headers)\n    assert resp.json()[\"updated\"] == len(ids)\n```\n---\n四、审核结论\n❌ 审核不通过（存在高危问题，须全部修复后方可合并）\n🔴 高危问题：共 3 处，必须全部修复后方可合并。\n🟡 中危问题：共 2 处，建议本次一并修复。\n🟢 低危问题：共 3 处，建议在后续迭代中完成整改。\n✅ 数量核对：高危3 + 中危2 + 低危3 = 总问题数8。\n> 审码元信息：已按 Viprasol + workbuddy-gate-90 **本批次改动重审** （指定改动 4 个，实际审读 4 个功能源码文件）（1 批并行，审码 ID `cr-run-99c48ed5b29e-023251`，无结果缓存）。LLM 产出 8 条；规则补种 0 条；合并去重后 8 条。\n\n\n报告 ID：`cr-63f60df276924c1e`",
+      "must_fix": [
+        "🔴 高危 — 审批状态筛选参数未传递且后端未定义｜文件：frontend/src/views/reports/EmployeeWorkHoursReportView.vue:318｜修复：前端 queryParams 补 approvalStatus；后端在 list/export 接口增加 approval_status 参数并在 _apply_work_hour_filters 中过滤。验证：选择待审批后请求 URL 含 approvalStatus=pending，返回记录 approval_status 全为待审批。",
+        "🔴 高危 — 批量审批接口后端缺失导致 404｜文件：frontend/src/views/reports/EmployeeWorkHoursReportView.vue:420｜修复：后端新增 POST /employee-work-hours/batch-approval 路由，校验状态为 approved/rejected，仅更新 pending 记录并返回 updated 数量。验证：POST 后 DB 中对应 id 状态变更，非 pending 记录不被覆盖。",
+        "🔴 高危 — 合计与导出默认口径未限定已通过｜文件：backend/app/routers/reports.py:560｜修复：未显式传入 approval_status 时，合计与导出默认按 approved 过滤；显式传入时按传入值过滤。验证：插入 approved+pending 各一条，合计应只含 approved。"
+      ],
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+        "backend/tests/test_employee_work_hours_report.py",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "blocker_count": 3,
+      "gate_findings": [
+        {
+          "file": "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+          "line": 318,
+          "severity": "critical",
+          "title": "审批状态筛选参数未传递且后端未定义",
+          "description": "前端 filters.approvalStatus 在 UI 可选，但 queryParams() 未将其加入请求参数，后端 list_employee_work_hours_report 也未声明 approval_status 查询参数。需求「提供审批状态筛选」完全失效，用户选择待审批后仍返回全部数据。触发条件：任意选择审批下拉并查询。",
+          "code_snippet": "function queryParams() {\n  return {\n    dateFrom: dateFrom.value,\n    dateTo: dateTo.value,\n    department: filters.department || undefined,\n    employeeNo: filters.employeeNo || undefined,\n    projectName: filters.projectName || undefined,\n    shiftType: filters.shiftType || undefined,\n    dimension: dimension.value,\n  }\n}",
+          "fix_suggestion": "前端 queryParams 补 approvalStatus；后端在 list/export 接口增加 approval_status 参数并在 _apply_work_hour_filters 中过滤。验证：选择待审批后请求 URL 含 approvalStatus=pending，返回记录 approval_status 全为待审批。",
+          "fix_code": "// ✅ 前端\nfunction queryParams() {\n  return {\n    dateFrom: dateFrom.value,\n    dateTo: dateTo.value,\n    department: filters.department || undefined,\n    employeeNo: filters.employeeNo || undefined,\n    projectName: filters.projectName || undefined,\n    shiftType: filters.shiftType || undefined,\n    approvalStatus: filters.approvalStatus || undefined,\n    dimension: dimension.value,\n  }\n}\n// ✅ 后端\nif approval_status:\n    query = query.filter(EmployeeWorkHour.approval_status == approval_status)"
+        },
+        {
+          "file": "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+          "line": 420,
+          "severity": "critical",
+          "title": "批量审批接口后端缺失导致 404",
+          "description": "前端 batchApproveEmployeeWorkHours 调用批量审批接口，但 backend/app/routers/reports.py 中不存在该路由，仅有 create_employee_work_hour。点击批量通过/驳回必然 404，需求「列表批量通过/驳回」不可用。触发条件：勾选待审批记录后点击批量通过。",
+          "code_snippet": "const resp = await batchApproveEmployeeWorkHours({ ids, approvalStatus })\nElMessage.success(`已${label} ${resp.updated || 0} 条`)",
+          "fix_suggestion": "后端新增 POST /employee-work-hours/batch-approval 路由，校验状态为 approved/rejected，仅更新 pending 记录并返回 updated 数量。验证：POST 后 DB 中对应 id 状态变更，非 pending 记录不被覆盖。",
+          "fix_code": "class WorkHourBatchApproval(BaseModel):\n    ids: list[int] = Field(min_length=1)\n    approval_status: str\n\n@router.post(\"/employee-work-hours/batch-approval\", summary=\"批量审批员工工时\")\ndef batch_approve_employee_work_hours(\n    payload: WorkHourBatchApproval,\n    _current_user: User = Depends(get_current_user),\n    db: Session = Depends(get_db),\n):\n    if payload.approval_status not in (\"approved\", \"rejected\"):\n        raise HTTPException(status_code=400, detail=\"审批状态无效\")\n    updated = (\n        db.query(EmployeeWorkHour)\n        .filter(EmployeeWorkHour.id.in_(payload.ids),\n                EmployeeWorkHour.approval_status == \"pending\")\n        .update({EmployeeWorkHour.approval_status: payload.approval_status},\n                synchronize_session=False)\n    )\n    db.commit()\n    return {\"updated\": updated}"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 560,
+          "severity": "critical",
+          "title": "合计与导出默认口径未限定已通过",
+          "description": "需求明确「合计与导出默认只统计已通过记录」，但 _build_work_hour_report_items 未按 approval_status 过滤，work_hours_sum/overtime_hours_sum 及导出 Excel 均包含 pending/rejected 记录，核算口径与需求不符，导致工时统计虚高。触发条件：存在非 approved 记录时查询或导出。",
+          "code_snippet": "all_items = _build_work_hour_report_items(\n    db, date_from=date_from, date_to=date_to, department=department,\n    employee_no=employee_no, project_name=project_name,\n    shift_type=shift_type, dimension=dimension,\n)\nwork_hours_sum = round(sum(i.work_hours for i in all_items), 2)",
+          "fix_suggestion": "未显式传入 approval_status 时，合计与导出默认按 approved 过滤；显式传入时按传入值过滤。验证：插入 approved+pending 各一条，合计应只含 approved。",
+          "fix_code": "effective_status = approval_status or \"approved\"  # 默认只统计已通过\nall_items = _build_work_hour_report_items(\n    db, date_from=date_from, date_to=date_to, department=department,\n    employee_no=employee_no, project_name=project_name,\n    shift_type=shift_type, approval_status=effective_status, dimension=dimension,\n)"
+        },
+        {
+          "file": "backend/app/routers/reports.py",
+          "line": 470,
+          "severity": "medium",
+          "title": "employee_month 维度使用 SQLite 专有函数",
+          "description": "func.strftime(\"%Y-%m\", ...) 是 SQLite 专有函数，生产环境若使用 MySQL/PostgreSQL 会抛 OperationalError 导致该维度接口 500。测试用 SQLite 掩盖了该问题。触发条件：在非 SQLite 数据库请求 dimension=employee_month。",
+          "code_snippet": "month_expr = func.strftime(\"%Y-%m\", EmployeeWorkHour.work_date)",
+          "fix_suggestion": "改用跨库表达式或按方言分支。验证：在目标数据库执行 dimension=employee_month 请求返回 200。",
+          "fix_code": "from sqlalchemy import cast, String\nmonth_expr = func.substr(cast(EmployeeWorkHour.work_date, String), 1, 7)"
+        },
+        {
+          "file": "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+          "line": 230,
+          "severity": "medium",
+          "title": "前端维度枚举与后端不一致",
+          "description": "后端 WORK_HOUR_DIMENSIONS 含 employee_date、employee_month，但前端 DIMENSION_COLS 未定义这两项，showCol 返回空数组导致列全部隐藏，且 radio 无对应按钮，功能不可达。触发条件：后端返回 employee_date/employee_month 维度数据。",
+          "code_snippet": "const DIMENSION_COLS = {\n  detail: [...],\n  employee: [...],\n  project: ['status', 'project_name', 'record_count', 'approval_status'],\n  department: ['status', 'department', 'record_count', 'approval_status'],\n}",
+          "fix_suggestion": "补齐前端维度列定义与 radio 按钮，或后端移除未使用维度。验证：切换各维度列显示正确。",
+          "fix_code": "employee_date: ['status','employee_name','employee_no','department','work_date','record_count','approval_status'],\nemployee_month: ['status','employee_name','employee_no','department','work_month','record_count','approval_status'],"
+        },
+        {
+          "file": "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+          "line": 360,
+          "severity": "low",
+          "title": "loadReport 未处理分页越界",
+          "description": "筛选后若当前页超出总页数会返回空列表且不自动回退，用户看到空白表格。触发条件：在第 3 页执行筛选后结果不足 3 页。",
+          "code_snippet": "items.value = resp.items || []\ntotal.value = resp.total || 0",
+          "fix_suggestion": "若 items 为空且 page>1，回退到第 1 页重查。",
+          "fix_code": "if ((!resp.items || resp.items.length === 0) && page.value > 1) {\n  page.value = 1\n  return loadReport()\n}"
+        },
+        {
+          "file": "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+          "line": 300,
+          "severity": "low",
+          "title": "formatHours 对 null 处理不严谨",
+          "description": "Number(null) 返回 0，Number(undefined) 返回 NaN。后端返回 null 时显示 0.0 而非 —，语义误导。触发条件：后端字段为 null。",
+          "code_snippet": "function formatHours(value) {\n  const n = Number(value)\n  if (Number.isNaN(n)) return '—'\n  return n.toFixed(1)\n}",
+          "fix_suggestion": "先判空再转换。",
+          "fix_code": "function formatHours(value) {\n  if (value === null || value === undefined || value === '') return '—'\n  const n = Number(value)\n  return Number.isNaN(n) ? '—' : n.toFixed(1)\n}"
+        },
+        {
+          "file": "backend/tests/test_employee_work_hours_report.py",
+          "line": 120,
+          "severity": "low",
+          "title": "测试未覆盖审批筛选与批量审批",
+          "description": "测试未覆盖 approval_status 筛选、批量审批接口、默认合计口径，无法防止问题1/2/3 回归。触发条件：后续修改相关逻辑无测试保护。",
+          "code_snippet": "def test_employee_work_hours_dimensions(client, auth_headers, sample_work_hours):\n    by_employee = client.get(\n        \"/api/reports/employee-work-hours?dimension=employee\",\n        headers=auth_headers,\n    )",
+          "fix_suggestion": "补充用例：approvalStatus=pending 只返回 pending；批量审批后状态变更；默认合计仅含 approved。",
+          "fix_code": "def test_approval_filter_and_batch(client, auth_headers, sample_work_hours):\n    r = client.get(\"/api/reports/employee-work-hours?approvalStatus=pending\", headers=auth_headers)\n    assert all(i[\"approval_status\"] == \"待审批\" for i in r.json()[\"items\"])\n    ids = [i[\"id\"] for i in r.json()[\"items\"]]\n    resp = client.post(\"/api/reports/employee-work-hours/batch-approval\",\n                       json={\"ids\": ids, \"approval_status\": \"approved\"}, headers=auth_headers)\n    assert resp.json()[\"updated\"] == len(ids)"
+        }
+      ]
+    },
+    "implement_fix_mandate": {
+      "round": 2,
+      "max_rounds": 3,
+      "must_fix": [
+        "frontend/src/views/reports/EmployeeWorkHoursReportView.vue：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）",
+        "须在点名文件的函数签名/Query 增加修复建议中的入参；响应模型字段赋值不算完成",
+        "🔴 高危 — 审批状态筛选参数未传递且后端未定义｜文件：frontend/src/views/reports/EmployeeWorkHoursReportView.vue:318｜修复：前端 queryParams 补 approvalStatus；后端在 list/export 接口增加 approval_status 参数并在 _apply_work_hour_filters 中过滤。验证：选择待审批后请求 URL 含 approvalStatus=pending，返回记录 approval_status 全为待审批。",
+        "🔴 高危 — 批量审批接口后端缺失导致 404｜文件：frontend/src/views/reports/EmployeeWorkHoursReportView.vue:420｜修复：后端新增 POST /employee-work-hours/batch-approval 路由，校验状态为 approved/rejected，仅更新 pending 记录并返回 updated 数量。验证：POST 后 DB 中对应 id 状态变更，非 pending 记录不被覆盖。",
+        "🔴 高危 — 合计与导出默认口径未限定已通过｜文件：backend/app/routers/reports.py:560｜修复：未显式传入 approval_status 时，合计与导出默认按 approved 过滤；显式传入时按传入值过滤。验证：插入 approved+pending 各一条，合计应只含 approved。"
+      ],
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+        "backend/tests/test_employee_work_hours_report.py",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "source": "must_fix_unaddressed"
+    },
+    "implement_gate_verdict": {
+      "class": "retry_delivery",
+      "reason": "must_fix_unaddressed",
+      "summary": "高危修复未落盘：frontend/src/views/reports/EmployeeWorkHoursReportView.vue：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）",
+      "violations": [
+        "frontend/src/views/reports/EmployeeWorkHoursReportView.vue：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）"
+      ]
+    },
+    "scope_fail_evidence": {
+      "detail": "高危修复未落盘：frontend/src/views/reports/EmployeeWorkHoursReportView.vue：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）",
+      "violations": [
+        "frontend/src/views/reports/EmployeeWorkHoursReportView.vue：仍缺少接口/函数入参 approval_status（响应字段赋值不算；须出现 Query 或形参注解 approval_status: Type）"
+      ],
+      "file_count": 4,
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHoursReportView.vue",
+        "backend/tests/test_employee_work_hours_report.py",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "gate_reason": "must_fix_unaddressed"
+    }
+  },
+  "prd_rev": "prd_1790562636",
+  "context_rev": "ctx_1790485632_2",
+  "plan_rev": "plan_1790562639"
+}

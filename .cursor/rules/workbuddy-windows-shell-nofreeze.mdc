@@ -1,0 +1,59 @@
+---
+description: Windows 上避免 Agent 终端假死（长命令无回显）
+alwaysApply: true
+---
+
+# Windows Agent 终端防假死
+
+> **现象**：对话里「正在跑…」很久没下文；用户感觉整会话卡死。  
+> **根因**：Cursor Agent 在 Windows 上跑 `python` / `npm` / `bash` / `curl` 时，进程可能假死或 stdout 不回，工具超时进后台。  
+> **不是** WorkBuddy 3081 挂了。
+
+## Agent 必须遵守
+
+1. **禁止**在 Agent 终端里阻塞等待：`npm pack`、`pnpm install`、`host.sh restart-web`、`ensure_dsh_knowledge --fix`、**`package_desktop.py` / `pack-desktop.ps1`**、无超时的长 `pip`/`svn`/`urllib` 下包（默认 >15s 且无写文件回执的）。
+2. **长操作**：写成脚本 → 输出落到 `tmp/_*.out` → 用 **一句**告诉用户在本机 **PowerShell**（或 Git Bash，勿用 WSL 空 home）自行执行；Agent 只读 `tmp/_*.out` 验收。
+3. **修 zod / 市场缓存 / 拷 client.js / 改 pnpm-lock**：优先 **文件工具**直改；需要下包时交给用户本机跑脚本，**不要**在 Agent 壳里 `py -3` 拉 tarball。
+4. Shell 若已出现 `Aborted` / 长时间 `running`：**立刻停**，改成本机命令 + 读 `tmp/_*.out`，禁止再开第二个长进程叠卡。
+5. 用户说「又卡死了 / 假死了」时：先区分  
+   - **对话假死** → Agent 壳；改短命令或让用户本机跑  
+   - **本机打包终端没刷字** → 先查 `tmp\_pack_desktop.stdout` / 是否有 `python`+`Robocopy`（拷 Host 正常，可十几分钟）；**不是**立刻 Ctrl+C  
+   - **3081 白屏 / Failed to load plugins** → bundles 残包（`purge_broken_profile_bundles`）  
+   - **写码 ERR_MODULE_NOT_FOUND zod** → `ensure_cursor_sdk_zod --fix`
+6. 产品入口对用户仍是浏览器 **http://127.0.0.1:3081/**；不要为修 Agent 终端去折腾 WSL `bash`。
+
+## Windows 桌面打包（本机跑 · 2026-10-21 踩坑写死）
+
+权威入口：`scripts/pack-desktop.ps1` → `scripts/lib/package_desktop.py`（成功须上传，见 `workbuddy-desktop-feed-upload.mdc`）。
+
+```powershell
+cd D:\AICodes\DSH_WorkBuddy
+powershell -NoProfile -File scripts\pack-desktop.ps1
+# 验收：tmp\_pack_desktop.out 末行 pack exit=0；产物 desktop\release\MOM-<ver>.exe
+```
+
+**禁止用的包装写法（会秒退或假「卡住」）：**
+
+| 写法 | 后果 |
+|---|---|
+| `$ErrorActionPreference="Stop"` + `py … 2>&1 \| Tee-Object` | stderr 变 ErrorRecord → **管道秒退**，`pack exit=` 空，日志几乎只有 start/exit |
+| 仅 `Start-Process -Redirect*` 且控制台无 heartbeat | 用户以为死机；其实在 **robocopy Host** / npm / electron-builder |
+| Agent 壳里直接 `package_desktop.py` | 对话假死；与本规则第 1 条冲突 |
+
+**正常长耗时阶段（勿杀）：** 内嵌 Host robocopy、`npm install` electron、`electron-builder` NSIS。另窗：
+
+```powershell
+Get-Content D:\AICodes\DSH_WorkBuddy\tmp\_pack_desktop.stdout -Tail 20 -Wait
+Get-Process python,Robocopy,node -ErrorAction SilentlyContinue
+```
+
+## 用户本机常用（可直接贴）
+
+```powershell
+cd D:\AICodes\DSH_WorkBuddy
+# 禁止: bash scripts/host.sh …（PATH 的 bash 经常是 WSL）
+# 禁止: $env:DSH_HOME="/mnt/c/..."
+powershell -NoProfile -File scripts\restart-web.ps1
+# 桌面重新打包（抬版本+上传）:
+powershell -NoProfile -File scripts\pack-desktop.ps1
+```

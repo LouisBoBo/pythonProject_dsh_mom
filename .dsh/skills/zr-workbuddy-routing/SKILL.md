@@ -1,0 +1,121 @@
+---
+name: zr-workbuddy-routing
+description: >-
+  ZR-WorkBuddy 工具路由：根据用户意图选择 mes_ask / mes_pcb /
+  pcb_8d_* / mes_code_dev_* / mes_code_review_* / mes_code_commit_* / mes_config 等工具。
+  查数、PCB 工艺、8D 报告、本机写码审码提交分流。
+---
+
+# ZR-WorkBuddy 工具路由
+# 对外产品名：江西中软工作助手（工程 DSH-ZR-WorkBuddy）
+
+本 Skill 只指导 **选工具与顺序**；业务逻辑在引擎或已安装的 DSH 插件，可调用能力由
+`features/` 热插拔或公司插件市场 Bundle 注册。
+若某工具不存在，说明对应 feature/插件未启用，勿假装已调用。
+
+## 快速分流
+
+| 用户意图 | 优先工具 | 来源 |
+| --- | --- | --- |
+| 查产量、良率、OEE、工单、缺陷等 **MES 数据** | `mes_ask` | feature mes-ask |
+| PCB **工艺问答**（叠层、DFM、AOI/飞针、IPC、缺陷排障） | `mes_pcb` | feature mes-pcb |
+| **PCB 8D 报告**（新建/补全/完整模拟样例/导出） | `pcb_8d_create` / `pcb_8d_fill` / `pcb_8d_demo` / `pcb_8d_export` | 插件 @zhongruan/dsh-pcb-8d |
+| 输入框旁 **「需求→上线」已绿**，贴图/文字开跑一体化 | **只调一次** `mes_dev_pipeline_begin`（成功有一行确认+过程流卡；禁止再调 begin，禁止让用户自查开关） | feature dev-pipeline |
+| 在本机工程 **写代码 / 改页面 / 改菜单 / 加功能 / 做报表页**（开关未开） | **立刻** `mes_code_dev_begin`（禁止 Bash 扫仓） | code-dev |
+| **本机目录审码**（直读源码，非 Git） | `mes_code_review_*`（见 zr-workbuddy-code-review） | code-review |
+| **提交 / git commit / 推送本批代码** | 对话确认卡优先；工具 `mes_code_commit_*` | code-commit |
+| 测 MES/LLM 连接、看引擎状态 | `mes_config` / `mes_status` | mes-config |
+
+## 边界（易错）
+
+1. **PCB 工艺问答 ≠ MES 查数**  
+   问「PCB 有哪些工序」「Class 2 孔铜」→ `mes_pcb`，不是 `mes_ask`。
+
+2. **8D 报告 ≠ 工艺闲聊**  
+   「开一份 8D」「补全 D4」→ `pcb_8d_create` / `pcb_8d_fill`。  
+   「完整模拟 8D」「输出完整样例报告」→ **`pcb_8d_demo`**（一键填满 D0～D8 并导出）。  
+   不要用 `mes_pcb` 只口头写报告。若工具不存在，提示安装 `@zhongruan/dsh-pcb-8d`。
+
+3. **做页面/改代码/改菜单 ≠ 查数，也 ≠ 宿主自己改仓**  
+   「员工工时报表页面」「加一个列表 CRUD」「物料出库要写在仓库管理菜单」  
+   → **只调** `mes_code_dev_begin`，出主聊天写码工具卡。  
+   **禁止** Bash / Grep / Read 扫用户工程、禁止宿主 Agent 直接改文件。
+
+4. **写码不会自动 commit**  
+   本机写码只同步改动到 workspace；提交走 `code-commit`：**选目录 → 门禁 → 人确认** 后才 git。  
+   禁止模型口头「确认一下」就调用 `mes_code_commit_confirm`（须 `confirmed=true` 且用户已点确认卡）。
+
+5. **提交 ≠ 全量审码**  
+   「提交代码」走门禁 findings 列表，**不要**调用 `mes_code_review_run` 出「代码审核汇总报告」。
+
+6. **引擎要先在跑**  
+   工具经 `mesEngine.runEngine` 调后厨。若失败，提示：`scripts/engine.sh zr-workbuddy ensure`。
+
+## 各工具一览
+
+### mes-ask（`mes_ask`）
+
+- 自然语言查 MES 指标与工单类数据，可出图。
+- 示例：「今日再制品工单有多少」「分析 8 月 30 号良率偏低原因」。
+
+### mes-pcb（`mes_pcb`）
+
+- PCB **制造工艺**专家对话，非 MES SQL。
+- 示例：「飞针和 AOI 怎么分工」「HASL 和 ENIG 选型」。
+
+### pcb-8d 插件（`pcb_8d_demo` / `create` / `fill` / `get` / `list` / `export`）
+
+- 公司市场插件 `@zhongruan/dsh-pcb-8d` 提供。
+- `pcb_8d_demo`：一键完整模拟业务数据（PCB-A100 虚焊）并导出 Markdown。
+- 亦可逐步 `create` → `fill` → `export`；草稿在 `~/.zhongruan/pcb-8d-drafts/`。
+- 示例：「生成一份完整模拟 8D 报告」「开一份虚焊的 8D」。
+
+### mes-config（`mes_config` / `mes_status`）
+
+- `mes_status`：连接与引擎概况。
+- `mes_config`：`action=test-mes` | `test-llm` | 留空同 status。
+
+### code-dev（`mes_code_dev_*`）
+
+- **主入口：`mes_code_dev_begin`**（改代码/改页面/改菜单第一下就调；见 **zr-workbuddy-code-dev**）
+- 工具卡内：选目录 → discuss 选项/确认 → Cursor Local；**不要**用 Bash 摸底代替 begin
+- 排障才用：`mes_code_dev_status`、`check`；确认后偶发代调：`start`（须 confirmed）
+- 进度：`mes_code_dev_job` / `cancel`
+- 写码车道须在引擎配置中心开启（`code_dev.enabled`）。
+
+### code-review（`mes_code_review_*`）
+
+- 本机直读源码 + Viprasol Skill LLM + 规则补种；终稿「代码审核汇总报告」；**非 Git diff、非 VS Code Bridge**。
+- 对话确认卡优先走引擎 **`/api/code-review/run/stream`**（SSE 进度 + 终稿逐行流式）。
+- Skill：**zr-workbuddy-code-review**
+- 工具：`mes_code_review_status`、`check`、`list`、`run`、`report`。
+- 审码车道须在配置中心开启（`code_review.enabled`）+ LLM 已配置。
+
+### code-commit（`mes_code_commit_*`）
+
+- 人触发提交：对话出选目录卡 → `POST /api/code-commit/start` 门禁 → 人确认 → `confirm` 才 commit/push。
+- Skill（门禁批审，非报告）：**zr-workbuddy-commit-batch-review**
+- 工具：`mes_code_commit_status`、`check`、`prepare`、`start`、`confirm`（须 confirmed）、`job`。
+- 提交车道须在配置中心开启（`code_commit.enabled`）；默认 `default_push=true`。
+
+## Feature / 插件未启用时
+
+告知用户（不必重启 DSH）：
+
+```bash
+scripts/plugin.sh --app zr-workbuddy features
+scripts/plugin.sh --app zr-workbuddy enable <feature-id>
+```
+
+公司插件：设置 → 插件市场 → 安装 `@zhongruan/dsh-pcb-8d` / `@zhongruan/dsh-cursor-coding` 等（`dsh-pcb-helper` / `dsh-weather` 已下架）。
+
+写码还需引擎配置中心 → **写码车道** 打开开关；提交还需 **提交车道**。
+
+## 与架构的关系
+
+- **Skill（本文件）**：DSH Agent 上下文，教路由与流程。
+- **Feature**：`apps/zr-workbuddy/features/<id>/` 注册工具，~1s 热插拔。
+- **公司 DSH 插件**：插件市场 Bundle，与 feature 并列可选。
+- **Engine**：`engine/app/` 算数与校验；改 Python 需 `engine.sh restart`。
+
+分工固定；勿在 Skill 里重复实现引擎逻辑。

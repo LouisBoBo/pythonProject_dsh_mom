@@ -1,0 +1,276 @@
+{
+  "epic_id": "ep-20260927-f7afa17edc",
+  "message": "仓储管理增加「低库存预警」页；调用 /api/inventory-low-stock 筛选分页；缺口=安全库存-现存量，降序并标红；无数据空状态；挂到仓储管理菜单\n\n【识图摘录】\n### 结构化需求草稿\n\n#### 1. 界面与元素\n- **低库存接口**：已存在，但菜单无预警页，库管需手工对账。\n- **仓储管理菜单**：\n  - 增加一个「低库存预警」页面。\n  - 调用 `/api/inventory-low-stock` 筛选分页。\n  - 缺口降序并标红。\n- **预警列表截图**：\n  - 显示缺口的数量（安全库存-现存量）。\n  - 无数据时显示空状态。\n\n#### 2. 字段与数据\n- **字段**：\n  - 缺口数量（安全库存-现存量）。\n  - 页面状态（有数据或空状态）。\n- **数据来源**：\n  - 通过调用 `/api/inventory-low-stock` API 获取筛选分页的数据。\n\n#### 3. 用户流程\n- 用户通过点击「低库存预警」页面进入。\n- 系统自动调用 `/api/inventory-low-stock` API 进行筛选和分页处理。\n- 数据返回后，系统进行排序（缺口数量降序），并将缺口部分标红。\n- 如果没有数据，则显示空状态。\n\n#### 4. 异常与校验\n- **异常处理**：\n  - API 调用时出现错误，应给出相应的错误提示。\n  - 数据处理过程中出现异常，应记录日志并进行适当处理。\n- **校验**：\n  - 确保API返回的数据格式正确。\n  - 检查缺口数量计算是否准确（安全库存-现存量）。\n\n#### 5. 待澄清问题\n- 如何定义「安全库存」的具体数值？\n- 「现存量」如何获取？是实时更新还是固定时间点获取？\n- 缺口数量超过一定阈值时，是否有其他警示措施？\n\n以上是根据截图中内容整理的结构化需求草稿，如有需要进一步澄清的问题，建议与相关团队沟通确认。",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_hebo",
+  "created_at": 1790497670,
+  "runs": [
+    "dpj-a439155e15514bb2"
+  ],
+  "intake_image_ids": [
+    "vimg-f612f1fe97a475ec"
+  ],
+  "updated_at": 1790498025,
+  "requirement_core": "仓储管理增加「低库存预警」页；调用 /api/inventory-low-stock 筛选分页；缺口=安全库存-现存量，降序并标红；无数据空状态；挂到仓储管理菜单",
+  "artifacts": {
+    "raw_intake": {
+      "text": "写成此需求开发 【附图:vimg-f612f1fe97a475ec】",
+      "has_workspace_hint": true,
+      "captured_at": 1790497671,
+      "image_ids": [
+        "vimg-f612f1fe97a475ec"
+      ],
+      "vision_text": "### 结构化需求草稿\n\n#### 1. 界面与元素\n- **低库存接口**：已存在，但菜单无预警页，库管需手工对账。\n- **仓储管理菜单**：\n  - 增加一个「低库存预警」页面。\n  - 调用 `/api/inventory-low-stock` 筛选分页。\n  - 缺口降序并标红。\n- **预警列表截图**：\n  - 显示缺口的数量（安全库存-现存量）。\n  - 无数据时显示空状态。\n\n#### 2. 字段与数据\n- **字段**：\n  - 缺口数量（安全库存-现存量）。\n  - 页面状态（有数据或空状态）。\n- **数据来源**：\n  - 通过调用 `/api/inventory-low-stock` API 获取筛选分页的数据。\n\n#### 3. 用户流程\n- 用户通过点击「低库存预警」页面进入。\n- 系统自动调用 `/api/inventory-low-stock` API 进行筛选和分页处理。\n- 数据返回后，系统进行排序（缺口数量降序），并将缺口部分标红。\n- 如果没有数据，则显示空状态。\n\n#### 4. 异常与校验\n- **异常处理**：\n  - API 调用时出现错误，应给出相应的错误提示。\n  - 数据处理过程中出现异常，应记录日志并进行适当处理。\n- **校验**：\n  - 确保API返回的数据格式正确。\n  - 检查缺口数量计算是否准确（安全库存-现存量）。\n\n#### 5. 待澄清问题\n- 如何定义「安全库存」的具体数值？\n- 「现存量」如何获取？是实时更新还是固定时间点获取？\n- 缺口数量超过一定阈值时，是否有其他警示措施？\n\n以上是根据截图中内容整理的结构化需求草稿，如有需要进一步澄清的问题，建议与相关团队沟通确认。",
+      "vision": {
+        "ok": true,
+        "model": "glm-4v-flash",
+        "image_count": 1
+      },
+      "requirement_core": "仓储管理增加「低库存预警」页；调用 /api/inventory-low-stock 筛选分页；缺口=安全库存-现存量，降序并标红；无数据空状态；挂到仓储管理菜单",
+      "normalize": {
+        "source": "vision_fallback",
+        "one_liner": "仓储管理增加「低库存预警」页",
+        "was_sanitized": true,
+        "notes": [
+          "原文不可实施，已用识图可实施摘要作为需求核心"
+        ],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "仓储管理增加「低库存预警」页；调用 /api/inventory-low-stock 筛选分页；缺口=安全库存-现存量，降序并标红；无数据空状态；挂到仓储管理菜单",
+      "goal_one_liner": "仓储管理增加「低库存预警」页",
+      "user_card": {
+        "one_liner": "仓储管理增加「低库存预警」页",
+        "what": "仓储管理增加「低库存预警」页；调用 /api/inventory-low-stock 筛选分页；缺口=安全库存-现存量，降序并标红；无数据空状态；挂到仓储管理菜单",
+        "how": "在对应菜单下挂入口；落地可访问页面与主路径交互；对接已有或规划中的接口（含筛选/分页）；按缺口规则展示并标红，空数据给空状态",
+        "done_when": [
+          "仓储管理增加「低库存预警」页",
+          "调用 /api/inventory-low-stock 筛选分页",
+          "缺口=安全库存-现存量，降序并标红",
+          "无数据空状态",
+          "挂到仓储管理菜单",
+          "改动不超过 22 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "新功能全栈页",
+        "scenario_id": "full_feature"
+      },
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "high",
+        "reason": "原文要求在菜单下新增业务页（含接口/列表主路径）"
+      },
+      "scope": {
+        "in_scope": [
+          "仓储管理增加「低库存预警」页",
+          "调用 /api/inventory-low-stock 筛选分页",
+          "缺口=安全库存-现存量，降序并标红",
+          "无数据空状态",
+          "挂到仓储管理菜单"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "**/inventory*",
+          "**/warehouse*",
+          "**/仓储*",
+          "**/layouts/**",
+          "**/router*",
+          "**/*filter*"
+        ],
+        "user_message_excerpt": "仓储管理增加「低库存预警」页；调用 /api/inventory-low-stock 筛选分页；缺口=安全库存-现存量，降序并标红；无数据空状态；挂到仓储管理菜单",
+        "scenario_id": "full_feature"
+      },
+      "acceptance": [
+        "仓储管理增加「低库存预警」页",
+        "调用 /api/inventory-low-stock 筛选分页",
+        "缺口=安全库存-现存量，降序并标红",
+        "无数据空状态",
+        "挂到仓储管理菜单",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790497684"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790485632_2"
+    },
+    "plan": {
+      "problem": "仓储管理增加「低库存预警」页",
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "high",
+        "reason": "原文要求在菜单下新增业务页（含接口/列表主路径）"
+      },
+      "scope": {
+        "in_scope": [
+          "仓储管理增加「低库存预警」页",
+          "调用 /api/inventory-low-stock 筛选分页",
+          "缺口=安全库存-现存量，降序并标红",
+          "无数据空状态",
+          "挂到仓储管理菜单"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "**/inventory*",
+          "**/warehouse*",
+          "**/仓储*",
+          "**/layouts/**",
+          "**/router*",
+          "**/*filter*"
+        ],
+        "user_message_excerpt": "仓储管理增加「低库存预警」页；调用 /api/inventory-low-stock 筛选分页；缺口=安全库存-现存量，降序并标红；无数据空状态；挂到仓储管理菜单",
+        "scenario_id": "full_feature"
+      },
+      "must_touch": [
+        "菜单/导航（入口可见）",
+        "路由注册（页面可达）",
+        "页面/组件（完整主路径）",
+        "后端接口（与页面配套）"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "菜单与路由可达",
+        "页面主路径可操作；接口可调通"
+      ],
+      "files_hint": "**/inventory*, **/warehouse*, **/仓储*, **/layouts/**, **/router*, **/*filter*, README.md, readme.md, backend/, docs/, frontend/",
+      "rev": "plan_1790497685"
+    },
+    "implement": {
+      "cursor_job_id": "ccj-20260927-162941-0261",
+      "changed_files": [
+        "backend/app/routers/inventory_low_stock.py",
+        "frontend/src/api/inventoryLowStock.js",
+        "frontend/src/views/warehouse/LowStockAlertsView.vue",
+        "backend/app/main.py",
+        "frontend/src/layouts/AppLayout.vue",
+        "frontend/src/router/index.js"
+      ],
+      "auto": true,
+      "scope_audit": {
+        "ok": true,
+        "file_count": 6,
+        "violations": [],
+        "detail": "变更 6 个文件，在范围内",
+        "max_files": 22
+      }
+    },
+    "implement_fix_mandate": {
+      "round": 1,
+      "source": "no_changed_files",
+      "must_fix": [
+        "必须真实改盘并产生非空 changed_files；空 Job 成功不算交付",
+        "对照【用户需求】实现功能；禁止只回复说明而不落文件",
+        "若功能已存在，须提交可核对的增量 diff，不得 0 文件收工",
+        "禁止创建/同步 *.db / erp.db 等数据库文件"
+      ]
+    },
+    "validate_last": {
+      "ok": true,
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "results": [
+        {
+          "name": "py-compile-root",
+          "cmd": "python -m compileall -q .",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 8.05
+        },
+        {
+          "name": "git-diff-check",
+          "cmd": "git diff --check",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 0.21
+        }
+      ],
+      "auto_defaults": true
+    },
+    "review": {
+      "report_id": "cr-7ce45721eb1441a0",
+      "auto": true,
+      "changed_only": true,
+      "files": [
+        "backend/app/routers/inventory_low_stock.py",
+        "frontend/src/api/inventoryLowStock.js",
+        "frontend/src/views/warehouse/LowStockAlertsView.vue",
+        "backend/app/main.py",
+        "frontend/src/layouts/AppLayout.vue",
+        "frontend/src/router/index.js"
+      ],
+      "skipped": false
+    },
+    "commit": {
+      "job_id": "cc-88922e571a2f4c8d",
+      "skipped": false,
+      "can_manual_retry": false,
+      "auto": true,
+      "attempts": 1
+    },
+    "pr": {
+      "pr_url": "",
+      "skipped": true,
+      "auto": true
+    },
+    "deploy": {
+      "job_id": "cd-9cfc63afe04a4de8",
+      "auto": true
+    }
+  },
+  "prd_rev": "prd_1790497684",
+  "context_rev": "ctx_1790485632_2",
+  "plan_rev": "plan_1790497685"
+}

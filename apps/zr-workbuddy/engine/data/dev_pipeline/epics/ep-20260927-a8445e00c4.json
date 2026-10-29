@@ -1,0 +1,253 @@
+{
+  "epic_id": "ep-20260927-a8445e00c4",
+  "message": "报表中心菜单新增员工工时报表",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_hebo",
+  "created_at": 1790518692,
+  "runs": [
+    "dpj-70e48a1a77ff4e27"
+  ],
+  "intake_image_ids": [],
+  "updated_at": 1790518850,
+  "requirement_core": "报表中心菜单新增员工工时报表",
+  "artifacts": {
+    "raw_intake": {
+      "text": "报表中心菜单新增员工工时报表",
+      "has_workspace_hint": true,
+      "captured_at": 1790518692,
+      "image_ids": [],
+      "vision_text": "",
+      "vision": {},
+      "requirement_core": "报表中心菜单新增员工工时报表",
+      "vision_surface": {},
+      "normalize": {
+        "source": "user_text",
+        "one_liner": "报表中心菜单新增员工工时报表",
+        "was_sanitized": false,
+        "notes": [],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "报表中心菜单新增员工工时报表",
+      "goal_one_liner": "报表中心菜单新增员工工时报表",
+      "user_card": {
+        "one_liner": "报表中心菜单新增员工工时报表",
+        "what": "报表中心菜单新增员工工时报表",
+        "how": "在对应菜单下挂入口",
+        "done_when": [
+          "报表中心菜单新增员工工时报表",
+          "改动不超过 22 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "新功能全栈页",
+        "scenario_id": "full_feature"
+      },
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "med",
+        "reason": "像新报表/管理页，按全栈页规划"
+      },
+      "scope": {
+        "in_scope": [
+          "报表中心菜单新增员工工时报表"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "报表中心菜单新增员工工时报表",
+        "scenario_id": "full_feature"
+      },
+      "acceptance": [
+        "报表中心菜单新增员工工时报表",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790518693"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790485632_2"
+    },
+    "plan": {
+      "problem": "报表中心菜单新增员工工时报表",
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "med",
+        "reason": "像新报表/管理页，按全栈页规划"
+      },
+      "scope": {
+        "in_scope": [
+          "报表中心菜单新增员工工时报表"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*"
+        ],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "page_title": "",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "报表中心菜单新增员工工时报表",
+        "scenario_id": "full_feature"
+      },
+      "must_touch": [
+        "菜单/导航（入口可见）",
+        "路由注册（页面可达）",
+        "页面/组件（完整主路径）",
+        "后端接口（与页面配套）"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "菜单与路由可达",
+        "页面主路径可操作；接口可调通"
+      ],
+      "files_hint": "**/reports/**, **/employee*work*, **/routers/reports*, **/schemas.py, frontend/src/views/reports/, **/layouts/**, **/router*, README.md, readme.md, backend/, docs/, frontend/",
+      "rev": "plan_1790518694"
+    },
+    "implement": {
+      "cursor_job_id": "ccj-20260927-221814-2ed9",
+      "changed_files": [
+        "frontend/src/config/reportFeatures.js"
+      ],
+      "auto": true,
+      "gate": {
+        "class": "pass",
+        "reason": "pass",
+        "summary": "写码完成（ccj-20260927-221814-2ed9，变更 1 项）"
+      },
+      "scope_audit": {
+        "ok": true,
+        "file_count": 1,
+        "violations": [],
+        "detail": "变更 1 个文件，在范围内",
+        "max_files": 22
+      },
+      "content_audit": {
+        "ok": true,
+        "violations": [],
+        "detail": "无明确列名，跳过内容文案门禁"
+      }
+    },
+    "validate_last": {
+      "ok": true,
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "results": [
+        {
+          "name": "py-compile-root",
+          "cmd": "python -m compileall -q .",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 6.39
+        },
+        {
+          "name": "git-diff-check",
+          "cmd": "git diff --check",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 0.18
+        }
+      ],
+      "auto_defaults": true
+    },
+    "review": {
+      "report_id": "cr-c48629182c0c4ce9",
+      "auto": true,
+      "changed_only": true,
+      "files": [
+        "frontend/src/config/reportFeatures.js"
+      ],
+      "skipped": false
+    },
+    "commit": {
+      "job_id": "cc-46b14a4a48974189",
+      "skipped": false,
+      "can_manual_retry": false,
+      "auto": true,
+      "attempts": 1
+    },
+    "pr": {
+      "pr_url": "",
+      "skipped": true,
+      "auto": true
+    },
+    "deploy": {
+      "job_id": "cd-0993b27bc05a4347",
+      "auto": true
+    }
+  },
+  "prd_rev": "prd_1790518693",
+  "context_rev": "ctx_1790485632_2",
+  "plan_rev": "plan_1790518694"
+}

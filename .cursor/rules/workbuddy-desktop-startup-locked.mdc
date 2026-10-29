@@ -1,0 +1,57 @@
+---
+description: 【LOCKED】桌面壳冷/热启动契约硬冻结——无用户明确允许禁止改单例/show/splash（alwaysApply）
+alwaysApply: true
+---
+
+# 桌面壳冷/热启动契约硬冻结（不可推翻 · LOCKED）
+
+> **冻结日**：2026-09-23。冷启可见 + 热启单窗已对齐验收。  
+> **破窗条件**：**仅当用户在对话里明确允许**改启动契约；改代码前须先改本规则。  
+> **权威实现**：`desktop/main.js`（`gotLock` / `createWindow` / `loadSplashHtml` / `if (gotLock) { app.whenReady… }`）。  
+> **门禁单测**：`desktop/tests/test_startup_contract.js`（改契约相关代码后必须仍通过）。
+
+**不是**建议。擅自改 = 事故。修「热启双窗」**不是**改 `show:false` 的理由；修「闪一下错误框」**不是**去掉 await splash 的理由。
+
+### A. 单例锁（防热启双窗 + splash ERR_FAILED）
+
+1. `app.requestSingleInstanceLock()` 后：`!gotLock` **必须立刻** `app.exit(0)`。  
+2. **禁止**在未拿到锁时注册 `app.whenReady` / 跑 `boot` / 开窗 / 加载 splash。  
+3. `app.whenReady(…)` **只许**写在 `if (gotLock) { … }` 内。  
+4. 第二实例：只经 `second-instance` → `showMainWindow()`（首实例响应）；禁止第二进程自己 boot。
+
+### B. 窗口可见（防冷启白屏 / 整窗不出现）
+
+1. `new BrowserWindow({…})` **一律** `show: true`。  
+2. **禁止** `show: false` + 空等 `ready-to-show` 作为冷启动主路径。  
+3. **禁止** `show: hasStartUrl`（或任何「冷启动先隐藏再等事件」的等价写法）。  
+4. 切到真实宿主页后可再 `show`/`focus`，但不得以此替代创建时 `show: true`。
+
+### C. Splash 加载顺序（防 ERR_ABORTED → 白屏）
+
+1. `loadSplashHtml` 必须 `async`，内部 **`await win.loadFile(file)`**（失败可降级 `await loadURL(pathToFileURL…)`）。  
+2. `createWindow` / `boot` **必须 await** splash；**禁止** fire-and-forget 丢弃 Promise。  
+3. 必须 **await splash 完成后再** `loadURL` 宿主/引擎页；否则会打断启动页 → 白屏。  
+4. splash 缺文件/加载失败：只打日志并保证窗口可见，**不**拖垮整个 boot。
+
+### D. 无用户允许一律拒绝
+
+- 把 `show` 改回 `false` / `hasStartUrl`，或靠 `ready-to-show` 才第一次 show  
+- 去掉 `!gotLock → app.exit(0)`，或把 `whenReady`/`boot` 挪到锁外  
+- splash 改回非 await / 与宿主 `loadURL` 并行抢导航  
+- 删本规则、改 `alwaysApply: false`，或削弱/删除 `test_startup_contract.js` 门禁断言  
+- 为「顺便修别的」顺手改上述契约（修热启不许动冷启可见性，反之亦然）
+
+**允许**（无需破窗）：排障只读、修崩溃/安全且**不改** A/B/C、补测试且**收紧不放松**契约、托盘/升级/上传等无关模块。
+
+要改契约：用户明确允许 → 先改本规则冻结段 → 再改 `main.js` 与 `test_startup_contract.js`。
+
+## 交付自检
+
+```bash
+node desktop/tests/test_startup_contract.js
+```
+
+人工冒烟（托盘先「退出」）：
+
+1. **冷启**：桌面图标 → 见启动页 → 进界面（非白屏、非整窗不出现）  
+2. **热启**：关窗藏托盘 → 再点图标 → **只一窗**，无 splash `ERR_FAILED`

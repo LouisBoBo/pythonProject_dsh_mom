@@ -1,0 +1,122 @@
+{
+  "name": "zr-workbuddy-desktop",
+  "version": "0.2.71",
+  "private": true,
+  "description": "ZR-WorkBuddy 宿主一体桌面：内嵌 Host + 引擎；安装后配置即可用",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "rcedit": "^4.0.1"
+  },
+  "build": {
+    "appId": "com.zr.workbuddy.dsh.desktop",
+    "productName": "MOM",
+    "executableName": "MOM",
+    "artifactName": "MOM-${version}.${ext}",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "icon": "icon.png",
+    "files": [
+      "main.js",
+      "preload.js",
+      "splash.html",
+      "tray-icon.png",
+      "lib/**",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "splash.html",
+        "to": "splash.html"
+      },
+      {
+        "from": "runtime/bin",
+        "to": "runtime/bin",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "runtime/pack/python.zip",
+        "to": "runtime/python.zip"
+      },
+      {
+        "from": "runtime/app",
+        "to": "runtime/app",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "runtime/node",
+        "to": "runtime/node",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "runtime/host/package.json",
+        "to": "host/package.json"
+      },
+      {
+        "from": "runtime/pack/host-node_modules.zip",
+        "to": "host/node_modules.zip"
+      },
+      {
+        "from": "runtime/market/node_modules",
+        "to": "market/node_modules",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "runtime/pnpm/node_modules/pnpm",
+        "to": "pnpm",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": [
+        "dir",
+        "zip"
+      ],
+      "identity": null
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "signAndEditExecutable": false
+    },
+    "npmRebuild": false,
+    "nsis": {
+      "include": "installer.nsh",
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "MOM",
+      "unicode": true,
+      "runAfterFinish": true,
+      "installerLanguages": [
+        "zh_CN",
+        "en_US"
+      ]
+    }
+  }
+}

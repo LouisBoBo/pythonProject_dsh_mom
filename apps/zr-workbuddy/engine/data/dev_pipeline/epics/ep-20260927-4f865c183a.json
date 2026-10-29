@@ -1,0 +1,236 @@
+{
+  "epic_id": "ep-20260927-4f865c183a",
+  "message": "低库存预警页（已有页面）按截图改表；按图中红框与批注改表（列名以批注原文为准，勿擅自替换）；同步 /api/inventory-low-stock 字段\n\n【识图摘录】\n### 页面定位\n- 页面标题：（界面主标题原文，如「低库存预警」） 未见\n- 菜单/导航路径：（侧栏或面包屑可见路径） R04 生产管理\n- 页面类型：列表页 / 表单 / 看板 / 弹窗 / 其它 列表页\n\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n\n### 表格（若有）\n- 表头列名（必须从左到右完整列出，一个不漏）：R04, 生产管理, 销售订单在库内，无建单与发货页，超发无校验, ①销售订单列表与新, ②登记发货数量与时间; ③校验不超剩余可发，发满关单, ①订单与发货记录截图; ②超发拒绝提示; ③关单后不可再发, 本项目, P0, 生产·交付达成\n- 可见示例行：编码/名称等关键单元格原文（最多 3 行） 未见\n- 分页/合计文案：未见\n\n### 标注与改动暗示\n- 附图附加文字：未见\n- 红框/箭头/高亮/手写圈：未见\n- 建议插入位置：未见\n\n### 其它有用信息\n- 报错文案、空状态、角标、颜色强调（如缺口标红）等：未见",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_hebo",
+  "created_at": 1790508618,
+  "runs": [
+    "dpj-1dec52386aaf4068"
+  ],
+  "intake_image_ids": [
+    "vimg-8ccbfffe184a1f5f"
+  ],
+  "updated_at": 1790508629,
+  "artifacts": {
+    "raw_intake": {
+      "text": "（附图需求，详见识图结果）",
+      "has_workspace_hint": true,
+      "captured_at": 1790508618,
+      "image_ids": [
+        "vimg-8ccbfffe184a1f5f"
+      ],
+      "vision_text": "### 页面定位\n- 页面标题：（界面主标题原文，如「低库存预警」） 未见\n- 菜单/导航路径：（侧栏或面包屑可见路径） R04 生产管理\n- 页面类型：列表页 / 表单 / 看板 / 弹窗 / 其它 列表页\n\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n\n### 表格（若有）\n- 表头列名（必须从左到右完整列出，一个不漏）：R04, 生产管理, 销售订单在库内，无建单与发货页，超发无校验, ①销售订单列表与新, ②登记发货数量与时间; ③校验不超剩余可发，发满关单, ①订单与发货记录截图; ②超发拒绝提示; ③关单后不可再发, 本项目, P0, 生产·交付达成\n- 可见示例行：编码/名称等关键单元格原文（最多 3 行） 未见\n- 分页/合计文案：未见\n\n### 标注与改动暗示\n- 附图附加文字：未见\n- 红框/箭头/高亮/手写圈：未见\n- 建议插入位置：未见\n\n### 其它有用信息\n- 报错文案、空状态、角标、颜色强调（如缺口标红）等：未见",
+      "vision": {
+        "ok": true,
+        "model": "glm-4v-flash",
+        "image_count": 1
+      },
+      "requirement_core": "低库存预警页（已有页面）按截图改表；按图中红框与批注改表（列名以批注原文为准，勿擅自替换）；同步 /api/inventory-low-stock 字段",
+      "vision_surface": {
+        "page_title": "",
+        "menu_path": "（侧栏或面包屑可见路径） R04 生产管理",
+        "table_columns": [
+          "缺口",
+          "R04",
+          "生产管理",
+          "销售订单在库内",
+          "无建单与发货页",
+          "超发无校验",
+          "①销售订单列表与新",
+          "发满关单",
+          "本项目",
+          "P0",
+          "生产·交付达成"
+        ],
+        "filters": [
+          "### 筛选与操作",
+          "筛选项：未见"
+        ],
+        "buttons": [
+          "按钮：未见"
+        ],
+        "marks": [
+          "红框/箭头/高亮/手写圈：未见",
+          "标注与改动暗示",
+          "高亮/手写圈：未见",
+          "箭头/高亮/手写圈：未见"
+        ],
+        "sample_codes": [],
+        "must_include_paths": [],
+        "forbid_paths": [],
+        "path_hints": [],
+        "raw_excerpt": "### 页面定位\n- 页面标题：（界面主标题原文，如「低库存预警」） 未见\n- 菜单/导航路径：（侧栏或面包屑可见路径） R04 生产管理\n- 页面类型：列表页 / 表单 / 看板 / 弹窗 / 其它 列表页\n\n### 筛选与操作\n- 筛选项：未见\n- 按钮：未见\n\n### 表格（若有）\n- 表头列名（必须从左到右完整列出，一个不漏）：R04, 生产管理, 销售订单在库内，无建单与发货页，超发无校验, ①销售订单列表与新, ②登记发货数量与时间; ③校验不超剩余可发，发满关单, ①订单与发货记录截图; ②超发拒绝提示; ③关单后不可再发, 本项目, P0, 生产·交付达成\n- 可见示例行：编码/名称等关键单元格原文（最多 3 行） 未见\n- 分页/合计文案：未见\n\n### 标注与改动暗示\n- 附图附加文字：未见\n- 红框/箭头/高亮/手写圈：未见\n- 建议插入位置：未见\n\n### 其它有用信息\n- 报错文案、空状态、角标、颜色强调（如缺口标红）等：未见"
+      },
+      "normalize": {
+        "source": "vision",
+        "one_liner": "低库存预警页（已有页面）按截图改表",
+        "was_sanitized": true,
+        "notes": [
+          "已丢弃套话/占位原文",
+          "原文无效或套话，已改用识图可实施摘要"
+        ],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "低库存预警页（已有页面）按截图改表；按图中红框与批注改表（列名以批注原文为准，勿擅自替换）；同步 /api/inventory-low-stock 字段",
+      "goal_one_liner": "低库存预警页（已有页面）按截图改表",
+      "user_card": {
+        "one_liner": "低库存预警页（已有页面）按截图改表",
+        "what": "低库存预警页（已有页面）按截图改表；按图中红框与批注改表（列名以批注原文为准，勿擅自替换）；同步 /api/inventory-low-stock 字段",
+        "how": "落地可访问页面与主路径交互；对接已有或规划中的接口（含筛选/分页）",
+        "done_when": [
+          "低库存预警页（已有页面）按截图改表",
+          "按图中红框与批注改表（列名以批注原文为准，勿擅自替换）",
+          "同步 /api/inventory-low-stock 字段",
+          "改动不超过 22 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "新功能全栈页",
+        "scenario_id": "full_feature"
+      },
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "high",
+        "reason": "原文要求在菜单下新增业务页（含接口/列表主路径）"
+      },
+      "scope": {
+        "in_scope": [
+          "低库存预警页（已有页面）按截图改表",
+          "按图中红框与批注改表（列名以批注原文为准，勿擅自替换）",
+          "同步 /api/inventory-low-stock 字段"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "frontend/src/views/warehouse/LowStockAlertsView.vue",
+          "backend/app/routers/inventory_low_stock.py",
+          "frontend/src/api/inventoryLowStock.js",
+          "**/inventory*",
+          "**/layouts/**",
+          "**/router*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [
+          "frontend/src/views/warehouse/LowStockAlertsView.vue",
+          "backend/app/routers/inventory_low_stock.py"
+        ],
+        "forbid_paths": [
+          "frontend/src/views/warehouse/MaterialInboundListView.vue"
+        ],
+        "page_title": "",
+        "user_message_excerpt": "低库存预警页（已有页面）按截图改表；按图中红框与批注改表（列名以批注原文为准，勿擅自替换）；同步 /api/inventory-low-stock 字段",
+        "scenario_id": "full_feature"
+      },
+      "acceptance": [
+        "低库存预警页（已有页面）按截图改表",
+        "按图中红框与批注改表（列名以批注原文为准，勿擅自替换）",
+        "同步 /api/inventory-low-stock 字段",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790508628"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790485632_2"
+    },
+    "plan": {
+      "problem": "低库存预警页（已有页面）按截图改表",
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "high",
+        "reason": "原文要求在菜单下新增业务页（含接口/列表主路径）"
+      },
+      "scope": {
+        "in_scope": [
+          "低库存预警页（已有页面）按截图改表",
+          "按图中红框与批注改表（列名以批注原文为准，勿擅自替换）",
+          "同步 /api/inventory-low-stock 字段"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "frontend/src/views/warehouse/LowStockAlertsView.vue",
+          "backend/app/routers/inventory_low_stock.py",
+          "frontend/src/api/inventoryLowStock.js",
+          "**/inventory*",
+          "**/layouts/**",
+          "**/router*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [
+          "frontend/src/views/warehouse/LowStockAlertsView.vue",
+          "backend/app/routers/inventory_low_stock.py"
+        ],
+        "forbid_paths": [
+          "frontend/src/views/warehouse/MaterialInboundListView.vue"
+        ],
+        "page_title": "",
+        "user_message_excerpt": "低库存预警页（已有页面）按截图改表；按图中红框与批注改表（列名以批注原文为准，勿擅自替换）；同步 /api/inventory-low-stock 字段",
+        "scenario_id": "full_feature"
+      },
+      "must_touch": [
+        "菜单/导航（入口可见）",
+        "路由注册（页面可达）",
+        "页面/组件（完整主路径）",
+        "后端接口（与页面配套）"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "菜单与路由可达",
+        "页面主路径可操作；接口可调通"
+      ],
+      "files_hint": "frontend/src/views/warehouse/LowStockAlertsView.vue, backend/app/routers/inventory_low_stock.py, frontend/src/api/inventoryLowStock.js, **/inventory*, **/layouts/**, **/router*, **/*.vue, README.md, readme.md, backend/, docs/, frontend/",
+      "rev": "plan_1790508629"
+    }
+  },
+  "requirement_core": "低库存预警页（已有页面）按截图改表；按图中红框与批注改表（列名以批注原文为准，勿擅自替换）；同步 /api/inventory-low-stock 字段",
+  "prd_rev": "prd_1790508628",
+  "context_rev": "ctx_1790485632_2",
+  "plan_rev": "plan_1790508629"
+}

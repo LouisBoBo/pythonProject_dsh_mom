@@ -1,0 +1,228 @@
+# 复制为 config.yaml 后填写真实连接信息（config.yaml 勿提交）
+mes:
+  base_url: ""
+  auth_type: password
+  username: ""
+  password: ""
+  token: ""
+  enterprise_code: ""
+  extra_headers: "{}"
+  verify_ssl: true
+  timeout: 30
+  # 问数：默认 false。为 true 时，未配业务库或 MES 失败才回退内置演示表（须在回复中标明演示）
+  allow_demo_fallback: false
+api_docs:
+  endpoints: []
+  raw_docs: ""
+  # 从 URL 解析成功后写入，界面会回显。空表示不自动拉取。问数只用 endpoints。
+  source_url: ""
+  source_username: ""
+  # 文档 Basic 密码，只留在 config.yaml，界面回显为打码。
+  source_password: ""
+  # 引擎启动后拉一次，之后按该秒数再拉。默认一天。失败保留上一份清单。最小 300，最大 86400。
+  sync_interval_sec: 86400
+# 公司共享知识库（中央 @zhongruan/dsh-knowledge exposeApi）。
+# base_url / read_token 都空 = 未接入：侧栏不出现「公司共享」上传，本机知识库行为不变。
+# read_token：全员只读（≥24）；write_token：上传/新建/删除（≥24）。
+# api_prefix 默认 /knowledge-api/v1；knowledge_base_id 空则自动选中央第一个可用库。
+# 公司共享知识库：交付态由 apps/zr-workbuddy/config/company-knowledge.env
+# 在 ensure_runtime / 桌面启动时自动合并；员工无需手改本段。
+company_knowledge:
+  base_url: ""
+  api_prefix: "/knowledge-api/v1"
+  read_token: ""
+  write_token: ""
+  knowledge_base_id: ""
+  timeout_ms: 10000
+  verify_ssl: true                 # 中央机自签证书时种子里写 false
+
+# 数据访问权限：只管控这两项。path 与 fields 都空表示尚未接入（问数不猜测字段）。
+# path：该项单独的只读 GET。fields：嵌在其它接口返回里的固定字段名。
+# 对接示例（本仓联调 MES）：
+#   员工工资 → GET /api/employees 的 salary
+#   采购单价 → GET /api/material-purchases 的 purchase_price
+sensitive_data:
+  purchase_unit_price:
+    path: ""
+    fields: []
+  employee_salary:
+    path: ""
+    fields: []
+data_dictionary:
+  work_orders: []
+  equipment_events: []
+  quality_records: []
+deepseek:
+  provider: deepseek
+  api_key: ""
+  base_url: https://api.deepseek.com
+  model: deepseek-chat
+
+# 视觉模型（对齐 simplified「商用模型 → 视觉模型」；OpenAI 兼容多模态）
+vision:
+  api_key: ""                                          # 智谱 / 通义等；勿提交
+  base_url: ""                                         # 例 https://open.bigmodel.cn/api/paas/v4
+  model: ""                                            # 例 glm-4v-flash、qwen-vl-plus
+
+# P0-1 本机 Cursor Local 写码（默认关闭；请在引擎「配置中心 → 写码车道」填写）
+code_dev:
+  enabled: false
+  cursor_api_key: ""
+  model: composer-2.5
+  max_concurrent: 1
+  cursor_timeout_sec: 2700
+  # 删除/下线核对类：Cursor 读盘上限与超时（秒）；预检跳过 Cursor 默认关闭
+  delete_verify_timeout_sec: 240
+  max_read_tools: 28
+  delete_preflight_auto_skip: false
+  # 删除策略：cursor_plan=Cursor 只读定位清单 + 引擎校验执行（推荐）
+  # engine_first=仅引擎规则 | cursor_full=Cursor 改码（易超时，不推荐）
+  delete_mode: cursor_plan
+  delete_plan_timeout_sec: 120
+  # 旧字段兼容：delete_engine_first: true → engine_first；false → cursor_full
+  default_workspace: ""
+  # P1 企业开关（默认 false，不改变现网日常行为）
+  # true：空 write_scope 拒绝 confirm，禁止整仓同步
+  require_explicit_write_scope: false
+  # true：订阅 Job SSE 须带 stream_token（UI 已透传；旧无 token 任务仍放行）
+  require_job_stream_token: false
+
+# P0-3 本机目录直读审码（默认关闭；无 Git / 无 IDE Bridge）
+code_review:
+  enabled: false
+  max_files: 40
+  max_file_bytes: 120000
+  max_total_bytes: 800000
+  default_workspace: ""
+  # 企业默认 false：须列文件卡签发的 path_ticket；仅排障可临时 true
+  allow_agent_absolute_path: false
+
+# P0-2 人触发提交（功能插件 code-commit 须启用；此处 enabled 默认 true）
+code_commit:
+  enabled: true
+  default_workspace: ""
+  work_branch: ""          # 空则按用户名自动生成；禁止提交到 protected_branches
+  remote_name: origin      # 推送远端名（可改 upstream 等）
+  default_push: true       # 确认卡默认勾选推送（无远端时仍会仅本地）
+  # 保护分支：禁止直接提交；可按项目改（如加 release）
+  protected_branches: [main, master, trunk, production, prod]
+  use_skill_review: true
+  allow_blocked: false     # 调试用：强制允许带阻断项提交
+  max_files: 80
+
+# P1 自动化部署（一体产品：一次确认 → 同步单元 → 拉起引擎+聊天壳 → 浏览器单入口）
+# 功能插件 code-deploy 须启用；界面只暴露下列核心项
+code_deploy:
+  enabled: false
+  provider: local_ssh
+  unified_product: true          # 一体部署（推荐）：收尾确保引擎+聊天壳，入口与本机一致
+  default_ref: HEAD              # 默认分支 / tag
+  entry_url: ""                  # 浏览器公网入口（如 http://主机:8093/）；由 nginx 反代，勿与引擎回环口相同
+  health_url: ""                 # 同 entry_url（兼容旧字段；二者填一即可）
+  default_workspace: ""          # 本地项目路径（git 根）
+  ssh_host: ""
+  ssh_user: ""
+  ssh_key_path: ""               # 如 ~/.ssh/id_ed25519（只填路径）
+  ssh_app_path: ""               # 远端目录，如 /www/wwwroot/DSH-WorkBuddy（与 8092 旧项目目录无关）
+  ssh_port: 22
+  # 部署策略：auto（按目录/画像识别）| workbuddy | vite_backend | static | custom
+  # 识别失败会停在配置，禁止默认套 Vite + uvicorn
+  deploy_preset: auto
+  # custom 时必填同步路径；可选本机构建命令与目录
+  # build_cmd: "npm run build"
+  # build_cwd: frontend
+  # sync_paths: [frontend/dist, backend]
+  # dist_rel: frontend/dist
+  # 无 systemd 时用进程命令行子串匹配重启（勿默认假设 uvicorn）
+  # process_match: ""
+  # 构建位置：local=本机构建再同步产物；remote=同步源码后在远端执行 build_cmd
+  build_where: local
+  # 同步排除：强制项（.env / *.db / node_modules 等）+ 本字段 + 画像 deploy.exclude_patterns
+  # 禁止只排除 erp.db；库文件一律用 *.db / *.sqlite*
+  # rsync_excludes: [__pycache__, uploads/]
+  # 探活期望状态码；0=接受 2xx/3xx
+  health_expect_status: 0
+  remote_restart_cmd: ""        # 可选；仅允许 systemctl/supervisorctl/service 单条重启。空则自动匹配该目录的服务
+  # 本机工程目录与上方 ssh_app_path 不一致时（例如界面默认 WorkBuddy、流水线工程是 aicoding）：
+  # workspace_overrides:
+  #   - match: pythonProject_zr_aicoding   # 路径包含即命中
+  #     ssh_app_path: /www/wwwroot/zr-aicoding
+  #     remote_restart_cmd: systemctl restart zr-aicoding-api
+  #     entry_url: http://175.178.238.31:8090/
+  # 引擎只绑 127.0.0.1；公网入口须另开 nginx（例：listen 8093 → 127.0.0.1:8095）
+  # 勿把 remote_engine_port 设成与 entry_url 同一端口，否则 nginx 无法 listen
+  remote_engine_port: 8095       # 远端引擎回环端口（勿用 8091/8092 旧项目口）
+  remote_host_port: 3080         # 远端聊天壳端口（与本机 dsh web 一致）
+  auto_restart_engine: true      # 同步引擎后重启；一体模式下无引擎变更也会 ensure
+  auto_restart_bridge: true      # 一体默认 true：含 bridge 时重装并重启聊天壳
+  # 以下有默认值，界面不展示
+  default_env: staging
+  env_whitelist: [staging]
+  allow_production: false
+  health_timeout_sec: 8
+
+# 需求到上线一体化（dev-pipeline；默认开启；须在功能插件页启用 dev-pipeline）
+dev_pipeline:
+  enabled: true                  # 功能总开关（与 plugins.json · dev-pipeline 配合）
+  # 一体化开关在聊天「会话顶栏」按 sessionId 设置，非本文件
+  auto_run: true                 # begin 后 1→10 自动连跑；中间无 pipeline 确认按钮
+  cursor_coding_base: http://127.0.0.1:18791
+  implement_timeout_sec: 2700
+  max_fix_rounds: 3
+  max_deploy_attempts: 3         # 步骤 10 部署整趟瞬时失败最多重试（硬顶 3；与写码 fix 轮次独立）
+  # 默认工程目录：请只填 code_dev.default_workspace（四车道共用）。
+  # 本字段仅兼容旧配置；与写码配置同时填写时优先写码配置。
+  default_workspace: ""
+  # 步骤 9 开 PR：auto（按 origin 识别）| github | gitlab | gitee | skip
+  pr_provider: auto
+  validate_timeout_sec: 600
+  on_step_fail: auto_fix          # 步骤 6 失败：auto_fix 回到 5；pause / fail_run
+  require_hitl_steps: []         # 企业 strict 模式可填步骤 id 列表
+  # 步骤 6 机器验证（在 workspace 内执行；为空则停步 waiting_user，禁止假通过）
+  validate_commands: []
+  # validate_commands:
+  #   - name: unit
+  #     cmd: python3 -m unittest discover -q
+  #     cwd: apps/zr-workbuddy/engine
+
+# 第三方 / feature 安装（P2；业务验收看引擎功能插件页）
+feature_install:
+  max_zip_bytes: 5242880         # zip 最大字节
+  max_files: 200
+  allow_force: true              # 是否允许覆盖已有 features/<id>
+
+# 企业用量上报（默认关；report_token 与 API Key 同级保密）
+usage:
+  report_enabled: false
+  report_url: ""                 # P0 本机汇总：http://127.0.0.1:<引擎端口>/api/usage-hub/v1
+  report_token: ""               # 机器票据（必填才能 ingest）；不是 DeepSeek Key；日志禁止回显
+                                 # 为空时拒绝上报入库，防止伪造流水
+  # 本机观测口径（2026-09）：有 ~/.dsh/llm-meter/events.jsonl 时采宿主 llm/stream；
+  # 无则回退会话/记忆/标题。控制台对照仅可选参考，不对账。
+  # 官网对照（可选参考）：platform.deepseek.com 登录态 userToken 或用量页手工录入
+  #   JSON.parse(localStorage.getItem('userToken')).value
+  # 写入本机 config.yaml（gitignore）；禁止提交仓库；日志禁止回显全文
+  deepseek_platform_enabled: true
+  deepseek_platform_token: ""
+
+# 自动化推送（对齐 simplified「系统配置 → 自动化推送」；企微群消息与飞书多维表格可只开其一）
+automations:
+  wecom_webhook_key: ""          # 企微群机器人 Webhook 完整地址或 key=
+  wecom_push_enabled: false      # 开启自动化结果推送
+  wecom_push_dry_run: false      # 推送联调：只打日志不真正发
+  feishu_app_id: ""              # 飞书开放平台 App ID
+  feishu_app_secret: ""          # 飞书 App Secret（加密存 config.yaml，勿提交）
+  feishu_bitable_enabled: false  # 开启飞书多维表格同步
+  feishu_bitable_dry_run: false  # 写表联调：只打日志不真正写
+
+# 本机「我的空间」（会话摘要进库、报告正文可自管；失败不影响聊天/审码）
+space:
+  retention_days: 90             # 0 = 不自动清理
+  max_session_body_chars: 65536
+  auto_purge_enabled: true
+  sync_pcb_8d: true              # 打开空间时同步 ~/.zhongruan/pcb-8d-drafts/*.md
+  pcb_8d_drafts_dir: ""          # 空 = 默认草稿目录；须在用户 home 下
+  sync_chat_docs: true           # 打开空间时从本机 DSH 会话抽出聊天产出的文档（测试用例/方案等）
+  ingest_code_files: true        # 写码成功后把已同步源码副本进资料库（白名单扩展名；跳过密钥文件）
+  code_file_max_count: 20        # 单次任务最多入库源码文件数
+  code_file_max_bytes: 262144    # 单文件上限（字节）

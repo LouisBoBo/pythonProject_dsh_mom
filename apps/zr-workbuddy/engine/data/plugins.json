@@ -1,0 +1,14 @@
+{
+  "enabled": [
+    "mes-config",
+    "mes-pcb",
+    "mes-ask",
+    "code-review",
+    "code-commit",
+    "code-deploy",
+    "dev-pipeline",
+    "vision",
+    "company-knowledge",
+    "workbuddy-manual"
+  ]
+}

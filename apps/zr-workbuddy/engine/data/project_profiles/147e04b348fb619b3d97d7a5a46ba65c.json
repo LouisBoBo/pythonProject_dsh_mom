@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "workspace": "D:\\Codes\\CI.Server.Plugins.App",
+  "scanned_at": 1790646567,
+  "fingerprint": "79e6ffeb81bf1da00286",
+  "vcs": {
+    "kind": "svn",
+    "remote": ""
+  },
+  "languages": [
+    "C#"
+  ],
+  "stack": {
+    "frontend": [],
+    "backend": [
+      ".NET",
+      "ASP.NET Core",
+      "TFM net6.0"
+    ],
+    "test": []
+  },
+  "layout": {
+    "kind": "dotnet_web",
+    "frontend_root": "",
+    "backend_root": "",
+    "router_files": [],
+    "view_dirs": [],
+    "api_dirs": [
+      "Controllers"
+    ],
+    "menu_files": [],
+    "entry_files": [
+      "Program.cs"
+    ],
+    "dotnet_csproj": [
+      "CI.Server.Plugins.App.csproj"
+    ],
+    "dotnet_sln": [
+      "CI.Server.Plugins.App.sln"
+    ]
+  },
+  "validate_commands": [
+    {
+      "name": "dotnet-build",
+      "cmd": "dotnet build --nologo -v q",
+      "cwd": "."
+    }
+  ],
+  "deploy": {
+    "preset": "dotnet_web",
+    "build_cwd": ".",
+    "build_cmd": "dotnet build --nologo -v q"
+  },
+  "ui": {
+    "sample_pages": [],
+    "style_libs": []
+  },
+  "conventions": {
+    "readme_excerpt": "",
+    "agents_excerpt": ""
+  },
+  "code_suffixes": [
+    ".cs",
+    ".user",
+    ".csproj",
+    ".sln",
+    ".json",
+    ".pubxml"
+  ],
+  "gaps": [
+    "已识别为 .NET 工程；远端如何部署/重启仍需在配置中确认，勿默认套前端 dist 同步",
+    "未见独立测试工程：验证暂用 dotnet build，未自动跑 dotnet test",
+    "没有 README，规范只能从代码抽样"
+  ],
+  "summary_zh": "布局：dotnet_web\n语言：C#\n前端：未识别\n后端：.NET、ASP.NET Core、TFM net6.0\n托管：SVN\n工程文件：CI.Server.Plugins.App.csproj\n入口：Program.cs\n接口目录：Controllers\n验证：. → dotnet build --nologo -v q\n改接口时优先 Controllers / Program.cs 与现有插件约定；不要套用其它仓库的前端页面目录。"
+}

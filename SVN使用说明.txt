@@ -1,0 +1,7 @@
+本项目日常以 SVN 维护。完整开箱、启停、禁止提交与排障见根目录：
+
+    使用必看手册.md
+
+检出：https://www.cimom.cn:11271/svn/JXZR/Person/HB
+日常：SnailSVN → Update → 改代码 → Commit
+密钥 config.yaml / .env 只留本机，禁止提交。

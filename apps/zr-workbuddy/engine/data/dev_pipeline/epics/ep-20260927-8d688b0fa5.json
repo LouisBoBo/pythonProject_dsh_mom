@@ -1,0 +1,159 @@
+{
+  "epic_id": "ep-20260927-8d688b0fa5",
+  "message": "报表中心菜单删除员工工时报表",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_hebo",
+  "created_at": 1790485106,
+  "runs": [
+    "dpj-bf549d32befc4e23"
+  ],
+  "intake_image_ids": [],
+  "updated_at": 1790485108,
+  "requirement_core": "报表中心菜单删除员工工时报表",
+  "artifacts": {
+    "raw_intake": {
+      "text": "报表中心菜单删除员工工时报表",
+      "has_workspace_hint": true,
+      "captured_at": 1790485107,
+      "image_ids": [],
+      "vision_text": "",
+      "vision": {},
+      "requirement_core": "报表中心菜单删除员工工时报表",
+      "normalize": {
+        "source": "user_text",
+        "one_liner": "报表中心菜单删除员工工时报表",
+        "was_sanitized": false,
+        "notes": []
+      }
+    },
+    "prd": {
+      "goal": "报表中心菜单删除员工工时报表",
+      "goal_one_liner": "报表中心菜单删除员工工时报表",
+      "user_card": {
+        "one_liner": "报表中心菜单删除员工工时报表",
+        "what": "报表中心菜单删除员工工时报表",
+        "how": "按仓库惯例补齐菜单/路由/页面/接口",
+        "done_when": [
+          "报表中心菜单删除员工工时报表",
+          "改动文件不超过 22 个，且不包含用户未提及的重构",
+          "步骤 6 配置的验证命令通过"
+        ],
+        "scenario_label": "新功能全栈页",
+        "scenario_id": "full_feature"
+      },
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "med",
+        "reason": "像新页面/模块"
+      },
+      "scope": {
+        "in_scope": [
+          "报表中心菜单删除员工工时报表"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py"
+        ],
+        "user_message_excerpt": "报表中心菜单删除员工工时报表",
+        "scenario_id": "full_feature"
+      },
+      "acceptance": [
+        "报表中心菜单删除员工工时报表",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790485107"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790483002_2"
+    },
+    "plan": {
+      "problem": "报表中心菜单删除员工工时报表",
+      "delivery": "菜单 + 路由 + 完整页面 + 后端接口（查询/列表/表单/分页/导出等按同类页面惯例补齐）",
+      "scenario": {
+        "scenario_id": "full_feature",
+        "scenario_label": "新功能全栈页",
+        "confidence": "med",
+        "reason": "像新页面/模块"
+      },
+      "scope": {
+        "in_scope": [
+          "报表中心菜单删除员工工时报表"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项"
+        ],
+        "max_files": 22,
+        "path_hints": [
+          "**/reports/**",
+          "**/employee*work*",
+          "**/routers/reports*",
+          "**/schemas.py"
+        ],
+        "user_message_excerpt": "报表中心菜单删除员工工时报表",
+        "scenario_id": "full_feature"
+      },
+      "must_touch": [
+        "菜单/导航（入口可见）",
+        "路由注册（页面可达）",
+        "页面/组件（完整主路径）",
+        "后端接口（与页面配套）"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "菜单与路由可达",
+        "页面主路径可操作；接口可调通"
+      ],
+      "files_hint": "**/reports/**, **/employee*work*, **/routers/reports*, **/schemas.py, README.md, readme.md, backend/, docs/, frontend/",
+      "rev": "plan_1790485108"
+    }
+  },
+  "prd_rev": "prd_1790485107",
+  "context_rev": "ctx_1790483002_2",
+  "plan_rev": "plan_1790485108"
+}

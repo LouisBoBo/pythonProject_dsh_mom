@@ -1,0 +1,42 @@
+---
+description: 部署硬约束——不得把线上服务搞挂；探活失败必须自动回滚（LOCKED）
+alwaysApply: true
+---
+
+# 部署不得搞挂服务（不可推翻 · LOCKED）
+
+> **冻结日**：2026-09-27。事故：增量部署同步后远端 API 因配置 ValidationError 起不来，探活 502，服务空窗。  
+> **破窗条件**：**仅当用户在对话里明确允许**，且本机临时 `WORKBUDDY_ALLOW_DEAD_SERVICE_DEPLOY=1`；**禁止**写进发版默认 / CI / 桌面。  
+> **权威实现**：`engine/app/code_deploy/ssh_sync.py`（`must_keep_service_alive` / 部署前快照 / 探活失败回滚）。
+
+**不是**建议。擅自关掉探活验收、或探活失败仍当成功 / 不回滚 = 事故。
+
+## 写死含义
+
+1. **服务存活优先于「文件已同步」**  
+   同步、pip、restart 都成功，但 `/api/health`（或配置的入口探活）不过 → **整次部署失败**。  
+   禁止把「rsync 完了」说成部署成功。
+
+2. **覆盖远端前必须可回滚**  
+   Vite+backend 布局：同步前对远端 `backend` + `frontend/dist` 打快照（排除 `.venv` / `.env` / db）。  
+   快照失败 → **拒绝覆盖**（避免搞挂后无法恢复）。
+
+3. **探活失败必须自动回滚**  
+   回滚文件 → 再重启 → 再探活。  
+   - 回滚后探活恢复：报错写明「新版本搞挂服务，已回滚并恢复」；**发版仍算失败**。  
+   - 回滚失败或回滚后仍挂：报错升级为需运维介入；**禁止静默留下挂死状态当软失败忽略**。
+
+4. **无探活 URL 不得假成功**  
+   未配置 `health_url` / `entry_url` 时，硬约束开启下 **拒绝认为部署成功**。
+
+## Agent / 开发者禁令
+
+- 删掉或绕过部署前快照 / 探活失败回滚  
+- 把 `WORKBUDDY_ALLOW_DEAD_SERVICE_DEPLOY=1` 写进默认 env、发版脚本、CI  
+- 探活失败仍写 `last_deploy` 成功基线  
+- 改口径为「只告警不回滚」而不先改本规则且无用户明确允许  
+
+## 交付自检
+
+- 人为推一份必挂配置 → 部署失败文案含回滚；公网 `/api/health` 仍 200  
+- `python -m unittest tests.test_code_deploy_service_alive -v` 过  

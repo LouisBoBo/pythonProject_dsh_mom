@@ -1,0 +1,5 @@
+{
+  "id": "code-deploy",
+  "name": "一体部署",
+  "purpose": "注册 mes_code_deploy_begin|prepare|confirm|status：主聊天确认卡 → 一体部署（增量/全量 SSH + 拉起引擎与聊天壳）"
+}

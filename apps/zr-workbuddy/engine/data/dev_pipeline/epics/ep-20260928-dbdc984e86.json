@@ -1,0 +1,349 @@
+{
+  "epic_id": "ep-20260928-dbdc984e86",
+  "message": "【界面锚定】员工工时报表（菜单：报表中心） 【现有表头】日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、状态、审批 【改动】员工工时报表删除状态列。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把其它列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框/箭头/高亮：圈住的是单元格；标注与改动暗示；高亮：圈住的是单元格；箭头/高亮：圈住的是单元格 【必须改文件】frontend/src/views/reports/EmployeeWorkHourReportView.vue、backend/app/routers/reports.py 【禁止改文件】frontend/src/views/warehouse/MaterialInboundListView.vue、frontend/src/views/warehouse/LowStockAlertsView.vue\n\n【识图摘录】\n### 页面定位\n- 页面标题：员工工时报表\n- 菜单/导航路径：报表中心·按条件查询员工工时明细\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：无\n- 按钮：无\n### 表格\n- 表头列名（从左到右完整列出）：日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、状态、审批\n- 可见示例行（最多 3 行）：\n  - 2026-09-28, E1001, 张三, 生产一部, PCB-A量产项目, 贴片工序, 白班, 8.00, 1.00, 一, 已通过\n  - 2026-09-27, E1001, 张三, 生产一部, PCB-A量产项目, 贴片工序, 白班, 8.00, 1.00, 一, 已通过\n  - 2026-09-26, E1001, 张三, 生产一部, PCB-A量产项目, 贴片工序, 白班, 8.00, 1.50, 一, 已通过\n### 分页/合计文案\n- 工时合计：86.00\n- 仅已通过\n### 标注与改动暗示\n- 附图附加文字：员工工时报表删除状态列\n- 红框/箭头/高亮：圈住的是单元格\n- 改动意图采用附加文字原文",
+  "workspace": "d:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+  "user_id": "u_hebo",
+  "created_at": 1790586287,
+  "runs": [
+    "dpj-c8befbaef63d4539"
+  ],
+  "intake_image_ids": [
+    "vimg-fe4fb109aa93c2a3"
+  ],
+  "updated_at": 1790586556,
+  "requirement_core": "【界面锚定】员工工时报表（菜单：报表中心）\n【现有表头】日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、状态、审批\n【改动】员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】。删除员工工时报表列表中的“状态”列，表格不再展示该列。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把其它列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。\n【图中标注】红框/箭头/高亮：圈住的是单元格；标注与改动暗示；高亮：圈住的是单元格；箭头/高亮：圈住的是单元格\n【必须改文件】frontend/src/views/reports/EmployeeWorkHourReportView.vue、backend/app/routers/reports.py\n【禁止改文件】frontend/src/views/warehouse/MaterialInboundListView.vue、frontend/src/views/warehouse/LowStockAlertsView.vue",
+  "artifacts": {
+    "raw_intake": {
+      "text": "员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】",
+      "has_workspace_hint": true,
+      "captured_at": 1790586287,
+      "image_ids": [
+        "vimg-fe4fb109aa93c2a3"
+      ],
+      "vision_text": "### 页面定位\n- 页面标题：员工工时报表\n- 菜单/导航路径：报表中心·按条件查询员工工时明细\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：无\n- 按钮：无\n### 表格\n- 表头列名（从左到右完整列出）：日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、状态、审批\n- 可见示例行（最多 3 行）：\n  - 2026-09-28, E1001, 张三, 生产一部, PCB-A量产项目, 贴片工序, 白班, 8.00, 1.00, 一, 已通过\n  - 2026-09-27, E1001, 张三, 生产一部, PCB-A量产项目, 贴片工序, 白班, 8.00, 1.00, 一, 已通过\n  - 2026-09-26, E1001, 张三, 生产一部, PCB-A量产项目, 贴片工序, 白班, 8.00, 1.50, 一, 已通过\n### 分页/合计文案\n- 工时合计：86.00\n- 仅已通过\n### 标注与改动暗示\n- 附图附加文字：员工工时报表删除状态列\n- 红框/箭头/高亮：圈住的是单元格\n- 改动意图采用附加文字原文",
+      "vision": {
+        "ok": true,
+        "model": "glm-4v-flash",
+        "image_count": 1
+      },
+      "requirement_core": "【界面锚定】员工工时报表（菜单：报表中心） 【现有表头】日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、状态、审批 【改动】员工工时报表删除状态列。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把其它列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。 【图中标注】红框/箭头/高亮：圈住的是单元格；标注与改动暗示；高亮：圈住的是单元格；箭头/高亮：圈住的是单元格 【必须改文件】frontend/src/views/reports/EmployeeWorkHourReportView.vue、backend/app/routers/reports.py 【禁止改文件】frontend/src/views/warehouse/MaterialInboundListView.vue、frontend/src/views/warehouse/LowStockAlertsView.vue",
+      "vision_surface": {
+        "page_title": "员工工时报表",
+        "menu_path": "报表中心",
+        "table_columns": [
+          "日期",
+          "工号",
+          "员工姓名",
+          "所属部门",
+          "项目名称",
+          "任务名称",
+          "班别",
+          "工时数",
+          "加班工时",
+          "状态",
+          "审批"
+        ],
+        "filters": [
+          "### 筛选与操作",
+          "筛选项：无"
+        ],
+        "buttons": [
+          "按钮：无"
+        ],
+        "marks": [
+          "红框/箭头/高亮：圈住的是单元格",
+          "标注与改动暗示",
+          "高亮：圈住的是单元格",
+          "箭头/高亮：圈住的是单元格"
+        ],
+        "sample_codes": [],
+        "must_include_paths": [
+          "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "backend/app/routers/reports.py"
+        ],
+        "forbid_paths": [
+          "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "frontend/src/views/warehouse/LowStockAlertsView.vue"
+        ],
+        "path_hints": [
+          "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "backend/app/routers/reports.py",
+          "**/reports/**",
+          "**/employee*work*",
+          "frontend/src/api/reports/**"
+        ],
+        "raw_excerpt": "### 页面定位\n- 页面标题：员工工时报表\n- 菜单/导航路径：报表中心·按条件查询员工工时明细\n- 页面类型：列表页\n### 筛选与操作\n- 筛选项：无\n- 按钮：无\n### 表格\n- 表头列名（从左到右完整列出）：日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、状态、审批\n- 可见示例行（最多 3 行）：\n  - 2026-09-28, E1001, 张三, 生产一部, PCB-A量产项目, 贴片工序, 白班, 8.00, 1.00, 一, 已通过\n  - 2026-09-27, E1001, 张三, 生产一部, PCB-A量产项目, 贴片工序, 白班, 8.00, 1.00, 一, 已通过\n  - 2026-09-26, E1001, 张三, 生产一部, PCB-A量产项目, 贴片工序, 白班, 8.00, 1.50, 一, 已通过\n### 分页/合计文案\n- 工时合计：86.00\n- 仅已通过\n### 标注与改动暗示\n- 附图附加文字：员工工时报表删除状态列\n- 红框/箭头/高亮：圈住的是单元格\n- 改动意图采用附加文字原文"
+      },
+      "normalize": {
+        "source": "user_plus_vision",
+        "one_liner": "员工工时报表删除状态列",
+        "was_sanitized": true,
+        "notes": [
+          "用户短句依赖截图：已锚定识图页面，禁止只按关键词改错页"
+        ],
+        "implementable": true
+      }
+    },
+    "prd": {
+      "goal": "【界面锚定】员工工时报表（菜单：报表中心）\n【现有表头】日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、状态、审批\n【改动】员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】。删除员工工时报表列表中的“状态”列，表格不再展示该列。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把其它列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。\n【图中标注】红框/箭头/高亮：圈住的是单元格；标注与改动暗示；高亮：圈住的是单元格；箭头/高亮：圈住的是单元格\n【必须改文件】frontend/src/views/reports/EmployeeWorkHourReportView.vue、backend/app/routers/reports.py\n【禁止改文件】frontend/src/views/warehouse/MaterialInboundListView.vue、frontend/src/views/warehouse/LowStockAlertsView.vue",
+      "goal_one_liner": "员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】",
+      "user_card": {
+        "one_liner": "员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】",
+        "what": "员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】。删除员工工时报表列表中的“状态”列，表格不再展示该列",
+        "how": "在员工工时报表页面的表格中移除“状态”表头及其对应单元格，并同步移除列表接口返回/渲染中的状态字段。",
+        "done_when": [
+          "员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】",
+          "员工工时报表表格中不再出现“状态”列",
+          "表格其余列（日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、审批）保持正常展示",
+          "列表数据加载与分页合计不受影响",
+          "改动不超过 8 个文件，不做无关重构",
+          "步骤 6 验证命令通过"
+        ],
+        "scenario_label": "既有能力增强",
+        "scenario_id": "enhance_existing",
+        "user_quote": "员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】"
+      },
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "用户原话：员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】",
+          "员工工时报表删除状态列",
+          "员工工时报表表格中不再出现“状态”列",
+          "表格其余列（日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、审批）保持正常展示",
+          "列表数据加载与分页合计不受影响"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "backend/app/routers/reports.py",
+          "**/reports/**",
+          "**/employee*work*",
+          "frontend/src/api/reports/**",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "**/*shift*",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [
+          "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "backend/app/routers/reports.py"
+        ],
+        "forbid_paths": [
+          "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "frontend/src/views/warehouse/LowStockAlertsView.vue"
+        ],
+        "page_title": "员工工时报表",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "【界面锚定】员工工时报表（菜单：报表中心）\n【现有表头】日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、状态、审批\n【改动】员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】。删除员工工时报表列表中的“状态”列，表格不再展示该列。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把其它列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。\n【图中标注】红框/箭头/高亮：圈住的是单元格；标注与改动暗示；高亮：圈住的是单元格；箭头/高亮：圈住的是单元格\n【必须改文件】frontend/src/views/reports/EmployeeWorkHourReportView.vue、backend/app/routers/reports.py\n【禁止改文件】frontend/src/views/warehouse/MaterialInboundListView.vue、frontend/src/views/warehouse/LowStockAlertsView.vue",
+        "scenario_id": "enhance_existing"
+      },
+      "acceptance": [
+        "用户原话：员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】",
+        "员工工时报表删除状态列",
+        "员工工时报表表格中不再出现“状态”列",
+        "表格其余列（日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、审批）保持正常展示",
+        "列表数据加载与分页合计不受影响",
+        "步骤 6 验证命令全部通过"
+      ],
+      "non_goals": [
+        "不借机做无关大重构",
+        "不把单一场景模板套死到所有需求上",
+        "不批量改 frontend/src/api/* 或抽取公共 http（除非用户明确要求）"
+      ],
+      "rev": "prd_1790586296"
+    },
+    "context_pack": {
+      "workspace": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+      "workspace_ok": true,
+      "workspace_error": "",
+      "project_markers": [
+        ".git/",
+        "frontend+backend/",
+        "backend/",
+        "frontend/"
+      ],
+      "top_level_dirs": [
+        "backend/",
+        "docs/",
+        "frontend/"
+      ],
+      "must_read": [
+        {
+          "path": "README.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        },
+        {
+          "path": "readme.md",
+          "bytes": 240,
+          "excerpt": "hellow world\n<!-- workbuddy-smoke -->\n<!-- workbuddy-hebo-check-0806 -->\n\nDSH 文件沙箱策略见 [docs/DSH_FILE_POLICY.md](docs/DSH_FILE_POLICY.md)。步骤 6 验证命令见根目录 `config.yaml` · `dev_pipeline.validate_commands`。\n"
+        }
+      ],
+      "risks": [],
+      "rev": "ctx_1790564309_2"
+    },
+    "plan": {
+      "problem": "员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】",
+      "delivery": "在已有页面/接口上增强（字段、筛选、权限、性能等），沿用现有入口",
+      "scenario": {
+        "scenario_id": "enhance_existing",
+        "scenario_label": "既有能力增强",
+        "confidence": "high",
+        "reason": "在既有报表/页面上做增量（筛选/列/字段等），禁止扩大成全栈新页"
+      },
+      "scope": {
+        "in_scope": [
+          "用户原话：员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】",
+          "员工工时报表删除状态列",
+          "员工工时报表表格中不再出现“状态”列",
+          "表格其余列（日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、审批）保持正常展示",
+          "列表数据加载与分页合计不受影响"
+        ],
+        "forbidden": [
+          "禁止重构、抽取公共模块、批量 rename、全仓格式化",
+          "禁止修改用户未提及的业务模块或页面",
+          "禁止顺带批量改 frontend/src/api/*（除非用户明确要求改 API 层或 http 封装）",
+          "禁止「顺手优化」、扩大交付面；只交付用户原话与验收项",
+          "禁止把功能挂到用户未指定的菜单（如用户写生产管理却挂到仓储管理）"
+        ],
+        "max_files": 8,
+        "path_hints": [
+          "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "backend/app/routers/reports.py",
+          "**/reports/**",
+          "**/employee*work*",
+          "frontend/src/api/reports/**",
+          "**/routers/reports*",
+          "**/schemas.py",
+          "**/*shift*",
+          "frontend/src/views/reports/",
+          "**/layouts/**",
+          "**/router*",
+          "**/*.vue"
+        ],
+        "must_include_paths": [
+          "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+          "backend/app/routers/reports.py"
+        ],
+        "forbid_paths": [
+          "frontend/src/views/warehouse/MaterialInboundListView.vue",
+          "frontend/src/views/warehouse/LowStockAlertsView.vue"
+        ],
+        "page_title": "员工工时报表",
+        "target_menu": "报表中心",
+        "user_message_excerpt": "【界面锚定】员工工时报表（菜单：报表中心）\n【现有表头】日期、工号、员工姓名、所属部门、项目名称、任务名称、班别、工时数、加班工时、状态、审批\n【改动】员工工时报表删除状态列\n【附图:vimg-fe4fb109aa93c2a3】。删除员工工时报表列表中的“状态”列，表格不再展示该列。须改本页前端表格 + 对应列表接口字段；禁止改其它业务列表页（勿把其它列表页误当成锚定页）。列名/字段以用户意图与图上批注为准，禁止擅自换成其它列。\n【图中标注】红框/箭头/高亮：圈住的是单元格；标注与改动暗示；高亮：圈住的是单元格；箭头/高亮：圈住的是单元格\n【必须改文件】frontend/src/views/reports/EmployeeWorkHourReportView.vue、backend/app/routers/reports.py\n【禁止改文件】frontend/src/views/warehouse/MaterialInboundListView.vue、frontend/src/views/warehouse/LowStockAlertsView.vue",
+        "scenario_id": "enhance_existing"
+      },
+      "must_touch": [
+        "既有页面或接口的增量改动",
+        "必要时菜单文案/权限点"
+      ],
+      "validation": [
+        "config.yaml · dev_pipeline.validate_commands",
+        "增强点可验收；原主路径不回归"
+      ],
+      "files_hint": "frontend/src/views/reports/EmployeeWorkHourReportView.vue, backend/app/routers/reports.py, **/reports/**, **/employee*work*, frontend/src/api/reports/**, **/routers/reports*, **/schemas.py, **/*shift*, frontend/src/views/reports/, **/layouts/**, **/router*, **/*.vue",
+      "rev": "plan_1790586299"
+    },
+    "implement": {
+      "cursor_job_id": "ccj-20260928-170500-80c7",
+      "changed_files": [
+        "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "auto": true,
+      "gate": {
+        "class": "pass",
+        "reason": "pass",
+        "summary": "写码完成（ccj-20260928-170500-80c7，变更 3 项）"
+      },
+      "scope_audit": {
+        "ok": true,
+        "file_count": 3,
+        "violations": [],
+        "detail": "变更 3 个文件，在范围内",
+        "max_files": 8
+      },
+      "content_audit": {
+        "ok": true,
+        "violations": [],
+        "detail": "无明确列名，跳过内容文案门禁"
+      }
+    },
+    "validate_last": {
+      "ok": true,
+      "summary": "自动验证通过（未手写 validate_commands，已探测默认检查）",
+      "results": [
+        {
+          "name": "py-compile-root",
+          "cmd": "python -m compileall -q .",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "",
+          "duration_sec": 3.9
+        },
+        {
+          "name": "git-diff-check",
+          "cmd": "git diff --check",
+          "cwd": "D:\\AICodes\\ZR_AI_Coding\\pythonProject_zr_aicoding",
+          "exit_code": 0,
+          "ok": true,
+          "stdout": "",
+          "stderr": "warning: in the working copy of 'backend/app/routers/reports.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'backend/app/schemas.py', LF will be replaced by CRLF the next time Git touches it",
+          "duration_sec": 0.15
+        }
+      ],
+      "auto_defaults": true
+    },
+    "review": {
+      "report_id": "cr-5bbd889d70d94d92",
+      "auto": true,
+      "changed_only": true,
+      "files": [
+        "frontend/src/views/reports/EmployeeWorkHourReportView.vue",
+        "backend/app/schemas.py",
+        "backend/app/routers/reports.py"
+      ],
+      "skipped": false
+    },
+    "commit": {
+      "job_id": "cc-de7df6055b61406c",
+      "skipped": false,
+      "can_manual_retry": false,
+      "auto": true,
+      "attempts": 1
+    },
+    "pr": {
+      "pr_url": "",
+      "skipped": true,
+      "auto": true
+    },
+    "deploy": {
+      "job_id": "cd-1457fbd1b2b444b4",
+      "auto": true,
+      "attempts": 1
+    }
+  },
+  "prd_rev": "prd_1790586296",
+  "context_rev": "ctx_1790564309_2",
+  "plan_rev": "plan_1790586299"
+}

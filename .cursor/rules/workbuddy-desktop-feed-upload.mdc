@@ -1,0 +1,65 @@
+---
+description: 桌面一体包打包成功必须自动上传更新清单；远端最多保留 2 个版本
+alwaysApply: true
+---
+
+# 桌面发版上传硬锁定（LOCKED）
+
+> **冻结日**：2026-09-23。  
+> **权威实现**：`scripts/lib/upload_desktop_feed.py`（由 `scripts/lib/package_desktop.py` 打包收尾调用）。  
+> **方案**：`docs/功能实现/桌面应用版本升级方案.md` §6。  
+> **产品名 / 产物**：`DESKTOP_PRODUCT=MOM`（`desktop/package.json` `productName` / `artifactName: MOM-${version}.${ext}`）。
+
+## 写死含义
+
+1. **`python scripts/lib/package_desktop.py` 打出安装包成功后必须自动上传**  
+   - 上传：`MOM-<ver>.exe`（Win）或 `.zip`（Mac）+ 对应 `latest-<platform>.json`  
+   - 目标：`http://175.178.238.31/workbuddy-desktop/` ← 远端目录 `/www/wwwroot/workbuddy-desktop/`  
+   - **上传失败 = 整次发版失败**（`die`），不得把「仅本地有包」当成发版成功。
+
+2. **远端最多保留 2 个版本的安装包**  
+   - 按文件名 semver 排序，只留最高的 2 个 `MOM-x.y.z.(exe|zip)`；更旧的安装包及同名 `.blockmap` 删除。  
+   - `latest-windows.json` / `latest-macos.json` 始终覆盖为当前发版，不计入「2 个版本」配额。
+
+3. **凭据不进仓库**  
+   - `apps/zr-workbuddy/config/desktop-upload.env`（gitignore / svn:ignore `*.env`）  
+   - 模板：`desktop-upload.env.example`  
+   - 必填：`WORKBUDDY_DESKTOP_SSH_KEY`（本机私钥路径）。
+
+4. **唯一破窗**：`WORKBUDDY_DESKTOP_SKIP_UPLOAD=1` 或 `--skip-upload`  
+   - 仅本机调试 / **云服务器暂不可达**；**禁止**写进发版默认 / CI。  
+   - 跳过上传时发版不算「已上线」；上线前必须补传或去掉破窗重跑打包。  
+   - 链路自检（不依赖云）：`node desktop/tests/test_update_chain_local.js`（用本机 `release/latest-*.json` mock HTTP）。
+
+## Windows 本机打包入口（与防假死规则对齐）
+
+- **用户本机**：`powershell -NoProfile -File scripts\pack-desktop.ps1`（推荐；有 heartbeat + `tmp\_pack_desktop.*`）。  
+- **兼容**：`scripts\package-desktop.cmd` / `scripts\package-desktop.sh` → 同调 `package_desktop.py`。  
+- **禁止** Agent 终端阻塞跑完整打包；细节与「秒退 / 终端没动」踩坑见 `.cursor/rules/workbuddy-windows-shell-nofreeze.mdc`「Windows 桌面打包」。  
+- 默认会 **自抬** `desktop/package.json` 版本；调试同版本用 `--no-bump`（仍须上传除非破窗）。  
+- 装新包前：托盘 **完全退出** 旧 MOM，再装 `desktop\release\MOM-<ver>.exe`。
+
+## 服务器无清单 / 无更大版本时的产品文案
+
+- 客户端拉默认 feed 得到 **404 / 网络不可达**，或清单版本 ≤ 当前安装包 → 弹窗展示 **「当前已是最新版本（v当前安装包号）」**（非红字告警）。  
+- **清单格式异常 / HTTP 非 404 业务错误** 仍红字失败，不得当成「已是最新」（防坏包/篡改被静默吞掉）。  
+- 404/离线不表示检查链路坏了，只表示远端没有可升级包；恢复 SSH 上传后，有更大版本才会出现下载/安装。
+
+## Agent / 开发者禁令
+
+- 禁止改回「打包只写本地清单、靠人工上传」为默认成功路径  
+- 禁止把 SSH 私钥、密码写进脚本、规则、文档示例正文  
+- 禁止远端保留无限历史安装包（默认 keep=2；改配额须先改本规则）  
+- 禁止把安装包装进 `dsh-plugins/` 市场目录  
+- 禁止在发版规则/指引里把产物名写回旧名 `ZR WorkBuddy-*.exe`（对外产物是 **MOM-*.exe**）  
+- 禁止用 `$ErrorActionPreference=Stop` + `2>&1|Tee-Object` 包一层当「官方打包入口」（会秒退）
+
+## 交付检查
+
+```powershell
+# 配置好 desktop-upload.env 后（本机）
+powershell -NoProfile -File scripts\pack-desktop.ps1
+# 期望：tmp\_pack_desktop.out 含 pack exit=0；scp 成功；
+# curl http://175.178.238.31/workbuddy-desktop/latest-windows.json 为 200 且 version 对齐 MOM 版本
+python scripts/lib/test_upload_desktop_feed.py
+```

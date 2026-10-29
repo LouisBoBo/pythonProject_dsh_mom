@@ -1,0 +1,55 @@
+---
+description: 【LOCKED】对话写码是核心路径——第一次就要做对；禁止靠多轮补洞当交付
+alwaysApply: true
+---
+
+# 对话写码 · 第一次就要做对（不可推翻 · LOCKED）
+
+> **冻结日**：2026-10-16。  
+> **背景**：写码是 WorkBuddy 核心能力；URL 附图失败、*.db EPERM 整单空同步、失败后续改弹框不明，都曾逼用户多开一轮。  
+> **破窗条件**：**仅当用户在对话里明确允许**削弱本规则；改代码前须先改本规则冻结段。
+
+**不是**建议。擅自用「先凑合、下一轮再修」交付写码链路 = 事故。
+
+## 写死含义
+
+1. **第一次就要做对**  
+   改写码桥接 / 附图 / 同步回收 / 确认卡文案前：先查清**本轮真实失败原因**（读最新 `cch-*.json` 的 `detail` / `changed_files` / `synced_files`），再动手。  
+   **禁止**猜着修、禁止只改提示词当「已彻底修复」。
+
+2. **每多一轮 = 多一轮成本**  
+   用户已确认过的写码诉求，本仓改动必须以「少弹框、少失败、源码必落盘」为目标。  
+   **禁止**把「再点一次续改 / 再开一轮」当成默认验收路径。
+
+3. **已知硬坑（改写码相关代码时必须对准，不得回退）**  
+   | 坑 | 正确做法 |
+   |---|---|
+   | 本地 Cursor SDK 拒 http 附图 URL | mes-bridge 在 `zr_cchat_*` 执行前把 `vimg` / vision URL **本地化为 data URL**；提示词禁止教 Agent 传 http 附图 URL |
+   | profile `zod@3.25.0` 无 dist → SDK `ERR_MODULE_NOT_FOUND` | `ensure_cursor_sdk_zod` + `vendor/zod` tarball；`restart-web` / host 最后钉；写码 begin/continue 前 `coding-zod-gate` 自动补或拒跑 |
+   | 同步 `*.db` EPERM 整单失败、`synced_files` 空 | **禁止**当写码产物同步库文件；失败后须能从沙箱**回收非 db 源码**（引擎 `recover-db-sync` + 客户端自动触发）；一体化仍走 `recover_job_after_db_sync_fail` |
+   | 失败后续改确认卡像「新开写码」 | 保留 HITL（不改 DSH 插件、不静默跳过确认）；卡上须说明「上一轮失败/续改」；Agent 正文须说清失败原因 |
+   | 失败轮 `synced_files` 空导致续改交接缺文件清单 | `zr_cchat_continue` 执行前由 mes-bridge 注入【系统续改交接】（`changed_files` 剔 *.db）并在缺省/错挂时钉 `parent_job_id` |
+
+4. **不改 DSH 写码插件源码**（见 `workbuddy-no-dsh-plugin.mdc`）  
+   只能在本仓 `mes-bridge` / `engine` 做桥接、回收、文案与门禁。
+
+5. **交付前自检（声称写码链路修好前）**  
+   - 读最新失败 Job：`detail` 属于哪一类硬坑，对应修复是否已覆盖  
+   - **硬坑回归门禁必跑**（仓根，可复制）：  
+     `node scripts/lib/run_coding_hard_pit_tests.mjs`  
+     （= mes-bridge `test_coding_*.js` + engine `tests.test_implement_db_sync_recover`；分项见清单 P0-2）  
+   - `build:client` 已落地（若改了 `client-src`）  
+   - 对用户只说：**3081** + 本机 `restart-web` / 引擎 restart（需要时）；**禁止**把「再试一轮碰运气」当结论  
+
+## 无用户允许一律拒绝
+
+- 削弱附图本地化 / db 沙箱回收 / 续改失败说明，改回「靠用户多点几轮」  
+- 未读 Job 盘就宣称「写码已彻底修复」  
+- 为图快改 DSH `@zhongruan/dsh-cursor-chat` 插件源码  
+- 删本规则、改 `alwaysApply: false`
+
+## 允许（无需破窗）
+
+- 排障只读、修崩溃/安全且不削弱上表硬坑  
+- 补测试且收紧不放松  
+- 文案更清楚、回收更稳、提示词更严（仍禁止 http 附图 URL、仍禁同步 *.db）

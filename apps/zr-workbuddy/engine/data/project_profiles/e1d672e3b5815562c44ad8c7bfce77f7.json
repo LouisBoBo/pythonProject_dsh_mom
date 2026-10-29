@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "workspace": "C:\\Users\\Yu\\AppData\\Local\\Temp\\tmpd31faqwg",
+  "scanned_at": 1790737435,
+  "fingerprint": "54ad6bb6b308357abe16",
+  "vcs": {
+    "kind": "none",
+    "remote": ""
+  },
+  "languages": [],
+  "stack": {
+    "frontend": [],
+    "backend": [],
+    "test": []
+  },
+  "layout": {
+    "kind": "unknown",
+    "frontend_root": "",
+    "backend_root": "",
+    "router_files": [],
+    "view_dirs": [],
+    "api_dirs": [],
+    "menu_files": [],
+    "entry_files": []
+  },
+  "validate_commands": [],
+  "deploy": {
+    "preset": "unknown",
+    "build_cwd": "",
+    "build_cmd": "",
+    "sync_hint": [],
+    "exclude_patterns": [
+      "node_modules",
+      ".venv",
+      "venv",
+      ".env",
+      ".env.*",
+      "*.db",
+      "*.sqlite",
+      "*.sqlite3",
+      ".git",
+      "__pycache__"
+    ]
+  },
+  "ui": {
+    "sample_pages": [],
+    "style_libs": []
+  },
+  "conventions": {
+    "readme_excerpt": "",
+    "agents_excerpt": ""
+  },
+  "review": {
+    "skip_dirs": []
+  },
+  "code_suffixes": [],
+  "gaps": [
+    "未能判断部署布局，需在配置里指定如何构建与同步",
+    "未发现测试或 lint 脚本，验证步不会自动跑真实用例",
+    "没有 README，规范只能从代码抽样",
+    "不是 Git / SVN 工作副本，提交与开 PR 需要另配托管"
+  ],
+  "summary_zh": "布局：unknown\n语言：未识别\n前端：未识别\n后端：未识别\n托管：无\n改页面、挂菜单、写接口时以以上路径为准，不要套用其它仓库的目录。"
+}
