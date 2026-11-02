@@ -76,6 +76,30 @@ class AlignDshToolsTests(unittest.TestCase):
             self.assertEqual(copy.resolve(), host.resolve())
             # bak 可能已异步清掉；对齐成功且 copy 已是宿主 realpath 即可
 
+    def test_fix_creates_missing_link(self):
+        """新检出没有 vendor/@deepseek-ai/dsh-tools：--fix 必须按宿主建链。"""
+        with tempfile.TemporaryDirectory() as td:
+            host = Path(td) / "host" / "dsh-tools"
+            host.mkdir(parents=True)
+            (host / "package.json").write_text('{"version":"1"}\n', encoding="utf-8")
+            link = Path(td) / "vendor" / "dsh-tools"
+            row = align_one("vendor", link, host, do_fix=True, create_missing=True)
+            self.assertTrue(link.exists(), row)
+            self.assertTrue(row["ok"], row)
+            self.assertTrue(row["fixed"], row)
+            self.assertEqual(link.resolve(), host.resolve())
+
+    def test_check_mode_still_skips_missing(self):
+        with tempfile.TemporaryDirectory() as td:
+            host = Path(td) / "host" / "dsh-tools"
+            host.mkdir(parents=True)
+            (host / "package.json").write_text('{"version":"1"}\n', encoding="utf-8")
+            link = Path(td) / "vendor" / "dsh-tools"
+            row = align_one("vendor", link, host, do_fix=False, create_missing=True)
+            self.assertFalse(link.exists())
+            self.assertTrue(row["ok"], row)
+            self.assertIn("不存在", row["detail"])
+
     def test_require_fails_when_host_missing(self):
         with mock.patch("align_dsh_tools.find_host_tools", return_value=None):
             report = align_all(do_fix=False, require=True)

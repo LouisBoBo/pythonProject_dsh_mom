@@ -88,6 +88,23 @@ def _req_file() -> Path:
     return REPO / "apps" / "zr-workbuddy" / "engine" / "requirements.txt"
 
 
+def _resolve_vendor_tools(repo: Path = REPO) -> Path:
+    """vendor dsh-tools 在仓库里只认软链；缺失时回退宿主，找不到就拒绝打包。"""
+    vendor = repo / "vendor" / "@deepseek-ai" / "dsh-tools"
+    if vendor.is_dir():
+        return vendor
+    _ensure_lib_path()
+    from align_dsh_tools import find_host_tools
+
+    host = find_host_tools()
+    if host is None:
+        raise FileNotFoundError(
+            f"缺少 {vendor}，且未找到宿主 dsh-tools；先运行 scripts/check-vendor.sh --fix"
+        )
+    _log(f"缺少 {vendor}，改用宿主 dsh-tools: {host}")
+    return host
+
+
 def _prune_tree(root: Path, label: str) -> None:
     _ensure_lib_path()
     from prune_pack_junk import prune_pack_junk
@@ -603,14 +620,11 @@ def sync_app_sources() -> None:
         raise FileNotFoundError(f"打包漏了预置用户手册: {builtin_src}")
 
     # mes-bridge → link:../../../../vendor/@deepseek-ai/dsh-tools
-    vendor_src = REPO / "vendor" / "@deepseek-ai" / "dsh-tools"
-    if vendor_src.is_dir():
-        vendor_dst = APP / "vendor" / "@deepseek-ai" / "dsh-tools"
-        vendor_dst.parent.mkdir(parents=True, exist_ok=True)
-        _log("复制 vendor/@deepseek-ai/dsh-tools")
-        _copytree(vendor_src, vendor_dst)
-    else:
-        _log(f"警告: 缺少 {vendor_src}，Bridge 安装可能失败")
+    vendor_src = _resolve_vendor_tools()
+    vendor_dst = APP / "vendor" / "@deepseek-ai" / "dsh-tools"
+    vendor_dst.parent.mkdir(parents=True, exist_ok=True)
+    _log("复制 vendor/@deepseek-ai/dsh-tools")
+    _copytree(vendor_src, vendor_dst)
 
     # zod 修复 tarball：zod@3.25.0 官方误发（无 dist），干净机器上 ensure_cursor_sdk_zod
     # 需 npm pack 补 dist，但内嵌 Node 不带完整 npm。把已知良好的 zod tgz 打进包，

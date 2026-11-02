@@ -36,6 +36,8 @@ node_modules/
 .vscode/
 *.swp
 apps/*/plugins/*/node_modules/
+# vendor dsh-tools 只认指向宿主 dsh 的软链，不跟踪实体副本
+/vendor/@deepseek-ai/dsh-tools
 **/vendor/@deepseek-ai/dsh-tools.bak-copy/
 
 **/engine/data/plugins.json.lock

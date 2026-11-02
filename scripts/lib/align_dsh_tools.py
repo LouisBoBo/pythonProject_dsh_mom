@@ -215,7 +215,7 @@ def link_dir(link: Path, target: Path) -> None:
     os.symlink(str(target), str(link), target_is_directory=True)
 
 
-def align_one(label: str, path: Path, host: Path, *, do_fix: bool) -> dict:
+def align_one(label: str, path: Path, host: Path, *, do_fix: bool, create_missing: bool = False) -> dict:
     exists = path.exists() or path.is_symlink() or _is_reparse(path)
     result = {
         "label": label,
@@ -226,7 +226,24 @@ def align_one(label: str, path: Path, host: Path, *, do_fix: bool) -> dict:
         "detail": "",
     }
     if not exists:
-        result["detail"] = "不存在（跳过）"
+        # 新检出不含 vendor/@deepseek-ai/dsh-tools（仓库只认软链）；--fix 时按宿主现建
+        if not (do_fix and create_missing):
+            result["detail"] = "不存在（跳过）"
+            return result
+        h_real = realpath(host)
+        try:
+            link_dir(path, host)
+        except Exception as exc:  # noqa: BLE001 — 门禁要把原因回给启动方，不抛栈
+            result["ok"] = False
+            result["detail"] = f"缺失且建链失败: {type(exc).__name__}: {exc}"
+            return result
+        p_real = realpath(path)
+        result["exists"] = True
+        result["real"] = p_real
+        result["host_real"] = h_real
+        result["ok"] = bool(p_real and h_real and os.path.normcase(p_real) == os.path.normcase(h_real))
+        result["fixed"] = result["ok"]
+        result["detail"] = "缺失，已按宿主建链" if result["ok"] else "缺失建链后仍不一致"
         return result
     h_real = realpath(host)
     p_real = realpath(path)
@@ -302,8 +319,8 @@ def align_all(
     vendor = repo_root / "vendor" / "@deepseek-ai" / "dsh-tools"
     profile_tools = profile_dir / "node_modules" / "@deepseek-ai" / "dsh-tools"
     items = [
-        align_one("vendor", vendor, host, do_fix=do_fix),
-        align_one("profile", profile_tools, host, do_fix=do_fix),
+        align_one("vendor", vendor, host, do_fix=do_fix, create_missing=True),
+        align_one("profile", profile_tools, host, do_fix=do_fix, create_missing=True),
     ]
     for nest in iter_nested_tools(profile_dir / "node_modules", profile_tools):
         items.append(align_one("nested", nest, host, do_fix=do_fix))

@@ -6,6 +6,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 _ROOT = Path(__file__).resolve().parents[2]
 _PY = _ROOT / "desktop" / "py"
@@ -43,6 +44,31 @@ class BuildRuntimeInterpreterTests(unittest.TestCase):
         self.assertIn("ensure_runtime.py", build_runtime.PACKAGED_LIB_SCRIPTS)
         self.assertIn("py_modules_stamp.py", build_runtime.PACKAGED_LIB_SCRIPTS)
         self.assertIn("win_hide.py", build_runtime.PACKAGED_LIB_SCRIPTS)
+
+
+class BuildRuntimeVendorTests(unittest.TestCase):
+    def test_existing_vendor_wins(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            vendor = repo / "vendor" / "@deepseek-ai" / "dsh-tools"
+            vendor.mkdir(parents=True)
+            self.assertEqual(build_runtime._resolve_vendor_tools(repo), vendor)
+
+    def test_missing_vendor_falls_back_to_host(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            host = Path(td) / "host-tools"
+            host.mkdir()
+            (host / "package.json").write_text("{}", encoding="utf-8")
+            with mock.patch("align_dsh_tools.find_host_tools", return_value=host):
+                self.assertEqual(build_runtime._resolve_vendor_tools(repo), host)
+
+    def test_missing_vendor_and_host_raises(self):
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            with mock.patch("align_dsh_tools.find_host_tools", return_value=None):
+                with self.assertRaises(FileNotFoundError):
+                    build_runtime._resolve_vendor_tools(repo)
 
 
 if __name__ == "__main__":

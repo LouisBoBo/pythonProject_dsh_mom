@@ -8,7 +8,7 @@ from typing import Any, Dict, List
 
 import httpx
 from fastapi import FastAPI, File, Form, Query, Request, UploadFile
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
@@ -4567,7 +4567,19 @@ def zr_logo_png():
 
 
 @app.get("/", include_in_schema=False)
-def index():
+def index(request: Request):
+    # 唯一入口是聊天壳 :3081；本机开发引擎根页直接跳过去（桌面壳自成一体，不跳）
+    host = (request.url.hostname or "").strip()
+    rt_port = int(_read_runtime_for_cors().get("port") or 0)
+    if (
+        not os.environ.get("WORKBUDDY_DESKTOP")
+        and host in ("127.0.0.1", "localhost", "::1")
+        and rt_port
+        and request.url.port == rt_port
+    ):
+        shell_port = int(os.environ.get("WORKBUDDY_WEB_PORT") or 3081)
+        host_part = f"[{host}]" if ":" in host else host
+        return RedirectResponse(f"http://{host_part}:{shell_port}/", status_code=302)
     return FileResponse(
         os.path.join(STATIC_DIR, "index.html"),
         headers={
